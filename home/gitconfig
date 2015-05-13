@@ -1,0 +1,18 @@
+[user]
+	name = Kenneth Powers
+	email = ken@kenpowers.net
+[color]
+	ui = auto
+[alias]
+	branches = branch -avv
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[push]
+	default = simple
+[diff]
+	tool = bc3
+[difftool]
+	bc3 = trustExitCode
+[merge]
+	tool = bc3
+[mergetool]
+	bc3 = trustExitCode
