@@ -8,3 +8,4 @@ fi
 
 # Define DOTFILES location
 export DOTFILES="$HOME/.dotfiles"
+export DOTFILESLIB="$DOTFILES/lib"

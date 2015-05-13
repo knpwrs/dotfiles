@@ -1,5 +1,5 @@
-# Disable color and theme in dumb terminals.
-if [[ "$TERM" == 'dumb' ]]; then
-  zstyle ':prezto:*:*' color 'no'
-  zstyle ':prezto:module:prompt' theme 'off'
-fi
+# Load zsh modules
+autoload -U colors && colors
+
+# Source everything ending in .zsh in the lib directory.
+source $DOTFILESLIB/*.zsh
