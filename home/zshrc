@@ -1,5 +1,6 @@
 # Load zsh modules
 autoload -U colors && colors
+autoload -Uz compinit && compinit
 
 # Source everything ending in .zsh in the lib directory.
 for rcfile in $DOTFILESLIB/*.zsh; do
