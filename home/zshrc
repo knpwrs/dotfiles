@@ -2,7 +2,9 @@
 autoload -U colors && colors
 
 # Source everything ending in .zsh in the lib directory.
-source $DOTFILESLIB/*.zsh
+for rcfile in $DOTFILESLIB/*.zsh; do
+  source $rcfile
+done
 
 # Load syntax highlighting
 source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
