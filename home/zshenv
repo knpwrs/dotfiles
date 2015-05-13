@@ -1,0 +1,10 @@
+# Defines environment variables.
+# Based on https://github.com/sorin-ionescu/prezto/blob/a84ac5b0023d71c98bb28a68c550dc13f6c51945/runcoms/zshenv
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+# Define DOTFILES location
+export DOTFILES="$HOME/.dotfiles"
