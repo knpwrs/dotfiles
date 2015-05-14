@@ -9,3 +9,8 @@ fi
 # Define DOTFILES location
 export DOTFILES="$HOME/.dotfiles"
 export DOTFILESLIB="$DOTFILES/lib"
+
+# Load zmv command
+# http://zshwiki.org/home/builtin/functions/zmv
+autoload -U zmv
+
