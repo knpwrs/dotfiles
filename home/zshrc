@@ -2,6 +2,9 @@
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 
+# Emacs key bindings
+bindkey -e
+
 # Source everything ending in .zsh in the lib directory.
 for rcfile in $DOTFILESLIB/*.zsh; do
   source $rcfile
