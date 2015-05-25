@@ -92,3 +92,15 @@ set softtabstop=2
 set shiftwidth=2
 set shiftround
 
+"
+" Search
+"
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set gdefault " default g flag
+nnoremap / /\v
+vnoremap / /\v
+nnoremap <Leader><Space> :set hlsearch!<CR> " Use \<Space> to toggle search highlighting
+
