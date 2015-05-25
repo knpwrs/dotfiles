@@ -18,7 +18,7 @@ set completeopt-=preview
 "" Source the vimrc file after saving it
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost $MYVIMRC NeoBundleClean
-"" Fast edit the .vimrc file using ,x
+"" Fast edit the .vimrc file using \x
 nnoremap <Leader>x :tabedit $MYVIMRC<CR>
 
 "
