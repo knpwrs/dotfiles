@@ -205,3 +205,9 @@ hi StartifyNumber  ctermfg=215
 hi StartifyPath    ctermfg=245
 hi StartifySlash   ctermfg=240
 
+"" Goyo and Limelight
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
+
