@@ -82,3 +82,13 @@ set linebreak
 set showbreak=↪
 set fillchars=diff:⣿,vert:│
 
+"
+" Indentation
+"
+set autoindent
+set cindent
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set shiftround
+
