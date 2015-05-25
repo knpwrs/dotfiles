@@ -17,10 +17,10 @@ set encoding=utf-8
 set completeopt+=longest
 set completeopt-=preview
 
-" Source the vimrc file after saving it
+"" Source the vimrc file after saving it
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost $MYVIMRC NeoBundleClean
-" Fast edit the .vimrc file using ,x
+"" Fast edit the .vimrc file using ,x
 nnoremap <Leader>x :tabedit $MYVIMRC<CR>
 
 "
@@ -33,9 +33,20 @@ endif
 call neobundle#begin(expand($HOME . '/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Start Bundles
+""
+"" Start Bundles
+
+"" Interface Bundles
 NeoBundle 'w0ng/vim-hybrid'
-" End Bundles
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'junegunn/goyo.vim' " Distraction-free editing
+NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
+
+"" End Bundles
+""
 
 call neobundle#end()
 NeoBundleCheck
@@ -43,5 +54,6 @@ NeoBundleCheck
 "
 " Interface
 "
+let g:startify_custom_header='Welcome to VimLand!'
 colorscheme hybrid
 
