@@ -187,3 +187,21 @@ let g:indent_guides_guide_size=1
 let g:indent_guides_default_mapping=0
 let g:indent_guides_exclude_filetypes=['help', 'nerdtree', 'startify', 'markdown']
 
+"" Startify
+let g:startify_custom_header=[
+  \'         (       *     ',
+  \'         )\ )  (  `    ',
+  \' (   (  (()/(  )\))(   ',
+  \' )\  )\  /(_))((_)()\  ',
+  \'((_)((_)(_))  (_()((_) ',
+  \'\ \ / / |_ _| |  \/  | ',
+  \' \ V /   | |  | |\/| | ',
+  \'  \_/   |___| |_|  |_| ',
+  \'                       ']
+hi StartifyHeader  ctermfg=111
+hi StartifyFooter  ctermfg=111
+hi StartifyBracket ctermfg=240
+hi StartifyNumber  ctermfg=215
+hi StartifyPath    ctermfg=245
+hi StartifySlash   ctermfg=240
+
