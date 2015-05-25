@@ -99,8 +99,51 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-set gdefault " default g flag
+set gdefault " Default g flag
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <Leader><Space> :set hlsearch!<CR> " Use \<Space> to toggle search highlighting
+
+"
+" Filetype Settings
+"
+
+" quickfix
+augroup ft_quickfix
+  autocmd!
+  autocmd filetype qf setlocal nolist nocursorline nowrap textwidth=0
+augroup end
+
+" markdown
+augroup ft_markdown
+  autocmd!
+  " use <Leader>1/2/3/4/5/6 to add headings
+  autocmd filetype markdown nnoremap <buffer> <Leader>1 i# <esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>2 i## <esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>3 i### <esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>4 i#### <esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>5 i##### <esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>6 i###### <esc>
+  " use <Leader>b to add blockquotes in normal and visual mode
+  autocmd filetype markdown nnoremap <buffer> <Leader>b i> <esc>
+  autocmd filetype markdown vnoremap <buffer> <Leader>b :s/^/> /<cr>
+  " use <Leader>ul and <Leader>ol to add list symbols in visual mode
+  autocmd filetype markdown vnoremap <buffer> <Leader>ul :s/^/* /<cr>
+  autocmd filetype markdown vnoremap <buffer> <Leader>ol :s/^/\=(line(".")-line("'<")+1).'. '/<cr>
+  " use <Leader>e1/2/3 to add emphasis symbols
+  autocmd filetype markdown nnoremap <buffer> <Leader>e1 i*<esc>a*<esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>e2 i**<esc>a**<esc>
+  autocmd filetype markdown nnoremap <buffer> <Leader>e3 i***<esc>a***<esc>
+  autocmd filetype markdown vnoremap <buffer> <Leader>e1 :s/\%v\(.*\)\%v/\*\1\*/<cr>
+  autocmd filetype markdown vnoremap <buffer> <Leader>e2 :s/\%v\(.*\)\%v/\*\*\1\*\*/<cr>
+  autocmd filetype markdown vnoremap <buffer> <Leader>e3 :s/\%V\(.*\)\%V/\*\*\*\1\*\*\*/<CR>
+  " Turn on spell
+  autocmd filetype markdown setlocal spell
+augroup END
+
+" HTML
+augroup ft_html
+  autocmd!
+  autocmd filetype html setlocal spell " Turn on spell
+augroup END
 
