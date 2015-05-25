@@ -177,6 +177,9 @@ nnoremap <Leader>= gg=G
 "" Toggle paste mode
 set pastetoggle=<F2>
 
+"" Remove last search highlight
+nnoremap <F3> :noh<CR>
+
 "
 " Plugin Settings
 "
