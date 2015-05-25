@@ -52,8 +52,6 @@ NeoBundleCheck
 "
 " Interface
 "
-let g:startify_custom_header='Welcome to VimLand!'
-colorscheme hybrid
 set title
 set titlestring=%t%(\ %m%)%(\ (%{expand('%:p:h')})%)%(\ %a%)
 set wildmenu
@@ -71,7 +69,13 @@ nnoremap <Leader>n :set relativenumber!<CR> " Toggle relative line numbers
 set formatoptions+=rnlmM
 set wrap
 set textwidth=80
-"" Fonts
+
+"
+" Colors and Fonts
+"
+syntax on
+colorscheme hybrid
+set background=dark
 set list " Visible whitespace
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set linebreak
