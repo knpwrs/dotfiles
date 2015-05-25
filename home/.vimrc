@@ -147,3 +147,30 @@ augroup ft_html
   autocmd filetype html setlocal spell " Turn on spell
 augroup END
 
+"
+" Key Mappings
+"
+
+"" Window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+"" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+"" Repeat last substitution, including flags, with &.
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
+"" Select entire buffer
+nnoremap vaa ggvGg_
+
+"" Strip all trailing whitespace in the current file
+nnoremap <Leader>q :%s/\s\+$//<CR>:let @/=''<CR>
+
+"" Fix all indents
+nnoremap <Leader>= gg=G
+
