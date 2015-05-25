@@ -174,6 +174,9 @@ nnoremap <Leader>q :%s/\s\+$//<CR>:let @/=''<CR>
 "" Fix all indents
 nnoremap <Leader>= gg=G
 
+"" Toggle paste mode
+set pastetoggle=<F2>
+
 "
 " Plugin Settings
 "
