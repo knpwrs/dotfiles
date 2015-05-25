@@ -15,22 +15,22 @@ Files are `source`d in the following order:
 1. `~/.zlogout`
 1. `/etc/zlogout`
 
-### `zshenv`
+### `.zshenv`
 
 This file is sourced by all instances of `zsh`. It should be kept as small as
 possible, preferrably only defining environment variables.
 
-### `zprofile`
+### `.zprofile`
 
 This file is similar to zlogin, but it is sourced before zshrc. See the
 description of zlogin below for what it may contain.
 
-### `zshrc`
+### `.zshrc`
 
 This file is sourced by interactive shells. It should define aliases,
 functions, shell options, and key bindings.
 
-### `zlogin`
+### `.zlogin`
 
 This file is sourced by login shells after zshrc, and thus, it should contain
 commands that need to execute at login. It is usually used for messages or for
