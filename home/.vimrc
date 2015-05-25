@@ -6,8 +6,6 @@
 "
 set nocompatible
 filetype plugin indent on
-let mapleader=','
-let maplocalleader='\'
 set timeoutlen=500
 set autoread
 set hidden
@@ -56,4 +54,27 @@ NeoBundleCheck
 "
 let g:startify_custom_header='Welcome to VimLand!'
 colorscheme hybrid
+set title
+set titlestring=%t%(\ %m%)%(\ (%{expand('%:p:h')})%)%(\ %a%)
+set wildmenu
+set wildmode=full
+set backspace=indent,eol,start
+set whichwrap+=h,l,<,>,[,]
+set scrolljump=5 " Lines to jump when scrolling off-screen
+set scrolloff=3 " Minimum number of lines to keep above and below cursor
+set sidescroll=1 " Minimal number of columns to scroll horizontally
+set sidescrolloff=10 " Minimal number of screen columns to keep away from cursor
+set showmatch " Show matching brackets/parenthesis
+set matchtime=2 " Decrease the time to blink
+set number " Show line numbers
+nnoremap <Leader>n :set relativenumber!<CR> " Toggle relative line numbers
+set formatoptions+=rnlmM
+set wrap
+set textwidth=80
+"" Fonts
+set list " Visible whitespace
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set linebreak
+set showbreak=↪
+set fillchars=diff:⣿,vert:│
 
