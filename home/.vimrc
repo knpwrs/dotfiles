@@ -67,8 +67,8 @@ set matchtime=2 " Decrease the time to blink
 set number " Show line numbers
 nnoremap <Leader>n :set relativenumber!<CR> " Toggle relative line numbers
 set formatoptions+=rnlmM
-set wrap
-set textwidth=80
+"set wrap
+"set textwidth=80
 
 "
 " Colors and Fonts
