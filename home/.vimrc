@@ -46,6 +46,7 @@ NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 "" Enhancement Bundles
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tpope/vim-abolish'
 
 "" End Bundles
 ""
