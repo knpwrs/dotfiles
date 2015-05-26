@@ -53,6 +53,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'kristijanhusak/vim-multiple-cursors'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'sickill/vim-pasta'
 
 "" End Bundles
 ""
