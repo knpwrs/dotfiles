@@ -105,7 +105,7 @@ set number " Show line numbers
 nnoremap <Leader>n :set relativenumber!<CR> " Toggle relative line numbers
 set formatoptions+=rnlmM
 "set wrap
-"set textwidth=80
+set textwidth=80
 
 "
 " Colors and Fonts
@@ -210,6 +210,9 @@ nnoremap <Leader>q :%s/\s\+$//<CR>:let @/=''<CR>
 
 "" Fix all indents
 nnoremap <Leader>= gg=G
+
+"" Wrap Current Paragraph
+nnoremap <Leader>q vipgq
 
 "" Toggle paste mode
 set pastetoggle=<F2>
