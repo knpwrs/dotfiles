@@ -195,15 +195,15 @@ let g:indent_guides_exclude_filetypes=['help', 'nerdtree', 'startify', 'markdown
 
 "" Startify
 let g:startify_custom_header=[
-  \'         (       *     ',
-  \'         )\ )  (  `    ',
-  \' (   (  (()/(  )\))(   ',
-  \' )\  )\  /(_))((_)()\  ',
-  \'((_)((_)(_))  (_()((_) ',
-  \'\ \ / / |_ _| |  \/  | ',
-  \' \ V /   | |  | |\/| | ',
-  \'  \_/   |___| |_|  |_| ',
-  \'                       ']
+  \'            (       *     ',
+  \'            )\ )  (  `    ',
+  \'    (   (  (()/(  )\))(   ',
+  \'    )\  )\  /(_))((_)()\  ',
+  \'   ((_)((_)(_))  (_()((_) ',
+  \'   \ \ / / |_ _| |  \/  | ',
+  \'    \ V /   | |  | |\/| | ',
+  \'     \_/   |___| |_|  |_| ',
+  \'                          ']
 hi StartifyHeader  ctermfg=111
 hi StartifyFooter  ctermfg=111
 hi StartifyBracket ctermfg=240
