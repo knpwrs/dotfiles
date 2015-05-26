@@ -60,6 +60,7 @@ NeoBundle 'chrisbra/vim-diff-enhanced'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'bkad/CamelCaseMotion'
+NeoBundle 'majutsushi/tagbar'
 
 "" End Bundles
 ""
@@ -254,4 +255,11 @@ let g:undotree_SetFocusWhenToggle=1
 
 "" investigate.vim
 nnoremap <Leader>k :call investigate#Investigate()<CR>
+
+"" Tag Bar
+nnoremap <Leader>t :TagbarToggle<CR>
+let g:tagbar_autofocus=1
+let g:tagbar_expand=1
+let g:tagbar_foldlevel=2
+let g:tagbar_autoshowtag=1
 
