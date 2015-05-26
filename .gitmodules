@@ -1,9 +1,0 @@
-[submodule "vendor/zsh-syntax-highlighting"]
-	path = vendor/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "vendor/nvm"]
-	path = vendor/nvm
-	url = https://github.com/creationix/nvm.git
-[submodule "home/vim/bundle/neobundle.vim"]
-	path = home/vim/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim
