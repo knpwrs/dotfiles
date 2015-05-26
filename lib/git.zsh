@@ -156,6 +156,7 @@ alias gmom='git merge origin/master'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
 alias gmum='git merge upstream/master'
+alias gmv='git mv'
 
 alias gp='git push'
 alias gpd='git push --dry-run'
