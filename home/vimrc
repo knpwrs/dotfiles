@@ -155,22 +155,22 @@ augroup end
 augroup ft_markdown
   autocmd!
   " use <Leader>1/2/3/4/5/6 to add headings
-  autocmd filetype markdown nnoremap <buffer> <Leader>1 i# <ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>2 i## <ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>3 i### <ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>4 i#### <ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>5 i##### <ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>6 i###### <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>1 I# <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>2 I## <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>3 I### <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>4 I#### <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>5 I##### <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>6 I###### <ESC>
   " use <Leader>b to add blockquotes in normal and visual mode
-  autocmd filetype markdown nnoremap <buffer> <Leader>b i> <ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>b I> <ESC>
   autocmd filetype markdown vnoremap <buffer> <Leader>b :s/^/> /<CR>
   " use <Leader>ul and <Leader>ol to add list symbols in visual mode
   autocmd filetype markdown vnoremap <buffer> <Leader>ul :s/^/* /<CR>
   autocmd filetype markdown vnoremap <buffer> <Leader>ol :s/^/\=(line(".")-line("'<")+1).'. '/<CR>
   " use <Leader>e1/2/3 to add emphasis symbols
-  autocmd filetype markdown nnoremap <buffer> <Leader>e1 i*<ESC>a*<ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>e2 i**<ESC>a**<ESC>
-  autocmd filetype markdown nnoremap <buffer> <Leader>e3 i***<ESC>a***<ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>e1 I*<ESC>a*<ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>e2 I**<ESC>a**<ESC>
+  autocmd filetype markdown nnoremap <buffer> <Leader>e3 I***<ESC>a***<ESC>
   autocmd filetype markdown vnoremap <buffer> <Leader>e1 :s/\%v\(.*\)\%v/\*\1\*/<CR>
   autocmd filetype markdown vnoremap <buffer> <Leader>e2 :s/\%v\(.*\)\%v/\*\*\1\*\*/<CR>
   autocmd filetype markdown vnoremap <buffer> <Leader>e3 :s/\%V\(.*\)\%V/\*\*\*\1\*\*\*/<CR>
