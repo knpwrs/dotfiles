@@ -4,6 +4,6 @@
 [submodule "vendor/nvm"]
 	path = vendor/nvm
 	url = https://github.com/creationix/nvm.git
-[submodule "home/.vim/bundle/neobundle.vim"]
-	path = home/.vim/bundle/neobundle.vim
+[submodule "home/vim/bundle/neobundle.vim"]
+	path = home/vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
