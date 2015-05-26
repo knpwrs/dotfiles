@@ -49,6 +49,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'kristijanhusak/vim-multiple-cursors'
 
 "" End Bundles
 ""
@@ -233,4 +234,7 @@ let delimitMate_balance_matchpairs=1
 let NERDCommentWholeLinesInVMode=2
 let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
+
+"" Multiple Cursors
+" See https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc#L684
 
