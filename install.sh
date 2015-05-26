@@ -7,7 +7,7 @@ setopt EXTENDED_GLOB
 rm "${ZDOTDIR:-$HOME}"/*(-@D)
 
 # Link all dotfiles to those in this repo.
-for rcfile in "${ZDOTDIR:-$HOME}"/.dotfiles/home/.*; do
-  ln -fsv "$rcfile" "${ZDOTDIR:-$HOME}/${rcfile:t}"
+for rcfile in "${ZDOTDIR:-$HOME}"/.dotfiles/home/^README.md(N); do
+  ln -fsnv "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
