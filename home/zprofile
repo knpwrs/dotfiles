@@ -8,7 +8,7 @@ fi
 
 # Editors
 export EDITOR='vim'
-export PAGER='less'
+export PAGER='less -R'
 export VISUAL='vim' # Editor to be opened from $PAGER
 
 # Language
