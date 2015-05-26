@@ -48,6 +48,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-repeat'
 
 "" End Bundles
 ""
