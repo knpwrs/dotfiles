@@ -49,6 +49,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'kristijanhusak/vim-multiple-cursors'
 NeoBundle 'mbbill/undotree'
 
