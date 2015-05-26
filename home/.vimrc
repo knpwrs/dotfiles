@@ -59,6 +59,7 @@ NeoBundle 'chrisbra/vim-diff-enhanced'
 "" Movement Bundles
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'bkad/CamelCaseMotion'
 
 "" End Bundles
 ""
