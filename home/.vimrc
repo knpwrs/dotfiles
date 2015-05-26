@@ -1,3 +1,6 @@
+" Originally based on ivim, gradually diverging.
+" https://github.com/kepbod/ivim
+
 "
 " General
 "
