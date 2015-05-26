@@ -181,7 +181,7 @@ augroup END
 " HTML
 augroup ft_html
   autocmd!
-  autocmd filetype html setlocal spell " Turn on spell
+  autocmd filetype html setlocal spell
 augroup END
 
 "
@@ -213,6 +213,9 @@ nnoremap <Leader>= gg=G
 
 "" Wrap Current Paragraph
 nnoremap <Leader>q vipgq
+
+"" Toggle Spellcheck
+nnoremap <Leader>s :set spell!<CR>
 
 "" Toggle paste mode
 set pastetoggle=<F2>
