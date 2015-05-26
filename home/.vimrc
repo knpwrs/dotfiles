@@ -56,6 +56,9 @@ NeoBundle 'wellle/targets.vim'
 NeoBundle 'roman/golden-ratio'
 NeoBundle 'chrisbra/vim-diff-enhanced'
 
+"" Movement Bundles
+NeoBundle 'tpope/vim-unimpaired'
+
 "" End Bundles
 ""
 
