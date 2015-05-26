@@ -70,8 +70,11 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'edsono/vim-matchit'
+
+"" Navigation Bundles
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'scrooloose/nerdtree'
 
 "" End Bundles
 ""
@@ -276,4 +279,7 @@ let g:tagbar_autoshowtag=1
 
 "" Unite
 " See https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc#L734
+
+"" NERD tree
+nnoremap <Leader>nn :NERDTreeToggle<CR>
 
