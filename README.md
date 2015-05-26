@@ -5,16 +5,16 @@ feel free to use ideas or suggest improvements.
 
 ## Installation
 
-1. Recursively clone this repository to `$HOME/.dotfiles`.
+1. Clone this repository to `$HOME/.dotfiles`.
 1. Run `./install.sh`.
 
 ## Structure
 
-Everything starting with `.` in `home` is linked to `$HOME/$file`. Old links
-are overridden / updated and dead links are deleted. `lib` contains any files
-which should not necessarily be linked to in `$HOME`. `settings` contains
-configuration for various terminal emulators. `vendor` contains external
-submodules.
+Everything in `home` is linked to `$HOME/$file`. Old links are overridden /
+updated and dead links are deleted. `lib` contains any files which should not
+necessarily be linked to in `$HOME`. `settings` contains configuration for
+various terminal emulators. `vendor` contains subtrees for external
+repositories.
 
 ## Inspiration / Influence
 
