@@ -55,6 +55,7 @@ NeoBundle 'sickill/vim-pasta'
 NeoBundle 'Keithbsmiley/investigate.vim'
 NeoBundle 'wellle/targets.vim'
 NeoBundle 'roman/golden-ratio'
+NeoBundle 'chrisbra/vim-diff-enhanced'
 
 "" End Bundles
 ""
