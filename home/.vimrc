@@ -1,5 +1,3 @@
-" Loosely based on ivim
-" https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc
 
 "
 " General
@@ -54,6 +52,7 @@ NeoBundle 'kristijanhusak/vim-multiple-cursors'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'sickill/vim-pasta'
+NeoBundle 'Keithbsmiley/investigate.vim'
 
 "" End Bundles
 ""
@@ -245,4 +244,7 @@ let NERDRemoveExtraSpaces=1
 "" Undo Tree
 nnoremap <Leader>u :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle=1
+
+"" investigate.vim
+nnoremap <Leader>k :call investigate#Investigate()<CR>
 
