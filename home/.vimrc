@@ -55,6 +55,14 @@ NeoBundle 'Keithbsmiley/investigate.vim'
 NeoBundle 'wellle/targets.vim'
 NeoBundle 'roman/golden-ratio'
 NeoBundle 'chrisbra/vim-diff-enhanced'
+NeoBundle 'Shougo/vimproc', {
+            \ 'build' : {
+            \     'windows' : 'make -f make_mingw32.mak',
+            \     'cygwin' : 'make -f make_cygwin.mak',
+            \     'mac' : 'make -f make_mac.mak',
+            \     'unix' : 'make -f make_unix.mak',
+            \    },
+            \ }
 
 "" Movement Bundles
 NeoBundle 'tpope/vim-unimpaired'
