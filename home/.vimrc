@@ -75,6 +75,7 @@ NeoBundle 'edsono/vim-matchit'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 
 "" End Bundles
 ""
@@ -281,5 +282,11 @@ let g:tagbar_autoshowtag=1
 " See https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc#L734
 
 "" NERD tree
-nnoremap <Leader>nn :NERDTreeToggle<CR>
+nnoremap <Leader>d :NERDTreeTabsToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR> " Highlight current file in NERD tree
+let NERDTreeChDirMode=2
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeDirArrows=1
 
