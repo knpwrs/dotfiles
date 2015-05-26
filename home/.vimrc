@@ -43,6 +43,9 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'junegunn/goyo.vim' " Distraction-free editing
 NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 
+"" Enhancement Bundles
+NeoBundle 'Raimondi/delimitMate'
+
 "" End Bundles
 ""
 
@@ -216,4 +219,9 @@ let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
+
+"" delimitMate
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space=1
+let delimitMate_balance_matchpairs=1
 
