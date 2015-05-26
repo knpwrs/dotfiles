@@ -62,6 +62,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'edsono/vim-matchit'
+NeoBundle 'Shougo/unite.vim'
 
 "" End Bundles
 ""
@@ -263,4 +264,7 @@ let g:tagbar_autofocus=1
 let g:tagbar_expand=1
 let g:tagbar_foldlevel=2
 let g:tagbar_autoshowtag=1
+
+"" Unite
+" See https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc#L734
 
