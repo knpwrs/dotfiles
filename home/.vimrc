@@ -54,6 +54,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'sickill/vim-pasta'
 NeoBundle 'Keithbsmiley/investigate.vim'
 NeoBundle 'wellle/targets.vim'
+NeoBundle 'roman/golden-ratio'
 
 "" End Bundles
 ""
