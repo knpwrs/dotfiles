@@ -50,6 +50,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'kristijanhusak/vim-multiple-cursors'
+NeoBundle 'mbbill/undotree'
 
 "" End Bundles
 ""
@@ -237,4 +238,8 @@ let NERDRemoveExtraSpaces=1
 
 "" Multiple Cursors
 " See https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc#L684
+
+"" Undo Tree
+nnoremap <Leader>u :UndotreeToggle<CR>
+let g:undotree_SetFocusWhenToggle=1
 
