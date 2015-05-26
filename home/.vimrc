@@ -45,6 +45,7 @@ NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 
 "" Enhancement Bundles
 NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'scrooloose/nerdcommenter'
 
 "" End Bundles
 ""
@@ -224,4 +225,9 @@ autocmd User GoyoLeave Limelight!
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space=1
 let delimitMate_balance_matchpairs=1
+
+"" NERD commenter
+let NERDCommentWholeLinesInVMode=2
+let NERDSpaceDelims=1
+let NERDRemoveExtraSpaces=1
 
