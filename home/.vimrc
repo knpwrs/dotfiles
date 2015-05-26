@@ -63,6 +63,7 @@ NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 
 "" End Bundles
 ""
