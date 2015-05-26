@@ -61,6 +61,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'edsono/vim-matchit'
 
 "" End Bundles
 ""
