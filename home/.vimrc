@@ -53,6 +53,7 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'sickill/vim-pasta'
 NeoBundle 'Keithbsmiley/investigate.vim'
+NeoBundle 'wellle/targets.vim'
 
 "" End Bundles
 ""
