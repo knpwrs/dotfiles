@@ -80,6 +80,17 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 
+"" Autocompletion Bundles
+if has('lua')
+  NeoBundle 'Shougo/neocomplete.vim'
+  let g:completion_engine='neocomplete'
+else
+  NeoBundle 'Shougo/neocomplcache.vim'
+  let g:completion_engine='neocomplcache'
+endif
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
 "" End Bundles
 ""
 
@@ -271,7 +282,21 @@ let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
 
 "" Multiple Cursors
-" See https://github.com/kepbod/ivim/blob/762ff3556c2251d1c997d683c0363e6680d4a9dc/vimrc#L684
+" Disable multiple cursors during NeoComplete.
+function! Multiple_cursors_before()
+  if g:ivim_completion_engine=='neocomplete'
+    exe 'NeoCompleteLock'
+  else
+    exe 'NeoComplCacheLock'
+  endif
+endfunction
+function! Multiple_cursors_after()
+  if g:ivim_completion_engine=='neocomplete'
+    exe 'NeoCompleteUnlock'
+  else
+    exe 'NeoComplCacheUnlock'
+  endif
+endfunction
 
 "" Undo Tree
 nnoremap <Leader>u :UndotreeToggle<CR>
@@ -298,4 +323,41 @@ let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeDirArrows=1
+
+""  Neocomplete & Neocomplcache
+" Use Tab and S-Tab to select candidate
+inoremap <expr><Tab>  pumvisible() ? "\<C-N>" : "\<Tab>"
+inoremap <expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-Tab>"
+if g:completion_engine=='neocomplete'
+  let g:neocomplete#enable_at_startup=1
+  let g:neocomplete#data_directory=$HOME . '/.vim/cache/neocomplete'
+  let g:neocomplete#enable_auto_delimiter=1
+  " Use <C-E> to close popup
+  inoremap <expr><C-E> neocomplete#cancel_popup()
+  inoremap <expr><CR> delimitMate#WithinEmptyPair() ?
+              \ "\<C-R>=delimitMate#ExpandReturn()\<CR>" :
+              \ pumvisible() ? neocomplete#close_popup() : "\<CR>"
+else
+  let g:neocomplcache_enable_at_startup=1
+  let g:neocomplcache_temporary_dir=$HOME . '/.vim/cache/neocomplcache'
+  let g:neocomplcache_enable_auto_delimiter=1
+  let g:neocomplcache_enable_fuzzy_completion=1
+  " Use <C-E> to close popup
+  inoremap <expr><C-E> neocomplcache#cancel_popup()
+  inoremap <expr><CR> delimitMate#WithinEmptyPair() ?
+              \ "\<C-R>=delimitMate#ExpandReturn()\<CR>" :
+              \ pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+endif
+
+"" Neosnippet
+" Set information for snippets
+let g:neosnippet#enable_snipmate_compatibility=1
+" Use <C-K> to expand or jump snippets in insert mode
+imap <C-K> <Plug>(neosnippet_expand_or_jump)
+" Use <C-K> to replace TARGET within snippets in visual mode
+xmap <C-K> <Plug>(neosnippet_start_unite_snippet_target)
+" For snippet_complete marker
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
