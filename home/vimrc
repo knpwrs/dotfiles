@@ -96,6 +96,7 @@ NeoBundle 'scrooloose/syntastic'
 
 "" Version Control Bundles
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
 
 "" End Bundles
 ""
