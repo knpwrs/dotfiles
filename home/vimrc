@@ -94,6 +94,9 @@ NeoBundle 'Shougo/neosnippet-snippets'
 "" Build Bundles
 NeoBundle 'scrooloose/syntastic'
 
+"" Version Control Bundles
+NeoBundle 'tpope/vim-fugitive'
+
 "" End Bundles
 ""
 
