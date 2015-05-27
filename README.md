@@ -16,6 +16,20 @@ necessarily be linked to in `$HOME`. `settings` contains configuration for
 various terminal emulators. `vendor` contains subtrees for external
 repositories.
 
+## Other Packages to Install
+
+### Homebrew
+
+* `cowsay`
+* `ctags`
+* `tree`
+* `vim`
+* `zsh`
+
+### NPM
+
+* `nd`
+
 ## Inspiration / Influence
 
 Ideas have been borrowed / stolen from [oh-my-zsh][omz] and [prezto][p].
