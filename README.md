@@ -28,6 +28,7 @@ repositories.
 
 ### NPM
 
+* `jshint`
 * `nd`
 
 ## Inspiration / Influence

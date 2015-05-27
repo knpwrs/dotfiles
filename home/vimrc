@@ -91,6 +91,9 @@ endif
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 
+"" Build Bundles
+NeoBundle 'scrooloose/syntastic'
+
 "" End Bundles
 ""
 
@@ -360,4 +363,14 @@ xmap <C-K> <Plug>(neosnippet_start_unite_snippet_target)
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+" -> Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_aggregate_errors=1
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_style_error_symbol = '✠'
+let g:syntastic_warning_symbol = '∆'
+let g:syntastic_style_warning_symbol = '≈'
 
