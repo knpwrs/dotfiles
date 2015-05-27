@@ -125,6 +125,15 @@ set formatoptions+=rnlmM
 "set wrap
 set textwidth=80
 
+"" Status Line
+set laststatus=2
+set noshowmode
+let g:airline_theme='bubblegum'
+set ttimeoutlen=50
+let g:bufferline_echo=0
+let g:bufferline_modified='[+]'
+let g:airline_powerline_fonts=1
+
 "
 " Colors and Fonts
 "
