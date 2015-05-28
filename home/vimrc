@@ -250,6 +250,9 @@ set pastetoggle=<F2>
 "" Remove last search highlight
 nnoremap <F3> :noh<CR>
 
+"" Check all buffers and prompt to reload if there are {ex,in}ternal changes
+nnoremap <leader>r :checktime<CR>
+
 "
 " Plugin Settings
 "
