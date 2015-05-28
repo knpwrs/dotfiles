@@ -33,7 +33,12 @@ repositories.
 
 ## Inspiration / Influence
 
-Ideas have been borrowed / stolen from [oh-my-zsh][omz] and [prezto][p].
+Ideas have been borrowed / stolen from:
 
+* [ivim][ivim]
+* [oh-my-zsh][omz]
+* [prezto][p]
+
+[ivim]: https://github.com/kepbod/ivim "ivim"
 [omz]: https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh"
 [p]: https://github.com/sorin-ionescu/prezto "prezto"
