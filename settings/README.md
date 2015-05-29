@@ -17,4 +17,3 @@ Just open `hybrid.terminal`.
 [scp]: http://adobe-fonts.github.io/source-code-pro/ "Source Code Pro"
 [plscp]: https://github.com/powerline/fonts/tree/master/SourceCodePro "Sauce Code Powerline"
 [plf]: https://github.com/powerline/fonts "Patched fonts for Powerline users."
-

@@ -17,4 +17,3 @@
 	bc3 = trustExitCode
 [core]
 	excludesfile = /Users/kpowers/.gitignore_global
-
