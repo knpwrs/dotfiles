@@ -6,6 +6,7 @@ feel free to use ideas or suggest improvements.
 ## Installation
 
 1. Clone this repository to `$HOME/.dotfiles`.
+1. Install necessary system fonts / themes in the `settings` directory.
 1. Run `./install.sh`.
 
 ## Structure
