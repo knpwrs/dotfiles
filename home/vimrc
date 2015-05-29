@@ -40,6 +40,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mhinz/vim-startify'
+NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'junegunn/goyo.vim' " Distraction-free editing
 NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 
