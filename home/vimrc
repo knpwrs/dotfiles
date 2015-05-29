@@ -45,6 +45,8 @@ NeoBundle 'junegunn/goyo.vim' " Distraction-free editing
 NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 
 "" Enhancement Bundles
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'vim-scripts/PreserveNoEOL' " Required by Editorconfig for full functionality
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-abolish'
@@ -257,6 +259,9 @@ nnoremap <leader>r :checktime<CR>
 "
 " Plugin Settings
 "
+
+"" Editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 "" Indent Guides
 let g:indent_guides_auto_colors=0
