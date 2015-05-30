@@ -48,7 +48,7 @@ NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'vim-scripts/PreserveNoEOL' " Required by Editorconfig for full functionality
 NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'tpope/vim-repeat'
@@ -302,11 +302,6 @@ autocmd User GoyoLeave Limelight!
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space=1
 let delimitMate_balance_matchpairs=1
-
-"" NERD commenter
-let NERDCommentWholeLinesInVMode=2
-let NERDSpaceDelims=1
-let NERDRemoveExtraSpaces=1
 
 "" Multiple Cursors
 " Disable multiple cursors during NeoComplete.
