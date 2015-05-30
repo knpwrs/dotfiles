@@ -47,6 +47,7 @@ NeoBundle 'junegunn/limelight.vim' " Hyperfocus-writing
 "" Enhancement Bundles
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'vim-scripts/PreserveNoEOL' " Required by Editorconfig for full functionality
+NeoBundle 'danro/rename.vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-abolish'
