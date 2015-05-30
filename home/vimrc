@@ -99,6 +99,7 @@ NeoBundle 'scrooloose/syntastic'
 "" Version Control Bundles
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
 "" Language Bundles
 NeoBundle 'pangloss/vim-javascript'
