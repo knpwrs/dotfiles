@@ -23,6 +23,7 @@ repositories.
 
 * `cowsay`
 * `ctags`
+* `tmux`
 * `tree`
 * `vim`
 * `zsh`
