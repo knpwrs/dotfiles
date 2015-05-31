@@ -104,6 +104,7 @@ NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
 "" Language Bundles
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'groenewege/vim-less'
 
 "" End Bundles
 ""
