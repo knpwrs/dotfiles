@@ -163,6 +163,7 @@ alias glp="_git_log_prettily"
 compdef _git glp=git-log
 alias glu="git pull upstream"
 alias glum="git pull upstream master"
+alias glump="git pull upstream master && git push origin master"
 
 alias gm='git merge'
 alias gmm='git merge master'
