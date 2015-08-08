@@ -35,6 +35,10 @@ repositories.
 * `jshint`
 * `nd`
 
+### Gems
+
+* `bropages`
+
 ## Inspiration / Influence
 
 Ideas have been borrowed / stolen from:
