@@ -21,6 +21,7 @@ repositories.
 
 ### Homebrew
 
+* `ack`
 * `cowsay`
 * `ctags`
 * `ranger`
