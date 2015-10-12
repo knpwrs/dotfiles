@@ -27,6 +27,11 @@ alias la='ls -lAh'
 alias pu='pushd'
 alias po='popd'
 
+alias KILL='killall -KILL'
+
 if  [[ "$OSTYPE" = darwin* ]]; then
   alias show='open -R'
 fi
+
+# Make aliases available to sudo
+alias sudo='sudo '
