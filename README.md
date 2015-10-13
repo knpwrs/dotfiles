@@ -22,6 +22,7 @@ repositories.
 ### Homebrew
 
 * `ack`
+* `caskroom/cask/brew-cask`
 * `cowsay`
 * `ctags`
 * `git`
@@ -32,6 +33,20 @@ repositories.
 * `tree`
 * `vim`
 * `zsh`
+
+#### Cask ([More][qlplugins])
+
+* `qlcolorcode`
+* `qlstephen`
+* `qlmarkdown`
+* `quicklook-json`
+* `qlprettypatch`
+* `quicklook-csv`
+* `betterzipql`
+* `qlimagesize`
+* `webpquicklook`
+* `suspicious-package`
+* `provisionql`
 
 ### NPM
 
@@ -53,3 +68,4 @@ Ideas have been borrowed / stolen from:
 [ivim]: https://github.com/kepbod/ivim "ivim"
 [omz]: https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh"
 [p]: https://github.com/sorin-ionescu/prezto "prezto"
+[qlplugins]: https://github.com/sindresorhus/quick-look-plugins "quick-look-plugins"
