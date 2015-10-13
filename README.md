@@ -88,6 +88,14 @@ Ideas have been borrowed / stolen from:
 * [oh-my-zsh]
 * [prezto]
 
+## Other Tips
+
+If you need to accept the xcode license at any point for some reason:
+
+```sh
+sudo xcodebuild -license
+```
+
 [Homebrew]: http://brew.sh/ "Homebrew"
 [Cask]: https://github.com/caskroom/homebrew-cask "Homebrew Cask"
 [ivim]: https://github.com/kepbod/ivim "ivim"
