@@ -23,8 +23,6 @@ repositories.
 ./vendor/packages/install.sh
 ```
 
-Note: Gems must be installed manually for now.
-
 ### [Homebrew]
 
 Run the command above, or to just install [Homebrew] ([Cask]) packages:
@@ -77,6 +75,12 @@ Note: this also installs `nvm`, `node`, and `npm` (if necessary).
 * `nws`
 
 ### Gems
+
+```sh
+./vendor/packages/install.sh
+```
+
+Note: this uses the system `ruby` and `sudo gem` to install packages.
 
 * `bropages`
 

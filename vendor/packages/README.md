@@ -5,7 +5,7 @@ packages.
 
 ## `install.sh`
 
-Simply calls `install-homebrew.sh` and `install-npm.sh`.
+Simply calls `install-homebrew.sh`, `install-npm.sh`, and `install-gems.sh`.
 
 ## `install-homebrew.sh`
 
@@ -16,3 +16,8 @@ the root `README.md`.
 
 Installs `nvm`, `node`, and `npm` (if necessary) and installs all `npm` packages
 listed in the root `README.md`.
+
+## `install-gems.sh`
+
+Uses system `ruby` and `sudo gem` to install packages listed in the root
+`README.md`.
