@@ -8,7 +8,10 @@ for rcfile in $DOTFILESLIB/*.zsh; do
 done
 
 # Set up NVM
-source $DOTFILES/vendor/nvm/nvm.sh
+export NVM_SH="$HOME/.nvm/nvm.sh"
+if [ -x $NVM_SH ]; then
+  source $NVM_SH
+fi
 
 # Load syntax highlighting
 source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

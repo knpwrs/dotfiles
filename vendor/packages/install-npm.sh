@@ -1,4 +1,11 @@
 #!/usr/bin/env zsh
 
-hash npm 2>/dev/null || { nvm install stable && nvm alias default stable }
+if [ ! -f $NVM_SH ]; then
+  git clone https://github.com/creationix/nvm.git $HOME/.nvm && pushd $HOME/.nvm && git checkout `git describe --abbrev=0 --tags` && popd
+  source $NVM_SH
+  nvm install stable && nvm alias default stable
+  echo "---"
+  echo "!!! Please restart zsh or source $NVM_SH to start using node."
+  echo "---"
+fi
 npm i -g jshint nd nws
