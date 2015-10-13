@@ -24,6 +24,8 @@ repositories.
 * `ack`
 * `cowsay`
 * `ctags`
+* `git`
+* `git-lfs`
 * `ranger`
 * `ssh-copy-id`
 * `tmux`
