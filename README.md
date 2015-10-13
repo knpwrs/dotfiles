@@ -52,6 +52,7 @@ repositories.
 
 * `jshint`
 * `nd`
+* `nws`
 
 ### Gems
 
