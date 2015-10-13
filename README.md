@@ -19,7 +19,21 @@ repositories.
 
 ## Other Packages to Install
 
+```sh
+./vendor/packages/install.sh
+```
+
+Note: Gems must be installed manually for now.
+
 ### Homebrew
+
+Run the command above, or to just install Homebrew (Cask) packages:
+
+```sh
+./vendor/packages/install-homebrew.sh
+```
+
+Note: this also installs Homebrew.
 
 * `ack`
 * `caskroom/cask/brew-cask`
@@ -49,6 +63,14 @@ repositories.
 * `provisionql`
 
 ### NPM
+
+Run the command above, or to just install NPM packages:
+
+```sh
+./vendor/packages/install-homebrew.sh
+```
+
+Note: this also installs `node` and `npm`.
 
 * `jshint`
 * `nd`
