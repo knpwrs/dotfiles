@@ -48,7 +48,7 @@ Note: this also installs [Homebrew] (if necessary).
 * `vim`
 * `zsh`
 
-#### [Cask] ([More][qlplugins])
+#### [Cask][Cask] ([More][qlplugins])
 
 * `qlcolorcode`
 * `qlstephen`
