@@ -25,15 +25,15 @@ repositories.
 
 Note: Gems must be installed manually for now.
 
-### Homebrew
+### [Homebrew]
 
-Run the command above, or to just install Homebrew (Cask) packages:
+Run the command above, or to just install [Homebrew] ([Cask]) packages:
 
 ```sh
 ./vendor/packages/install-homebrew.sh
 ```
 
-Note: this also installs Homebrew.
+Note: this also installs [Homebrew].
 
 * `ack`
 * `caskroom/cask/brew-cask`
@@ -48,7 +48,7 @@ Note: this also installs Homebrew.
 * `vim`
 * `zsh`
 
-#### Cask ([More][qlplugins])
+#### [Cask] ([More][qlplugins])
 
 * `qlcolorcode`
 * `qlstephen`
@@ -84,11 +84,13 @@ Note: this also installs `node` and `npm`.
 
 Ideas have been borrowed / stolen from:
 
-* [ivim][ivim]
-* [oh-my-zsh][omz]
-* [prezto][p]
+* [ivim]
+* [oh-my-zsh]
+* [prezto]
 
+[Homebrew]: http://brew.sh/ "Homebrew"
+[Cask]: https://github.com/caskroom/homebrew-cask "Homebrew Cask"
 [ivim]: https://github.com/kepbod/ivim "ivim"
-[omz]: https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh"
-[p]: https://github.com/sorin-ionescu/prezto "prezto"
+[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh"
+[prezto]: https://github.com/sorin-ionescu/prezto "prezto"
 [qlplugins]: https://github.com/sindresorhus/quick-look-plugins "quick-look-plugins"
