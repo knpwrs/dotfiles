@@ -33,7 +33,7 @@ Run the command above, or to just install [Homebrew] ([Cask]) packages:
 ./vendor/packages/install-homebrew.sh
 ```
 
-Note: this also installs [Homebrew].
+Note: this also installs [Homebrew] (if necessary).
 
 * `ack`
 * `caskroom/cask/brew-cask`
@@ -70,7 +70,7 @@ Run the command above, or to just install NPM packages:
 ./vendor/packages/install-homebrew.sh
 ```
 
-Note: this also installs `node` and `npm`.
+Note: this also installs `nvm`, `node`, and `npm` (if necessary).
 
 * `jshint`
 * `nd`
