@@ -5,19 +5,20 @@ packages.
 
 ## `install.sh`
 
-Simply calls `install-homebrew.sh`, `install-npm.sh`, and `install-gems.sh`.
+Simply calls `./homebrew/install.sh`, `./npm/install.sh`, and
+`./gems/install.sh`.
 
-## `install-homebrew.sh`
+## `./homebrew/install.sh`
 
-Installs Homebrew (if necessary) and installs all homebrew packages listed in
-the root `README.md`.
+Installs Homebrew (if necessary) and installs all packages listed in
+`./homebrew/packages-homebrew`, `./homebrew/packages-cask`, and
+`./homebrew/packages-cask-ql`.
 
-## `install-npm.sh`
+## `./npm/install.sh`
 
-Installs `nvm`, `node`, and `npm` (if necessary) and installs all `npm` packages
-listed in the root `README.md`.
+Installs `nvm`, `node`, and `npm` (if necessary) and installs all packages
+listed in `./npm/packages`.
 
-## `install-gems.sh`
+## `./gems/install.sh`
 
-Uses system `ruby` and `sudo gem` to install packages listed in the root
-`README.md`.
+Uses system `ruby` and `sudo gem` to install packages listed `gems/packages`.
