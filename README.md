@@ -63,17 +63,17 @@ Note: this also installs [Homebrew] (if necessary).
 
 ##### Quicklook Plugins ([More][qlplugins])
 
-* `qlcolorcode`
-* `qlstephen`
-* `qlmarkdown`
-* `quicklook-json`
-* `qlprettypatch`
-* `quicklook-csv`
 * `betterzipql`
-* `qlimagesize`
-* `webpquicklook`
-* `suspicious-package`
 * `provisionql`
+* `qlcolorcode`
+* `qlimagesize`
+* `qlmarkdown`
+* `qlprettypatch`
+* `qlstephen`
+* `quicklook-csv`
+* `quicklook-json`
+* `suspicious-package`
+* `webpquicklook`
 
 ### NPM
 
