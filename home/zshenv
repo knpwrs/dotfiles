@@ -10,6 +10,7 @@ fi
 export DOTFILES="$HOME/.dotfiles"
 export DOTFILESLIB="$DOTFILES/lib"
 export DOTPACKAGES="$DOTFILES/vendor/packages"
+export WORKSPACE="$HOME/Workspace"
 
 # Load zmv command
 # http://zshwiki.org/home/builtin/functions/zmv
