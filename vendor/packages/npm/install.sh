@@ -8,4 +8,4 @@ if [ ! -f $NVM_SH ]; then
   echo "!!! Please restart zsh or source $NVM_SH to start using node."
   echo "---"
 fi
-npm i -g jshint nd nws
+<$DOTPACKAGES/npm/packages xargs npm i -g
