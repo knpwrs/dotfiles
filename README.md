@@ -46,7 +46,22 @@ Note: this also installs [Homebrew] (if necessary).
 * `vim`
 * `zsh`
 
-#### [Cask][Cask] ([More][qlplugins])
+#### [Cask][Cask]
+
+##### Applications
+
+* `atom`
+* `alfred`
+* `beyond-compare`
+* `bit-slicer`
+* `firefox`
+* `google-chrome`
+* `handbrake`
+* `keka`
+* `reaper`
+* `vlc`
+
+##### Quicklook Plugins ([More][qlplugins])
 
 * `qlcolorcode`
 * `qlstephen`
