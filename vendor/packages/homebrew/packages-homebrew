@@ -2,10 +2,17 @@ ack
 caskroom/cask/brew-cask
 cowsay
 ctags
+curl
 git
 git-lfs
+mitmproxy
+netcat
+ngrep
+nyancat
 ranger
+siege
 ssh-copy-id
+sshuttle
 tmux
 tree
 vim
