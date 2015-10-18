@@ -3,6 +3,7 @@ caskroom/cask/brew-cask
 cowsay
 ctags
 curl
+ffmpeg
 git
 git-lfs
 mitmproxy
