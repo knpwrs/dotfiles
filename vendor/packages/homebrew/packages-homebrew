@@ -6,6 +6,7 @@ curl
 ffmpeg
 git
 git-lfs
+gnupg
 mitmproxy
 netcat
 ngrep
