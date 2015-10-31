@@ -12,8 +12,10 @@ the [Powerline fonts repository][plf].
 
 ### Mac OS X Terminal
 
-Just open `hybrid.terminal`.
+Just open `Dracula.terminal`. Based on
+[zenorocha/dracula-theme][dracula].
 
-[scp]: http://adobe-fonts.github.io/source-code-pro/ "Source Code Pro"
+[dracula]: https://github.com/zenorocha/dracula-theme/ "Dracula Theme"
 [plscp]: https://github.com/powerline/fonts/tree/master/SourceCodePro "Sauce Code Powerline"
 [plf]: https://github.com/powerline/fonts "Patched fonts for Powerline users."
+[scp]: http://adobe-fonts.github.io/source-code-pro/ "Source Code Pro"

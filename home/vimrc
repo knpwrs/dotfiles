@@ -35,7 +35,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "" Start Bundles
 
 "" Interface Bundles
-NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 NeoBundle 'bling/vim-airline'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -146,7 +146,7 @@ let g:airline_powerline_fonts=1
 " Colors and Fonts
 "
 syntax on
-colorscheme hybrid
+color Dracula
 set background=dark
 set list " Visible whitespace
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
