@@ -3,6 +3,7 @@ caskroom/cask/brew-cask
 cowsay
 ctags
 curl
+duck
 ffmpeg
 git
 git-lfs
