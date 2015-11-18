@@ -83,6 +83,8 @@ alias gcount='git shortlog -sn'
 compdef gcount=git
 alias gcp='git cherry-pick'
 alias gcs='git commit -S'
+alias gcz='git cz'
+alias gcza='git cz -a'
 
 alias gd='git diff'
 alias gdc='git diff --cached'
