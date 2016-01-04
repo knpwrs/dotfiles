@@ -1,7 +1,7 @@
 browser-run
 commitizen
 generator-license
-jshint
+eslint
 nd
 node-inspector
 nws
