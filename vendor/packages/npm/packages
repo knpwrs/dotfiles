@@ -2,9 +2,11 @@ browser-run
 commitizen
 generator-license
 eslint
+fkill-cli
 nd
 np
 node-inspector
 nws
 trash-cli
+vtop
 yo
