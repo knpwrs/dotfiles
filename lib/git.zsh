@@ -166,6 +166,7 @@ alias glog='git log --oneline --decorate --color --graph'
 alias glone='git clone'
 alias glp="_git_log_prettily"
 compdef _git glp=git-log
+alias glrb="git pull --rebase"
 alias glu="git pull upstream"
 alias glum="git pull upstream master"
 alias glump="git pull upstream master && git push origin master"
