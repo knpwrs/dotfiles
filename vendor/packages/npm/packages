@@ -3,6 +3,7 @@ commitizen
 generator-license
 eslint
 nd
+np
 node-inspector
 nws
 trash-cli
