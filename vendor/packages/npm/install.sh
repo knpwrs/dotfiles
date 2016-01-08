@@ -8,4 +8,4 @@ if [ ! -f $NVM_SH ]; then
   echo "!!! Please restart zsh or source $NVM_SH to start using node."
   echo "---"
 fi
-<$DOTPACKAGES/npm/packages xargs npm i -g
+<$DOTPACKAGES/npm/packages cut -d' ' -f1 | xargs npm i -g

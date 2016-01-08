@@ -1,12 +1,12 @@
-browser-run
-commitizen
-generator-license
-eslint
-fkill-cli
-nd
-np
-node-inspector
-nws
-trash-cli
-vtop
-yo
+browser-run       # Runs JavaScript in a browser and sends the console logs to stdout.
+commitizen        # Commit message wizard.
+generator-license # Yeoman generator for license files.
+eslint            # JavaScript code linter.
+fkill-cli         # Cross-platform CLI kill.
+nd                # CLI markdown viewer.
+np                # Better npm publish.
+node-inspector    # Node debugger.
+nws               # Node web server.
+trash-cli         # Move files to trash.
+vtop              # Visual top command.
+yo                # Project scaffolding.
