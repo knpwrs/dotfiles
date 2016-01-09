@@ -7,6 +7,7 @@ curl                    # HTTP client.
 duck                    # Cyberduck CLI.
 ffmpeg                  # Play, record, convert, and stream audio and video.
 git                     # Distributed revision control system.
+git-cal                 # Visual commits calendar for git.
 git-extras              # Extra git commands.
 git-lfs                 # Git extension for versioning large files.
 gnupg                   # GNU Pretty Good Privacy (PGP) package.
