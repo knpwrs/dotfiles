@@ -156,8 +156,12 @@
 	dF8QD05TS2V5ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3O0FITltiaWttcn2GjpGa
 	rK+0AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
 	</data>
+	<key>columnCount</key>
+	<integer>120</integer>
 	<key>name</key>
 	<string>Dracula</string>
+	<key>rowCount</key>
+	<integer>36</integer>
 	<key>shellExitAction</key>
 	<integer>0</integer>
 	<key>type</key>
