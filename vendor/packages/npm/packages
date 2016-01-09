@@ -26,6 +26,7 @@ pjs               # Pipeable JavaScript.
 public-ip         # Show public IP address.
 recursive-blame   # Recursively blame a file in git.
 rocky-cli         # HTTP(S) proxy with websocket and replay support.
+speed-test        # CLI speed test client.
 tfa               # CLI two-factor authentication client.
 trash-cli         # Move files to trash.
 ttystudio         # Record terminal to GIF.
