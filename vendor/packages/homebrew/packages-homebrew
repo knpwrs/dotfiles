@@ -10,6 +10,7 @@ git                     # Distributed revision control system.
 git-cal                 # Visual commits calendar for git.
 git-extras              # Extra git commands.
 git-lfs                 # Git extension for versioning large files.
+git-open                # Open the GitHub page or website for the current repository.
 gnupg                   # GNU Pretty Good Privacy (PGP) package.
 mitmproxy               # Intercept, modify, replay, save HTTP/S traffic.
 mpg123                  # MP3 player for Linux and UNIX.
