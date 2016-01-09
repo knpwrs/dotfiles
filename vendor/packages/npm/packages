@@ -24,6 +24,7 @@ pageres-cli       # Capture screenshots of websites at various resolutions.
 pen.md            # Hot-loading markdown preview server.
 pjs               # Pipeable JavaScript.
 public-ip         # Show public IP address.
+recursive-blame   # Recursively blame a file in git.
 rocky-cli         # HTTP(S) proxy with websocket and replay support.
 tfa               # CLI two-factor authentication client.
 trash-cli         # Move files to trash.
