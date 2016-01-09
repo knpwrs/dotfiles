@@ -1,4 +1,5 @@
 ack                     # Grep for source code.
+archey                  # "About this Mac" CLI.
 caskroom/cask/brew-cask # Install GUI applications with Homebrew.
 cowsay                  # Configurable talking characters in ASCII art.
 ctags                   # Reimplementation of ctags(1).
