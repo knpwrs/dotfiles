@@ -1,18 +1,18 @@
-alfred
-atom
-bettertouchtool
-beyond-compare
-bit-slicer
-firefox
-gas-mask
-google-chrome
-google-drive
-handbrake
-keka
-mancy
-slack
-vagrant
-vagrant-manager
-virtualbox
-virtualbox-extension-pack
-vlc
+alfred                    # Power-user spotlight.
+atom                      # Open source hackable text editor from GitHub.
+bettertouchtool           # Advanced system touch gesture control.
+beyond-compare            # Advanced diff and compare tool.
+bit-slicer                # Universal game trainer.
+firefox                   # Web browser from Mozilla.
+gas-mask                  # Manage and switch between multiple hosts files.
+google-chrome             # Web browser from Google.
+google-drive              # File sync / backup from Google.
+handbrake                 # Video conversion utility.
+keka                      # Archive extraction and creation.
+mancy                     # Super node repl.
+slack                     # Chat client for teams.
+vagrant                   # Development environment virtual machines.
+vagrant-manager           # Manage vagrant machines from native Mac UI.
+virtualbox                # Open source virtual machines.
+virtualbox-extension-pack # Extensions for Virtual Box.
+vlc                       # Open source media player.

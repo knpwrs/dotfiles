@@ -1,24 +1,24 @@
-ack
-caskroom/cask/brew-cask
-cowsay
-ctags
-curl
-duck
-ffmpeg
-git
-git-lfs
-gnupg
-mitmproxy
-mpg123
-netcat
-ngrep
-nyancat
-ranger
-siege
-ssh-copy-id
-sshuttle
-tmux
-tree
-vim
-wget
-zsh
+ack                     # Grep for source code.
+caskroom/cask/brew-cask # Install GUI applications with Homebrew.
+cowsay                  # Configurable talking characters in ASCII art.
+ctags                   # Reimplementation of ctags(1).
+curl                    # HTTP client.
+duck                    # Cyberduck CLI.
+ffmpeg                  # Play, record, convert, and stream audio and video.
+git                     # Distributed revision control system.
+git-lfs                 # Git extension for versioning large files.
+gnupg                   # GNU Pretty Good Privacy (PGP) package.
+mitmproxy               # Intercept, modify, replay, save HTTP/S traffic.
+mpg123                  # MP3 player for Linux and UNIX.
+netcat                  # Utility for managing network connections.
+ngrep                   # Network grep.
+nyancat                 # Nyancat in your terminal, rendered through ANSI escape sequences.
+ranger                  # File browser.
+siege                   # HTTP regression testing and benchmarking utility
+ssh-copy-id             # Add a public key to a remote machine's authorized_keys file.
+sshuttle                # Proxy server that works as a poor man's VPN.
+tmux                    # Terminal multiplexer.
+tree                    # Display directories as trees (with optional color/HTML output).
+vim                     # Vi \"workalike\" with many additional features.
+wget                    # Internet file retriever.
+zsh                     # UNIX shell (command interpreter).
