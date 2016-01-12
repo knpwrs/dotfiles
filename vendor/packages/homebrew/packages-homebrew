@@ -5,6 +5,7 @@ cowsay                  # Configurable talking characters in ASCII art.
 ctags                   # Reimplementation of ctags(1).
 curl                    # HTTP client.
 duck                    # Cyberduck CLI.
+exiftool                # Image exif manipulation.
 ffmpeg                  # Play, record, convert, and stream audio and video.
 git                     # Distributed revision control system.
 git-cal                 # Visual commits calendar for git.
