@@ -1,1 +1,3 @@
-bropages # Highly readable supplement to man pages.
+bropages        # Highly readable supplement to man pages.
+jekyll          # A static site generator.
+jekyll-paginate # Pagination plugin for jekyll.
