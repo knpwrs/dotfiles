@@ -1,12 +1,9 @@
 browser-run       # Runs JavaScript in a browser and sends the console logs to stdout.
 bugger            # Chrome devtool bindings for node.
-commitizen        # Commit message wizard.
 david             # NPM dependency version checker.
 dev-time-cli      # Get the current local time of a GitHub user.
-generator-license # Yeoman generator for license files.
 empty-trash-cli   # Empty trash.
 eslint            # JavaScript code linter.
-fkill-cli         # Cross-platform CLI kill.
 internal-ip       # Show internal IP address.
 is-online-cli     # Check if the Internet connection is up.
 is-up-cli         # Check if a website is up or down using ititup.org.
@@ -18,7 +15,6 @@ nd                # CLI markdown viewer.
 np                # Better npm publish.
 npm-name-cli      # Check if a package name is available on npm.
 node-inspector    # Node debugger.
-normit            # Google translate CLI.
 nws               # Node web server.
 pageres-cli       # Capture screenshots of websites at various resolutions.
 pen.md            # Hot-loading markdown preview server.
@@ -31,4 +27,3 @@ tfa               # CLI two-factor authentication client.
 trash-cli         # Move files to trash.
 ttystudio         # Record terminal to GIF.
 vtop              # Visual top command.
-yo                # Project scaffolding.
