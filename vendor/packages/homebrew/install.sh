@@ -2,7 +2,7 @@
 
 if  [[ "$OSTYPE" = darwin* ]]; then
   HBPACKAGES=$DOTPACKAGES/homebrew
-  hash brew 2>/dev/null || { ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" }
+  hash brew 2>/dev/null || { ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && echo "Please agree to the Xcode license." && sudo xcodebuild -license }
   <$HBPACKAGES/packages-homebrew cut -d' ' -f1 | xargs brew install
   <$HBPACKAGES/packages-dupes cut -d' ' -f1 | xargs brew install
   <$HBPACKAGES/packages-cask cut -d' ' -f1 | xargs brew cask install
