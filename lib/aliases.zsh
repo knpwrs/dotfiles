@@ -22,6 +22,9 @@ duu() {
 alias md='mkdir -p'
 alias rd=rmdir
 alias d='dirs -v | head -10'
+function mkcd() {
+  md $1 && cd $1
+}
 
 alias lsa='ls -lah'
 alias l='ls -lah'
