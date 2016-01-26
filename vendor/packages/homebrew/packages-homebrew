@@ -18,6 +18,7 @@ mpg123                  # MP3 player for Linux and UNIX.
 netcat                  # Utility for managing network connections.
 ngrep                   # Network grep.
 nyancat                 # Nyancat in your terminal, rendered through ANSI escape sequences.
+pgcli                   # PostgreSQL CLI with autocomplete and syntax highlighting.
 ranger                  # File browser.
 siege                   # HTTP regression testing and benchmarking utility
 ssh-copy-id             # Add a public key to a remote machine's authorized_keys file.
