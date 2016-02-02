@@ -16,4 +16,5 @@ vagrant                   # Development environment virtual machines.
 vagrant-manager           # Manage vagrant machines from native Mac UI.
 virtualbox                # Open source virtual machines.
 virtualbox-extension-pack # Extensions for Virtual Box.
+visual-studio-code        # Electron-based text editor from Microsoft.
 vlc                       # Open source media player.
