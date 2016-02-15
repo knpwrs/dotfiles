@@ -2,6 +2,7 @@ browser-run       # Runs JavaScript in a browser and sends the console logs to s
 bugger            # Chrome devtool bindings for node.
 david             # NPM dependency version checker.
 dev-time-cli      # Get the current local time of a GitHub user.
+diff-so-fancy     # Fancy diffs for git.
 empty-trash-cli   # Empty trash.
 eslint            # JavaScript code linter.
 internal-ip       # Show internal IP address.
