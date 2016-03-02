@@ -15,6 +15,11 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
+alias dr="cd ~/Google\ Drive/"
+alias dl="cd ~/Downloads/"
+alias dt="cd ~/Desktop/"
+alias w="cd ~/Workspace/"
+
 duu() {
   du -hd0 $1 | cut -f1
 }
