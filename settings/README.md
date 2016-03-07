@@ -12,10 +12,9 @@ the [Powerline fonts repository][plf].
 
 ### Mac OS X Terminal
 
-Just open `Dracula.terminal`. Based on
-[zenorocha/dracula-theme][dracula].
+Just open `OneDark.terminal`. Based on [`atom-one-dark-terminal`][aodt].
 
-[dracula]: https://github.com/zenorocha/dracula-theme/ "Dracula Theme"
+[aodt]: https://github.com/nathanbuchar/atom-one-dark-terminal "Atom One Dark Terminal"
 [plscp]: https://github.com/powerline/fonts/tree/master/SourceCodePro "Sauce Code Powerline"
 [plf]: https://github.com/powerline/fonts "Patched fonts for Powerline users."
 [scp]: http://adobe-fonts.github.io/source-code-pro/ "Source Code Pro"
