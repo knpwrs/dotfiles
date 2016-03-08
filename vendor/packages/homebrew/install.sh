@@ -7,6 +7,8 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   <$HBPACKAGES/packages-dupes cut -d' ' -f1 | xargs brew install
   <$HBPACKAGES/packages-cask cut -d' ' -f1 | xargs brew cask install
   <$HBPACKAGES/packages-cask-ql cut -d' ' -f1 | xargs brew cask install
+  brew tap caskroom/fonts
+  <$HBPACKAGES/packages-cask-fonts cut -d' ' -f1 | xargs brew cask install
 else
   echo "Not on OSX. Skipping Homebrew."
 fi
