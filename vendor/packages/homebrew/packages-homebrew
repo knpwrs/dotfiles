@@ -1,5 +1,6 @@
 ack         # Grep for source code.
 archey      # "About this Mac" CLI.
+cloc        # Count lines of code in a directory.
 coreutils   # GNU core utilities (Mac is BSD).
 cowsay      # Configurable talking characters in ASCII art.
 ctags       # Reimplementation of ctags(1).
