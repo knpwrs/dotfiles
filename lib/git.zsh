@@ -43,6 +43,11 @@ function work_in_progress() {
   fi
 }
 
+# Init a repository and cd to it
+function gcd() {
+  git init $1 && cd $1
+}
+
 #
 # Aliases
 # (sorted alphabetically)
