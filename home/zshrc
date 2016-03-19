@@ -12,6 +12,9 @@ export NVM_SH="$HOME/.nvm/nvm.sh"
 if [ -x $NVM_SH ]; then
   source $NVM_SH
 fi
+# https://github.com/creationix/nvm/issues/860
+alias node='unalias node npm && nvm use stable && node'
+alias npm='node -v > /dev/null && npm'
 
 # Load syntax highlighting
 source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

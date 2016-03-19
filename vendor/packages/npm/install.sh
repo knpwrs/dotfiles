@@ -3,7 +3,8 @@
 if [ ! -f $NVM_SH ]; then
   git clone https://github.com/creationix/nvm.git $HOME/.nvm && pushd $HOME/.nvm && git checkout `git describe --abbrev=0 --tags` && popd
   source $NVM_SH
-  nvm install stable && nvm alias default stable
+  # nvm install stable && nvm alias default stable # Alias default stable slows down shell startup time https://github.com/creationix/nvm/issues/860
+  nvm install stable
   echo "---"
   echo "!!! Please restart zsh or source $NVM_SH to start using node."
   echo "---"
