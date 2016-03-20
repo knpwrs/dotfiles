@@ -22,6 +22,7 @@ pen.md            # Hot-loading markdown preview server.
 pjs               # Pipeable JavaScript.
 public-ip         # Show public IP address.
 recursive-blame   # Recursively blame a file in git.
+replem            # Quickly try nodejs modules in a repl.
 rocky-cli         # HTTP(S) proxy with websocket and replay support.
 speed-test        # CLI speed test client.
 tfa               # CLI two-factor authentication client.
