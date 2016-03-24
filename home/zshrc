@@ -14,7 +14,8 @@ if [ -x $NVM_SH ]; then
 fi
 # https://github.com/creationix/nvm/issues/860
 alias node='unalias node npm && nvm use stable && node'
-alias npm='node -v > /dev/null && npm'
+alias lode='unalias lode && node -v > /dev/null'
+alias npm='lode && npm'
 
 # Load syntax highlighting
 source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
