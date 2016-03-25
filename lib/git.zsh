@@ -106,6 +106,10 @@ alias gfa='git fetch --all --prune'
 function gfg() { git ls-files | grep $@ }
 compdef gfg=grep
 alias gfo='git fetch origin'
+function gfp() {
+  git show $(git merge-base --fork-point $1)
+}
+alias gfpm='gfp master'
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
