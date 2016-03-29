@@ -96,6 +96,7 @@ alias gcza='git cz -a'
 
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gdm='git diff master'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
