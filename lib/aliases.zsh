@@ -45,5 +45,7 @@ fi
 
 alias KILL='killall -KILL'
 
+alias hb='HandBrakeCLI'
+
 # Make aliases available to sudo
 alias sudo='sudo '
