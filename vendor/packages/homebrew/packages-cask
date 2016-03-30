@@ -10,6 +10,7 @@ gas-mask                  # Manage and switch between multiple hosts files.
 google-chrome             # Web browser from Google.
 google-drive              # File sync / backup from Google.
 handbrake                 # Video conversion utility.
+handbrakecli              # CLI for Handbrake.
 keka                      # Archive extraction and creation.
 mancy                     # Super node repl.
 slack                     # Chat client for teams.
