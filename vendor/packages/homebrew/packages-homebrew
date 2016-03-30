@@ -33,5 +33,6 @@ tmux        # Terminal multiplexer.
 tree        # Display directories as trees (with optional color/HTML output).
 vim         # Vi \"workalike\" with many additional features.
 wget        # Internet file retriever.
+woof        # Simple one-off HTTP file sharing.
 youtube-dl  # Download youtube videos.
 zsh         # UNIX shell (command interpreter).
