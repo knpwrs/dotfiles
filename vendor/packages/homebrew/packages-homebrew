@@ -31,6 +31,7 @@ nyancat     # Nyancat in your terminal, rendered through ANSI escape sequences.
 pgcli       # PostgreSQL CLI with autocomplete and syntax highlighting.
 ranger      # File browser.
 siege       # HTTP regression testing and benchmarking utility
+sift        # Fast and powerful alternative to grep.
 ssh-copy-id # Add a public key to a remote machine's authorized_keys file.
 sshuttle    # Proxy server that works as a poor man's VPN.
 tig         # Text-mode interface for git.
