@@ -47,5 +47,7 @@ alias KILL='killall -KILL'
 
 alias hb='HandBrakeCLI'
 
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
+
 # Make aliases available to sudo
 alias sudo='sudo '
