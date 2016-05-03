@@ -157,6 +157,9 @@ compdef _git ggpur=git-checkout
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias ginit='git init'
+function gicd() {
+  git init $1 && cd $1
+}
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 compdef git-svn-dcommit-push=git
 
