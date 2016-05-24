@@ -49,5 +49,13 @@ alias hb='HandBrakeCLI'
 
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
 
+# stdio encryption and decryption
+encrypt() {
+  openssl des3
+}
+decrypt() {
+  openssl des3 -d
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
