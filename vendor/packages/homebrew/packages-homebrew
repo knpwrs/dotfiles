@@ -23,6 +23,7 @@ gnu-tar     # GNU version of the tar utility.
 gnupg       # GNU Pretty Good Privacy (PGP) package.
 graphviz    # Rich set of graph drawing tools.
 httpie      # cURL-like tool for humans.
+imagemagick # CLI image manipulation utilities.
 jq          # SED for JSON.
 mitmproxy   # Intercept, modify, replay, save HTTP/S traffic.
 mpg123      # MP3 player for Linux and UNIX.
