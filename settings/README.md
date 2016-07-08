@@ -2,15 +2,15 @@
 
 This folder contains various configuration files for various system settings.
 
-## OS X
+## macOS
 
-Run [`osx.sh`] to set up custom settings. Read [`osx.sh`] for more info.
+Run [`macos.sh`] to set up custom settings. Read [`macos.sh`] for more info.
 
-## OS X Terminal
+## macOS Terminal
 
 Make sure that all [Homebrew packages][hbp] are installed and then open
 `OneDark.terminal`. Based on [`atom-one-dark-terminal`][aodt].
 
 [aodt]: https://github.com/nathanbuchar/atom-one-dark-terminal "Atom One Dark Terminal"
 [hbp]: ../vendor/packages/homebrew/ "Homebrew Packages"
-[`osx.sh`]: ./osx.sh "OSX Settings Script"
+[`macos.sh`]: ./macos.sh "macOS Settings Script"
