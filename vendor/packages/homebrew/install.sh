@@ -12,6 +12,7 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   HBPACKAGES=$DOTPACKAGES/homebrew
   hash brew 2>/dev/null || { ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && echo "Please agree to the Xcode license." && sudo xcodebuild -license }
   installhb homebrew
+  installhb homebrew-external
   installhb dupes
   installhb games
   installhbc cask
