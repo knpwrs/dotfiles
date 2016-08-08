@@ -44,3 +44,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[rerere]
+	enabled = true
