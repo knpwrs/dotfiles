@@ -22,7 +22,8 @@ typeset -gU cdpath fpath mailpath path
 
 ## Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/bin
+  $HOME/bin # Custom home bin directory
+  $HOME/.bin # bin directory from this repo
   /usr/local/{bin,sbin}
   $path
 )
