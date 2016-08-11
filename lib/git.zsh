@@ -163,9 +163,9 @@ function gicd() {
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 compdef git-svn-dcommit-push=git
 
-alias gk='\gitk --all --branches'
+alias ggk='\gitk --all --branches'
 compdef _git gk='gitk'
-alias gke='\gitk --all $(git log -g --pretty=format:%h)'
+alias ggke='\gitk --all $(git log -g --pretty=format:%h)'
 compdef _git gke='gitk'
 
 alias gl='git pull'

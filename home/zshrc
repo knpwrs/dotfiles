@@ -8,23 +8,20 @@ for rcfile in $DOTFILESLIB/*.zsh; do
 done
 
 # Set up NVM
-export NVM_SH="$HOME/.nvm/nvm.sh"
-if [ -x $NVM_SH ]; then
-  source $NVM_SH
-fi
+export NVM_DIR="$HOME/.nvm"
+export NVM_SH="$NVM_DIR/nvm.sh"
 # https://github.com/creationix/nvm/issues/860
-declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+declare -a NODE_GLOBALS=(`find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 
 NODE_GLOBALS+=("node")
 NODE_GLOBALS+=("nvm")
 
 load_nvm () {
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_SH" ] && . "$NVM_SH"
 }
 
 for cmd in "${NODE_GLOBALS[@]}"; do
-    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+  eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
 done
 
 # Load syntax highlighting
@@ -32,7 +29,7 @@ source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Tell the terminal about the working directory at each prompt.
 # http://apple.stackexchange.com/a/128999
-if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ]; then
+if [ "$TERM_PROGRAM" = "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ]; then
   update_terminal_cwd() {
     # Identify the directory using a "file:" scheme URL,
     # including the host name to disambiguate local vs.
