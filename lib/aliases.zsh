@@ -51,10 +51,10 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 
 # stdio encryption and decryption
 encrypt() {
-  openssl des3
+  openssl aes-256-cbc
 }
 decrypt() {
-  openssl des3 -d
+  openssl aes-256-cbc -d
 }
 
 # Make aliases available to sudo
