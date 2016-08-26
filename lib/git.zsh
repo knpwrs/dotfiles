@@ -114,6 +114,7 @@ alias gfpm='gfp master'
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
+alias ggc='git gc'
 ggf() {
   [[ "$#" != 1 ]] && b="$(current_branch)"
   git push --force origin "${b:=$1}"
