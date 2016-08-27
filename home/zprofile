@@ -7,9 +7,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 # Editors
-export EDITOR='vim'
+export EDITOR='nvim'
 export PAGER='less -R'
-export VISUAL='vim' # Editor to be opened from $PAGER
+export VISUAL='nvim' # Editor to be opened from $PAGER
 
 # Language
 if [[ -z "$LANG" ]]; then
