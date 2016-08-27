@@ -120,6 +120,7 @@ Plug 'mbbill/undotree'
 Plug 'godlygeek/tabular'
 Plug 'sickill/vim-pasta'
 Plug 'keith/investigate.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 "" Movement Plugs
 Plug 'Lokaltog/vim-easymotion'
