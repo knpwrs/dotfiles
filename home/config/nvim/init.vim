@@ -166,6 +166,7 @@ let g:airline_powerline_fonts=1
 let g:ctrlp_map='<C-p>'
 let g:ctrlp_working_path_mode='ra'
 "" NERDTree
+let NERDTreeShowHidden=1
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
 "" Tagbar
