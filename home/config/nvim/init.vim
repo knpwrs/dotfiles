@@ -57,7 +57,7 @@ set list
 set ruler
 
 "" Line numbers.
-set relativenumber
+set number
 function! NumberToggle()
   if (&relativenumber == 1)
     set norelativenumber
@@ -68,8 +68,6 @@ function! NumberToggle()
   endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
-autocmd InsertEnter * :set norelativenumber | :set number
-autocmd InsertLeave * :set nonumber | :set relativenumber
 
 "" Source the vim config after saving it.
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -123,7 +121,7 @@ Plug 'keith/investigate.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 "" Movement Plugs
-Plug 'Lokaltog/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
 "" Navigation Plugs
 Plug 'ctrlpvim/ctrlp.vim'
