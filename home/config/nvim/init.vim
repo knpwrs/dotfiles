@@ -13,6 +13,8 @@ endif
 filetype plugin indent on
 "" Enable syntax highlighting.
 syntax on
+"" Visual selection coloring
+hi Visual cterm=NONE ctermbg=0 ctermfg=NONE
 "" Indent according to previous line.
 set autoindent
 "" Use spaces instaed of tabs.
