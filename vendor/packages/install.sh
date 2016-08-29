@@ -7,6 +7,6 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 $DOTPACKAGES/homebrew/install.sh
-$DOTPACKAGES/npm/install.sh
+$DOTPACKAGES/install-npm.sh
 $DOTPACKAGES/install-gems.sh
 $DOTPACKAGES/pip/install.sh
