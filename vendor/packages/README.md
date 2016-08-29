@@ -21,3 +21,8 @@ useful packages.
 ## `install-gems.sh`
 
 Uses system `ruby` and `sudo gem` to install a set of useful gems.
+
+## `install-pip.sh`
+
+Uses system `python` and `easy_install` to install `pip` to install a set of
+useful eggs.
