@@ -40,6 +40,7 @@ formulae=(
   ngrep         # Network grep.
   nyancat       # Nyancat in your terminal, rendered through ANSI escape sequences.
   pgcli         # PostgreSQL CLI with autocomplete and syntax highlighting.
+  python3       # Python 3
   ranger        # File browser.
   siege         # HTTP regression testing and benchmarking utility
   sift          # Fast and powerful alternative to grep.
