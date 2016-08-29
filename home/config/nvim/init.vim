@@ -16,6 +16,7 @@ syntax on
 "" Highlight coloring
 hi Visual cterm=NONE ctermbg=0 ctermfg=NONE
 hi Search cterm=NONE ctermbg=0 ctermfg=white
+hi Pmenu cterm=NONE ctermbg=white ctermfg=0
 "" Indent according to previous line.
 set autoindent
 "" Use spaces instaed of tabs.
