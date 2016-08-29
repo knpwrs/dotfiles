@@ -5,8 +5,7 @@ packages.
 
 ## `install.sh`
 
-Simply calls `./homebrew/install.sh`, `./npm/install.sh`, and
-`./gems/install.sh`.
+Calls all other install scripts.
 
 ## `./homebrew/install.sh`
 
@@ -19,6 +18,6 @@ Installs Homebrew (if necessary) and installs all packages listed in
 Installs `nvm`, `node`, and `npm` (if necessary) and installs all packages
 listed in `./npm/packages`.
 
-## `./gems/install.sh`
+## `install-gems.sh`
 
-Uses system `ruby` and `sudo gem` to install packages listed `gems/packages`.
+Uses system `ruby` and `sudo gem` to install a set of useful gems.
