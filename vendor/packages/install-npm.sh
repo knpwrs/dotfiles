@@ -1,13 +1,15 @@
 #!/usr/bin/env zsh
 
-if [ ! -f $NVM_SH ]; then
+if [ ! -d $HOME/.nvm ]; then
   git clone https://github.com/creationix/nvm.git $HOME/.nvm && pushd $HOME/.nvm && git checkout `git describe --abbrev=0 --tags` && popd
-  source $NVM_SH
+  source $HOME/.nvm/nvm.sh
   # nvm install stable && nvm alias default stable # Alias default stable slows down shell startup time https://github.com/creationix/nvm/issues/860
   nvm install stable
   echo "---"
   echo "!!! Please restart zsh or source $NVM_SH to start using node."
   echo "---"
+else
+  source $HOME/.nvm/nvm.sh
 fi
 
 packages=(
