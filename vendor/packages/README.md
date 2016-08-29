@@ -13,10 +13,10 @@ Installs Homebrew (if necessary) and installs all packages listed in
 `./homebrew/packages-homebrew`, `./homebrew/packages-cask`, and
 `./homebrew/packages-cask-ql`.
 
-## `./npm/install.sh`
+## `install-npm.sh`
 
-Installs `nvm`, `node`, and `npm` (if necessary) and installs all packages
-listed in `./npm/packages`.
+Installs `nvm`, `node`, and `npm` (if necessary) and then installs a set of
+useful packages.
 
 ## `install-gems.sh`
 
