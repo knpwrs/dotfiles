@@ -7,14 +7,14 @@ packages.
 
 Calls all other install scripts.
 
+## `install-gems.sh`
+
+Uses system `ruby` and `sudo gem` to install a set of useful gems.
+
 ## `install-npm.sh`
 
 Installs `nvm`, `node`, and `npm` (if necessary) and then installs a set of
 useful packages.
-
-## `install-gems.sh`
-
-Uses system `ruby` and `sudo gem` to install a set of useful gems.
 
 ## `install-pip.sh`
 
