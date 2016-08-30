@@ -36,6 +36,7 @@ formulae=(
   jq            # SED for JSON.
   mitmproxy     # Intercept, modify, replay, save HTTP/S traffic.
   mpg123        # MP3 player for Linux and UNIX.
+  mycli         # MySQL CLI with autocomplete and syntax highlighting.
   neovim        # Neovim
   netcat        # Utility for managing network connections.
   ngrep         # Network grep.
