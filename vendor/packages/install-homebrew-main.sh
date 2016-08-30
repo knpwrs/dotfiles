@@ -15,6 +15,7 @@ formulae=(
   ctags         # Reimplementation of ctags(1).
   curl          # HTTP client.
   diff-so-fancy # Fancy diff for git.
+  direnv        # Shell environment switcher.
   duck          # Cyberduck CLI.
   exiftool      # Image exif manipulation.
   ffmpeg        # Play, record, convert, and stream audio and video.
