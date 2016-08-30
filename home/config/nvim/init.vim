@@ -18,6 +18,7 @@ hi Visual cterm=NONE ctermbg=0 ctermfg=NONE
 hi Search cterm=NONE ctermbg=0 ctermfg=white
 hi Pmenu cterm=NONE ctermbg=white ctermfg=0
 hi LineNr cterm=NONE ctermbg=NONE ctermfg=grey
+hi MatchParen cterm=NONE ctermbg=NONE ctermfg=red
 "" Indent according to previous line.
 set autoindent
 "" Use spaces instaed of tabs.
