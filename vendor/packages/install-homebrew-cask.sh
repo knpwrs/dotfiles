@@ -17,6 +17,7 @@ casks=(
   handbrakecli              # CLI for Handbrake.
   keka                      # Archive extraction and creation.
   slack                     # Chat client for teams.
+  telegram                  # Telegram messaging client.
   vagrant                   # Development environment virtual machines.
   vagrant-manager           # Manage vagrant machines from native Mac UI.
   virtualbox                # Open source virtual machines.
