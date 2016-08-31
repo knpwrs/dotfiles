@@ -7,28 +7,6 @@ for rcfile in $DOTFILESLIB/*.zsh; do
   source $rcfile
 done
 
-# Set up NVM
-export NVM_DIR="$HOME/.nvm"
-export NVM_SH="$NVM_DIR/nvm.sh"
-# https://github.com/creationix/nvm/issues/860
-declare -a NODE_GLOBALS=(`find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
-
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
-
-load_nvm () {
-  [ -s "$NVM_SH" ] && . "$NVM_SH"
-}
-
-for cmd in "${NODE_GLOBALS[@]}"; do
-  eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done
-
-# Load direnv
-if hash direnv 2>/dev/null; then
-  eval "$(direnv hook zsh)"
-fi
-
 # Load syntax highlighting
 source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
