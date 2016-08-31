@@ -1,6 +1,5 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
+# Copyright (c) 2015 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -28,10 +27,12 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]=
+
 BUFFER='echo {x})'
 
 expected_region_highlight=(
-  "5  5  $ZSH_HIGHLIGHT_STYLES[bracket-level-1]" # {
-  "7  7  $ZSH_HIGHLIGHT_STYLES[bracket-level-1]" # }
-  "8  8 $ZSH_HIGHLIGHT_STYLES[bracket-error]" # )
+  "6  6  bracket-level-1" # {
+  "8  8  bracket-level-1" # }
+  "9  9 bracket-error" # )
 )

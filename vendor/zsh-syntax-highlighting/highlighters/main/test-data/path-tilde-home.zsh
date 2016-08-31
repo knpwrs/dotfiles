@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
 # Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
 # All rights reserved.
@@ -28,9 +27,10 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
+HOME="."
 BUFFER='ls ~'
 
 expected_region_highlight=(
-  "1 2 $ZSH_HIGHLIGHT_STYLES[command]" # ls
-  "4 4 $ZSH_HIGHLIGHT_STYLES[path]"    # ~
+  "1 2 command" # ls
+  "4 4 path"    # ~
 )

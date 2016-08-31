@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
 # Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
 # All rights reserved.
@@ -31,17 +30,17 @@
 BUFFER='ps aux | grep java | sort | uniq | tail | head'
 
 expected_region_highlight=(
-  "1  2  $ZSH_HIGHLIGHT_STYLES[command]" # ps
-  "4  6  $ZSH_HIGHLIGHT_STYLES[default]" # aux
-  "8  8  $ZSH_HIGHLIGHT_STYLES[default]" # |
-  "10 13 $ZSH_HIGHLIGHT_STYLES[command]" # grep
-  "15 18 $ZSH_HIGHLIGHT_STYLES[default]" # java
-  "20 20 $ZSH_HIGHLIGHT_STYLES[default]" # |
-  "22 25 $ZSH_HIGHLIGHT_STYLES[command]" # sort
-  "27 27 $ZSH_HIGHLIGHT_STYLES[default]" # |
-  "29 32 $ZSH_HIGHLIGHT_STYLES[command]" # uniq
-  "34 34 $ZSH_HIGHLIGHT_STYLES[default]" # |
-  "36 39 $ZSH_HIGHLIGHT_STYLES[command]" # tail
-  "41 41 $ZSH_HIGHLIGHT_STYLES[default]" # |
-  "43 46 $ZSH_HIGHLIGHT_STYLES[command]" # head
+  "1  2  command" # ps
+  "4  6  default" # aux
+  "8  8  commandseparator" # |
+  "10 13 command" # grep
+  "15 18 default" # java
+  "20 20 commandseparator" # |
+  "22 25 command" # sort
+  "27 27 commandseparator" # |
+  "29 32 command" # uniq
+  "34 34 commandseparator" # |
+  "36 39 command" # tail
+  "41 41 commandseparator" # |
+  "43 46 command" # head
 )

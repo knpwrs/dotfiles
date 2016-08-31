@@ -1,6 +1,5 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
+# Copyright (c) 2015 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -28,8 +27,12 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-BUFFER='A=1'
+BUFFER='A=1 b=("foo" bar)'
 
 expected_region_highlight=(
-  "1 3 $ZSH_HIGHLIGHT_STYLES[assign]" # A=1
+  "1 3 assign" # A=1
+  "5 7 assign" # b=(
+  "8 12 double-quoted-argument" # "foo"
+  "14 16 default" # bar
+  "17 17 assign" # )
 )

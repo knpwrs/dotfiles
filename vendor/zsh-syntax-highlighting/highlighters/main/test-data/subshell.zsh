@@ -1,6 +1,5 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
+# Copyright (c) 2015 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -28,9 +27,15 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-BUFFER='ls highlighters/main/test-data/path-space-\ .zsh'
+BUFFER='tar cf - * | (cd /target; tar xfp -) | { cat }'
 
 expected_region_highlight=(
-  "1 2  $ZSH_HIGHLIGHT_STYLES[command]" # ls
-  "4 48 $ZSH_HIGHLIGHT_STYLES[path]"    # highlighters/main/test-data/path-space-\ .zsh
+  "1 3 command" # tar
+  "14 14 reserved-word" # (
+  "15 16 builtin" # cd
+  "27 29 command" # tar
+  "36 36 reserved-word" # )
+  "40 40 reserved-word" # {
+  "42 44 command" # cat
+  "46 46 reserved-word" # }
 )
