@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
 # Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
 # All rights reserved.
@@ -28,9 +27,11 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-BUFFER='ls highlighters/main/test-data/path.zsh'
+mkdir A
+touch A/mu
+BUFFER='ls A/mu'
 
 expected_region_highlight=(
-  "1 2  $ZSH_HIGHLIGHT_STYLES[command]" # ls
-  "4 39 $ZSH_HIGHLIGHT_STYLES[path]"    # highlighters/main/test-data/path.zsh
+  "1 2 command" # ls
+  "4 7 path"     # A/mu
 )

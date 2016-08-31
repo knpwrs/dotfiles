@@ -1,6 +1,5 @@
-#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
+# Copyright (c) 2015 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -31,5 +30,5 @@
 BUFFER='echo "foo ( bar"'
 
 expected_region_highlight=(
-"1  15 $ZSH_HIGHLIGHT_STYLES[none]" # We expect the brackets highlighter to do nothing 
+"1  16 NONE" # We expect the brackets highlighter to do nothing
 )
