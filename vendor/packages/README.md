@@ -50,7 +50,7 @@ Fonts from [`caskroom/homebrew-fonts`][hbf].
 
 Games from [`homebrew/homebrew-games`][hbg].
 
-### `install-homebrew-external.sh`
+### `install-homebrew-other.sh`
 
 Other various packages from the homebrew ecosystem.
 
