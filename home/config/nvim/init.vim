@@ -126,6 +126,7 @@ Plug 'sickill/vim-pasta'
 Plug 'keith/investigate.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
+Plug 'tommcdo/vim-exchange'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
