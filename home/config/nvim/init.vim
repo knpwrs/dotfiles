@@ -169,6 +169,7 @@ let g:airline_powerline_fonts=1
 "" CtrlP
 let g:ctrlp_map='<C-p>'
 let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 "" NERDTree
 let NERDTreeShowHidden=1
 nnoremap <silent> <F2> :NERDTreeFind<CR>
