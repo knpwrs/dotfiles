@@ -8,6 +8,7 @@ fi
 
 # Define DOTFILES location
 export DOTFILES="$HOME/.dotfiles"
+export DOTHOME="$DOTFILES/home"
 export DOTLIB="$DOTFILES/lib"
 export DOTPACKAGES="$DOTFILES/vendor/packages"
 export WORKSPACE="$HOME/Workspace"
