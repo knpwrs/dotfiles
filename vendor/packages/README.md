@@ -21,10 +21,10 @@ useful packages.
 Uses system `python` and `easy_install` to install `pip` to install a set of
 useful eggs.
 
-## `install-homebrew.sh`
+## `install-mac.sh`
 
 Installs Homebrew (if necessary) and calls all of the `install-homebrew-*.sh`
-scripts. Exits if not running on macOS.
+scripts as well as `install-mas.sh`. Exits if not running on macOS.
 
 ### `install-homebrew-main.sh`
 
@@ -54,9 +54,15 @@ Games from [`homebrew/homebrew-games`][hbg].
 
 Other various packages from the homebrew ecosystem.
 
+### `install-mas.sh`
+
+Installs apps from the Mac App Store using [`mas`] (installed by main Homebrew
+script above).
+
 
 [hbc]: https://github.com/homebrew/homebrew-core "homebrew/homebrew-core"
 [hbd]: https://github.com/homebrew/homebrew-dupes "homebrew/homebrew-dupes"
 [caskroom]: https://github.com/caskroom/homebrew-cask "caskroom/homebrew-cask"
 [hbf]: https://github.com/caskroom/homebrew-fonts "caskroom/homebrew-fonts"
 [hbg]: https://github.com/homebrew/homebrew-games "homebrew/homebrew-games"
+[`mas`]: https://github.com/argon/mas "Mac App Store CLI"

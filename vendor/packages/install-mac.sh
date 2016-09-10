@@ -10,6 +10,7 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   $DOTPACKAGES/install-homebrew-cask-fonts.sh
   $DOTPACKAGES/install-homebrew-games.sh
   $DOTPACKAGES/install-homebrew-external.sh
+  $DOTPACKAGES/install-mas.sh
 else
-  echo "Not on macOS. Skipping Homebrew."
+  echo "Not on macOS. Skipping mac packages."
 fi
