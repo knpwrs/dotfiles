@@ -34,6 +34,7 @@ formulae=(
   httpie        # cURL-like tool for humans.
   imagemagick   # CLI image manipulation utilities.
   jq            # SED for JSON.
+  mas           # Mac App Store CLI
   mitmproxy     # Intercept, modify, replay, save HTTP/S traffic.
   mpg123        # MP3 player for Linux and UNIX.
   mycli         # MySQL CLI with autocomplete and syntax highlighting.
