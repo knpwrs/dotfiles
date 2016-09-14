@@ -49,6 +49,8 @@ alias hb='HandBrakeCLI'
 
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
 
+alias v='nvim'
+alias vv='nvim .'
 alias vim='nvim'
 
 # stdio encryption and decryption
