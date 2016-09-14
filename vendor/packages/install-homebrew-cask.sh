@@ -11,6 +11,7 @@ casks=(
   cheatsheet                # Hold the ⌘-key to get a list of all active shortcuts for the current application.
   firefox                   # Web browser from Mozilla.
   gas-mask                  # Manage and switch between multiple hosts files.
+  gitify                    # GitHub desktop notifications.
   google-chrome             # Web browser from Google.
   google-drive              # File sync / backup from Google.
   handbrake                 # Video conversion utility.
