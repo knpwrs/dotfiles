@@ -18,6 +18,7 @@ formulae=(
   direnv        # Shell environment switcher.
   duck          # Cyberduck CLI.
   exiftool      # Image exif manipulation.
+  fdupes        # Duplicate file finder.
   ffmpeg        # Play, record, convert, and stream audio and video.
   figlet        # Make large letters out of ordinary text.
   fzf           # Fuzzy finder.
