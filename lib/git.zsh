@@ -167,6 +167,13 @@ compdef _git ggu=git-checkout
 alias ggpur='ggu'
 compdef _git ggpur=git-checkout
 
+function ghlcd() {
+  glcd "git@github.com:$1"
+}
+function ghone() {
+  git clone "git@github.com:$1"
+}
+
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias ginit='git init'
