@@ -74,6 +74,7 @@ function gbda() {
 }
 alias gbdal='gbda -l'
 alias gbl='git blame -b -w'
+alias gbm='git branch -m'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
 alias gbs='git bisect'
