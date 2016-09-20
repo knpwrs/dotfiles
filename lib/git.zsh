@@ -256,11 +256,11 @@ alias gsu='git submodule update'
 alias gts='git tag -s'
 
 alias gunignore='git update-index --no-assume-unchanged'
-alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+alias gunwip='git log -n 1 | grep -q -c "WIP:" && git reset HEAD~1'
 alias gup='git pull --rebase'
 alias gupv='git pull --rebase -v'
 
 alias gvt='git verify-tag'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -t "$DOTLIB/gwip.template"'
