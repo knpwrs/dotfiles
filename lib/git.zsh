@@ -61,7 +61,18 @@ alias gap='git add -p'
 
 alias gb='git branch'
 alias gba='git branch -a'
-alias gbda='git branch --merged | command grep -vE "^(\*|\s*master\s*$)" | command xargs -n 1 git branch -d'
+function gbda() {
+  local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v master | grep -v svn)
+  if [ "$1" = "-l" ]; then
+    # Delete all merged local branches
+    echo "$branches" | xargs -n 1 git branch -d
+  else
+    # Delete all merged branches (including remote and tracking)
+    # Requires git-extras to be installed.
+    echo "$branches" | xargs git delete-branch
+  fi
+}
+alias gbdal='gbda -l'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
