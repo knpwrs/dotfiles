@@ -42,6 +42,7 @@ formulae=(
   neovim        # Neovim
   netcat        # Utility for managing network connections.
   ngrep         # Network grep.
+  nmap          # Network exploration tool and security / port scanner.
   nyancat       # Nyancat in your terminal, rendered through ANSI escape sequences.
   pgcli         # PostgreSQL CLI with autocomplete and syntax highlighting.
   python3       # Python 3
