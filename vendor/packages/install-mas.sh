@@ -10,6 +10,7 @@ apps=(
   634159523 # MainStage 3
   915542151 # Monity
   935250717 # MonthlyCal
+  928871589 # Noizio
   409201541 # Pages
   407963104 # Pixelmator
   921553264 # Screenium 3
