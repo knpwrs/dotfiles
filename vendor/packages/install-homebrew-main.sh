@@ -45,6 +45,7 @@ formulae=(
   nmap          # Network exploration tool and security / port scanner.
   nyancat       # Nyancat in your terminal, rendered through ANSI escape sequences.
   pgcli         # PostgreSQL CLI with autocomplete and syntax highlighting.
+  pv            # Monitor the progress of data through a pipe.
   python3       # Python 3
   ranger        # File browser.
   siege         # HTTP regression testing and benchmarking utility
