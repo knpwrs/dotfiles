@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# Tested on El Capitan.
+# Tested on Sierra.
 # May require logout / restart to take effect.
 # Based on https://gist.github.com/saetia/1623487
 # Additional options from https://github.com/mathiasbynens/dotfiles/blob/master/.osx
@@ -49,7 +49,7 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
