@@ -6,6 +6,9 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# Library Path
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+
 # Define DOTFILES location
 export DOTFILES="$HOME/.dotfiles"
 export DOTHOME="$DOTFILES/home"
