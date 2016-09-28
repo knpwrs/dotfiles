@@ -10,6 +10,7 @@ formulae=(
   aria2         # Multi-protocol download client.
   ccat          # cat with syntax highlighting.
   cloc          # Count lines of code in a directory.
+  cmatrix       # Matrix in the terminal.
   coreutils     # GNU core utilities (Mac is BSD).
   cowsay        # Configurable talking characters in ASCII art.
   ctags         # Reimplementation of ctags(1).
