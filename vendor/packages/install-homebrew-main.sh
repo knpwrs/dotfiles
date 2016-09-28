@@ -49,6 +49,7 @@ formulae=(
   pv            # Monitor the progress of data through a pipe.
   python3       # Python 3
   ranger        # File browser.
+  rig           # Random Identity Generator
   siege         # HTTP regression testing and benchmarking utility
   sift          # Fast and powerful alternative to grep.
   sl            # Steam Locomotive
