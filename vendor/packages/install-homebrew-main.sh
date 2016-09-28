@@ -50,6 +50,7 @@ formulae=(
   ranger        # File browser.
   siege         # HTTP regression testing and benchmarking utility
   sift          # Fast and powerful alternative to grep.
+  sl            # Steam Locomotive
   ssh-copy-id   # Add a public key to a remote machine's authorized_keys file.
   sshuttle      # Proxy server that works as a poor man's VPN.
   tig           # Text-mode interface for git.
