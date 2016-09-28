@@ -55,6 +55,7 @@ formulae=(
   sshuttle      # Proxy server that works as a poor man's VPN.
   tig           # Text-mode interface for git.
   tmux          # Terminal multiplexer.
+  toilet        # Display large, colorful characters.
   tree          # Display directories as trees (with optional color/HTML output).
   vim           # Vi \"workalike\" with many additional features.
   wget          # Internet file retriever.
