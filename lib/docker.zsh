@@ -1,3 +1,9 @@
+# docker-compose
+alias dc="docker-compose"
+alias dck="dc kill"
+alias dcrf="dc rm -f"
+alias dcu="dc up"
+
 # docker-machine
 alias dm="docker-machine"
 alias dma="dm active"            # Print which machine is active
