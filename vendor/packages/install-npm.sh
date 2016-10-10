@@ -29,6 +29,7 @@ packages=(
   nd              # CLI markdown viewer.
   np              # Better npm publish.
   npm-name-cli    # Check if a package name is available on npm.
+  npm-quick-run   # Quickly run npm scripts by prefix without typing the full name.
   node-inspector  # Node debugger.
   nws             # Node web server.
   pageres-cli     # Capture screenshots of websites at various resolutions.
