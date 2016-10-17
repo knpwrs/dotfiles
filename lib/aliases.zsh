@@ -61,5 +61,10 @@ decrypt() {
   openssl aes-256-cbc -d
 }
 
+# see what is listening on a given port
+port() {
+  lsof -n -i:$1 | grep LISTEN
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
