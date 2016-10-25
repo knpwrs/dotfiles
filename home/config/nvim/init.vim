@@ -9,6 +9,8 @@ if has('vim_starting')
   set fileencoding=utf-8
   set fileencodings=utf-8
 endif
+"" Use jk as escape sequence
+imap jk <Esc>
 "" Load plugins according to detected filetype.
 filetype plugin indent on
 "" Enable syntax highlighting.
