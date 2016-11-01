@@ -164,3 +164,6 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 
 # Show battery percentage in menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Disable automatically rearrange Spaces based on recent use
+defaults write com.apple.dock mru-spaces -int 0
