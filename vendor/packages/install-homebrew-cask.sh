@@ -17,6 +17,7 @@ casks=(
   handbrake                 # Video conversion utility.
   handbrakecli              # CLI for Handbrake.
   keka                      # Archive extraction and creation.
+  sketch                    # Professional Digital Design for Mac
   slack                     # Chat client for teams.
   telegram                  # Telegram messaging client.
   vagrant                   # Development environment virtual machines.
