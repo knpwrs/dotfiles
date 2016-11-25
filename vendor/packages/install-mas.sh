@@ -3,6 +3,7 @@
 apps=(
   937984704 # Amphetamine
   499233976 # Cathode
+  523620159 # CleanMyDrive 2
   411643860 # DaisyDisk
   847496013 # Deckset
   408981434 # iMovie
