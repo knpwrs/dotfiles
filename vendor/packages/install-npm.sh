@@ -24,6 +24,7 @@ packages=(
   is-online-cli   # Check if the Internet connection is up.
   is-up-cli       # Check if a website is up or down using ititup.org.
   jsome           # Pretty JSON viewer.
+  lice            # License generator.
   license-checker # Checks licenses for node app dependencies.
   live-server     # Live-reloading static dev server.
   modhelp         # Display README for any NPM module in terminal.
