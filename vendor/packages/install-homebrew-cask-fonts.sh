@@ -16,6 +16,7 @@ casks=(
   font-quicksand
   font-raleway
   font-roboto
+  font-roboto-condensed
   font-source-code-pro-for-powerline
   font-source-sans-pro
 )
