@@ -41,6 +41,7 @@ packages=(
   recursive-blame # Recursively blame a file in git.
   replem          # Quickly try nodejs modules in a repl.
   rocky-cli       # HTTP(S) proxy with websocket and replay support.
+  serve           # Static web server with directory listings.
   speed-test      # CLI speed test client.
   tfa             # CLI two-factor authentication client.
   trash-cli       # Move files to trash.
