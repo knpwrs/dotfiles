@@ -47,6 +47,7 @@ packages=(
   trash-cli       # Move files to trash.
   ttystudio       # Record terminal to GIF.
   vtop            # Visual top command.
+  yarn            # Alternative node package manager.
 )
 
 npm i -g "${packages[@]///}"
