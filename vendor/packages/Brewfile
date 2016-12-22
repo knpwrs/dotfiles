@@ -37,6 +37,7 @@ brew 'imagemagick'                # CLI image manipulation utilities.
 brew 'jq'                         # SED for JSON.
 brew 'mas'                        # Mac App Store CLI
 brew 'mitmproxy'                  # Intercept, modify, replay, save HTTP/S traffic.
+brew 'moreutils'                  # Other useful utilities.
 brew 'mpg123'                     # MP3 player for Linux and UNIX.
 brew 'mycli'                      # MySQL CLI with autocomplete and syntax highlighting.
 brew 'neovim'                     # Neovim
