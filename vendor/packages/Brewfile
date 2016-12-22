@@ -65,6 +65,7 @@ brew 'toilet'                     # Display large, colorful characters.
 brew 'tree'                       # Display directories as trees (with optional color/HTML output).
 brew 'vbindiff'                   # Visual binary diff.
 brew 'vim'                        # Vi \"workalike\" with many additional features.
+brew 'webkit2png'                 # Create website screenshots from terminal.
 brew 'wget'                       # Internet file retriever.
 brew 'woof'                       # Simple one-off HTTP file sharing.
 brew 'youtube-dl'                 # Download youtube videos.
