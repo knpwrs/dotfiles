@@ -1,0 +1,146 @@
+# Base Taps
+
+tap 'neovim/neovim'
+
+# Base Packages
+
+brew 'ack'                        # Grep for source code.
+brew 'archey'                     # "About this Mac" CLI.
+brew 'aria2'                      # Multi-protocol download client.
+brew 'ccat'                       # cat with syntax highlighting.
+brew 'cloc'                       # Count lines of code in a directory.
+brew 'cmatrix'                    # Matrix in the terminal.
+brew 'coreutils'                  # GNU core utilities (Mac is BSD).
+brew 'cowsay'                     # Configurable talking characters in ASCII art.
+brew 'ctags'                      # Reimplementation of ctags(1).
+brew 'curl'                       # HTTP client.
+brew 'diff-so-fancy'              # Fancy diff for git.
+brew 'direnv'                     # Shell environment switcher.
+brew 'duck'                       # Cyberduck CLI.
+brew 'exiftool'                   # Image exif manipulation.
+brew 'fdupes'                     # Duplicate file finder.
+brew 'ffmpeg'                     # Play, record, convert, and stream audio and video.
+brew 'figlet'                     # Make large letters out of ordinary text.
+brew 'fzf'                        # Fuzzy finder.
+brew 'git'                        # Distributed revision control system.
+brew 'git-cal'                    # Visual commits calendar for git.
+brew 'git-extras'                 # Extra git commands.
+brew 'git-imerge'                 # Incremental merge helper for git.
+brew 'git-lfs'                    # Git extension for versioning large files.
+brew 'git-open'                   # Open the GitHub page or website for the current repository.
+brew 'gnu-sed'                    # GNU version of the sed utility.
+brew 'gnu-tar'                    # GNU version of the tar utility.
+brew 'gnupg'                      # GNU Pretty Good Privacy (PGP) package.
+brew 'graphviz'                   # Rich set of graph drawing tools.
+brew 'httpie'                     # cURL-like tool for humans.
+brew 'imagemagick'                # CLI image manipulation utilities.
+brew 'jq'                         # SED for JSON.
+brew 'mas'                        # Mac App Store CLI
+brew 'mitmproxy'                  # Intercept, modify, replay, save HTTP/S traffic.
+brew 'mpg123'                     # MP3 player for Linux and UNIX.
+brew 'mycli'                      # MySQL CLI with autocomplete and syntax highlighting.
+brew 'neovim'                     # Neovim
+brew 'netcat'                     # Utility for managing network connections.
+brew 'ngrep'                      # Network grep.
+brew 'nmap'                       # Network exploration tool and security / port scanner.
+brew 'nyancat'                    # Nyancat in your terminal, rendered through ANSI escape sequences.
+brew 'pgcli'                      # PostgreSQL CLI with autocomplete and syntax highlighting.
+brew 'pv'                         # Monitor the progress of data through a pipe.
+brew 'python3'                    # Python 3
+brew 'ranger'                     # File browser.
+brew 'reattach-to-user-namespace' # Utility for tighter macOS and tmux integration
+brew 'rig'                        # Random Identity Generator
+brew 'siege'                      # HTTP regression testing and benchmarking utility
+brew 'sift'                       # Fast and powerful alternative to grep.
+brew 'sl'                         # Steam Locomotive
+brew 'ssh-copy-id'                # Add a public key to a remote machine's authorized_keys file.
+brew 'sshuttle'                   # Proxy server that works as a poor man's VPN.
+brew 'tig'                        # Text-mode interface for git.
+brew 'tmux'                       # Terminal multiplexer.
+brew 'toilet'                     # Display large, colorful characters.
+brew 'tree'                       # Display directories as trees (with optional color/HTML output).
+brew 'vim'                        # Vi \"workalike\" with many additional features.
+brew 'wget'                       # Internet file retriever.
+brew 'woof'                       # Simple one-off HTTP file sharing.
+brew 'youtube-dl'                 # Download youtube videos.
+brew 'zsh'                        # UNIX shell (command interpreter).
+
+# More recent versions of various unix tools.
+
+brew 'homebrew/dupes/rsync' # Utility that provides fast incremental file transfer
+
+# Games
+
+brew 'homebrew/games/gnuski' # Open source clone of Skifree
+brew 'homebrew/games/ski'    # Evade the deadly Yeti on your jet-powered skis.
+brew 'homebrew/games/yetris' # Terminal Tetris
+
+# Casks
+cask 'alfred'                    # Power-user spotlight.
+cask 'atom'                      # Open source hackable text editor from GitHub.
+cask 'beardedspice'              # More control over keyboard media keys.
+cask 'bettertouchtool'           # Advanced system touch gesture control.
+cask 'beyond-compare'            # Advanced diff and compare tool.
+cask 'bit-slicer'                # Universal game trainer.
+cask 'caprine'                   # Unofficial Facebook Messenger client.
+cask 'cheatsheet'                # Hold the ⌘-key to get a list of all active shortcuts for the current application.
+cask 'firefox'                   # Web browser from Mozilla.
+cask 'gas-mask'                  # Manage and switch between multiple hosts files.
+cask 'gitify'                    # GitHub desktop notifications.
+cask 'google-chrome'             # Web browser from Google.
+cask 'google-drive'              # File sync / backup from Google.
+cask 'handbrake'                 # Video conversion utility.
+cask 'handbrakecli'              # CLI for Handbrake.
+cask 'keka'                      # Archive extraction and creation.
+cask 'sketch'                    # Professional Digital Design for Mac
+cask 'slack'                     # Chat client for teams.
+cask 'telegram'                  # Telegram messaging client.
+cask 'vagrant'                   # Development environment virtual machines.
+cask 'vagrant-manager'           # Manage vagrant machines from native Mac UI.
+cask 'virtualbox'                # Open source virtual machines.
+cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
+cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
+cask 'vlc'                       # Open source media player.
+
+# Cask Quick Look Plugins
+cask 'betterzipql'         # Quicklook for zip files.
+cask 'provisionql'         # Quicklook for ipa & provision.
+cask 'qlcolorcode'         # Quicklook syntax highlighting.
+cask 'qlimagesize'         # Adds dimensions and file size to Quicklook title bar.
+cask 'qlmarkdown'          # Quicklook for markdown.
+cask 'qlprettypatch'       # Quicklook for patch files.
+cask 'qlstephen'           # Quicklook for extensionless text files (README, etc).
+cask 'quicklook-csv'       # Quicklook for csv files.
+cask 'quicklook-json'      # Quicklook for json files.
+cask 'suspicious-package'  # Quicklook for package files.
+cask 'webpquicklook'       # Quicklook for webp files.
+
+# Cask Fonts
+tap 'caskroom/fonts' # Official caskroom fonts tap
+cask 'font-dosis'
+cask 'font-fira-sans'
+cask 'font-inconsolata'
+cask 'font-lato'
+cask 'font-league-gothic'
+cask 'font-montserrat'
+cask 'font-pacifico'
+cask 'font-pt-sans'
+cask 'font-quicksand'
+cask 'font-raleway'
+cask 'font-roboto'
+cask 'font-roboto-condensed'
+cask 'font-source-code-pro-for-powerline'
+cask 'font-source-sans-pro'
+
+# Mac App Store
+
+mas 'Affinity Designer', id: 824171161
+mas 'Affinity Photo', id: 824183456
+mas 'Amphetamine', id: 937984704
+mas 'Cathode', id: 499233976
+mas 'CleanMyDrive 2', id: 523620159
+mas 'DaisyDisk', id: 411643860
+mas 'Keynote', id: 409183694
+mas 'Monity', id: 915542151
+mas 'MonthlyCal', id: 935250717
+mas 'Screenium 3', id: 921553264
