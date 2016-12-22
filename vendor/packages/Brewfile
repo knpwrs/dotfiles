@@ -63,6 +63,7 @@ brew 'tig'                        # Text-mode interface for git.
 brew 'tmux'                       # Terminal multiplexer.
 brew 'toilet'                     # Display large, colorful characters.
 brew 'tree'                       # Display directories as trees (with optional color/HTML output).
+brew 'vbindiff'                   # Visual binary diff.
 brew 'vim'                        # Vi \"workalike\" with many additional features.
 brew 'wget'                       # Internet file retriever.
 brew 'woof'                       # Simple one-off HTTP file sharing.
