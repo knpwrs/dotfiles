@@ -47,6 +47,7 @@ brew 'ngrep'                      # Network grep.
 brew 'nmap'                       # Network exploration tool and security / port scanner.
 brew 'nyancat'                    # Nyancat in your terminal, rendered through ANSI escape sequences.
 brew 'pgcli'                      # PostgreSQL CLI with autocomplete and syntax highlighting.
+brew 'pigz'                       # Parallel Implementation of GZip
 brew 'pv'                         # Monitor the progress of data through a pipe.
 brew 'python3'                    # Python 3
 brew 'ranger'                     # File browser.
