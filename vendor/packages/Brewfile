@@ -50,6 +50,7 @@ brew 'pgcli'                      # PostgreSQL CLI with autocomplete and syntax 
 brew 'pv'                         # Monitor the progress of data through a pipe.
 brew 'python3'                    # Python 3
 brew 'ranger'                     # File browser.
+brew 'rename'                     # File renaming utilities.
 brew 'reattach-to-user-namespace' # Utility for tighter macOS and tmux integration
 brew 'rig'                        # Random Identity Generator
 brew 'siege'                      # HTTP regression testing and benchmarking utility
