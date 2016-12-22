@@ -98,6 +98,7 @@ cask 'google-drive'              # File sync / backup from Google.
 cask 'handbrake'                 # Video conversion utility.
 cask 'handbrakecli'              # CLI for Handbrake.
 cask 'keka'                      # Archive extraction and creation.
+cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'sketch'                    # Professional Digital Design for Mac
 cask 'slack'                     # Chat client for teams.
 cask 'telegram'                  # Telegram messaging client.
