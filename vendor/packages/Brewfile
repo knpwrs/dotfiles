@@ -21,6 +21,7 @@ brew 'exiftool'                   # Image exif manipulation.
 brew 'fdupes'                     # Duplicate file finder.
 brew 'ffmpeg'                     # Play, record, convert, and stream audio and video.
 brew 'figlet'                     # Make large letters out of ordinary text.
+brew 'findutils'                  # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew 'fzf'                        # Fuzzy finder.
 brew 'git'                        # Distributed revision control system.
 brew 'git-cal'                    # Visual commits calendar for git.
