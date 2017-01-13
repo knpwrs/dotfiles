@@ -166,6 +166,7 @@ set laststatus=2
 set noshowmode
 set ttimeoutlen=50
 let g:airline_theme='bubblegum'
+let g:airline#extensions#tmuxline#enabled=0
 let g:bufferline_echo=0
 let g:bufferline_modified='[+]'
 let g:airline_powerline_fonts=1
