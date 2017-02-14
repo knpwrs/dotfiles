@@ -5,6 +5,7 @@ tap 'neovim/neovim'
 # Base Packages
 
 brew 'ack'                        # Grep for source code.
+brew 'ag'                         # The Silver Searcher. Faster ack.
 brew 'archey'                     # "About this Mac" CLI.
 brew 'aria2'                      # Multi-protocol download client.
 brew 'ccat'                       # cat with syntax highlighting.
