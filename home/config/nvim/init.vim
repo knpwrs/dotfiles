@@ -129,6 +129,7 @@ Plug 'keith/investigate.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
+Plug 'mileszs/ack.vim'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
@@ -183,3 +184,6 @@ nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
 "" delimitMate
 let delimitMate_expand_cr=1
+"" ack.vim
+let g:ackprg='ag --vimgrep'
+noremap <leader>f :Ack!<Space>''<Left>
