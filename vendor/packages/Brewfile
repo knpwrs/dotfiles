@@ -55,6 +55,7 @@ brew 'ranger'                     # File browser.
 brew 'rename'                     # File renaming utilities.
 brew 'reattach-to-user-namespace' # Utility for tighter macOS and tmux integration
 brew 'rig'                        # Random Identity Generator
+brew 'screenfetch'                # The Bash Screenshot Information Tool
 brew 'siege'                      # HTTP regression testing and benchmarking utility
 brew 'sift'                       # Fast and powerful alternative to grep.
 brew 'sl'                         # Steam Locomotive
