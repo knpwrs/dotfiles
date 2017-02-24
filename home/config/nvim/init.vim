@@ -94,6 +94,16 @@ else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
 
+"" Status Line
+let g:modemap={ 'n': 'NORMAL', 'i': 'INSERT', 'v': 'VISUAL' }
+set laststatus=2
+set noshowmode
+set ttimeoutlen=50
+let g:bufferline_echo=0
+let g:bufferline_modified='[+]'
+set statusline=%{g:modemap[mode()]}
+set statusline+=%=%f\ %m
+
 "
 " Begin vim-plug
 " Run :PlugInstall to install plugins.
@@ -165,7 +175,7 @@ set background=dark
 colorscheme hybrid
 hi vertsplit ctermfg=238 ctermbg=235
 hi LineNr ctermfg=237
-hi StatusLine ctermfg=235 ctermbg=bg
+hi StatusLine ctermfg=white ctermbg=bg cterm=bold
 hi StatusLineNC ctermfg=235 ctermbg=bg
 hi TabLineFill ctermfg=bg ctermbg=bg
 hi TabLine ctermfg=bg ctermbg=fg
@@ -173,22 +183,14 @@ hi TabLineSel ctermfg=red ctermbg=bg
 hi Search ctermbg=58 ctermfg=15
 hi Default ctermfg=1
 hi clear SignColumn
-hi SignColumn ctermbg=235
-hi GitGutterAdd ctermbg=235 ctermfg=245
-hi GitGutterChange ctermbg=235 ctermfg=245
-hi GitGutterDelete ctermbg=235 ctermfg=245
+hi SignColumn ctermbg=bg
+hi GitGutterAdd ctermfg=245
+hi GitGutterChange ctermfg=245
+hi GitGutterDelete ctermfg=245
 hi GitGutterChangeDelete ctermbg=235 ctermfg=245
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
-set statusline=%=&P\ %f\ %m
-set fillchars=vert:\ ,stl:\ ,stlnc:\
 set laststatus=2
 set noshowmode
-"" Status Line
-set laststatus=2
-set noshowmode
-set ttimeoutlen=50
-let g:bufferline_echo=0
-let g:bufferline_modified='[+]'
 "" CtrlP
 let g:ctrlp_map='<C-p>'
 let g:ctrlp_working_path_mode='ra'
