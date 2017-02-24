@@ -1,5 +1,6 @@
+#!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2015 zsh-syntax-highlighting contributors
+# Copyright (c) 2012 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -27,27 +28,17 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-alias alias1="unused expansion"
-alias -s alias2="echo"
-if set -o | grep -q aliasfuncdef; then
-  setopt alias_func_def # 5.4+
-fi
-alias1() {} # to check that it's highlighted as an alias, not as a function
+BUFFER='for n in *; do echo $n; end'
 
-BUFFER='x.alias2; alias1'
-
-# Set expected_region_highlight as a function of zsh version.
-#
-# Highlight of suffix alias requires zsh-5.1.1 or newer; see issue #126,
-# and commit 36403 to zsh itself.  Therefore, check if the requisite zsh
-# functionality is present, and skip verifying suffix-alias highlighting
-# if it isn't.
-expected_region_highlight=()
-if [[ "$(type -w x.alias2)" == *suffix* ]]; then
-  expected_region_highlight+=(
-    "1 8 suffix-alias" # x.alias2
-  )
-fi
-expected_region_highlight+=(
-  "11 16 alias" # alias1
+expected_region_highlight=(
+  '1 3 reserved-word' # for
+  '5 5 default' # n
+  '7 8 default' # in
+  '10 10 globbing' # *
+  '11 11 commandseparator' # ;
+  '13 14 reserved-word' # do
+  '16 19 builtin' # echo
+  '21 22 default' # $n
+  '23 23 commandseparator' # ;
+  '25 27 unknown-token' # end
 )
