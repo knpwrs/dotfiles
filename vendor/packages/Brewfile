@@ -99,6 +99,7 @@ cask 'google-chrome'             # Web browser from Google.
 cask 'google-drive'              # File sync / backup from Google.
 cask 'handbrake'                 # Video conversion utility.
 cask 'hex-fiend'                 # A fast and clever open source hex editor for macOS.
+cask 'hyper'                     # Terminal emulator built on web standards.
 cask 'keka'                      # Archive extraction and creation.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'native-access'             # Native Instruments Management Tool
@@ -140,7 +141,6 @@ cask 'font-quicksand'
 cask 'font-raleway'
 cask 'font-roboto'
 cask 'font-roboto-condensed'
-cask 'font-source-code-pro-for-powerline'
 cask 'font-source-sans-pro'
 
 # Mac App Store

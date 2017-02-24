@@ -107,10 +107,8 @@ call plug#begin('~/.config/nvim/plugged')
 "" Start Plugs
 
 "" Interface Plugs
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
-Plug 'edkolev/tmuxline.vim'
+Plug 'w0ng/vim-hybrid'
 "" Enhancement Plugs
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/PreserveNoEOL' " Required by EditorConfig for full functionality
@@ -162,15 +160,35 @@ call plug#end()
 " End vim-plug
 "
 
+"" Colorscheme
+set background=dark
+colorscheme hybrid
+hi vertsplit ctermfg=238 ctermbg=235
+hi LineNr ctermfg=237
+hi StatusLine ctermfg=235 ctermbg=bg
+hi StatusLineNC ctermfg=235 ctermbg=bg
+hi TabLineFill ctermfg=bg ctermbg=bg
+hi TabLine ctermfg=bg ctermbg=fg
+hi TabLineSel ctermfg=red ctermbg=bg
+hi Search ctermbg=58 ctermfg=15
+hi Default ctermfg=1
+hi clear SignColumn
+hi SignColumn ctermbg=235
+hi GitGutterAdd ctermbg=235 ctermfg=245
+hi GitGutterChange ctermbg=235 ctermfg=245
+hi GitGutterDelete ctermbg=235 ctermfg=245
+hi GitGutterChangeDelete ctermbg=235 ctermfg=245
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+set statusline=%=&P\ %f\ %m
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+set laststatus=2
+set noshowmode
 "" Status Line
 set laststatus=2
 set noshowmode
 set ttimeoutlen=50
-let g:airline_theme='bubblegum'
-let g:airline#extensions#tmuxline#enabled=0
 let g:bufferline_echo=0
 let g:bufferline_modified='[+]'
-let g:airline_powerline_fonts=1
 "" CtrlP
 let g:ctrlp_map='<C-p>'
 let g:ctrlp_working_path_mode='ra'

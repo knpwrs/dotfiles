@@ -10,7 +10,7 @@ function get_pwd() {
 function git_dirty() {
   if [[ -n $(git status -s 2> /dev/null) ]]; then
     # Dirty
-    echo "$fg[red]●"
+    echo "$fg_bold[red]●$reset_color"
   fi
 }
 function git_branch() {
@@ -20,11 +20,11 @@ function git_branch() {
 }
 function git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo " ($fg[cyan]$(git_branch)$(git_dirty)$reset_color)"
+  echo " ($fg_bold[cyan]$(git_branch)$(git_dirty))"
 }
 
 # Sets the prompt
 function precmd() {
-  PROMPT="$fg[magenta]%n$reset_color at $fg[yellow]%m$reset_color in $fg[green]$(get_pwd)$reset_color$(git_prompt)
-%{$reset_color%}$ "
+    PROMPT="$fg_bold[red]%n$reset_color at $fg_bold[yellow]%m$reset_color in $fg_bold[green]$(get_pwd)$reset_color$(git_prompt)
+%{$reset_color%}$fg_bold[white]❯ "
 }
