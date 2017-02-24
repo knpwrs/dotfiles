@@ -77,8 +77,6 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
-"" Source the vim config after saving it.
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "" \x edits the vi config file.
 nnoremap <Leader>x :tabedit $MYVIMRC<CR>
 "" <C-l> redraws the screen and removes any search highlighting.
@@ -109,6 +107,9 @@ set statusline+=%=%f\ %m
 " Run :PlugInstall to install plugins.
 "
 if has('vim_starting')
+  "" Source the vim config after saving it
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  "" Source vim-plug
   source ~/.dotfiles/vendor/plug.vim
 endif
 
