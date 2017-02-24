@@ -94,12 +94,15 @@ endif
 
 "" Status Line
 let g:modemap={ 'n': 'NORMAL', 'i': 'INSERT', 'v': 'VISUAL' }
+function! CurrentModeString()
+  return get(g:modemap, mode(), '')
+endfunction
 set laststatus=2
 set noshowmode
 set ttimeoutlen=50
 let g:bufferline_echo=0
 let g:bufferline_modified='[+]'
-set statusline=%{g:modemap[mode()]}
+set statusline=%{CurrentModeString()}
 set statusline+=%=%f\ %m
 
 "
