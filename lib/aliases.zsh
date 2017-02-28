@@ -53,6 +53,8 @@ alias v='nvim'
 alias vv='nvim .'
 alias vim='nvim'
 
+alias zshr='exec zsh -l'
+
 # stdio encryption and decryption
 encrypt() {
   openssl aes-256-cbc
