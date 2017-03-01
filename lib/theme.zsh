@@ -26,5 +26,5 @@ function git_prompt() {
 # Sets the prompt
 function precmd() {
     PROMPT="$fg_bold[red]%n$reset_color at $fg_bold[yellow]%m$reset_color in $fg_bold[green]$(get_pwd)$reset_color$(git_prompt)
-%{$reset_color%}$fg_bold[white]❯ "
+%{$reset_color$fg_bold[white]%}❯ "
 }
