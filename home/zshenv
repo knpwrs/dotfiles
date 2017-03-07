@@ -14,6 +14,7 @@ export DOTFILES="$HOME/.dotfiles"
 export DOTHOME="$DOTFILES/home"
 export DOTLIB="$DOTFILES/lib"
 export DOTPACKAGES="$DOTFILES/vendor/packages"
+export DOTVENDOR="$DOTFILES/vendor"
 export WORKSPACE="$HOME/Workspace"
 
 # Load zmv command
