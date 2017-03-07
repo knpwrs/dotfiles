@@ -23,46 +23,5 @@ useful eggs.
 
 ## `install-mac.sh`
 
-Installs Homebrew (if necessary) and calls all of the `install-homebrew-*.sh`
-scripts as well as `install-mas.sh`. Exits if not running on macOS.
-
-### `install-homebrew-main.sh`
-
-Packages from [`homebrew/homebrew-core`][hbc].
-
-### `install-homebrew-dupes.sh`
-
-Packages from [`homebrew/homebrew-dupes`][hbd].
-
-### `install-homebrew-cask.sh`
-
-Packages from [`caskroom/homebrew-cask`][caskroom]
-
-### `install-homebrew-cask-ql.sh`
-
-Quicklook plugins [`caskroom/homebrew-cask`][caskroom].
-
-### `install-homebrew-cask-fonts.sh`
-
-Fonts from [`caskroom/homebrew-fonts`][hbf].
-
-### `install-homebrew-games.sh`
-
-Games from [`homebrew/homebrew-games`][hbg].
-
-### `install-homebrew-other.sh`
-
-Other various packages from the homebrew ecosystem.
-
-### `install-mas.sh`
-
-Installs apps from the Mac App Store using [`mas`] (installed by main Homebrew
-script above).
-
-
-[hbc]: https://github.com/homebrew/homebrew-core "homebrew/homebrew-core"
-[hbd]: https://github.com/homebrew/homebrew-dupes "homebrew/homebrew-dupes"
-[caskroom]: https://github.com/caskroom/homebrew-cask "caskroom/homebrew-cask"
-[hbf]: https://github.com/caskroom/homebrew-fonts "caskroom/homebrew-fonts"
-[hbg]: https://github.com/homebrew/homebrew-games "homebrew/homebrew-games"
-[`mas`]: https://github.com/argon/mas "Mac App Store CLI"
+Installs Homebrew (if necessary) and installs everything listed in `Brewfile`.
+Exits if not running on macOS.
