@@ -7,6 +7,10 @@ git submodules. Google around and you'll see why not.
 
 Vendored distribution of [`vim-plug`], a minimalist Vim plugin manager.
 
+## [`zsh-bd`]
+
+Vendored distribution of [`zsh-bd`], like `cd` but backwards.
+
 ## [`zsh-syntax-highlighting`]
 
 Vendored distribution of [`zsh-syntax-highlighting`].
@@ -22,4 +26,5 @@ This directory contains installation scripts for various packages I use from
 popular package managers.
 
 [`vim-plug`]: https://github.com/junegunn/vim-plug "vim-plug"
+[`zsh-bd`]: https://github.com/Tarrasch/zsh-bd
 [`zsh-syntax-highlighting`]: https://github.com/zsh-users/zsh-syntax-highlighting "zsh-syntax-highlighting"
