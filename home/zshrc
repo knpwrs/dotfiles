@@ -7,6 +7,9 @@ for rcfile in $DOTLIB/*.zsh; do
   source $rcfile
 done
 
+# Load zsh-bd
+source $DOTFILES/vendor/zsh-bd/bd.zsh
+
 # Load syntax highlighting
 # Customization: https://github.com/zsh-users/zsh-syntax-highlighting/blob/9523d6d49cb3d4db5bd84c3cec6168a2057fe3ab/docs/highlighters/main.md
 typeset -A ZSH_HIGHLIGHT_STYLES
