@@ -8,14 +8,14 @@ for rcfile in $DOTLIB/*.zsh; do
 done
 
 # Load zsh-bd
-source $DOTFILES/vendor/zsh-bd/bd.zsh
+source $DOTVENDOR/zsh-bd/bd.zsh
 
 # Load syntax highlighting
 # Customization: https://github.com/zsh-users/zsh-syntax-highlighting/blob/9523d6d49cb3d4db5bd84c3cec6168a2057fe3ab/docs/highlighters/main.md
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
-source $DOTFILES/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DOTVENDOR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Tell the terminal about the working directory at each prompt.
 # http://apple.stackexchange.com/a/128999
