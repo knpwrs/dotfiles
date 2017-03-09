@@ -82,5 +82,30 @@ mdf() {
   man -t "${1}" | open -f -a Preview
 }
 
+# extract anything
+extract() {
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.7z)       7z e "$1"                                     ;;
+      *.tar.bz2)  tar -jxf "$1"                                 ;;
+      *.tar.gz)   tar -zxf "$1"                                 ;;
+      *.bz2)      bunzip2 "$1"                                  ;;
+      *.dmg)      hdiutil mount "$1"                            ;;
+      *.gz)       gunzip "$1"                                   ;;
+      *.tar)      tar -xf "$1"                                  ;;
+      *.tbz2)     tar -jxf "$1"                                 ;;
+      *.tgz)      tar -zxf "$1"                                 ;;
+      *.zip)      unzip "$1"                                    ;;
+      *.ZIP)      unzip "$1"                                    ;;
+      *.pax)      cat "$1" | pax -r                             ;;
+      *.pax.Z)    uncompress "$1" --stdout | pax -r             ;;
+      *.Z)        uncompress "$1"                               ;;
+      *) echo "'$1' cannot be extracted/mounted via extract()"  ;;
+    esac
+  else
+    echo "'$1' cannot be extracted/mounted via extract()"
+  fi
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
