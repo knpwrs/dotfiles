@@ -61,6 +61,7 @@ alias v='nvim'
 alias vv='nvim .'
 alias vim='nvim'
 
+# reload zsh
 alias zshr='exec zsh -l'
 
 # stdio encryption and decryption
