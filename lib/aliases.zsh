@@ -76,5 +76,10 @@ port() {
   lsof -n -i:$1 | grep LISTEN
 }
 
+# open a man page as a pdf
+mdf() {
+  man -t "${1}" | open -f -a Preview
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
