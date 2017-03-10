@@ -10,7 +10,7 @@ function get_pwd() {
 function git_dirty() {
   if [[ -n $(git status -s 2> /dev/null) ]]; then
     # Dirty
-    echo "$fg_bold[red]●$reset_color"
+    echo "$fg_bold[red]●"
   fi
 }
 function git_branch() {
@@ -20,7 +20,7 @@ function git_branch() {
 }
 function git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo " ($fg_bold[cyan]$(git_branch)$(git_dirty))"
+  echo " ($fg_bold[cyan]$(git_branch)$(git_dirty)$reset_color)"
 }
 
 # Sets the prompt
