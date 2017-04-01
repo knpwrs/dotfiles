@@ -71,6 +71,7 @@ brew 'vim'                        # Vi \"workalike\" with many additional featur
 brew 'webkit2png'                 # Create website screenshots from terminal.
 brew 'wget'                       # Internet file retriever.
 brew 'woof'                       # Simple one-off HTTP file sharing.
+brew 'yarn'                       # JavaScript package manager.
 brew 'youtube-dl'                 # Download youtube videos.
 brew 'zsh'                        # UNIX shell (command interpreter).
 
