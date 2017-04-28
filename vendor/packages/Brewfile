@@ -46,6 +46,7 @@ brew 'neovim'                     # Neovim
 brew 'netcat'                     # Utility for managing network connections.
 brew 'ngrep'                      # Network grep.
 brew 'nmap'                       # Network exploration tool and security / port scanner.
+brew 'node'                       # Node.js.
 brew 'nyancat'                    # Nyancat in your terminal, rendered through ANSI escape sequences.
 brew 'p7zip'                      # A command line port of the 7zip utility to Unix, Mac OS X and BeOS.
 brew 'pgcli'                      # PostgreSQL CLI with autocomplete and syntax highlighting.

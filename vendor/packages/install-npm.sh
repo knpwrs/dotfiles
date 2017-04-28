@@ -1,16 +1,6 @@
 #!/usr/bin/env zsh
 
-if [ ! -d $HOME/.nvm ]; then
-  git clone https://github.com/creationix/nvm.git $HOME/.nvm && pushd $HOME/.nvm && git checkout `git describe --abbrev=0 --tags` && popd
-  source $HOME/.nvm/nvm.sh
-  # nvm install stable && nvm alias default stable # Alias default stable slows down shell startup time https://github.com/creationix/nvm/issues/860
-  nvm install stable
-  echo "---"
-  echo "!!! Please restart zsh or source $NVM_SH to start using node."
-  echo "---"
-else
-  source $HOME/.nvm/nvm.sh
-fi
+hash npm 2>/dev/null || { echo "Please install node and npm before installing global npm packages." && exit 0; }
 
 packages=(
   browser-run     # Runs JavaScript in a browser and sends the console logs to stdout.
@@ -45,7 +35,6 @@ packages=(
   trash-cli       # Move files to trash.
   ttystudio       # Record terminal to GIF.
   vtop            # Visual top command.
-  yarn            # Alternative node package manager.
 )
 
 npm i -g "${packages[@]///}"

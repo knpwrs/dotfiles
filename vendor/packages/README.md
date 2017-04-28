@@ -5,7 +5,7 @@ packages.
 
 ## `install.sh`
 
-Calls all other install scripts.
+Calls all other install scripts in the appropriate order.
 
 ## `install-gems.sh`
 
@@ -13,8 +13,8 @@ Uses system `ruby` and `sudo gem` to install a set of useful gems.
 
 ## `install-npm.sh`
 
-Installs `nvm`, `node`, and `npm` (if necessary) and then installs a set of
-useful packages.
+Installs global npm packages (cli tools). Requires `node` and `npm` to be
+installed.
 
 ## `install-pip.sh`
 
