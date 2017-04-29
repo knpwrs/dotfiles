@@ -4,15 +4,11 @@ hash npm 2>/dev/null || { echo "Please install node and npm before installing gl
 
 packages=(
   browser-run     # Runs JavaScript in a browser and sends the console logs to stdout.
-  david           # NPM dependency version checker.
   dev-time-cli    # Get the current local time of a GitHub user.
   empty-trash-cli # Empty trash.
-  eslint          # JavaScript code linter.
-  gron            # Make JSON greppable.
   internal-ip     # Show internal IP address.
   is-online-cli   # Check if the Internet connection is up.
   is-up-cli       # Check if a website is up or down using ititup.org.
-  jsome           # Pretty JSON viewer.
   lice            # License generator.
   license-checker # Checks licenses for node app dependencies.
   live-server     # Live-reloading static dev server.
@@ -24,7 +20,6 @@ packages=(
   nws             # Node web server.
   pageres-cli     # Capture screenshots of websites at various resolutions.
   pen.md          # Hot-loading markdown preview server.
-  pjs             # Pipeable JavaScript.
   public-ip       # Show public IP address.
   recursive-blame # Recursively blame a file in git.
   replem          # Quickly try nodejs modules in a repl.
@@ -34,7 +29,6 @@ packages=(
   tfa             # CLI two-factor authentication client.
   trash-cli       # Move files to trash.
   ttystudio       # Record terminal to GIF.
-  vtop            # Visual top command.
 )
 
 npm i -g "${packages[@]///}"
