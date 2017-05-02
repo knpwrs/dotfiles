@@ -12,6 +12,7 @@ packages=(
   lice            # License generator.
   license-checker # Checks licenses for node app dependencies.
   live-server     # Live-reloading static dev server.
+  localtunnel     # Simple tool to expose a local port over public dns.
   modhelp         # Display README for any NPM module in terminal.
   nd              # CLI markdown viewer.
   np              # Better npm publish.
