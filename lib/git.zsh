@@ -210,6 +210,8 @@ alias glump="git pull upstream master && git push origin master"
 
 alias gm='git merge'
 alias gmm='git merge master'
+alias gmmnff='git merge master --no-ff'
+alias gmnff='git merge --no-ff'
 alias gmom='git merge origin/master'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
