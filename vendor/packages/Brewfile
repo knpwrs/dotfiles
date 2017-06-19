@@ -147,6 +147,10 @@ cask 'font-roboto'
 cask 'font-roboto-condensed'
 cask 'font-source-sans-pro'
 
+# Alternative cask versions
+tap 'caskroom/versions'
+cask 'google-chrome-canary'
+
 # Mac App Store
 
 mas 'Affinity Designer', id: 824171161
