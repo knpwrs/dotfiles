@@ -52,6 +52,7 @@ function keygen() {
   ssh-keygen -o -a 100 -t ed25519 -C $1
 }
 alias KILL='killall -KILL'
+alias resume="kill -CONT"
 
 alias hb='HandBrakeCLI'
 
