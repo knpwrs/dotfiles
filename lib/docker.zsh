@@ -1,8 +1,14 @@
+# general
+alias drun='docker run --rm -v $(pwd):/host -w /host'
+
 # docker-compose
 alias dc="docker-compose"
 alias dck="dc kill"
 alias dcrf="dc rm -f"
 alias dcu="dc up"
+alias dcud="dc up -d"
+alias dcd="dc down"
+alias dcr="dc run"
 
 # docker-machine
 alias dm="docker-machine"
