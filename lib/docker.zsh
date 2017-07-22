@@ -4,6 +4,9 @@ alias drun='docker run --rm -v $(pwd):/host -w /host'
 # docker-compose
 alias dc="docker-compose"
 alias dcb="dc build"
+dcl() {
+  docker logs -f $(dc ps -q $1)
+}
 alias dck="dc kill"
 alias dcrf="dc rm -f"
 alias dcu="dc up"
