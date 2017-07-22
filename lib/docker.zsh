@@ -12,7 +12,7 @@ alias dcrf="dc rm -f"
 alias dcu="dc up"
 alias dcud="dc up -d"
 alias dcd="dc down"
-alias dcr="dc run"
+alias dcr="dc run --rm"
 
 # docker-machine
 alias dm="docker-machine"
