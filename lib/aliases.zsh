@@ -25,6 +25,10 @@ duu() {
 }
 
 alias md='mkdir -p'
+function mvd() {
+  mkdir $1
+  mv $(ls -A | grep -v $1 | grep -v .git) $1
+}
 alias rd=rmdir
 alias d='dirs -v | head -10'
 function mkcd() {
