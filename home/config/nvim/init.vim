@@ -197,6 +197,7 @@ set laststatus=2
 set noshowmode
 "" CtrlP
 let g:ctrlp_map='<C-p>'
+nmap <leader>o :CtrlPBuffer<CR>
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 "" NERDTree
