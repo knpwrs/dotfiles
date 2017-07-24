@@ -19,7 +19,6 @@ syntax on
 hi Visual cterm=NONE ctermbg=0 ctermfg=NONE
 hi Search cterm=NONE ctermbg=0 ctermfg=white
 hi Pmenu cterm=NONE ctermbg=white ctermfg=0
-hi LineNr cterm=NONE ctermbg=NONE ctermfg=grey
 hi MatchParen cterm=NONE ctermbg=NONE ctermfg=red
 "" Indent according to previous line.
 set autoindent
@@ -178,7 +177,7 @@ call plug#end()
 set background=dark
 colorscheme hybrid
 hi vertsplit ctermfg=238 ctermbg=235
-hi LineNr ctermfg=237
+hi LineNr ctermfg=grey
 hi StatusLine ctermfg=white ctermbg=bg cterm=bold
 hi StatusLineNC ctermfg=235 ctermbg=bg
 hi TabLineFill ctermfg=bg ctermbg=bg
@@ -188,10 +187,10 @@ hi Search ctermbg=58 ctermfg=15
 hi Default ctermfg=1
 hi clear SignColumn
 hi SignColumn ctermbg=bg
-hi GitGutterAdd ctermfg=245
-hi GitGutterChange ctermfg=245
-hi GitGutterDelete ctermfg=245
-hi GitGutterChangeDelete ctermbg=235 ctermfg=245
+hi GitGutterAdd ctermfg=green
+hi GitGutterChange ctermfg=yellow
+hi GitGutterDelete ctermfg=red
+hi GitGutterChangeDelete ctermfg=red
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
 set noshowmode
