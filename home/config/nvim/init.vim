@@ -147,7 +147,6 @@ Plug 'majutsushi/tagbar'
 "" Navigation Plugs
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 "" Autocompletion Plugs
 if has('lua')
   Plug 'Shougo/neocomplete.vim'
@@ -162,7 +161,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
-Plug 'amirh/HTML-AutoCloseTag'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'mattn/emmet-vim'
 
