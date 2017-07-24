@@ -84,6 +84,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 "" Split mappings
 noremap <Leader>- :<C-u>split<CR>
 noremap <Leader>\| :<C-u>vsplit<CR>
+noremap <leader>w <C-w>w
 
 if has('multi_byte') && &encoding ==# 'utf-8'
   let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
