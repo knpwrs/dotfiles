@@ -202,6 +202,7 @@ let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 "" NERDTree
 let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 nmap <Leader>t :NERDTreeToggle<CR>
 nmap <Leader>T :NERDTreeFind<CR>
 "" Tagbar
