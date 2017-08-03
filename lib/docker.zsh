@@ -1,5 +1,5 @@
 # general
-alias drun='docker run --rm -v $(pwd):/host -w /host'
+alias drun='docker run -it --rm -v $(pwd):/host -w /host'
 
 # docker-compose
 alias dc="docker-compose"
