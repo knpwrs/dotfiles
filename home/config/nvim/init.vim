@@ -129,6 +129,7 @@ Plug 'vim-scripts/PreserveNoEOL' " Required by EditorConfig for full functionali
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'danro/rename.vim'
 Plug 'raimondi/delimitmate'
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
