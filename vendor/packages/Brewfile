@@ -106,6 +106,7 @@ cask 'hyper'                     # Terminal emulator built on web standards.
 cask 'keka'                      # Archive extraction and creation.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'native-access'             # Native Instruments Management Tool
+cask 'robot-3t'                  # Free MongoDB admin application.
 cask 'sketch'                    # Professional Digital Design for Mac
 cask 'slack'                     # Chat client for teams.
 cask 'synthesia'                 # A fun way to learn how to play the piano.
