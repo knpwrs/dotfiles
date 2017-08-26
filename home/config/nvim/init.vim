@@ -22,7 +22,7 @@ hi Pmenu cterm=NONE ctermbg=white ctermfg=0
 hi MatchParen cterm=NONE ctermbg=NONE ctermfg=red
 "" Indent according to previous line.
 set autoindent
-"" Use spaces instaed of tabs.
+"" Use spaces instead of tabs.
 set expandtab
 "" Tab key indents by 2 spaces.
 set softtabstop=2
@@ -80,6 +80,17 @@ nnoremap <C-n> :call NumberToggle()<cr>
 nnoremap <Leader>x :tabedit $MYVIMRC<CR>
 "" <C-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+"" Spell check settings
+set spelllang=en
+set spellfile=$DOTLIB/spell/en.utf-8.add
+noremap <Leader>s :set spell!<CR>
+" The following is from https://stackoverflow.com/a/38742983/355325
+for d in glob("$DOTLIB/spell/*.add", 1, 1)
+  if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
+    exec 'mkspell! ' . fnameescape(d)
+  endif
+endfor
 
 "" Split mappings
 noremap <Leader>- :<C-u>split<CR>
