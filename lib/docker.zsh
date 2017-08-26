@@ -13,6 +13,7 @@ alias dcu="dc up"
 alias dcud="dc up -d"
 alias dcd="dc down"
 alias dcr="dc run --rm"
+alias dcrs="dc restart"
 
 # docker-machine
 alias dm="docker-machine"
