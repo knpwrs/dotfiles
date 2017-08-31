@@ -1,6 +1,6 @@
 # Base Taps
 
-tap 'neovim/neovim'
+tap 'universal-ctags/universal-ctags'
 
 # Base Packages
 
@@ -13,11 +13,10 @@ brew 'cloc'                       # Count lines of code in a directory.
 brew 'cmatrix'                    # Matrix in the terminal.
 brew 'coreutils'                  # GNU core utilities (Mac is BSD).
 brew 'cowsay'                     # Configurable talking characters in ASCII art.
-brew 'ctags'                      # Reimplementation of ctags(1).
 brew 'curl'                       # HTTP client.
 brew 'diff-so-fancy'              # Fancy diff for git.
 brew 'direnv'                     # Shell environment switcher.
-brew 'duck'                       # Cyberduck CLI.
+# brew 'duck'                       # Cyberduck CLI. # Requires Java.
 brew 'exiftool'                   # Image exif manipulation.
 brew 'fdupes'                     # Duplicate file finder.
 brew 'ffmpeg'                     # Play, record, convert, and stream audio and video.
@@ -33,6 +32,7 @@ brew 'git-open'                   # Open the GitHub page or website for the curr
 brew 'gnu-sed'                    # GNU version of the sed utility.
 brew 'gnu-tar'                    # GNU version of the tar utility.
 brew 'gnupg'                      # GNU Pretty Good Privacy (PGP) package.
+brew 'gnuski'                     # Open source clone of Skifree
 brew 'graphviz'                   # Rich set of graph drawing tools.
 brew 'httpie'                     # cURL-like tool for humans.
 brew 'imagemagick'                # CLI image manipulation utilities.
@@ -54,12 +54,14 @@ brew 'pigz'                       # Parallel Implementation of GZip
 brew 'pv'                         # Monitor the progress of data through a pipe.
 brew 'python3'                    # Python 3
 brew 'ranger'                     # File browser.
-brew 'rename'                     # File renaming utilities.
 brew 'reattach-to-user-namespace' # Utility for tighter macOS and tmux integration
+brew 'rename'                     # File renaming utilities.
 brew 'rig'                        # Random Identity Generator
+brew 'rsync'                      # Utility that provides fast incremental file transfer
 brew 'screenfetch'                # The Bash Screenshot Information Tool
 brew 'siege'                      # HTTP regression testing and benchmarking utility
 brew 'sift'                       # Fast and powerful alternative to grep.
+brew 'ski'                        # Evade the deadly Yeti on your jet-powered skis.
 brew 'sl'                         # Steam Locomotive
 brew 'ssh-copy-id'                # Add a public key to a remote machine's authorized_keys file.
 brew 'sshuttle'                   # Proxy server that works as a poor man's VPN.
@@ -67,24 +69,16 @@ brew 'tig'                        # Text-mode interface for git.
 brew 'tmux'                       # Terminal multiplexer.
 brew 'toilet'                     # Display large, colorful characters.
 brew 'tree'                       # Display directories as trees (with optional color/HTML output).
+brew 'universal-ctags'            # A maintained ctags implementation.
 brew 'vbindiff'                   # Visual binary diff.
 brew 'vim'                        # Vi \"workalike\" with many additional features.
 brew 'webkit2png'                 # Create website screenshots from terminal.
 brew 'wget'                       # Internet file retriever.
 brew 'woof'                       # Simple one-off HTTP file sharing.
 brew 'yarn'                       # JavaScript package manager.
+brew 'yetris'                     # Terminal Tetris
 brew 'youtube-dl'                 # Download youtube videos.
 brew 'zsh'                        # UNIX shell (command interpreter).
-
-# More recent versions of various unix tools.
-
-brew 'homebrew/dupes/rsync' # Utility that provides fast incremental file transfer
-
-# Games
-
-brew 'homebrew/games/gnuski' # Open source clone of Skifree
-brew 'homebrew/games/ski'    # Evade the deadly Yeti on your jet-powered skis.
-brew 'homebrew/games/yetris' # Terminal Tetris
 
 # Casks
 cask 'alfred'                    # Power-user spotlight.
@@ -106,7 +100,7 @@ cask 'hyper'                     # Terminal emulator built on web standards.
 cask 'keka'                      # Archive extraction and creation.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'native-access'             # Native Instruments Management Tool
-cask 'robot-3t'                  # Free MongoDB admin application.
+cask 'robo-3t'                   # Free MongoDB admin application.
 cask 'sketch'                    # Professional Digital Design for Mac
 cask 'slack'                     # Chat client for teams.
 cask 'synthesia'                 # A fun way to learn how to play the piano.
