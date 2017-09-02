@@ -178,6 +178,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'mattn/emmet-vim'
+Plug 'nelstrom/vim-markdown-folding'
 
 "" End Plugs
 ""
