@@ -10,6 +10,7 @@ brew 'archey'                     # "About this Mac" CLI.
 brew 'aria2'                      # Multi-protocol download client.
 brew 'ccat'                       # cat with syntax highlighting.
 brew 'cloc'                       # Count lines of code in a directory.
+brew 'cmake'                      # Cross-platform build system.
 brew 'cmatrix'                    # Matrix in the terminal.
 brew 'coreutils'                  # GNU core utilities (Mac is BSD).
 brew 'cowsay'                     # Configurable talking characters in ASCII art.
@@ -98,6 +99,7 @@ cask 'handbrake'                 # Video conversion utility.
 cask 'hex-fiend'                 # A fast and clever open source hex editor for macOS.
 cask 'hyper'                     # Terminal emulator built on web standards.
 cask 'keka'                      # Archive extraction and creation.
+cask 'macvim'                    # Vim with a mac gui.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'native-access'             # Native Instruments Management Tool
 cask 'robo-3t'                   # Free MongoDB admin application.
