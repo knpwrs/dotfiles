@@ -94,7 +94,6 @@ cask 'firefox'                   # Web browser from Mozilla.
 cask 'gas-mask'                  # Manage and switch between multiple hosts files.
 cask 'gitify'                    # GitHub desktop notifications.
 cask 'google-chrome'             # Web browser from Google.
-cask 'google-drive'              # File sync / backup from Google.
 cask 'handbrake'                 # Video conversion utility.
 cask 'hex-fiend'                 # A fast and clever open source hex editor for macOS.
 cask 'hyper'                     # Terminal emulator built on web standards.
