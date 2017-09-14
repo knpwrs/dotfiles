@@ -30,6 +30,7 @@ packages=(
   tfa             # CLI two-factor authentication client.
   trash-cli       # Move files to trash.
   ttystudio       # Record terminal to GIF.
+  typescript      # Typescript server.
 )
 
 npm i -g "${packages[@]///}"
