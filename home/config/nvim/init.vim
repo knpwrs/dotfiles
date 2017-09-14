@@ -210,6 +210,8 @@ hi GitGutterChangeDelete ctermfg=red
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
 set noshowmode
+"" Misc Key bindings
+nmap <silent> dsf ds(db
 "" CtrlP
 let g:ctrlp_map='<C-p>'
 nmap <leader>o :CtrlPBuffer<CR>
