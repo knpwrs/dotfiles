@@ -179,6 +179,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'mattn/emmet-vim'
 Plug 'nelstrom/vim-markdown-folding'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi' " TSServer client
 
 "" End Plugs
 ""
