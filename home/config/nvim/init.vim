@@ -162,6 +162,7 @@ Plug 'majutsushi/tagbar'
 "" Navigation Plugs
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tyok/nerdtree-ack'
 "" Autocompletion Plugs
 if has('lua')
   Plug 'Shougo/neocomplete.vim'
