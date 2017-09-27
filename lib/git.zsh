@@ -43,12 +43,6 @@ function work_in_progress() {
   fi
 }
 
-# Init a repository and cd to it
-function gcd() {
-  git init $1 && cd $1
-}
-
-#
 # Aliases
 # (sorted alphabetically)
 #
@@ -89,6 +83,7 @@ alias gca='git commit -v -a'
 alias gca!='git commit -v -a --amend'
 alias gcan!='git commit -v -a -s --no-edit --amend'
 alias gcb='git checkout -b'
+alias gcd='git checkout develop'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
 alias gclean='git reset --hard && git clean -dfx'
