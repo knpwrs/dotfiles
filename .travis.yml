@@ -4,4 +4,4 @@ script:
   - ./vendor/packages/install-mac.sh
   - sudo ./vendor/packages/install-npm.sh
   - sudo ./vendor/packages/install-gems.sh
-  - sudo ./vendor/packages/install-pip.sh
+  # - sudo ./vendor/packages/install-pip.sh
