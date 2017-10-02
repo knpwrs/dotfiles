@@ -76,7 +76,7 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
-"" \x edits the vi config file.
+"" \, edits the vi config file.
 nnoremap <Leader>, :tabedit $MYVIMRC<CR>
 "" <C-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
