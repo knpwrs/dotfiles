@@ -62,6 +62,10 @@ set synmaxcol=200
 set list
 "" Show cursor position in status line.
 set ruler
+"" Enable code folding
+set foldmethod=syntax
+"" Disable code folding by default
+set nofoldenable
 
 "" Line numbers.
 set number
@@ -256,3 +260,4 @@ let g:syntastic_javascript_checkers=['eslint']
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_level = 6
