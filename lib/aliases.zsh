@@ -43,6 +43,8 @@ alias la='ls -lAh'
 alias pu='pushd'
 alias po='popd'
 
+alias rl='readlink -f'
+
 if  [[ "$OSTYPE" = darwin* ]]; then
   alias show='open -R'
 fi
