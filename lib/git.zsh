@@ -92,6 +92,7 @@ alias gcmsg='git commit -m'
 alias gco='git checkout'
 alias gcod='git checkout -- .'
 alias gcount='git shortlog -sn'
+alias gcw='git checkout work'
 compdef gcount=git
 alias gcp='git cherry-pick'
 alias gcre='git commit --reedit-message=$1'
