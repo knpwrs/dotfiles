@@ -30,6 +30,7 @@ function mvd() {
   mv $(ls -A | grep -v $1 | grep -v .git) $1
 }
 alias rd=rmdir
+alias rf='rm -rf'
 alias d='dirs -v | head -10'
 function mkcd() {
   md $1 && cd $1
