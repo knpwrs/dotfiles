@@ -205,6 +205,7 @@ alias glum="git pull upstream master"
 alias glump="git pull upstream master && git push origin master"
 
 alias gm='git merge'
+alias gma='git merge --abort'
 alias gmd='git merge develop'
 alias gmm='git merge master'
 alias gmmnff='git merge master --no-ff'
