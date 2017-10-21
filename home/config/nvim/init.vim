@@ -172,7 +172,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
 Plug 'mileszs/ack.vim'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
@@ -248,16 +248,10 @@ let delimitMate_expand_cr=1
 "" ack.vim
 let g:ackprg='ag --vimgrep'
 noremap <leader>f :Ack!<Space>''<Left>
-"" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height=5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers=['eslint']
+"" ALE
+let g:ale_open_list = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
