@@ -16,6 +16,8 @@ export DOTLIB="$DOTFILES/lib"
 export DOTPACKAGES="$DOTFILES/vendor/packages"
 export DOTVENDOR="$DOTFILES/vendor"
 export WORKSPACE="$HOME/Workspace"
+export GITHUB="$WORKSPACE/github.com"
+export KNPWRS="$GITHUB/knpwrs"
 
 # Load zmv command
 # http://zshwiki.org/home/builtin/functions/zmv
