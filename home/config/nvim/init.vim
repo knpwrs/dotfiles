@@ -1,5 +1,3 @@
-" Originally based on minimal vimrc: https://github.com/mhinz/vim-galore/blob/master/content/minimal-vimrc.vim
-
 "
 " General Settings
 "

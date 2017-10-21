@@ -72,7 +72,7 @@ brew 'toilet'                     # Display large, colorful characters.
 brew 'tree'                       # Display directories as trees (with optional color/HTML output).
 brew 'universal-ctags'            # A maintained ctags implementation.
 brew 'vbindiff'                   # Visual binary diff.
-brew 'vim'                        # Vi \"workalike\" with many additional features.
+brew 'vim'                        # Vi "workalike" with many additional features.
 brew 'webkit2png'                 # Create website screenshots from terminal.
 brew 'wget'                       # Internet file retriever.
 brew 'woof'                       # Simple one-off HTTP file sharing.
