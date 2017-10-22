@@ -151,11 +151,20 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'bling/vim-bufferline'
 Plug 'w0ng/vim-hybrid'
 "" Enhancement Plugs
-Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-scripts/PreserveNoEOL' " Required by EditorConfig for full functionality
+Plug 'AndrewRadev/sideways.vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'danro/rename.vim'
+Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
+Plug 'godlygeek/tabular'
+Plug 'keith/investigate.vim'
+Plug 'mbbill/undotree'
+Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
+Plug 'sickill/vim-pasta'
+Plug 'tommcdo/vim-exchange'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-eunuch'
@@ -164,17 +173,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'mbbill/undotree'
-Plug 'godlygeek/tabular'
-Plug 'sickill/vim-pasta'
-Plug 'keith/investigate.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'tommcdo/vim-exchange'
-Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'AndrewRadev/sideways.vim'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
@@ -194,13 +193,13 @@ endif
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
-Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " TSServer client
 Plug 'hail2u/vim-css3-syntax'
-Plug 'mattn/emmet-vim'
-Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi' " TSServer client
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
+Plug 'sheerun/vim-polyglot'
 
 "" End Plugs
 ""
