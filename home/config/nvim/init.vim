@@ -64,6 +64,8 @@ set ruler
 set foldmethod=syntax
 "" Disable code folding by default
 set nofoldenable
+"" Ex Command Menu Completion
+set wildmenu
 
 "" Line numbers.
 set number
