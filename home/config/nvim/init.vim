@@ -55,6 +55,8 @@ set list
 set foldmethod=syntax
 "" Disable code folding by default
 set nofoldenable
+"" Command timeout
+set ttimeoutlen=50
 
 "" Line numbers.
 set number
@@ -109,16 +111,15 @@ else
 endif
 
 "" Status Line
-let g:modemap={ 'n': 'NORMAL', 'i': 'INSERT', 'v': 'VISUAL' }
+let s:modemap={ 'n': 'NORMAL', 'i': 'INSERT', 'v': 'VISUAL' }
 function! CurrentModeString()
-  return get(g:modemap, mode(), '')
+  return get(s:modemap, mode(), '')
 endfunction
 set noshowmode
-set ttimeoutlen=50
 let g:bufferline_echo=0
-let g:bufferline_modified='[+]'
 set statusline=%{CurrentModeString()}
-set statusline+=%=%f\ %m
+set statusline+=%=%l,%c " ruler
+set statusline+=\ %f
 
 "
 " Begin vim-plug
@@ -215,7 +216,6 @@ hi GitGutterDelete ctermfg=red
 hi GitGutterChangeDelete ctermfg=red
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
-set noshowmode
 "" Misc Key bindings
 nmap <silent> dsf ds(db
 "" CtrlP
