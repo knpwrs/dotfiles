@@ -193,7 +193,6 @@ endif
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
-Plug 'Quramy/tsuquyomi', { 'for': 'typescript' } " TSServer client
 Plug 'hail2u/vim-css3-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
@@ -251,6 +250,7 @@ let g:ackprg='ag --vimgrep'
 noremap <leader>f :Ack!<Space>''<Left>
 "" ALE
 let g:ale_open_list = 1
+let g:ale_completion_enabled = 1
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
