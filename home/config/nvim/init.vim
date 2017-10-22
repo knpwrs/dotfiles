@@ -142,14 +142,12 @@ Plug 'w0ng/vim-hybrid'
 "" Enhancement Plugs
 Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'keith/investigate.vim'
-Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'sickill/vim-pasta'
