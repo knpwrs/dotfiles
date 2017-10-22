@@ -174,6 +174,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/sideways.vim'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
@@ -255,3 +256,8 @@ let g:ale_open_list = 1
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_level = 6
+"" sideways.vim
+nnoremap <leader>h :SidewaysLeft<cr>
+nnoremap <leader>H :SidewaysJumpLeft<cr>
+nnoremap <leader>l :SidewaysRight<cr>
+nnoremap <leader>L :SidewaysJumpRight<cr>
