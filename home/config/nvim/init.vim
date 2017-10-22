@@ -173,6 +173,7 @@ Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
+Plug 'AndrewRadev/splitjoin.vim'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
