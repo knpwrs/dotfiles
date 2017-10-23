@@ -2,8 +2,8 @@
 bindkey -e
 
 # History key bindings
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
+bindkey '^k' up-line-or-search
+bindkey '^j' down-line-or-search
 
 # Edit the current command line in $EDITOR
 autoload -U edit-command-line
