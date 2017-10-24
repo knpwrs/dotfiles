@@ -171,6 +171,11 @@ function ghone() {
 
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+alias gim='git imerge'
+alias gimc='git imerge continue'
+alias gimf='git imerge finish'
+alias gimm='git imerge merge'
+alias gimr='git imerge rebase'
 alias ginit='git init'
 function gicd() {
   git init $1 && cd $1
