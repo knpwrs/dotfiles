@@ -57,16 +57,16 @@ alias gb='git branch'
 alias gba='git branch -a'
 function gbda() {
   local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v master | grep -v svn)
-  if [ "$1" = "-l" ]; then
-    # Delete all merged local branches
-    echo "$branches" | xargs -n 1 git branch -d
-  else
+  if [ "$1" = "-r" ]; then
     # Delete all merged branches (including remote and tracking)
     # Requires git-extras to be installed.
     echo "$branches" | xargs git delete-branch
+  else
+    # Delete all merged local branches
+    echo "$branches" | xargs -n 1 git branch -d
   fi
 }
-alias gbdal='gbda -l'
+alias gbdar='gbda -r'
 alias gbl='git blame -b -w'
 alias gbm='git branch -m'
 alias gbnm='git branch --no-merged'
