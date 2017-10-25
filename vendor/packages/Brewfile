@@ -109,6 +109,7 @@ cask 'telegram'                  # Telegram messaging client.
 cask 'vagrant'                   # Development environment virtual machines.
 cask 'vagrant-manager'           # Manage vagrant machines from native Mac UI.
 cask 'veertu-desktop'            # Native Virtualization for macOS
+cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
