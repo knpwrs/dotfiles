@@ -92,6 +92,9 @@ noremap <Leader>- :<C-u>split<CR>
 noremap <Leader>\| :<C-u>vsplit<CR>
 noremap <leader>w <C-w>w
 
+"" Close quickfix
+noremap <Leader>c :ccl<CR>
+
 "" Tab mappings
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
