@@ -41,8 +41,9 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
+alias nps='jq .scripts < package.json'
 alias nr='npm run'
-alias ns='jq .scripts < package.json'
+alias ns='npm start'
 
 alias pu='pushd'
 alias po='popd'
