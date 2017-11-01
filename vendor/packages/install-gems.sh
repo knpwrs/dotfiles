@@ -6,6 +6,7 @@ echo "---"
 
 gems=(
   bropages           # Highly readable supplement to man pages.
+  neovim             # A Ruby client for Neovim.
   cocoapods          # Package manager for XCode projects.
   jekyll             # A static site generator.
   jekyll-paginate    # Pagination plugin for jekyll.
