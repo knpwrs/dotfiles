@@ -43,6 +43,8 @@ alias la='ls -lAh'
 
 alias nps='jq .scripts < package.json'
 alias nr='npm run'
+alias nrb='npm run build'
+alias nrd='npm run dev'
 alias ns='npm start'
 
 alias pu='pushd'
