@@ -236,7 +236,8 @@ let g:tagbar_autofocus=1
 "" delimitMate
 let delimitMate_expand_cr=1
 "" ack.vim
-let g:ackprg='ag --vimgrep'
+" let g:ackprg='ag --vimgrep' " The Silver Searcher
+let g:ackprg='rg --vimgrep --no-heading' " ripgrep
 noremap <leader>f :Ack!<Space>''<Left>
 "" ALE
 let g:ale_open_list = 1
