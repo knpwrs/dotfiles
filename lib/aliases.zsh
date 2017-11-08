@@ -43,6 +43,7 @@ alias la='ls -lAh'
 
 alias ni='npm install'
 alias nps='jq .scripts < package.json'
+alias npv='jq -r .version < package.json'
 alias nr='npm run'
 alias nrb='npm run build'
 alias nrc='npm run check'
