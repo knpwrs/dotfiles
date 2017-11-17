@@ -190,6 +190,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
+Plug 'racer-rust/vim-racer'
 Plug 'sheerun/vim-polyglot'
 
 "" End Plugs

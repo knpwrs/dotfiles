@@ -29,6 +29,15 @@ path=(
   $path
 )
 
+# rust
+RUST_BIN="$HOME/.cargo/bin"
+if [[ -d "$RUST_BIN" ]]; then
+  path=(
+    $HOME/.cargo/bin # rust crates
+    $path
+  )
+fi
+
 # GNU coreutils man path fix
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
 
