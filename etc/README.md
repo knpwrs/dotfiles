@@ -10,5 +10,9 @@ Run [`macos.sh`] to set up custom settings. Read [`macos.sh`] for more info.
 
 Open [`knpwrs.terminal`] to set up colors for Terminal.app.
 
+## BetterTouchTool
+
+Load [`gestures.json`] into Better Touch Tool for awesome gestures.
+
 [`macos.sh`]: ./macos.sh "macOS Settings Script"
 [`knpwrs.terminal`]: ./knpwrs.terminal "knpwrs Terminal.app theme"
