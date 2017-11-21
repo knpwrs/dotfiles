@@ -67,6 +67,7 @@ function gbda() {
   fi
 }
 alias gbdar='gbda -r'
+alias gbpa='git fetch -p --all && git branch -vv | grep ":gone]" | cut -d" " -f3 | xargs git branch -D'
 alias gbl='git blame -b -w'
 alias gbm='git branch -m'
 alias gbnm='git branch --no-merged'
