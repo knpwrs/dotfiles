@@ -5,14 +5,19 @@
 	branches = branch -avv
 [push]
 	default = simple
-[diff]
-	tool = bc3
-[difftool]
-	bc3 = trustExitCode
 [merge]
-	tool = bc3
+	tool = Kaleidoscope
 [mergetool]
-	bc3 = trustExitCode
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [core]
 	excludesfile = ~/.gitignore_global
 [filter "lfs"]
