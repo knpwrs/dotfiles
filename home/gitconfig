@@ -51,3 +51,11 @@
 	untracked = cyan
 [rerere]
 	enabled = true
+[url "git@github.com:"]
+	insteadOf = "gh:"
+[url "git://github.com/"]
+	insteadOf = "github:"
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
