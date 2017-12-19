@@ -14,3 +14,11 @@ alias nv='npm version'
 alias nvM='npm version major'
 alias nvm='npm version minor'
 alias nvp='npm version patch'
+
+function npf() {
+  jq ".$2" < $(npm ls --parseable "$1")/package.json
+}
+
+function nplf() {
+  jq ".$2" < "./node_modules/$1/package.json"
+}
