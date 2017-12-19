@@ -66,6 +66,7 @@ function gbda() {
     echo "$branches" | xargs -n 1 git branch -d
   fi
 }
+alias gbdaf='gfa && gbda -r'
 alias gbdar='gbda -r'
 alias gbpa='git fetch -p --all && git branch -vv | grep ":gone]" | cut -d" " -f3 | xargs git branch -D'
 alias gbl='git blame -b -w'
