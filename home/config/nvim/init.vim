@@ -1,5 +1,5 @@
 "
-" Neovim default settins
+" Neovim default settings
 " :h defaults
 "
 
