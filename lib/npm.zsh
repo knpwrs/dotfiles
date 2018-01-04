@@ -1,5 +1,6 @@
 alias ni='npm install'
 alias nid='npm install -D'
+alias ninit='npm init'
 alias nps='jq .scripts < package.json'
 alias npv='echo "v$(jq -r .version < package.json)"'
 alias nr='npm run'
