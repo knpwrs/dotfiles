@@ -115,5 +115,16 @@ extract() {
   fi
 }
 
+# unbuffer command for copying
+unbuf() {
+  local prog
+  if hash gsed 2>/dev/null; then
+    prog='gsed'
+  else
+    prog='sed'
+  fi
+  unbuffer $@ | $prog -r "s/"$'\E'"\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g"
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
