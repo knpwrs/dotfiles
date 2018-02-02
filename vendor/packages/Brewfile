@@ -82,6 +82,7 @@ brew 'yetris'                     # Terminal Tetris
 brew 'youtube-dl'                 # Download youtube videos.
 brew 'z'                          # Jump around.
 brew 'zsh'                        # UNIX shell (command interpreter).
+brew 'homebrew/dupes/expect'      # A tool for automating interactive applications.
 
 # Casks
 cask 'alfred'                    # Power-user spotlight.
