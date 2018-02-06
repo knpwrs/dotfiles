@@ -248,6 +248,14 @@ nmap <silent> ]W <Plug>(ale_last)
 let g:deoplete#enable_at_startup = 1
 inoremap <C-j> <C-n>
 inoremap <C-k> <C-p>
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ deoplete#mappings#manual_complete()
+  function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction"}}}
 " let g:ale_completion_enabled = 1 " currently beta
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
