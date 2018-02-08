@@ -22,7 +22,7 @@ packages=(
   oji             # Text emoticons maker.
   pageres-cli     # Capture screenshots of websites at various resolutions.
   pen.md          # Hot-loading markdown preview server.
-  public-ip       # Show public IP address.
+  public-ip-cli   # Show public IP address.
   recursive-blame # Recursively blame a file in git.
   replem          # Quickly try nodejs modules in a repl.
   rocky-cli       # HTTP(S) proxy with websocket and replay support.
