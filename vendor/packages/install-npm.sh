@@ -19,6 +19,7 @@ packages=(
   npm-name-cli    # Check if a package name is available on npm.
   npm-quick-run   # Quickly run npm scripts by prefix without typing the full name.
   nws             # Node web server.
+  oji             # Text emoticons maker.
   pageres-cli     # Capture screenshots of websites at various resolutions.
   pen.md          # Hot-loading markdown preview server.
   public-ip       # Show public IP address.
