@@ -126,5 +126,10 @@ unbuf() {
   unbuffer $@ | $prog -r "s/"$'\E'"\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g"
 }
 
+# Open DefinitelyTyped
+typed() {
+  open "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/$1"
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
