@@ -1,5 +1,6 @@
 alias npi='npm install'
 alias npid='npm install -D'
+alias npig='npm install -g'
 alias npinit='npm init'
 alias npl='npm link'
 alias npps='jq .scripts < package.json'
