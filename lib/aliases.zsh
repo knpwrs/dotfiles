@@ -131,5 +131,10 @@ typed() {
   open "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/$1"
 }
 
+# Clear out Neovim Swap
+nvcswp() {
+  rm -f $HOME/.local/share/nvim/swap/*.swp
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
