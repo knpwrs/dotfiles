@@ -44,6 +44,7 @@ alias la='ls -lAh'
 alias pu='pushd'
 alias po='popd'
 
+alias rgi='rg -i'
 alias rl='readlink -f'
 
 if  [[ "$OSTYPE" = darwin* ]]; then
