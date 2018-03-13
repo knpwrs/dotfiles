@@ -256,6 +256,7 @@ inoremap <silent><expr> <TAB>
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
   endfunction"}}}
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 " let g:ale_completion_enabled = 1 " currently beta
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
