@@ -1,7 +1,7 @@
 # Based on https://github.com/robbyrussell/oh-my-zsh/blob/7ed82b4df6d381ef26a4dbdf253bf414497adcd1/plugins/globalias/globalias.plugin.zsh
 
 globalias() {
-   if ! [[ $LBUFFER =~ '^z$' ]]; then
+   if ! [[ $LBUFFER =~ '^z$' || $LBUFFER =~ '\$' ]]; then
      zle _expand_alias
      zle expand-word
    fi
