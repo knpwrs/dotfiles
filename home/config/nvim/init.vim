@@ -165,6 +165,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
+Plug 'tommcdo/vim-fugitive-blame-ext' " Requires tpope/vim-fugitive
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
@@ -265,3 +266,5 @@ let g:vim_markdown_folding_level = 6
 "" sideways.vim
 nnoremap <leader>H :SidewaysLeft<cr>
 nnoremap <leader>L :SidewaysRight<cr>
+"" vim-fugitive
+nmap <leader>b :Gblame<cr>
