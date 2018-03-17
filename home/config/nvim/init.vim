@@ -267,5 +267,10 @@ let g:vim_markdown_folding_level = 6
 "" sideways.vim
 nnoremap <leader>H :SidewaysLeft<cr>
 nnoremap <leader>L :SidewaysRight<cr>
+"" vim-gitgutter
+" nmap <leader>hs <Plug>GitGutterStageHunk " Default binding
+" nmap <leader>hu <Plug>GitGutterUndoHunk " Default binding
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
 "" vim-fugitive
 nmap <leader>b :Gblame<cr>
