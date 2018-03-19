@@ -7,6 +7,7 @@ packages=(
   bundle-size     # Show bundle size of npm packages.
   dev-time-cli    # Get the current local time of a GitHub user.
   empty-trash-cli # Empty trash.
+  fkill-cli       # Fabulously kill processes.
   internal-ip     # Show internal IP address.
   is-online-cli   # Check if the Internet connection is up.
   is-up-cli       # Check if a website is up or down using ititup.org.
