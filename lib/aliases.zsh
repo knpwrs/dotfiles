@@ -64,6 +64,8 @@ alias resume="kill -CONT"
 
 alias hb='HandBrakeCLI'
 
+alias osvg='svgo -i - -o - --pretty --multipass'
+
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
 
 alias v='nvim'
