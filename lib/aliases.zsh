@@ -64,7 +64,7 @@ alias resume="kill -CONT"
 
 alias hb='HandBrakeCLI'
 
-alias osvg='svgo -i - -o - --pretty --multipass'
+alias osvg='svgo -i - -o - --pretty --multipass --enable=removeXMLNS'
 
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
 
