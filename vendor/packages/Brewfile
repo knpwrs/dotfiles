@@ -35,6 +35,7 @@ brew 'gnu-tar'                    # GNU version of the tar utility.
 brew 'gnupg'                      # GNU Pretty Good Privacy (PGP) package.
 brew 'gnuski'                     # Open source clone of Skifree
 brew 'graphviz'                   # Rich set of graph drawing tools.
+brew 'gron'                       # Make JSON greppable!
 brew 'httpie'                     # cURL-like tool for humans.
 brew 'imagemagick'                # CLI image manipulation utilities.
 brew 'jq'                         # SED for JSON.
