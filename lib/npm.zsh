@@ -1,3 +1,4 @@
+alias npci='npm ci'
 alias npi='npm install'
 alias npid='npm install -D'
 alias npig='npm install -g'
