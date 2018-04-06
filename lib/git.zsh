@@ -55,6 +55,7 @@ alias gap='git add -p'
 
 alias gb='git branch'
 alias gba='git branch -a'
+alias gbd='git branch -D'
 function gbda() {
   local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v master | grep -v svn)
   if [ "$1" = "-r" ]; then
