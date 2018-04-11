@@ -18,6 +18,7 @@ packages=(
   localtunnel                      # Simple tool to expose a local port over public dns.
   modhelp                          # Display README for any NPM module in terminal.
   nd                               # CLI markdown viewer.
+  neovim                           # Neovim Node provider.
   np                               # Better npm publish.
   npm-name-cli                     # Check if a package name is available on npm.
   npm-quick-run                    # Quickly run npm scripts by prefix without typing the full name.
