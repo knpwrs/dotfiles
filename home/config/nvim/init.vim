@@ -241,6 +241,7 @@ let g:ackprg='rg --vimgrep --no-heading' " ripgrep
 noremap <leader>f :Ack!<Space>''<Left>
 "" ALE
 let g:ale_open_list = 1
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
