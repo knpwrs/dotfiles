@@ -20,6 +20,7 @@ packages=(
   nd                               # CLI markdown viewer.
   neovim                           # Neovim Node provider.
   np                               # Better npm publish.
+  npm-merge-driver                 # git merge driver for resolving conflicts in npm-related files
   npm-name-cli                     # Check if a package name is available on npm.
   npm-quick-run                    # Quickly run npm scripts by prefix without typing the full name.
   nws                              # Node web server.
