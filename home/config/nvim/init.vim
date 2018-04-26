@@ -220,6 +220,7 @@ hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
 "" Misc Key bindings
 nmap <silent> dsf ds(db
+  \:call repeat#set("dsf")<CR>
 "" CtrlP
 let g:ctrlp_map='<C-p>'
 nmap <leader>o :CtrlPBuffer<CR>
