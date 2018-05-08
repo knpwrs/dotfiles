@@ -139,5 +139,14 @@ nvcswp() {
   rm -f $HOME/.local/share/nvim/swap/*.swp
 }
 
+# Measure time to first byte with CURL
+ttfb() {
+  curl -o /dev/null \
+    -H 'Cache-Control: no-cache' \
+    -s \
+    -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total: %{time_total} \n" \
+    $1
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
