@@ -126,6 +126,10 @@ function gfp() {
   git show $(git merge-base --fork-point $1)
 }
 alias gfpm='gfp master'
+gfr() {
+  [[ "$#" != 1 ]] && local r="origin"
+  git fetch --all && git reset --hard "${r:=$1}/$(current_branch)"
+}
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
