@@ -1,3 +1,4 @@
+*.local.md
 *.swp
 .DS_Store
 .tern-port
