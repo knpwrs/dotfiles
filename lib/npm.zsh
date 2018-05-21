@@ -29,3 +29,11 @@ function npf() {
 function nplf() {
   jq ".$2" < "./node_modules/$1/package.json"
 }
+
+function npoh() {
+  open $(npm view $1 homepage)
+}
+
+function npon() {
+  open "https://npm.im/$1"
+}
