@@ -170,7 +170,7 @@ Plug 'tommcdo/vim-fugitive-blame-ext' " Requires tpope/vim-fugitive
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
 "" Navigation Plugs
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
 Plug 'tyok/nerdtree-ack'
 "" Autocompletion Plugs
@@ -221,11 +221,9 @@ set laststatus=2
 "" Misc Key bindings
 nmap <silent> dsf ds(db
   \:call repeat#set("dsf")<CR>
-"" CtrlP
-let g:ctrlp_map='<C-p>'
-nmap <leader>o :CtrlPBuffer<CR>
-let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"" FZF
+nmap <C-p> :FZF<CR>
+nmap <leader>F :FZF<CR>
 "" NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1

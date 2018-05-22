@@ -23,6 +23,9 @@ if [ -f $Z_FILE ]; then
   source $Z_FILE
 fi
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Tell the terminal about the working directory at each prompt.
 # http://apple.stackexchange.com/a/128999
 if [ "$TERM_PROGRAM" = "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ]; then

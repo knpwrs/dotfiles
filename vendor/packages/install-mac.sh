@@ -12,6 +12,8 @@ if  [[ "$OSTYPE" = darwin* ]]; then
     echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells
     chsh -s /usr/local/bin/zsh
   fi
+  # Setup fzf
+  yes | $(brew --prefix)/opt/fzf/install
 else
   echo "Not on macOS. Skipping mac packages."
 fi
