@@ -37,3 +37,10 @@ function npoh() {
 function npon() {
   open "https://npm.im/$1"
 }
+
+function fnp() {
+jq -r '[.dependencies | to_entries[] | .key][], [.devDependencies | to_entries[] | .key][]' < package.json \
+  | sort \
+  | fzf --preview='jq . node_modules/{}/package.json' \
+        --bind='ctrl-h:execute(open $(jq -r .homepage node_modules/{}/package.json))'
+}
