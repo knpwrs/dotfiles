@@ -25,6 +25,8 @@ fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# zsh-interactive-cd
+source $DOTVENDOR/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
 # Tell the terminal about the working directory at each prompt.
 # http://apple.stackexchange.com/a/128999
