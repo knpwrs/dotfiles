@@ -344,6 +344,9 @@ fco() {
   git checkout $(echo "$target" | awk '{print $2}')
 }
 
+# fcof - undo unstaged changes to files
+alias fcof='git checkout -- $(fzf)'
+
 # fcop(review) - checkout git branch/tag, with a preview showing the commits between the tag/branch and HEAD
 fcop() {
   local tags branches target
