@@ -316,6 +316,19 @@ fbr() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
+# fbrd - delete branches
+fbrd() {
+  local branches target
+  branches=$(
+    git branch --all | grep -v HEAD             |
+    sed "s/.* //"    | sed "s#remotes/[^/]*/##" |
+    sort -u          | awk '{print "\x1b[34;1mbranch\x1b[m\t" $1}') || return
+  target=$(
+    (echo "$tags"; echo "$branches") |
+    fzf --no-hscroll --ansi +m -d "\t" -n 2) || return
+  git branch -D $(echo "$target" | awk '{print $2}')
+}
+
 # fco - checkout git branch/tag
 fco() {
   local tags branches target
