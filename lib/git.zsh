@@ -366,19 +366,6 @@ fshow() {
 FZF-EOF"
 }
 
-# fshop - fshow with previews
-fshop() {
-  git log --graph --color=always \
-      --format="%C(auto)%h%d %s %C(white)%C(bold)%cr" "$@" |
-  fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
-      --preview $_viewGitLogLine \
-      --bind "ctrl-m:execute:
-                (grep -o '[a-f0-9]\{7\}' | head -1 |
-                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
-                {}
-FZF-EOF"
-}
-
 # fcs - get git commit SHA
 # example: git rebase -i $(fcs)
 fsha() {
