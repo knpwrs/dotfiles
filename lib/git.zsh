@@ -367,7 +367,7 @@ FZF-EOF"
 }
 
 # fcs - get git commit SHA
-# example: git rebase -i $(fcs)
+# example: git rebase -i $(fsha)
 fsha() {
   local commits commit
   commits=$(git log --color=always --pretty=oneline --abbrev-commit --reverse) &&
