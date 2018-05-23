@@ -22,3 +22,6 @@ export KNPWRS="$GITHUB/knpwrs"
 # Load zmv command
 # http://zshwiki.org/home/builtin/functions/zmv
 autoload -U zmv
+
+# Local zsh env
+[ -f ~/.env.local.zsh ] && source ~/.env.local.zsh
