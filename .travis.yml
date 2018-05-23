@@ -1,8 +1,0 @@
-os: osx
-osx_image: xcode8.3
-script:
-  - ./vendor/packages/install-mac.sh
-  - ./vendor/packages/install-crates.sh
-  - sudo ./vendor/packages/install-npm.sh
-  - sudo ./vendor/packages/install-gems.sh
-  # - sudo ./vendor/packages/install-pip.sh
