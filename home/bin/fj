@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+set -e
+
+ticket=$({for ((req=0;req<5;req++)); do
+  curl "https://$JIRA_TEAM.atlassian.net/rest/api/2/search?jql=order%20by%20updated%20DESC&maxResults=100&startAt=$(($req * 100))" \
+    -s -u "$JIRA_USER:$JIRA_TOKEN" \
+    |  jq -r '.issues[] | "\(.key): \(.fields.summary)"' &
+done} | fzf --no-hscroll +m | cut -d ':' -f 1)
+
+[ ${#ticket} -gt 0 ] && open "https://$JIRA_TEAM.atlassian.net/browse/$ticket"
