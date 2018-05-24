@@ -101,3 +101,6 @@ chh() {
 
  # Search words
  alias fw='fzf < /usr/share/dict/words'
+
+ # Open a file in vim
+ alias fim='vim $(fzf)'
