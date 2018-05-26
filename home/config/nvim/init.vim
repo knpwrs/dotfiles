@@ -155,6 +155,7 @@ Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'sickill/vim-pasta'
 Plug 'tommcdo/vim-exchange'
+Plug 'tommcdo/vim-fugitive-blame-ext' " Requires tpope/vim-fugitive
 Plug 'tomtom/tcomment_vim'
 Plug 'tonchis/vim-to-github'
 Plug 'tpope/vim-abolish'
@@ -165,7 +166,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
-Plug 'tommcdo/vim-fugitive-blame-ext' " Requires tpope/vim-fugitive
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
