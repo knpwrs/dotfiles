@@ -1,4 +1,9 @@
 #!/usr/local/bin zsh
+
+# Use fd instead of find for speed
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Most of these are from https://github.com/junegunn/fzf/wiki/examples
 
 # fkill - kill process
@@ -13,7 +18,7 @@ fkill() {
 }
 
 # fd - cd to selected directory
-fd() {
+fcd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
@@ -28,7 +33,7 @@ fdf() {
  }
 
 # fdr - cd to selected parent directory
-fdr() {
+fcdr() {
   local declare dirs=()
   get_parent_dirs() {
     if [[ -d "${1}" ]]; then dirs+=("$1"); else return; fi
@@ -43,7 +48,7 @@ fdr() {
 }
 
 # fh - repeat history
-fh() {
+fch() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
