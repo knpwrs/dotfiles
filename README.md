@@ -21,11 +21,20 @@ terminal emulators. `vendor` contains subtrees for external repositories.
 
 ## Other Tips
 
+### Xcode
+
 If you need to accept the xcode license at any point for some reason:
 
 ```sh
 sudo xcodebuild -license
 ```
 
+### Not Ken?
+
+If your name is not Ken Powers you will probably want to edit
+[`./home/gitconfig`][gitc] to have your information. You can do this on your
+own branch to make pulling upstream changes easier.
+
 [Homebrew]: http://brew.sh/ "Homebrew"
 [`./vendor/packages`]: vendor/packages "./vendor/packages"
+[gitc]: ./home/gitconfig "gitconfig"
