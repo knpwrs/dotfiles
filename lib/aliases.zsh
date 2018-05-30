@@ -150,3 +150,6 @@ ttfb() {
 
 # Make aliases available to sudo
 alias sudo='sudo '
+
+# pls
+alias pls='sudo $(fc -ln -1)'
