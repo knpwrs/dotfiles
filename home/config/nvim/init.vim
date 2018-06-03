@@ -1,4 +1,4 @@
-"
+
 " Neovim default settings
 " :h defaults
 "
@@ -155,6 +155,7 @@ Plug 'keith/investigate.vim'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'sickill/vim-pasta'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-fugitive-blame-ext' " Requires tpope/vim-fugitive
 Plug 'tomtom/tcomment_vim'
