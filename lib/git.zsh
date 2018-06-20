@@ -103,6 +103,8 @@ alias gcount='git shortlog -sn'
 alias gcw='git checkout work'
 compdef gcount=git
 alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
 alias gcre='git commit --reedit-message=$1'
 alias gcrea='git commit -a --reedit-message$1'
 alias gcs='git commit -S'
