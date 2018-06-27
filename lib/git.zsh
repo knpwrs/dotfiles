@@ -92,7 +92,6 @@ alias gcb='git checkout -b'
 alias gcd='git checkout develop'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
-alias gclean='git reset --hard && git clean -dfx'
 alias gcm='git checkout master'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
@@ -207,12 +206,14 @@ alias gl='git pull'
 function glcd() {
   git clone $1 && cd $(basename -s .git $1)
 }
+alias glean='git clean -df'
 alias glg='git log --stat --color'
 alias glgp='git log --stat --color -p'
 alias glgg='git log --graph --color'
 alias glgga='git log --graph --decorate --all'
 alias glgm='git log --graph --max-count=10'
 alias glo='git log --oneline --decorate --color'
+alias globber='git reset --hard && git clean -dfx'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 alias glof='git log --format=full --decorate --color'
