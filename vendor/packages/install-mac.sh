@@ -14,6 +14,8 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   fi
   # Setup fzf
   yes | $(brew --prefix)/opt/fzf/install
+  # Set default applications
+  duti -s com.qvacua.VimR .txt all
 else
   echo "Not on macOS. Skipping mac packages."
 fi
