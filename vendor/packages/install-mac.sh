@@ -16,6 +16,7 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   yes | $(brew --prefix)/opt/fzf/install
   # Set default applications
   duti -s com.qvacua.VimR .txt all
+  duti -s org.videolan.vlc .mp4 all
 else
   echo "Not on macOS. Skipping mac packages."
 fi
