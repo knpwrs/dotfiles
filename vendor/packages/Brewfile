@@ -47,6 +47,7 @@ brew 'mitmproxy'                  # Intercept, modify, replay, save HTTP/S traff
 brew 'moreutils'                  # Other useful utilities.
 brew 'mpg123'                     # MP3 player for Linux and UNIX.
 brew 'mycli'                      # MySQL CLI with autocomplete and syntax highlighting.
+brew 'neofetch'                   # A command-line system information tool written in bash 3.2+
 brew 'neovim'                     # Neovim
 brew 'netcat'                     # Utility for managing network connections.
 brew 'ngrep'                      # Network grep.
