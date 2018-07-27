@@ -106,6 +106,8 @@ noremap <Leader>7 7gt
 noremap <Leader>8 8gt
 noremap <Leader>9 9gt
 noremap <Leader>0 :tablast<cr>
+noremap <Leader>[ :tabm -1<cr>
+noremap <Leader>] :tabm +1<cr>
 
 if has('multi_byte') && &encoding ==# 'utf-8'
   let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
