@@ -107,6 +107,7 @@ cask 'handbrake'                 # Video conversion utility.
 cask 'hex-fiend'                 # A fast and clever open source hex editor for macOS.
 cask 'hyper'                     # Terminal emulator built on web standards.
 cask 'keka'                      # Archive extraction and creation.
+cask 'kitty'                     # The fast, featureful, GPU-based terminal emulator.
 cask 'macvim'                    # Vim with a mac gui.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'native-access'             # Native Instruments Management Tool
