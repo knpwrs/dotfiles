@@ -87,6 +87,9 @@ for d in glob("$DOTLIB/spell/*.add", 1, 1)
   endif
 endfor
 
+"" Toggle paste mode
+noremap <Leader>P :set paste!<cr>
+
 "" Split mappings
 noremap <Leader>- :<C-u>split<CR>
 noremap <Leader>\| :<C-u>vsplit<CR>
