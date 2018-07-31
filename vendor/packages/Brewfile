@@ -155,6 +155,7 @@ cask 'font-quicksand'
 cask 'font-raleway'
 cask 'font-roboto'
 cask 'font-roboto-condensed'
+cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 
 # Alternative cask versions
