@@ -1,4 +1,4 @@
-*.local.md
+*.ignore.*
 *.swp
 .DS_Store
 .tern-port
