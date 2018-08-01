@@ -6,8 +6,7 @@ feel free to use ideas or suggest improvements.
 ## Installation
 
 1. Clone this repository to `$HOME/.dotfiles`.
-1. Follow the instructions in the `etc` directory to set up system
-   settings.
+1. Follow the instructions in the `etc` directory to set up system settings.
 1. Run `./install.sh`.
 1. Optionally follow the instructions in [`vendor/packages`] to install
    packages I use on a regular basis.
@@ -16,8 +15,8 @@ feel free to use ideas or suggest improvements.
 
 Everything in `home` is linked to `$HOME/.$file`. Old links are overridden /
 updated and dead links are deleted. `lib` contains any files which should not
-necessarily be linked to in `$HOME`. `etc` contains configuration for various
-terminal emulators. `vendor` contains subtrees for external repositories.
+necessarily be linked to in `$HOME`. `etc` contains configuration miscellaneous
+tools. `vendor` contains subtrees for external repositories.
 
 ## Other Tips
 
