@@ -218,6 +218,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vitalk/vim-simple-todo'
 Plug 'w0rp/ale'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
