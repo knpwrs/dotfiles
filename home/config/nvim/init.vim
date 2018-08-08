@@ -327,3 +327,11 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 "" vim-fugitive
 nmap <leader>b :Gblame<cr>
+"" vim-simple-todo
+let g:simple_todo_map_keys = 0
+nmap <Leader>i <Plug>(simple-todo-new-list-item-start-of-line)
+nmap <Leader>o <Plug>(simple-todo-below)
+nmap <Leader>O <Plug>(simple-todo-above)
+nmap <Leader>x <Plug>(simple-todo-mark-as-done)
+nmap <Leader>X <Plug>(simple-todo-mark-as-undone)
+nmap <Leader>m <Plug>(simple-todo-mark-switch)
