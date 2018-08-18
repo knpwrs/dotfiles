@@ -42,6 +42,7 @@ brew 'httpie'                     # cURL-like tool for humans.
 brew 'imagemagick'                # CLI image manipulation utilities.
 brew 'innoextract'                # Tool to unpack installers created by Inno Setup.
 brew 'jq'                         # SED for JSON.
+brew 'jpegoptim'                  # Optimize/compress JPEG files without losing quality.
 brew 'mas'                        # Mac App Store CLI
 brew 'mitmproxy'                  # Intercept, modify, replay, save HTTP/S traffic.
 brew 'moreutils'                  # Other useful utilities.
