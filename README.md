@@ -8,7 +8,7 @@ feel free to use ideas or suggest improvements.
 1. Clone this repository to `$HOME/.dotfiles`.
 1. Follow the instructions in the `etc` directory to set up system settings.
 1. Run `./install.sh`.
-1. Optionally follow the instructions in [`vendor/packages`] to install
+1. Optionally follow the instructions in [`./vendor/packages`] to install
    packages I use on a regular basis.
 
 ## Structure
