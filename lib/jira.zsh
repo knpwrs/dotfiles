@@ -7,8 +7,6 @@ function jql() {
 }
 
 function fjql() {
-  set -e
-
   ticket=$({for ((req=0;req<5;req++)); do
     jql $1 $req &
   done} | fzf --no-hscroll +m | cut -d ':' -f 1)
