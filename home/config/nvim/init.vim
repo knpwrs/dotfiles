@@ -219,6 +219,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vitalk/vim-simple-todo'
+Plug 'vim-scripts/BufOnly.vim'
 Plug 'w0rp/ale'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
@@ -341,3 +342,5 @@ nmap <Leader>m <Plug>(simple-todo-mark-switch)
 vmap <Leader>x <Plug>(simple-todo-mark-as-done)
 vmap <Leader>X <Plug>(simple-todo-mark-as-undone)
 vmap <Leader>m <Plug>(simple-todo-mark-switch)
+"" BufOnly.vim
+cnoreabbrev bufo BufO
