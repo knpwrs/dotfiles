@@ -6,8 +6,8 @@ RUSTUP="$HOME/.cargo/bin/rustup"
 
 crates=(
   cargo-watch # Watch for file changes and run cargo commands
-  racer     # Code completion for rust
-  hyperfine # A command-line benchmarking tool
+  hyperfine   # A command-line benchmarking tool
+  racer       # Code completion for rust
 )
 
 $CARGO add component rust-src
