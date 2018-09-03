@@ -175,6 +175,10 @@ set statusline=%{CurrentModeString()}
 set statusline+=%=%l,%c " ruler
 set statusline+=\ %f
 
+"" Write with sudo
+command! -nargs=0 WriteWithSudo :w !sudo tee % > /dev/null
+cnoreabbrev ww WriteWithSudo
+
 "
 " Begin vim-plug
 " Run :PlugInstall to install plugins.
