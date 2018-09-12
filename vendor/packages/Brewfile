@@ -85,6 +85,7 @@ brew 'watchman'                   # Watches files and records, or triggers actio
 brew 'webkit2png'                 # Create website screenshots from terminal.
 brew 'wget'                       # Internet file retriever.
 brew 'woof'                       # Simple one-off HTTP file sharing.
+brew 'wrk'                        # HTTP load tester.
 brew 'yarn'                       # JavaScript package manager.
 brew 'yetris'                     # Terminal Tetris
 brew 'youtube-dl'                 # Download youtube videos.
