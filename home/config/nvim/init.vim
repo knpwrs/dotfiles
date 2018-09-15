@@ -71,6 +71,13 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
+"" Execute macro over lines in visual mode
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
 "" \, edits the vi config file.
 nnoremap <Leader>, :tabedit $MYVIMRC<CR>
 "" <C-l> redraws the screen and removes any search highlighting.
