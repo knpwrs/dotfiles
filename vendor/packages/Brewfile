@@ -4,94 +4,94 @@ tap 'universal-ctags/universal-ctags'
 
 # Base Packages
 
-brew 'ack'                                   # Grep for source code.
-brew 'ag'                                    # The Silver Searcher. Faster ack.
-brew 'archey'                                # "About this Mac" CLI.
-brew 'aria2'                                 # Multi-protocol download client.
-brew 'bat'                                   # A cat clone with wings.
-brew 'ccat'                                  # cat with syntax highlighting.
-brew 'cloc'                                  # Count lines of code in a directory.
-brew 'cmake'                                 # Cross-platform build system.
-brew 'cmatrix'                               # Matrix in the terminal.
-brew 'coreutils'                             # GNU core utilities (Mac is BSD).
-brew 'cowsay'                                # Configurable talking characters in ASCII art.
-brew 'curl'                                  # HTTP client.
-brew 'diff-so-fancy'                         # Fancy diff for git.
-brew 'direnv'                                # Shell environment switcher.
-# brew 'duck'                                 # Cyberduck CLI. # Requires Java.
-brew 'duti'                                  # A command-line tool to select default applications for document types and URL schemes on Mac OS X
-brew 'exiftool'                              # Image exif manipulation.
-brew 'fd'                                    # A simple, fast, and user-friendly alternative to 'find'.
-brew 'fdupes'                                # Duplicate file finder.
-brew 'ffmpeg'                                # Play, record, convert, and stream audio and video.
-brew 'figlet'                                # Make large letters out of ordinary text.
-brew 'findutils'                             # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew 'fzf'                                   # Fuzzy finder.
-brew 'git'                                   # Distributed revision control system.
-brew 'git-cal'                               # Visual commits calendar for git.
-brew 'git-extras'                            # Extra git commands.
-brew 'git-imerge'                            # Incremental merge helper for git.
-brew 'git-lfs'                               # Git extension for versioning large files.
-brew 'git-open'                              # Open the GitHub page or website for the current repository.
-brew 'gnu-sed', args: ['with-default-names'] # GNU version of the sed utility.
-brew 'gnu-tar', args: ['with-default-names'] # GNU version of the tar utility.
-brew 'gnupg'                                 # GNU Pretty Good Privacy (PGP) package.
-brew 'gnuski'                                # Open source clone of Skifree
-brew 'graphviz'                              # Rich set of graph drawing tools.
-brew 'gron'                                  # Make JSON greppable!
-brew 'httpie'                                # cURL-like tool for humans.
-brew 'imagemagick'                           # CLI image manipulation utilities.
-brew 'innoextract'                           # Tool to unpack installers created by Inno Setup.
-brew 'jq'                                    # SED for JSON.
-brew 'jpegoptim'                             # Optimize/compress JPEG files without losing quality.
-brew 'mas'                                   # Mac App Store CLI
-brew 'mitmproxy'                             # Intercept, modify, replay, save HTTP/S traffic.
-brew 'moreutils'                             # Other useful utilities.
-brew 'mpg123'                                # MP3 player for Linux and UNIX.
-brew 'mycli'                                 # MySQL CLI with autocomplete and syntax highlighting.
-brew 'neofetch'                              # A command-line system information tool written in bash 3.2+
-brew 'neovim'                                # Neovim
-brew 'netcat'                                # Utility for managing network connections.
-brew 'ngrep'                                 # Network grep.
-brew 'nmap'                                  # Network exploration tool and security / port scanner.
-brew 'node'                                  # Node.js.
-brew 'nyancat'                               # Nyancat in your terminal, rendered through ANSI escape sequences.
-brew 'p7zip'                                 # A command line port of the 7zip utility to Unix, Mac OS X and BeOS.
-brew 'pgcli'                                 # PostgreSQL CLI with autocomplete and syntax highlighting.
-brew 'pigz'                                  # Parallel Implementation of GZip
-brew 'pv'                                    # Monitor the progress of data through a pipe.
-brew 'python3'                               # Python 3
-brew 'ranger'                                # File browser.
-brew 'reattach-to-user-namespace'            # Utility for tighter macOS and tmux integration
-brew 'rename'                                # File renaming utilities.
-brew 'rig'                                   # Random Identity Generator
-brew 'ripgrep'                               # Faster Silver Searcher.
-brew 'rsync'                                 # Utility that provides fast incremental file transfer
-brew 'screenfetch'                           # The Bash Screenshot Information Tool
-brew 'siege'                                 # HTTP regression testing and benchmarking utility
-brew 'sift'                                  # Fast and powerful alternative to grep.
-brew 'ski'                                   # Evade the deadly Yeti on your jet-powered skis.
-brew 'sl'                                    # Steam Locomotive
-brew 'ssh-copy-id'                           # Add a public key to a remote machine's authorized_keys file.
-brew 'sshuttle'                              # Proxy server that works as a poor man's VPN.
-brew 'tig'                                   # Text-mode interface for git.
-brew 'tmux'                                  # Terminal multiplexer.
-brew 'toilet'                                # Display large, colorful characters.
-brew 'tree'                                  # Display directories as trees (with optional color/HTML output).
-brew 'universal-ctags'                       # A maintained ctags implementation.
-brew 'vbindiff'                              # Visual binary diff.
-brew 'vim'                                   # Vi "workalike" with many additional features.
-brew 'watchman'                              # Watches files and records, or triggers actions, when they change.
-brew 'webkit2png'                            # Create website screenshots from terminal.
-brew 'wget'                                  # Internet file retriever.
-brew 'woof'                                  # Simple one-off HTTP file sharing.
-brew 'wrk'                                   # HTTP load tester.
-brew 'yarn'                                  # JavaScript package manager.
-brew 'yetris'                                # Terminal Tetris
-brew 'youtube-dl'                            # Download youtube videos.
-brew 'z'                                     # Jump around.
-brew 'zsh'                                   # UNIX shell (command interpreter).
-brew 'homebrew/dupes/expect'                 # A tool for automating interactive applications.
+brew 'ack'                                     # Grep for source code.
+brew 'ag'                                      # The Silver Searcher. Faster ack.
+brew 'archey'                                  # "About this Mac" CLI.
+brew 'aria2'                                   # Multi-protocol download client.
+brew 'bat'                                     # A cat clone with wings.
+brew 'ccat'                                    # cat with syntax highlighting.
+brew 'cloc'                                    # Count lines of code in a directory.
+brew 'cmake'                                   # Cross-platform build system.
+brew 'cmatrix'                                 # Matrix in the terminal.
+brew 'coreutils'                               # GNU core utilities (Mac is BSD).
+brew 'cowsay'                                  # Configurable talking characters in ASCII art.
+brew 'curl'                                    # HTTP client.
+brew 'diff-so-fancy'                           # Fancy diff for git.
+brew 'direnv'                                  # Shell environment switcher.
+brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
+brew 'exiftool'                                # Image exif manipulation.
+brew 'fd'                                      # A simple, fast, and user-friendly alternative to 'find'.
+brew 'fdupes'                                  # Duplicate file finder.
+brew 'ffmpeg'                                  # Play, record, convert, and stream audio and video.
+brew 'figlet'                                  # Make large letters out of ordinary text.
+brew 'findutils'                               # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew 'fzf'                                     # Fuzzy finder.
+brew 'git'                                     # Distributed revision control system.
+brew 'git-cal'                                 # Visual commits calendar for git.
+brew 'git-extras'                              # Extra git commands.
+brew 'git-imerge'                              # Incremental merge helper for git.
+brew 'git-lfs'                                 # Git extension for versioning large files.
+brew 'git-open'                                # Open the GitHub page or website for the current repository.
+brew 'gnu-sed', args: ['with-default-names']   # GNU version of the sed utility.
+brew 'gnu-tar', args: ['with-default-names']   # GNU version of the tar utility.
+brew 'gnu-which', args: ['with-default-names'] # GNU version of the tar utility.
+brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) package.
+brew 'gnuski'                                  # Open source clone of Skifree
+brew 'graphviz'                                # Rich set of graph drawing tools.
+brew 'gron'                                    # Make JSON greppable!
+brew 'httpie'                                  # cURL-like tool for humans.
+brew 'imagemagick'                             # CLI image manipulation utilities.
+brew 'innoextract'                             # Tool to unpack installers created by Inno Setup.
+brew 'jq'                                      # SED for JSON.
+brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
+brew 'mas'                                     # Mac App Store CLI
+brew 'mitmproxy'                               # Intercept, modify, replay, save HTTP/S traffic.
+brew 'moreutils'                               # Other useful utilities.
+brew 'mpg123'                                  # MP3 player for Linux and UNIX.
+brew 'mycli'                                   # MySQL CLI with autocomplete and syntax highlighting.
+brew 'neofetch'                                # A command-line system information tool written in bash 3.2+
+brew 'neovim'                                  # Neovim
+brew 'netcat'                                  # Utility for managing network connections.
+brew 'ngrep'                                   # Network grep.
+brew 'nmap'                                    # Network exploration tool and security / port scanner.
+brew 'node'                                    # Node.js.
+brew 'nyancat'                                 # Nyancat in your terminal, rendered through ANSI escape sequences.
+brew 'p7zip'                                   # A command line port of the 7zip utility to Unix, Mac OS X and BeOS.
+brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
+brew 'pigz'                                    # Parallel Implementation of GZip
+brew 'pv'                                      # Monitor the progress of data through a pipe.
+brew 'python3'                                 # Python 3
+brew 'ranger'                                  # File browser.
+brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
+brew 'rename'                                  # File renaming utilities.
+brew 'rig'                                     # Random Identity Generator
+brew 'ripgrep'                                 # Faster Silver Searcher.
+brew 'rsync'                                   # Utility that provides fast incremental file transfer
+brew 'screenfetch'                             # The Bash Screenshot Information Tool
+brew 'siege'                                   # HTTP regression testing and benchmarking utility
+brew 'sift'                                    # Fast and powerful alternative to grep.
+brew 'ski'                                     # Evade the deadly Yeti on your jet-powered skis.
+brew 'sl'                                      # Steam Locomotive
+brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file.
+brew 'sshuttle'                                # Proxy server that works as a poor man's VPN.
+brew 'tig'                                     # Text-mode interface for git.
+brew 'tmux'                                    # Terminal multiplexer.
+brew 'toilet'                                  # Display large, colorful characters.
+brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
+brew 'universal-ctags'                         # A maintained ctags implementation.
+brew 'vbindiff'                                # Visual binary diff.
+brew 'vim'                                     # Vi "workalike" with many additional features.
+brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
+brew 'webkit2png'                              # Create website screenshots from terminal.
+brew 'wget'                                    # Internet file retriever.
+brew 'woof'                                    # Simple one-off HTTP file sharing.
+brew 'wrk'                                     # HTTP load tester.
+brew 'yarn'                                    # JavaScript package manager.
+brew 'yetris'                                  # Terminal Tetris
+brew 'youtube-dl'                              # Download youtube videos.
+brew 'z'                                       # Jump around.
+brew 'zsh'                                     # UNIX shell (command interpreter).
+brew 'homebrew/dupes/expect'                   # A tool for automating interactive applications.
 
 # Casks
 cask 'alfred'                    # Power-user spotlight.
