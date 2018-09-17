@@ -44,6 +44,7 @@ brew 'imagemagick'                             # CLI image manipulation utilitie
 brew 'innoextract'                             # Tool to unpack installers created by Inno Setup.
 brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
+brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
 brew 'mitmproxy'                               # Intercept, modify, replay, save HTTP/S traffic.
 brew 'moreutils'                               # Other useful utilities.
