@@ -243,7 +243,7 @@ Plug 'tyok/nerdtree-ack'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-vim'
 " Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
+" Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 Plug 'wokalski/autocomplete-flow'
 "" Version Control Plugs
 Plug 'airblade/vim-gitgutter'
