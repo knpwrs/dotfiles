@@ -72,6 +72,8 @@ alias v='nvim'
 alias vv='nvim .'
 alias vim='nvim'
 
+alias fed='fd -tf | xargs sed -i'
+
 # reload zsh
 alias zshr='exec zsh -l'
 
