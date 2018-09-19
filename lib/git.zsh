@@ -309,6 +309,11 @@ alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -t "$DOTLIB/gwip.template"'
 
 #
+# Other git-related aliaes
+#
+alias dug='du -hd0 $(git rev-parse --git-dir)'
+
+#
 # FZF
 # https://github.com/junegunn/fzf/wiki/examples#git
 #
