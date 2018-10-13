@@ -124,7 +124,7 @@ cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
 cask 'vlc'                       # Open source media player.
 
 # Cask Quick Look Plugins
-cask 'betterzipql'         # Quicklook for zip files.
+cask 'betterzip'           # Quicklook for zip files.
 cask 'provisionql'         # Quicklook for ipa & provision.
 cask 'qlcolorcode'         # Quicklook syntax highlighting.
 cask 'qlimagesize'         # Adds dimensions and file size to Quicklook title bar.
