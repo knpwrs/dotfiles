@@ -1,7 +1,3 @@
-# Base Taps
-
-tap 'universal-ctags/universal-ctags'
-
 # Base Packages
 
 brew 'ack'                                     # Grep for source code.
@@ -79,7 +75,6 @@ brew 'tig'                                     # Text-mode interface for git.
 brew 'tmux'                                    # Terminal multiplexer.
 brew 'toilet'                                  # Display large, colorful characters.
 brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
-brew 'universal-ctags'                         # A maintained ctags implementation.
 brew 'vbindiff'                                # Visual binary diff.
 brew 'vim'                                     # Vi "workalike" with many additional features.
 brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
@@ -92,7 +87,6 @@ brew 'yetris'                                  # Terminal Tetris
 brew 'youtube-dl'                              # Download youtube videos.
 brew 'z'                                       # Jump around.
 brew 'zsh'                                     # UNIX shell (command interpreter).
-brew 'homebrew/dupes/expect'                   # A tool for automating interactive applications.
 
 # Casks
 cask 'alfred'                    # Power-user spotlight.
@@ -123,7 +117,6 @@ cask 'synthesia'                 # A fun way to learn how to play the piano.
 cask 'telegram'                  # Telegram messaging client.
 cask 'vagrant'                   # Development environment virtual machines.
 cask 'vagrant-manager'           # Manage vagrant machines from native Mac UI.
-cask 'veertu-desktop'            # Native Virtualization for macOS
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
