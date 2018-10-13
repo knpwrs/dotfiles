@@ -89,6 +89,7 @@ brew 'z'                                       # Jump around.
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
 # Casks
+cask '1password'                 # Password manager.
 cask 'alfred'                    # Power-user spotlight.
 cask 'atom'                      # Open source hackable text editor from GitHub.
 cask 'beardedspice'              # More control over keyboard media keys.
