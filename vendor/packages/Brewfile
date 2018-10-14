@@ -113,6 +113,7 @@ cask 'macvim'                    # Vim with a mac gui.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'native-access'             # Native Instruments Management Tool
 cask 'robo-3t'                   # Free MongoDB admin application.
+cask 'signal'                    # Signal messaging app.
 cask 'sketch'                    # Professional Digital Design for Mac
 cask 'slack'                     # Chat client for teams.
 cask 'synthesia'                 # A fun way to learn how to play the piano.
