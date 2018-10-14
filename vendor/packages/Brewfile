@@ -98,6 +98,7 @@ cask 'beyond-compare'            # Advanced diff and compare tool.
 cask 'bit-slicer'                # Universal game trainer.
 cask 'caprine'                   # Unofficial Facebook Messenger client.
 cask 'cheatsheet'                # Hold the ⌘-key to get a list of all active shortcuts for the current application.
+cask 'downie'                    # Video downloader.
 cask 'firefox'                   # Web browser from Mozilla.
 cask 'gas-mask'                  # Manage and switch between multiple hosts files.
 cask 'gitify'                    # GitHub desktop notifications.
