@@ -125,6 +125,7 @@ cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
 cask 'vlc'                       # Open source media player.
+cask 'whatsapp'                  # Whatsapp messaging app.
 
 # Cask Quick Look Plugins
 cask 'betterzip'           # Quicklook for zip files.
