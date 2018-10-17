@@ -7,9 +7,9 @@
 #   - https://stedolan.github.io/jq/
 #   - https://github.com/junegunn/fzf
 #
-# You will also need to define $JIRA_TEAM and $JIRA_TOKEN environment
-# variables. See the following for information on setting machine-private
-# environment variables:
+# You will also need to define $JIRA_TEAM, $JIRA_USER, and $JIRA_TOKEN
+# environment variables. See the following for information on setting
+# machine-private environment variables:
 #
 #   - https://github.com/knpwrs/dotfiles#private-environment-variables
 #
