@@ -34,6 +34,12 @@ If your name is not Ken Powers you will probably want to edit
 [`./home/gitconfig`][gitc] to have your information. You can do this on your
 own branch to make pulling upstream changes easier.
 
+### Private Environment Variables
+
+You can create a file at `home/env.local.zsh` which will be `source`d by
+`home/zshenv`. `*.local.zsh` is in this repository's `.gitignore` file so you
+don't have to worry about sensitive data being committed to the repository.
+
 [Homebrew]: http://brew.sh/ "Homebrew"
 [`./vendor/packages`]: vendor/packages "./vendor/packages"
 [gitc]: ./home/gitconfig "gitconfig"
