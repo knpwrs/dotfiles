@@ -8,8 +8,7 @@ alias -g ......='../../../../..'
 alias c1='cd -'
 alias c2='cd -2'
 alias c3='cd -3'
-alias c4='cd -4'
-alias c5='cd -5'
+alias c4='cd -4' alias c5='cd -5'
 alias c6='cd -6'
 alias c7='cd -7'
 alias c8='cd -8'
@@ -149,6 +148,9 @@ ttfb() {
     -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total: %{time_total} \n" \
     $1
 }
+
+# Generate 256-bit secret
+alias gensec='openssl rand -base64 32'
 
 # Make aliases available to sudo
 alias sudo='sudo '
