@@ -1,3 +1,4 @@
+alias npcc='npm ci && npm run check'
 alias npcd='npm ci && npm run dev'
 alias npci='npm ci'
 alias npi='npm install'
