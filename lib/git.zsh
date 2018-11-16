@@ -177,6 +177,7 @@ alias ggpur='ggu'
 compdef _git ggpur=git-checkout
 
 alias gh='git rev-parse HEAD'
+alias ghs='git rev-parse HEAD | head -c 7'
 
 function ghlcd() {
   glcd "git@github.com:$1"
