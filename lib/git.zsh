@@ -57,7 +57,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -D'
 function gbda() {
-  local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v master | grep -v svn)
+  local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v 'master\|svn\|develop\|release-candidate')
   if [ "$1" = "-r" ]; then
     # Delete all merged branches (including remote and tracking)
     # Requires git-extras to be installed.
