@@ -77,6 +77,7 @@ brew 'toilet'                                  # Display large, colorful charact
 brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
 brew 'vbindiff'                                # Visual binary diff.
 brew 'vim'                                     # Vi "workalike" with many additional features.
+brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit).
 brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
 brew 'webkit2png'                              # Create website screenshots from terminal.
 brew 'wget'                                    # Internet file retriever.
