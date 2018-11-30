@@ -414,3 +414,13 @@ fa() {
   IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && git add "${files[@]}"
 }
+
+# Initialize git environment variables for a workspace
+genvrc() {
+  cat >> .envrc <<EOF
+  export GIT_AUTHOR_NAME="$1"
+  export GIT_AUTHOR_EMAIL="$2"
+  export GIT_COMMITTER_NAME="$1"
+  export GIT_COMMITTER_EMAIL="$2"
+EOF
+}
