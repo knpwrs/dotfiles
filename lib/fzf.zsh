@@ -128,3 +128,11 @@ fo() {
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
 }
+
+# fb [FUZZY PATTERN] - Open the selected file with bat
+# Requires bat to be installed via cargo
+fb() {
+  local files
+  IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && bat "${files[@]}" --paging
+}
