@@ -414,7 +414,7 @@ fsha() {
 #   - Exit if there's no match (--exit-0)
 fa() {
   local files
-  IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
+  IFS=$'\n' files=($(git diff --name-only | fzf --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && git add "${files[@]}"
 }
 
