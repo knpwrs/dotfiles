@@ -91,6 +91,7 @@ brew 'zsh'                                     # UNIX shell (command interpreter
 
 # Casks
 cask '1password'                 # Password manager.
+cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
 cask 'alfred'                    # Power-user spotlight.
 cask 'appcleaner'                # Mac app uninstaller.
 cask 'apptrap'                   # Automatically uninstall apps when moving them to the trash.
