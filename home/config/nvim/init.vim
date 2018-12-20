@@ -332,6 +332,13 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_level = 6
+let g:vim_markdown_fenced_languages = [
+   \ 'js=javascript',
+   \ 'rb=ruby',
+   \ 'rs=rust',
+   \ 'ts=typescript',
+   \ 'py=python',
+   \]
 "" sideways.vim
 nnoremap <leader>H :SidewaysLeft<cr>
 nnoremap <leader>L :SidewaysRight<cr>
