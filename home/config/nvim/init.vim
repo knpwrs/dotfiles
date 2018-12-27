@@ -219,7 +219,7 @@ Plug 'mileszs/ack.vim'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-exchange'
-Plug 'tommcdo/vim-fugitive-blame-ext' " Requires tpope/vim-fugitive
+Plug 'tommcdo/vim-fugitive-blame-ext' " requires tpope/vim-fugitive
 Plug 'tomtom/tcomment_vim'
 Plug 'tonchis/vim-to-github'
 Plug 'tpope/vim-abolish'
