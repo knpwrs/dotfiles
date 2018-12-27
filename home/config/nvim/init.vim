@@ -250,7 +250,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
 Plug 'hail2u/vim-css3-syntax'
-Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
