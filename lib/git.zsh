@@ -152,10 +152,10 @@ alias ggpull='ggl'
 compdef _git ggpull=git-checkout
 ggp() {
 if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
-  git push origin "${*}"
+  git push -u origin "${*}"
 else
   [[ "$#" == 0 ]] && local b="$(current_branch)"
-  git push origin "${b:=$1}"
+  git push -u origin "${b:=$1}"
 fi
 }
 compdef _git ggp=git-checkout
