@@ -313,7 +313,7 @@ alias gvt='git verify-tag'
 
 alias gwa='git log --diff-filter=A --'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -t "$DOTLIB/gwip.template"'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -t "$DOTLIB/gwip.template"'
 
 #
 # Other git-related aliaes
