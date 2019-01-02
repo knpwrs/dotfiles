@@ -36,7 +36,7 @@ alias fj="fjql 'order%20by%20updated%20DESC'"
 alias fjm="fjql 'assignee%20%3D%20currentUser()%20AND%20resolution%20%3D%20Unresolved%20order%20by%20updated%20DESC'"
 
 function jurl() {
-  local ticket=$(git branch | grep \* | cut -d ' ' -f 2 | cut -d '/' -f 1)
+  local ticket=$(current_branch | cut -d ' ' -f 2 | cut -d '/' -f 1)
   echo "https://$JIRA_TEAM.atlassian.net/browse/$ticket"
 }
 
