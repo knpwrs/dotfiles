@@ -35,7 +35,10 @@ function fjql() {
 alias fj="fjql 'order%20by%20updated%20DESC'"
 alias fjm="fjql 'assignee%20%3D%20currentUser()%20AND%20resolution%20%3D%20Unresolved%20order%20by%20updated%20DESC'"
 
-function jo() {
+function jurl() {
   local ticket=$(git branch | grep \* | cut -d ' ' -f 2 | cut -d '/' -f 1)
-  open "https://$JIRA_TEAM.atlassian.net/browse/$ticket"
+  echo "https://$JIRA_TEAM.atlassian.net/browse/$ticket"
 }
+
+alias jo='open $(jurl)'
+alias jcp='jurl | pbcopy'
