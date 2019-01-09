@@ -43,6 +43,7 @@ brew 'jpegoptim'                               # Optimize/compress JPEG files wi
 brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
 brew 'mitmproxy'                               # Intercept, modify, replay, save HTTP/S traffic.
+brew 'mkcert'                                  # A simple zero-config tool to make locally trusted development certificates with any names you'd like.
 brew 'moreutils'                               # Other useful utilities.
 brew 'mpg123'                                  # MP3 player for Linux and UNIX.
 brew 'mycli'                                   # MySQL CLI with autocomplete and syntax highlighting.
