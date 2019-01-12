@@ -1,5 +1,6 @@
 # general
 alias drun='docker run -it --rm -v $(pwd):/host -w /host'
+alias deit='docker exec -it'
 
 # docker-compose
 alias dc="docker-compose"
