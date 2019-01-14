@@ -11,6 +11,7 @@ crates=(
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
   racer       # Code completion for rust
+  tokei       # A fast cloc alternative
 )
 
 $CARGO add component rust-src
