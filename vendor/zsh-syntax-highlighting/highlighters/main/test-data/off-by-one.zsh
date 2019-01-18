@@ -27,14 +27,15 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-alias a=A
+alias a=:
 f() {}
 
 BUFFER='a;f;'
 
 expected_region_highlight=(
-  "1 1 alias" # f
+  "1 1 alias" # a
+  "1 1 builtin" # a (:)
   "2 2 commandseparator" # ;
-  "3 3 function" # g
+  "3 3 function" # f
   "4 4 commandseparator" # ;
 )

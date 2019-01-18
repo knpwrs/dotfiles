@@ -30,5 +30,5 @@
 BUFFER='echo "foo ( bar"'
 
 expected_region_highlight=(
-"1  16 NONE" # We expect the brackets highlighter to do nothing
+"11 11 bracket-error"
 )
