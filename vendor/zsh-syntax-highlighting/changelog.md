@@ -1,14 +1,75 @@
-up to 28d7056a7a06
-
 # Changes in version 0.6.0
+
+This is a stable release, featuring bugfixes and minor improvements.
+
+
+## Performance improvements:
+
+(none)
 
 
 ## Added highlighting of:
 
 - The `isearch` and `suffix` [`$zle_highlight` settings][zshzle-Character-Highlighting].
-  (79e4d3d12405, 15db71abd0cc; requires zsh 5.3 for `$ISEARCHMATCH_ACTIVE` / `$SUFFIX_ACTIVE` support)
+  (79e4d3d12405, 15db71abd0cc, b56ee542d619; requires zsh 5.3 for `$ISEARCHMATCH_ACTIVE` / `$SUFFIX_ACTIVE` support)
 
 [zshzle-Character-Highlighting]: http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting
+
+- Possible history expansions in double-quoted strings.
+  (76ea9e1df316)
+
+- Mismatched `if`/`then`/`elif`/`else`/`fi`.
+  (73cb83270262)
+
+
+## Fixed highlighting of:
+
+- A comment line followed by a non-comment line.
+  (#385, 9396ad5c5f9c)
+
+- An unquoted `$*` (expands to the positional parameters).
+  (237f89ad629f)
+
+- history-incremental-pattern-search-backward under zsh 5.3.1.
+  (#407, #415, 462779629a0c)
+
+
+## API changes (for highlighter authors):
+
+(none)
+
+
+## Developer-visible changes:
+
+- tests: Set the `ALIAS_FUNC_DEF` option for zsh 5.4 compatibility.
+  (9523d6d49cb3)
+
+
+## Other changes:
+
+- docs: Added before/after screenshots.
+  (cd9ec14a65ec..b7e277106b49)
+
+- docs: Link Fedora package.
+  (3d74aa47e4a7, 5feed23962df)
+
+- docs: Link FreeBSD port.
+  (626c034c68d7)
+
+- docs: Link OpenSUSE Build Service packages
+  (#419, dea1fedc7358)
+
+- Prevent user-defined aliases from taking effect in z-sy-h's own code.
+  (#390, 2dce602727d7, 8d5afe47f774; and #392, #395, b8fa1b9dc954)
+
+- docs: Update zplug installation instructions.
+  (#399, 4f49c4a35f17)
+
+- Improve "unhandled ZLE widget 'foo'" error message.
+  (#409, be083d7f3710)
+
+- Fix printing of "failed loading highlighters" error message.
+  (#426, ad522a091429)
 
 
 # Changes in version 0.5.0
@@ -248,50 +309,66 @@ in this area.
 - incomplete sudo commands
   (a3047a912100, 2f05620b19ae)
 
-        sudo;
-        sudo -u;
+    ```zsh
+    sudo;
+    sudo -u;
+    ```
 
 - command words following reserved words
   (#207, #222, b397b12ac139 et seq, 6fbd2aa9579b et seq, 8b4adbd991b0)
 
-        if ls; then ls; else ls; fi
-        repeat 10 do ls; done
+    ```zsh
+    if ls; then ls; else ls; fi
+    repeat 10 do ls; done
+    ```
 
     (The `ls` are now highlighted as a command.)
 
 - comments (when `INTERACTIVE_COMMENTS` is set)
   (#163, #167, 693de99a9030)
 
-        echo Hello # comment
+    ```zsh
+    echo Hello # comment
+    ```
 
 - closing brackets of arithmetic expansion, subshells, and blocks
   (#226, a59f442d2d34, et seq)
 
-        (( foo ))
-        ( foo )
-        { foo }
+    ```zsh
+    (( foo ))
+    ( foo )
+    { foo }
+    ```
 
 - command names enabled by the `PATH_DIRS` option
   (#228, 96ee5116b182)
 
-        # When ~/bin/foo/bar exists, is executable, ~/bin is in $PATH,
-        # and 'setopt PATH_DIRS' is in effect
-        foo/bar
+    ```zsh
+    # When ~/bin/foo/bar exists, is executable, ~/bin is in $PATH,
+    # and 'setopt PATH_DIRS' is in effect
+    foo/bar
+    ```
 
 - parameter expansions with braces inside double quotes
   (#186, 6e3720f39d84)
 
-        echo "${foo}"
+    ```zsh
+    echo "${foo}"
+    ```
 
 - parameter expansions in command word
   (#101, 4fcfb15913a2)
 
-        x=/bin/ls
-        $x -l
+    ```zsh
+    x=/bin/ls
+    $x -l
+    ```
 
-- the command separators '|&', '&!', '&|'
+- the command separators '\|&', '&!', '&\|'
 
-        view file.pdf &!  ls
+    ```zsh
+    view file.pdf &!  ls
+    ```
 
 
 ## Fixed highlighting of:
@@ -299,23 +376,31 @@ in this area.
 - precommand modifiers at non-command-word position
   (#209, 2c9f8c8c95fa)
 
-        ls command foo
+    ```zsh
+    ls command foo
+    ```
 
 - sudo commands with infix redirections
   (#221, be006aded590, 86e924970911)
 
-        sudo -u >/tmp/foo.out user ls
+    ```zsh
+    sudo -u >/tmp/foo.out user ls
+    ```
 
 - subshells; anonymous functions
   (#166, #194, 0d1bfbcbfa67, 9e178f9f3948)
 
-        (true)
-        () { true }
+    ```zsh
+    (true)
+    () { true }
+    ```
 
 - parameter assignment statements with no command
   (#205, 01d7eeb3c713)
 
-        A=1;
+    ```zsh
+    A=1;
+    ```
 
     (The semicolon used to be highlighted as a mistake)
 
@@ -406,69 +491,95 @@ in this area.
 
 - suffix aliases (requires zsh 5.1.1 or newer):
 
-        alias -s png=display
-        foo.png
+    ```zsh
+    alias -s png=display
+    foo.png
+    ```
 
 - prefix redirections:
 
-        <foo.txt cat
+    ```zsh
+    <foo.txt cat
+    ```
 
 - redirection operators:
 
-        echo > foo.txt
+    ```zsh
+    echo > foo.txt
+    ```
 
 - arithmetic evaluations:
 
-        (( 42 ))
+    ```zsh
+    (( 42 ))
+    ```
 
 - $'' strings, including \x/\octal/\u/\U escapes
 
-        : $'foo\u0040bar'
+    ```zsh
+    : $'foo\u0040bar'
+    ```
 
 - multiline strings:
 
-        % echo "line 1
-        line 2"
+    ```zsh
+    % echo "line 1
+    line 2"
+    ```
 
 - string literals that haven't been finished:
 
-        % echo "Hello, world
-
+    ```zsh
+    % echo "Hello, world
+    ```
 - command words that involve tilde expansion:
 
-        % ~/bin/foo
-
+    ```zsh
+    % ~/bin/foo
+    ```
 
 ## Fixed highlighting of:
 
 - quoted command words:
 
-        % \ls
+    ```zsh
+    % \ls
+    ```
 
 - backslash escapes in "" strings:
 
-        % echo "\x41"
+    ```zsh
+    % echo "\x41"
+    ```
 
 - noglob after command separator:
 
-        % :; noglob echo *
+    ```zsh
+    % :; noglob echo *
+    ```
 
 - glob after command separator, when the first command starts with 'noglob':
 
-        % noglob true; echo *
+    ```zsh
+    % noglob true; echo *
+    ```
 
 - the region (vi visual mode / set-mark-command) (issue #165)
 
 - redirection and command separators that would be highlighted as `path_approx`
 
-        % echo foo;‸
-        % echo <‸
+    ```zsh
+    % echo foo;‸
+    % echo <‸
+    ```
 
     (where `‸` represents the cursor location)
 
 - escaped globbing (outside quotes)
 
-        % echo \*
+    ```zsh
+    % echo \*
+    ```
 
 
 ## Other changes:

@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2010-2016 zsh-syntax-highlighting contributors
+# Copyright (c) 2010-2017 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -29,6 +29,13 @@
 # -------------------------------------------------------------------------------------------------
 
 
+setopt NO_UNSET WARN_CREATE_GLOBAL
+
+local -r root=${0:h:h}
+local -a anon_argv; anon_argv=("$@")
+
+(){
+set -- "${(@)anon_argv}"
 # Check an highlighter was given as argument.
 [[ -n "$1" ]] || {
   echo >&2 "Bail out! You must provide the name of a valid highlighter as argument."
@@ -36,22 +43,22 @@
 }
 
 # Check the highlighter is valid.
-[[ -f ${0:h:h}/highlighters/$1/$1-highlighter.zsh ]] || {
+[[ -f $root/highlighters/$1/$1-highlighter.zsh ]] || {
   echo >&2 "Bail out! Could not find highlighter ${(qq)1}."
   exit 2
 }
 
 # Check the highlighter has test data.
-[[ -d ${0:h:h}/highlighters/$1/test-data ]] || {
+[[ -d $root/highlighters/$1/test-data ]] || {
   echo >&2 "Bail out! Highlighter ${(qq)1} has no test data."
   exit 2
 }
 
 # Set up results_filter
 local results_filter
-if [[ $QUIET == y ]]; then
+if [[ ${QUIET-} == y ]]; then
   if type -w perl >/dev/null; then
-    results_filter=${0:A:h}/tap-filter
+    results_filter=$root/tests/tap-filter
   else
     echo >&2 "Bail out! quiet mode not supported: perl not found"; exit 2
   fi
@@ -62,18 +69,18 @@ fi
 
 # Load the main script.
 # While here, test that it doesn't eat aliases.
-print > >($results_filter | ${0:A:h}/tap-colorizer.zsh) -r -- "# global (driver) tests"
-print > >($results_filter | ${0:A:h}/tap-colorizer.zsh) -r -- "1..1"
+print > >($results_filter | $root/tests/tap-colorizer.zsh) -r -- "# global (driver) tests"
+print > >($results_filter | $root/tests/tap-colorizer.zsh) -r -- "1..1"
 alias -- +plus=plus
 alias -- _other=other
-original_alias_dash_L_output="$(alias -L)"
-. ${0:h:h}/zsh-syntax-highlighting.zsh
+local original_alias_dash_L_output="$(alias -L)"
+. $root/zsh-syntax-highlighting.zsh
 if [[ $original_alias_dash_L_output == $(alias -L) ]]; then
   print -r -- "ok 1 # 'alias -- +foo=bar' is preserved"
 else
   print -r -- "not ok 1 # 'alias -- +foo=bar' is preserved"
   exit 1
-fi > >($results_filter | ${0:A:h}/tap-colorizer.zsh) 
+fi > >($results_filter | $root/tests/tap-colorizer.zsh)
 
 # Overwrite _zsh_highlight_add_highlight so we get the key itself instead of the style
 _zsh_highlight_add_highlight()
@@ -84,72 +91,95 @@ _zsh_highlight_add_highlight()
 # Activate the highlighter.
 ZSH_HIGHLIGHT_HIGHLIGHTERS=($1)
 
+# In zsh<5.3, 'typeset -p arrayvar' emits two lines, so we use this wrapper instead.
+typeset_p() {
+	for 1 ; do
+		print -r -- "$1=( ${(@q-P)1} )"
+	done
+}
+
+# Escape # as ♯ and newline as ↵ they are illegal in the 'description' part of TAP output
+# The string to escape is «"$@"»; the result is returned in $REPLY.
+tap_escape() {
+  local s="$@"
+  REPLY="${${s//'#'/♯}//$'\n'/↵}"
+}
+
 # Runs a highlighting test
 # $1: data file
 run_test_internal() {
 
   local tests_tempdir="$1"; shift
   local srcdir="$PWD"
-  builtin cd -q -- "$tests_tempdir" || { echo >&2 "Bail out! cd failed: $?"; return 1 }
+  builtin cd -q -- "$tests_tempdir" || { echo >&2 "Bail out! On ${(qq)1}: cd failed: $?"; return 1 }
 
   echo "# ${1:t:r}"
 
   # Load the data and prepare checking it.
-  PREBUFFER= BUFFER= ;
+  local BUFFER CURSOR MARK PENDING PREBUFFER REGION_ACTIVE WIDGET REPLY skip_test unsorted=0
+  local expected_mismatch
+  local -a expected_region_highlight region_highlight
   . "$srcdir"/"$1"
 
+  (( $#skip_test )) && { print -r -- "1..0 # SKIP $skip_test"; return; }
+
   # Check the data declares $PREBUFFER or $BUFFER.
-  [[ -z $PREBUFFER && -z $BUFFER ]] && { echo >&2 "Bail out! Either 'PREBUFFER' or 'BUFFER' must be declared and non-blank"; return 1; }
+  [[ -z $PREBUFFER && -z $BUFFER ]] && { echo >&2 "Bail out! On ${(qq)1}: Either 'PREBUFFER' or 'BUFFER' must be declared and non-blank"; return 1; }
   # Check the data declares $expected_region_highlight.
-  (( ${#expected_region_highlight} == 0 )) && { echo >&2 "Bail out! 'expected_region_highlight' is not declared or empty."; return 1; }
+  (( $+expected_region_highlight == 0 )) && { echo >&2 "Bail out! On ${(qq)1}: 'expected_region_highlight' is not declared."; return 1; }
+
+  # Set sane defaults for ZLE variables
+  : ${CURSOR=$#BUFFER} ${PENDING=0} ${WIDGET=z-sy-h-test-harness-test-widget}
 
   # Process the data.
-  region_highlight=()
   _zsh_highlight
 
-  # Overlapping regions can be declared in region_highlight, so we first build an array of the
-  # observed highlighting.
-  local -A observed_result
-  for ((i=1; i<=${#region_highlight}; i++)); do
-    local -a highlight_zone; highlight_zone=( ${(z)region_highlight[$i]} )
-    integer start=$highlight_zone[1] end=$highlight_zone[2]
-    if (( start < end )) # region_highlight ranges are half-open
-    then
-      (( --end )) # convert to closed range, like expected_region_highlight
-      (( ++start, ++end )) # region_highlight is 0-indexed; expected_region_highlight is 1-indexed
-      for j in {$start..$end}; do
-        observed_result[$j]=$highlight_zone[3]
-      done
-    else
-      # noop range; ignore.
-    fi
-    unset start end
-    unset highlight_zone
-  done
+  if (( unsorted )); then
+    region_highlight=("${(@n)region_highlight}")
+    expected_region_highlight=("${(@n)expected_region_highlight}")
+  fi
 
-  # Then we compare the observed result with the expected one.
-  echo "1..${#expected_region_highlight}"
-  for ((i=1; i<=${#expected_region_highlight}; i++)); do
-    local -a highlight_zone; highlight_zone=( ${(z)expected_region_highlight[$i]} )
+  echo "1..$(( $#expected_region_highlight + 1))"
+  local i
+  for ((i=1; i<=$#expected_region_highlight; i++)); do
+    local -a expected_highlight_zone; expected_highlight_zone=( ${(z)expected_region_highlight[i]} )
+    integer exp_start=$expected_highlight_zone[1] exp_end=$expected_highlight_zone[2]
     local todo=
-    integer start=$highlight_zone[1] end=$highlight_zone[2]
-    # Escape # as ♯ since the former is illegal in the 'description' part of TAP output
-    local desc="[$start,$end] «${BUFFER[$start,$end]//'#'/♯}»"
-    # Match the emptiness of observed_result if no highlighting is expected
-    [[ $highlight_zone[3] == NONE ]] && highlight_zone[3]=
-    [[ -n "$highlight_zone[4]" ]] && todo="# TODO $highlight_zone[4]"
-    for j in {$start..$end}; do
-      if [[ "$observed_result[$j]" != "$highlight_zone[3]" ]]; then
-        print -r -- "not ok $i - $desc - expected ${(qqq)highlight_zone[3]}, observed ${(qqq)observed_result[$j]}. $todo"
-        continue 2
-      fi
-    done
-    print -r -- "ok $i - $desc${todo:+ - }$todo"
-    unset desc
-    unset start end
+    (( $+expected_highlight_zone[4] )) && todo="# TODO $expected_highlight_zone[4]"
+    if ! (( $+region_highlight[i] )); then
+      print -r -- "not ok $i - unmatched expectation ($exp_start $exp_end $expected_highlight_zone[3])"
+      continue
+    fi
+    local -a highlight_zone; highlight_zone=( ${(z)region_highlight[i]} )
+    integer start=$(( highlight_zone[1] + 1 )) end=$highlight_zone[2]
+    local desc="[$start,$end] «${BUFFER[$start,$end]}»"
+    tap_escape $desc; desc=$REPLY
+    if
+      [[ $start != $exp_start ]] ||
+      [[ $end != $exp_end ]] ||
+      [[ $highlight_zone[3] != $expected_highlight_zone[3] ]]
+    then
+      print -r -- "not ok $i - $desc - expected ($exp_start $exp_end ${(qqq)expected_highlight_zone[3]}), observed ($start $end ${(qqq)highlight_zone[3]}). $todo"
+    else
+      print -r -- "ok $i - $desc${todo:+ - }$todo"
+    fi
+    unset expected_highlight_zone
+    unset exp_start exp_end
     unset todo
     unset highlight_zone
+    unset start end
+    unset desc
   done
+
+  if (( $#expected_region_highlight == $#region_highlight )); then
+    print -r -- "ok $i - cardinality check" "${expected_mismatch:+"# TODO ${(qqq)expected_mismatch}"}"
+  else
+    local details
+    details+="have $#expected_region_highlight expectations and $#region_highlight region_highlight entries: "
+    details+="«$(typeset_p expected_region_highlight)» «$(typeset_p region_highlight)»"
+    tap_escape $details; details=$REPLY
+    print -r -- "not ok $i - $details" "${expected_mismatch:+"# TODO ${(qqq)expected_mismatch}"}"
+  fi
 }
 
 # Run a single test file.  The exit status is 1 if the test harness had
@@ -172,7 +202,7 @@ run_test() {
       local ret=$pipestatus[1] stderr=$pipestatus[2]
       if (( ! stderr )); then
         # stdout will become stderr
-        echo "Bail out! output on stderr"; return 1
+	echo "Bail out! On ${(qq)1}: output on stderr"; return 1
       else
         return $ret
       fi
@@ -185,9 +215,11 @@ run_test() {
 # Process each test data file in test data directory.
 integer something_failed=0
 ZSH_HIGHLIGHT_STYLES=()
-for data_file in ${0:h:h}/highlighters/$1/test-data/*.zsh; do
-  run_test "$data_file" | tee >($results_filter | ${0:A:h}/tap-colorizer.zsh) | grep -v '^not ok.*# TODO' | grep -Eq '^not ok|^ok.*# TODO' && (( something_failed=1 ))
+local data_file
+for data_file in $root/highlighters/$1/test-data/*.zsh; do
+  run_test "$data_file" | tee >($results_filter | $root/tests/tap-colorizer.zsh) | grep -v '^not ok.*# TODO' | grep -Eq '^not ok|^ok.*# TODO' && (( something_failed=1 ))
   (( $pipestatus[1] )) && exit 2
 done
 
 exit $something_failed
+}

@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2016 zsh-syntax-highlighting contributors
+# Copyright (c) 2017 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -27,10 +27,8 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]=
-
-BUFFER=': "\"{x"'
+BUFFER=': x)'
 
 expected_region_highlight=(
-  "3 9 NONE 'issue #303'"
+  "4 4 bracket-error" # )
 )
