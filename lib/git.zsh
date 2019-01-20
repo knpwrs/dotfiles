@@ -321,6 +321,19 @@ alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commi
 #
 alias dug='du -hd0 $(git rev-parse --git-dir)'
 
+# Count lines of code in a git repository
+# Requires tokei crate to be installed
+gloc() {
+  tmp=$(mktemp -u)
+  git clone --depth 1 $1 $tmp
+  tokei --sort code $tmp
+  rm -rf $tmp
+}
+# Count lines of code in a github repository
+ghoc() {
+  gloc https://github.com/$1
+}
+
 #
 # FZF
 # https://github.com/junegunn/fzf/wiki/examples#git
