@@ -118,6 +118,7 @@ cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # The fast, featureful, GPU-based terminal emulator.
 cask 'macvim'                    # Vim with a mac gui.
 cask 'monity-helper'             # Helper program for monity (see mas packages).
+cask 'postico'                   # A Modern PostgreSQL Client for the Mac.
 cask 'robo-3t'                   # Free MongoDB admin application.
 cask 'signal'                    # Signal messaging app.
 cask 'sketch'                    # Professional Digital Design for Mac
