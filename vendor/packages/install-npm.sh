@@ -15,6 +15,7 @@ packages=(
   license-checker                  # Checks licenses for node app dependencies.
   live-server                      # Live-reloading static dev server.
   localtunnel                      # Simple tool to expose a local port over public dns.
+  matrix-rain                      # Fill your terminal with falling green text.
   modhelp                          # Display README for any NPM module in terminal.
   nd                               # CLI markdown viewer.
   neovim                           # Neovim Node provider.
