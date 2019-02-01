@@ -124,6 +124,7 @@ cask 'signal'                    # Signal messaging app.
 cask 'sketch'                    # Professional Digital Design for Mac
 cask 'slack'                     # Chat client for teams.
 cask 'synthesia'                 # A fun way to learn how to play the piano.
+cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 cask 'telegram'                  # Telegram messaging client.
 cask 'vagrant'                   # Development environment virtual machines.
 cask 'vagrant-manager'           # Manage vagrant machines from native Mac UI.
