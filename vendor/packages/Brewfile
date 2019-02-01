@@ -121,7 +121,7 @@ cask 'monity-helper'             # Helper program for monity (see mas packages).
 cask 'postico'                   # A Modern PostgreSQL Client for the Mac.
 cask 'robo-3t'                   # Free MongoDB admin application.
 cask 'signal'                    # Signal messaging app.
-cask 'sketch'                    # Professional Digital Design for Mac
+cask 'sketch'                    # Professional Digital Design for Mac.
 cask 'slack'                     # Chat client for teams.
 cask 'synthesia'                 # A fun way to learn how to play the piano.
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
