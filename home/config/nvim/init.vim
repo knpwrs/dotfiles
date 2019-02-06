@@ -311,9 +311,12 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
-nmap <silent> <leader>ah <Plug>(ale_hover)
+imap <C-Space> <Plug>(ale_complete)
 nmap <silent> <leader>ad <Plug>(ale_go_to_definition)
 nmap <silent> <leader>at <Plug>(ale_go_to_definition_in_tab)
+nmap <silent> <leader>ah <Plug>(ale_hover)
+nmap <silent> <leader>ar <Plug>(ale_find_references)
+nmap <silent> <leader>aw <Plug>(ale_detail)
 "" Deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <C-j> <C-n>
