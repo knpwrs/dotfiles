@@ -239,8 +239,6 @@ Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
 Plug 'tyok/nerdtree-ack'
-"" Autocompletion Plugs
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "" Version Control Plugs
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
