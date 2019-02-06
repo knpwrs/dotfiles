@@ -79,14 +79,14 @@ function! ExecuteMacroOverVisualRange()
 endfunction
 
 "" \, edits the vi config file.
-nnoremap <Leader>, :tabedit $MYVIMRC<CR>
+nnoremap <leader>, :tabedit $MYVIMRC<CR>
 "" <C-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 "" Spell check settings
 set spelllang=en
 set spellfile=$DOTLIB/spell/en.utf-8.add
-noremap <Leader>s :set spell!<CR>
+noremap <leader>s :set spell!<CR>
 " The following is from https://stackoverflow.com/a/38742983/355325
 for d in glob("$DOTLIB/spell/*.add", 1, 1)
   if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
@@ -95,29 +95,29 @@ for d in glob("$DOTLIB/spell/*.add", 1, 1)
 endfor
 
 "" Toggle paste mode
-noremap <Leader>P :set paste!<cr>
+noremap <leader>P :set paste!<cr>
 
 "" Split mappings
-noremap <Leader>- :<C-u>split<CR>
-noremap <Leader>\| :<C-u>vsplit<CR>
+noremap <leader>- :<C-u>split<CR>
+noremap <leader>\| :<C-u>vsplit<CR>
 noremap <leader>w <C-w>w
 
 "" Close quickfix
-noremap <Leader>c :ccl<CR>
+noremap <leader>c :ccl<CR>
 
 "" Tab mappings
-noremap <Leader>1 1gt
-noremap <Leader>2 2gt
-noremap <Leader>3 3gt
-noremap <Leader>4 4gt
-noremap <Leader>5 5gt
-noremap <Leader>6 6gt
-noremap <Leader>7 7gt
-noremap <Leader>8 8gt
-noremap <Leader>9 9gt
-noremap <Leader>0 :tablast<cr>
-noremap <Leader>[ :tabm -1<cr>
-noremap <Leader>] :tabm +1<cr>
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+noremap <leader>[ :tabm -1<cr>
+noremap <leader>] :tabm +1<cr>
 
 " Rename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
@@ -293,8 +293,8 @@ nmap <leader>F :FZF<CR>
 "" NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
-nmap <Leader>t :NERDTreeToggle<CR>
-nmap <Leader>T :NERDTreeFind<CR>
+nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>T :NERDTreeFind<CR>
 "" Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
@@ -351,14 +351,14 @@ nmap [h <Plug>GitGutterPrevHunk
 nmap <leader>b :Gblame<cr>
 "" vim-simple-todo
 let g:simple_todo_map_keys = 0
-nmap <Leader>i <Plug>(simple-todo-new-list-item-start-of-line)
-nmap <Leader>o <Plug>(simple-todo-below)
-nmap <Leader>O <Plug>(simple-todo-above)
-nmap <Leader>x <Plug>(simple-todo-mark-as-done)
-nmap <Leader>X <Plug>(simple-todo-mark-as-undone)
-nmap <Leader>m <Plug>(simple-todo-mark-switch)
-vmap <Leader>x <Plug>(simple-todo-mark-as-done)
-vmap <Leader>X <Plug>(simple-todo-mark-as-undone)
-vmap <Leader>m <Plug>(simple-todo-mark-switch)
+nmap <leader>i <Plug>(simple-todo-new-list-item-start-of-line)
+nmap <leader>o <Plug>(simple-todo-below)
+nmap <leader>O <Plug>(simple-todo-above)
+nmap <leader>x <Plug>(simple-todo-mark-as-done)
+nmap <leader>X <Plug>(simple-todo-mark-as-undone)
+nmap <leader>m <Plug>(simple-todo-mark-switch)
+vmap <leader>x <Plug>(simple-todo-mark-as-done)
+vmap <leader>X <Plug>(simple-todo-mark-as-undone)
+vmap <leader>m <Plug>(simple-todo-mark-switch)
 "" BufOnly.vim
 cnoreabbrev bufo BufO
