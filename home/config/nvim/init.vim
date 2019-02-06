@@ -241,10 +241,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tyok/nerdtree-ack'
 "" Autocompletion Plugs
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-vim'
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
-Plug 'wokalski/autocomplete-flow'
 "" Version Control Plugs
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -307,6 +303,7 @@ noremap <leader>f :Ack!<Space>''<Left>
 "" ALE
 let g:ale_open_list = 1
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \  'javascript': ['eslint', 'flow']
 \}
@@ -314,6 +311,9 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+nmap <silent> <leader>ah <Plug>(ale_hover)
+nmap <silent> <leader>ad <Plug>(ale_go_to_definition)
+nmap <silent> <leader>at <Plug>(ale_go_to_definition_in_tab)
 "" Deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <C-j> <C-n>
@@ -327,7 +327,6 @@ inoremap <silent><expr> <TAB>
   return !col || getline('.')[col - 1]  =~ '\s'
   endfunction"}}}
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-" let g:ale_completion_enabled = 1 " currently beta
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
