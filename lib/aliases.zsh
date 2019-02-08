@@ -14,6 +14,10 @@ alias c7='cd -7'
 alias c8='cd -8'
 alias c9='cd -9'
 
+cdd() {
+  cd $(dirname $1)
+}
+
 alias dr="cd ~/Google\ Drive/"
 alias dl="cd ~/Downloads/"
 alias dt="cd ~/Desktop/"
