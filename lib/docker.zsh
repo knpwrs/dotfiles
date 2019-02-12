@@ -5,6 +5,7 @@ alias deit='docker exec -it'
 # docker-compose
 alias dc="docker-compose"
 alias dcb="docker-compose build"
+alias dce="docker-compose exec"
 dcl() {
   docker logs -f $(dc ps -q $1)
 }
