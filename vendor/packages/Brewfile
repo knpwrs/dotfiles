@@ -60,7 +60,6 @@ brew 'rename'                                  # File renaming utilities.
 brew 'rig'                                     # Random Identity Generator
 brew 'ripgrep'                                 # Faster Silver Searcher.
 brew 'rsync'                                   # Utility that provides fast incremental file transfer
-brew 'screenfetch'                             # The Bash Screenshot Information Tool
 brew 'siege'                                   # HTTP regression testing and benchmarking utility
 brew 'sift'                                    # Fast and powerful alternative to grep.
 brew 'sl'                                      # Steam Locomotive
@@ -78,14 +77,11 @@ brew 'wget'                                    # Internet file retriever.
 brew 'woof'                                    # Simple one-off HTTP file sharing.
 brew 'wrk'                                     # HTTP load tester.
 brew 'yarn'                                    # JavaScript package manager.
-brew 'yetris'                                  # Terminal Tetris
-brew 'youtube-dl'                              # Download youtube videos.
 brew 'z'                                       # Jump around.
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
 # Casks
 cask '1password'                 # Password manager.
-cask '1password-cli'             # 1Password CLI.
 cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
 cask 'alfred'                    # Power-user spotlight.
 cask 'appcleaner'                # Mac app uninstaller.
@@ -93,40 +89,17 @@ cask 'apptrap'                   # Automatically uninstall apps when moving them
 cask 'atom'                      # Open source hackable text editor from GitHub.
 cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
-cask 'beyond-compare'            # Advanced diff and compare tool.
-cask 'bit-slicer'                # Universal game trainer.
-cask 'caprine'                   # Unofficial Facebook Messenger client.
-cask 'cheatsheet'                # Hold the ⌘-key to get a list of all active shortcuts for the current application.
-cask 'downie'                    # Video downloader.
 cask 'firefox'                   # Web browser from Mozilla.
-cask 'gas-mask'                  # Manage and switch between multiple hosts files.
-cask 'gitify'                    # GitHub desktop notifications.
 cask 'google-chrome'             # Web browser from Google.
 cask 'google-backup-and-sync'    # Google Drive
-cask 'handbrake'                 # Video conversion utility.
-cask 'hex-fiend'                 # A fast and clever open source hex editor for macOS.
-cask 'hyper'                     # Terminal emulator built on web standards.
 cask 'keka'                      # Archive extraction and creation.
 cask 'keybase'                   # Crypto for everyone.
-cask 'kitty'                     # The fast, featureful, GPU-based terminal emulator.
-cask 'macvim'                    # Vim with a mac gui.
-cask 'monity-helper'             # Helper program for monity (see mas packages).
-cask 'postico'                   # A Modern PostgreSQL Client for the Mac.
-cask 'robo-3t'                   # Free MongoDB admin application.
-cask 'signal'                    # Signal messaging app.
-cask 'sketch'                    # Professional Digital Design for Mac.
-cask 'slack'                     # Chat client for teams.
-cask 'synthesia'                 # A fun way to learn how to play the piano.
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
-cask 'telegram'                  # Telegram messaging client.
-cask 'vagrant'                   # Development environment virtual machines.
-cask 'vagrant-manager'           # Manage vagrant machines from native Mac UI.
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
 cask 'vlc'                       # Open source media player.
-cask 'whatsapp'                  # Whatsapp messaging app.
 
 # Cask Quick Look Plugins
 cask 'betterzip'           # Quicklook for zip files.
@@ -166,5 +139,4 @@ tap 'caskroom/versions'
 cask 'google-chrome-canary'
 
 # Mac App Store
-
 mas 'Amphetamine', id: 937984704
