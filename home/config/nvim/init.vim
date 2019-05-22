@@ -215,6 +215,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-exchange'
@@ -361,3 +362,6 @@ vmap <leader>X <Plug>(simple-todo-mark-as-undone)
 vmap <leader>m <Plug>(simple-todo-mark-switch)
 "" BufOnly.vim
 cnoreabbrev bufo BufO
+"" vim-prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
