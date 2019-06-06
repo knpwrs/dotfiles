@@ -215,6 +215,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -300,7 +301,7 @@ noremap <leader>f :Ack!<Space>''<Left>
 "" ALE
 let g:ale_open_list = 1
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \  'javascript': ['eslint', 'flow']
 \}
