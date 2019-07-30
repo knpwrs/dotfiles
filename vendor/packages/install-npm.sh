@@ -11,6 +11,7 @@ packages=(
   is-online-cli                    # Check if the Internet connection is up.
   is-up-cli                        # Check if a website is up or down using ititup.org.
   javascript-typescript-langserver # Language server for JavaScript and TypeScript.
+  jay-repl                         # Supercharged JavaScript REPL.
   lice                             # License generator.
   license-checker                  # Checks licenses for node app dependencies.
   live-server                      # Live-reloading static dev server.
