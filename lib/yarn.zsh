@@ -1,4 +1,5 @@
 alias ya='yarn'
+alias yaa='yarn add'
 alias yad='yarn add --dev'
 alias yag='yarn global add'
 alias yal='yarn link'
