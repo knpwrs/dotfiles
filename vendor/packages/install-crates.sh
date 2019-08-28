@@ -9,9 +9,14 @@ crates=(
   cargo-watch # Watch for file changes and run cargo commands
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
-  racer       # Code completion for rust
   tokei       # A fast cloc alternative
 )
 
-$CARGO add component rust-src
+components=(
+  rls
+  rust-analysis
+  rust-src
+)
+
+$RUSTUP component add "${components[@]///}"
 $CARGO install "${crates[@]///}"
