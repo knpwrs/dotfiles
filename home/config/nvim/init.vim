@@ -216,7 +216,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -250,6 +249,13 @@ Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
 Plug 'racer-rust/vim-racer'
 Plug 'rhysd/vim-wasm'
 Plug 'sheerun/vim-polyglot'
+"" Autocompletion plug
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'deoplete-plugins/deoplete-zsh'
 
 "" End Plugs
 ""
@@ -329,6 +335,12 @@ inoremap <silent><expr> <TAB>
   return !col || getline('.')[col - 1]  =~ '\s'
   endfunction"}}}
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+"" LanguageClient-neovim
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'typescript': ['javascript-typescript-stdio'],
+    \}
+
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
