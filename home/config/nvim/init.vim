@@ -338,7 +338,9 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 "" LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
+    \ 'typescript.tsx': ['javascript-typescript-stdio'],
     \}
 
 "" vim-markdown
