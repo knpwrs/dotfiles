@@ -248,6 +248,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
 Plug 'racer-rust/vim-racer'
 Plug 'rhysd/vim-wasm'
+Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
 "" Autocompletion plug
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -380,3 +381,5 @@ cnoreabbrev bufo BufO
 "" vim-prettier
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+"" rust.vim
+let g:rustfmt_autosave = 1

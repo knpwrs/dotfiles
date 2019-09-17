@@ -16,6 +16,7 @@ components=(
   rls
   rust-analysis
   rust-src
+  rustfmt
 )
 
 $RUSTUP component add "${components[@]///}"
