@@ -1,3 +1,5 @@
+alias npa='npm audit'
+alias npaf='npm audit fix'
 alias npcb='npm ci && npm run build'
 alias npcc='npm ci && npm run check'
 alias npcd='npm ci && npm run dev'
