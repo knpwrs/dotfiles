@@ -37,6 +37,7 @@ packages=(
   tfa                              # CLI two-factor authentication client.
   trash-cli                        # Move files to trash.
   ttystudio                        # Record terminal to GIF.
+  wscat                            # WebSocket debugging tool.
 )
 
 npm i -g "${packages[@]///}"
