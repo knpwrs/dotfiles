@@ -23,6 +23,8 @@ alias dl="cd ~/Downloads/"
 alias dt="cd ~/Desktop/"
 alias w="cd ~/Workspace/"
 
+alias cpr="cp -r"
+
 duu() {
   du -hd0 $1 | cut -f1
 }
