@@ -12,6 +12,7 @@ brew 'cowsay'                                  # Configurable talking characters
 brew 'curl'                                    # HTTP client.
 brew 'diff-so-fancy'                           # Fancy diff for git.
 brew 'direnv'                                  # Shell environment switcher.
+brew 'doctl'                                   # DigitalOcean CLI
 brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
 brew 'exiftool'                                # Image exif manipulation.
 brew 'fd'                                      # A simple, fast, and user-friendly alternative to 'find'.
