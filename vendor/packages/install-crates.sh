@@ -10,6 +10,7 @@ crates=(
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
   tokei       # A fast cloc alternative
+  zoxide      # A cd command that learns your habits
 )
 
 components=(

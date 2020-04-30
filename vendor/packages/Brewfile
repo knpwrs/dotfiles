@@ -78,7 +78,6 @@ brew 'wget'                                    # Internet file retriever.
 brew 'woof'                                    # Simple one-off HTTP file sharing.
 brew 'wrk'                                     # HTTP load tester.
 brew 'yarn'                                    # JavaScript package manager.
-brew 'z'                                       # Jump around.
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
 # Casks

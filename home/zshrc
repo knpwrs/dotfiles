@@ -17,10 +17,9 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
 source $DOTVENDOR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# z
-Z_FILE=/usr/local/etc/profile.d/z.sh
-if [ -f $Z_FILE ]; then
-  source $Z_FILE
+# zoxide
+if type zoxide > /dev/null; then
+  eval "$(zoxide init zsh)"
 fi
 
 # fzf
