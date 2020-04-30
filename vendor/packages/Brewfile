@@ -10,7 +10,6 @@ brew 'cmatrix'                                 # Matrix in the terminal.
 brew 'coreutils'                               # GNU core utilities (Mac is BSD).
 brew 'cowsay'                                  # Configurable talking characters in ASCII art.
 brew 'curl'                                    # HTTP client.
-brew 'diff-so-fancy'                           # Fancy diff for git.
 brew 'direnv'                                  # Shell environment switcher.
 brew 'doctl'                                   # DigitalOcean CLI
 brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
@@ -23,6 +22,7 @@ brew 'findutils'                               # Install GNU `find`, `locate`, `
 brew 'fzf'                                     # Fuzzy finder.
 brew 'git'                                     # Distributed revision control system.
 brew 'git-cal'                                 # Visual commits calendar for git.
+brew 'git-delta'                               # A syntax-highlighter for git and diff output
 brew 'git-extras'                              # Extra git commands.
 brew 'git-imerge'                              # Incremental merge helper for git.
 brew 'git-lfs'                                 # Git extension for versioning large files.
