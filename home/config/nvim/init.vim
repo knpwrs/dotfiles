@@ -379,7 +379,7 @@ vmap <leader>m <Plug>(simple-todo-mark-switch)
 "" BufOnly.vim
 cnoreabbrev bufo BufO
 "" vim-prettier
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_config_present = 1
 "" rust.vim
 let g:rustfmt_autosave = 1
