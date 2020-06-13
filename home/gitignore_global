@@ -4,3 +4,5 @@
 .tern-port
 .vscode
 *.code-workspace
+.idea
+*.iml
