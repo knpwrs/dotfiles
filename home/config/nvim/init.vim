@@ -359,8 +359,8 @@ let g:vim_markdown_fenced_languages = [
 nnoremap <leader>H :SidewaysLeft<cr>
 nnoremap <leader>L :SidewaysRight<cr>
 "" vim-gitgutter
-" nmap <leader>hs <Plug>GitGutterStageHunk " Default binding
-" nmap <leader>hu <Plug>GitGutterUndoHunk " Default binding
+" nmap <leader>hs <Plug>(GitGutterStageHunk) " Default binding
+" nmap <leader>hu <Plug>(GitGutterUndoHunk) " Default binding
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 "" vim-fugitive
