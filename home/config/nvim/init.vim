@@ -214,7 +214,7 @@ Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
-Plug 'junegunn/vim-peekaboo'
+" Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'sickill/vim-pasta'
@@ -250,13 +250,8 @@ Plug 'racer-rust/vim-racer'
 Plug 'rhysd/vim-wasm'
 Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
-"" Autocompletion plug
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'deoplete-plugins/deoplete-zsh'
+"" Autocompletion plugs
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" End Plugs
 ""
@@ -323,26 +318,24 @@ nmap <silent> <leader>at <Plug>(ale_go_to_definition_in_tab)
 nmap <silent> <leader>ah <Plug>(ale_hover)
 nmap <silent> <leader>ar <Plug>(ale_find_references)
 nmap <silent> <leader>aw <Plug>(ale_detail)
-"" Deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <C-j> <C-n>
-inoremap <C-k> <C-p>
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ deoplete#mappings#manual_complete()
-  function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-  endfunction"}}}
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-"" LanguageClient-neovim
-let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
-    \ 'typescript': ['javascript-typescript-stdio'],
-    \ 'typescript.tsx': ['javascript-typescript-stdio'],
-    \}
+
+"" coc.nvim
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nmap <leader>rn <Plug>(coc-rename)
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2

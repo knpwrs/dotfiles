@@ -66,6 +66,7 @@ brew 'sift'                                    # Fast and powerful alternative t
 brew 'sl'                                      # Steam Locomotive
 brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file.
 brew 'sshuttle'                                # Proxy server that works as a poor man's VPN.
+brew 'starship'                                # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 brew 'tig'                                     # Text-mode interface for git.
 brew 'tmux'                                    # Terminal multiplexer.
 brew 'toilet'                                  # Display large, colorful characters.
@@ -115,7 +116,7 @@ cask 'suspicious-package'  # Quicklook for package files.
 cask 'webpquicklook'       # Quicklook for webp files.
 
 # Cask Fonts
-tap 'caskroom/fonts' # Official caskroom fonts tap
+tap 'caskroom/fonts' # official caskroom fonts tap
 cask 'font-dosis'
 cask 'font-fira-sans'
 cask 'font-fontawesome'
@@ -131,6 +132,7 @@ cask 'font-quicksand'
 cask 'font-raleway'
 cask 'font-roboto'
 cask 'font-roboto-condensed'
+cask 'font-saucecodepro-nerd-font'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 
