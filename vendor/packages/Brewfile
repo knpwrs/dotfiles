@@ -95,6 +95,7 @@ cask 'google-chrome'             # Web browser from Google.
 cask 'google-backup-and-sync'    # Google Drive
 cask 'keka'                      # Archive extraction and creation.
 cask 'keybase'                   # Crypto for everyone.
+cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
