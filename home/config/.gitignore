@@ -2,5 +2,7 @@
 !.gitignore
 !alacritty
 !alacritty/**
+!kitty
+!kitty/**
 !nvim
 !nvim/**
