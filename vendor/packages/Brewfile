@@ -135,7 +135,7 @@ cask 'font-quicksand'
 cask 'font-raleway'
 cask 'font-roboto'
 cask 'font-roboto-condensed'
-cask 'font-saucecodepro-nerd-font'
+cask 'font-sauce-code-pro-nerd-font'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 
