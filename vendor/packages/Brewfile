@@ -58,9 +58,11 @@ brew 'python3'                                 # Python 3
 brew 'ranger'                                  # File browser.
 brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
 brew 'rename'                                  # File renaming utilities.
+brew 'rbenv'                                   # Groom your app’s Ruby environment
 brew 'rig'                                     # Random Identity Generator
 brew 'ripgrep'                                 # Faster Silver Searcher.
 brew 'rsync'                                   # Utility that provides fast incremental file transfer
+brew 'ruby-build'                              # Compile and install Ruby
 brew 'siege'                                   # HTTP regression testing and benchmarking utility
 brew 'sift'                                    # Fast and powerful alternative to grep.
 brew 'sl'                                      # Steam Locomotive
