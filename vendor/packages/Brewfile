@@ -119,7 +119,7 @@ cask 'suspicious-package'  # Quicklook for package files.
 cask 'webpquicklook'       # Quicklook for webp files.
 
 # Cask Fonts
-tap 'caskroom/fonts' # official caskroom fonts tap
+tap 'homebrew/cask-fonts' # official caskroom fonts tap
 cask 'font-dosis'
 cask 'font-fira-sans'
 cask 'font-fontawesome'
@@ -140,7 +140,7 @@ cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 
 # Alternative cask versions
-tap 'caskroom/versions'
+tap 'homebrew/homebrew-cask-versions'
 cask 'google-chrome-canary'
 
 # Mac App Store
