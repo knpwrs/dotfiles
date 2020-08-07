@@ -96,7 +96,9 @@ alias gcb='git checkout -b'
 alias gcd='git checkout develop'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
-alias gcm='git checkout master'
+function gcm() {
+  git checkout master || git checkout main
+}
 alias gcmsg='git commit -m'
 alias gco='git checkout'
 alias gcod='git checkout -- .'
