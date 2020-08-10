@@ -304,9 +304,8 @@ noremap <leader>f :Ack!<Space>''<Left>
 let g:ale_open_list = 1
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 " let g:ale_completion_enabled = 1
-let g:ale_linters = {
-\  'javascript': ['eslint', 'flow']
-\}
+let g:ale_linters = {}
+let g:ale_linters.javascript = ['eslint']
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
