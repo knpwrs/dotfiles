@@ -76,6 +76,7 @@ brew 'tree'                                    # Display directories as trees (w
 brew 'vbindiff'                                # Visual binary diff.
 brew 'vim'                                     # Vi "workalike" with many additional features.
 brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit).
+brew 'watch'                                   # Executes a program periodically, showing output fullscreen
 brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
 brew 'wget'                                    # Internet file retriever.
 brew 'woof'                                    # Simple one-off HTTP file sharing.
