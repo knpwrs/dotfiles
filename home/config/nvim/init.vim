@@ -57,6 +57,10 @@ set foldmethod=syntax
 set nofoldenable
 "" Command timeout
 set ttimeoutlen=50
+"" Swapfile write time
+set updatetime=300
+"" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
 
 "" Line numbers.
 set number
@@ -80,6 +84,11 @@ endfunction
 
 "" \, edits the vi config file.
 nnoremap <leader>, :tabedit $MYVIMRC<CR>
+"" allow executing local vimrc files
+set exrc
+"" disable :autocmd, shell, and write commands in local vimrc files
+set secure
+
 "" <C-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
@@ -209,7 +218,6 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'danro/rename.vim'
-Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
@@ -223,6 +231,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-fugitive-blame-ext' " requires tpope/vim-fugitive
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -250,6 +259,11 @@ Plug 'racer-rust/vim-racer'
 Plug 'rhysd/vim-wasm'
 Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
+""" Rails Development
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
 "" Autocompletion plugs
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -300,12 +314,6 @@ let delimitMate_expand_cr=1
 " let g:ackprg='ag --vimgrep' " The Silver Searcher
 let g:ackprg='rg --vimgrep --no-heading' " ripgrep
 noremap <leader>f :Ack!<Space>''<Left>
-"" ALE
-let g:ale_open_list = 1
-let g:ale_echo_msg_format = '[%linter%] %code: %%s'
-" let g:ale_completion_enabled = 1
-let g:ale_linters = {}
-let g:ale_linters.javascript = ['eslint']
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
@@ -338,6 +346,9 @@ nmap <silent> gY :call CocAction('jumpTypeDefinition', 'tab drop')<CR>
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gI :call CocAction('jumpImplementation', 'tab drop')<CR>
 nmap <silent> gr <Plug>(coc-references)
+" Navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-prev)
 
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2

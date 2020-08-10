@@ -27,3 +27,4 @@ alias zln='zmv -L' # Link
 
 # Local zsh env
 [ -f ~/.env.local.zsh ] && source ~/.env.local.zsh
+if [ -e /Users/knpwrs/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/knpwrs/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
