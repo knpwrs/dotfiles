@@ -333,8 +333,11 @@ endfunction
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD :call CocAction('jumpDefinition', 'tab drop')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gY :call CocAction('jumpTypeDefinition', 'tab drop')<CR>
 nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gI :call CocAction('jumpImplementation', 'tab drop')<CR>
 nmap <silent> gr <Plug>(coc-references)
 
 "" vim-markdown
