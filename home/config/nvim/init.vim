@@ -336,6 +336,12 @@ Plug 'sheerun/vim-polyglot'
 "" Motions
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent' "| Plug 'kana/vim-textobj-user'
+"" Rails Development
+Plug 'nelstrom/vim-textobj-rubyblock' "| Plug 'kana/vim-textobj-user'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
 
 "" End Plugs
 ""
