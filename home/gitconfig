@@ -3,6 +3,8 @@
 	email = ken@kenpowers.net
 [alias]
 	branches = branch -avv
+[pull]
+  ff = only
 [push]
 	default = simple
 [merge]
