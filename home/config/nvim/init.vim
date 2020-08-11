@@ -258,11 +258,6 @@ Plug 'racer-rust/vim-racer'
 Plug 'rhysd/vim-wasm'
 Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
-""" Rails Development
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
 
 "" End Plugs
 ""
