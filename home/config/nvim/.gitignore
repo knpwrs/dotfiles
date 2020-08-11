@@ -1,3 +1,4 @@
 *
 !.gitignore
 !*.vim
+!coc-settings.json
