@@ -222,6 +222,7 @@ Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -247,8 +248,6 @@ Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
 Plug 'tyok/nerdtree-ack'
-"" Version Control Plugs
-Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
 Plug 'hail2u/vim-css3-syntax'
@@ -264,8 +263,6 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-"" Autocompletion plugs
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" End Plugs
 ""
@@ -288,10 +285,6 @@ hi Search ctermbg=58 ctermfg=15
 hi Default ctermfg=1
 hi clear SignColumn
 hi SignColumn ctermbg=bg
-hi GitGutterAdd ctermfg=green
-hi GitGutterChange ctermfg=yellow
-hi GitGutterDelete ctermfg=red
-hi GitGutterChangeDelete ctermfg=red
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
 "" Misc Key bindings
@@ -327,6 +320,7 @@ nmap <silent> <leader>ar <Plug>(ale_find_references)
 nmap <silent> <leader>aw <Plug>(ale_detail)
 
 "" coc.nvim
+hi CocCodeLens ctermfg=242
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -337,6 +331,9 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Highlights
+hi CocCodeLens ctermfg=242
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -349,7 +346,11 @@ nmap <silent> gr <Plug>(coc-references)
 " Navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-prev)
-
+" coc-git
+nmap <leader>hs :CocCommand git.chunkStage<cr>
+nmap <leader>hu :CocCommand git.chunkUndo<cr>
+nmap ]h <Plug>(coc-git-nextchunk)
+nmap [h <Plug>(coc-git-prevchunk)
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
@@ -364,11 +365,6 @@ let g:vim_markdown_fenced_languages = [
 "" sideways.vim
 nnoremap <leader>H :SidewaysLeft<cr>
 nnoremap <leader>L :SidewaysRight<cr>
-"" vim-gitgutter
-" nmap <leader>hs <Plug>(GitGutterStageHunk) " Default binding
-" nmap <leader>hu <Plug>(GitGutterUndoHunk) " Default binding
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
 "" vim-fugitive
 nmap <leader>b :Gblame<cr>
 "" vim-simple-todo
