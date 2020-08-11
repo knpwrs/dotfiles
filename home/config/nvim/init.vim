@@ -357,6 +357,10 @@ nmap <leader>hs :CocCommand git.chunkStage<cr>
 nmap <leader>hu :CocCommand git.chunkUndo<cr>
 nmap ]h <Plug>(coc-git-nextchunk)
 nmap [h <Plug>(coc-git-prevchunk)
+" coc-list
+nmap <silent><nowait> <space>d :<C-u>CocList diagnostics<cr>
+nmap <silent><nowait> <space>c :<C-u>CocList commands<cr>
+nmap <silent><nowait> <space>o :<C-u>CocList outline<cr>
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
