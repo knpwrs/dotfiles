@@ -320,7 +320,13 @@ nmap <silent> <leader>ar <Plug>(ale_find_references)
 nmap <silent> <leader>aw <Plug>(ale_detail)
 
 "" coc.nvim
-hi CocCodeLens ctermfg=242
+let g:coc_global_extensions = [
+  \'coc-eslint',
+  \'coc-git',
+  \'coc-json',
+  \'coc-tsserver',
+  \'coc-yaml',
+  \]
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>rn <Plug>(coc-rename)
 
