@@ -358,6 +358,7 @@ nmap [h <Plug>(coc-git-prevchunk)
 nmap <silent><nowait> <space>d :<C-u>CocList diagnostics<cr>
 nmap <silent><nowait> <space>c :<C-u>CocList commands<cr>
 nmap <silent><nowait> <space>o :<C-u>CocList outline<cr>
+nmap <silent><nowait> <space>s :<C-u>CocList -I symbols<cr>
 " coc-yank
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 " formatting
