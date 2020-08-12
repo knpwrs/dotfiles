@@ -321,6 +321,7 @@ let g:coc_global_extensions = [
   \'coc-json',
   \'coc-tsserver',
   \'coc-yaml',
+  \'coc-yank',
   \]
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>rn <Plug>(coc-rename)
@@ -356,6 +357,9 @@ nmap [h <Plug>(coc-git-prevchunk)
 nmap <silent><nowait> <space>d :<C-u>CocList diagnostics<cr>
 nmap <silent><nowait> <space>c :<C-u>CocList commands<cr>
 nmap <silent><nowait> <space>o :<C-u>CocList outline<cr>
+" coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
