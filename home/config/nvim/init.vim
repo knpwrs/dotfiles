@@ -359,6 +359,9 @@ nmap <silent><nowait> <space>c :<C-u>CocList commands<cr>
 nmap <silent><nowait> <space>o :<C-u>CocList outline<cr>
 " coc-yank
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+" formatting
+xmap <leader>q  <Plug>(coc-format-selected)
+nmap <leader>q  <Plug>(coc-format-selected)
 
 "" vim-markdown
 let g:vim_markdown_new_list_item_indent = 2
