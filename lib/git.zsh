@@ -100,6 +100,7 @@ function gcm() {
   git checkout master || git checkout main
 }
 alias gcmsg='git commit -m'
+alias gcnv='git commit --no-verify'
 alias gco='git checkout'
 alias gcod='git checkout -- .'
 alias gcoo='git checkout --ours'
