@@ -61,6 +61,8 @@ set ttimeoutlen=50
 set updatetime=300
 "" Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+"" Show incremental live substitution
+set inccommand=nosplit
 
 "" Line numbers.
 set number
