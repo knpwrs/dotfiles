@@ -225,6 +225,7 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }

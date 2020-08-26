@@ -6,3 +6,4 @@
 *.code-workspace
 .idea
 *.iml
+Session*.vim
