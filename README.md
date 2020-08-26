@@ -20,7 +20,7 @@ tools. `vendor` contains subtrees for external repositories.
 
 ## Other Tips
 
-### `tmux` and neovim `sessions`
+### `tmux` and `neovim` sessions
 
 * In `neovim` run `:Obsess` to start recording your neovim session
   * Restore session with `vim -S Session.vim`
