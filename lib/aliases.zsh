@@ -76,6 +76,7 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 alias v='nvim'
 alias vv='nvim .'
 alias vim='nvim'
+alias vims='nvim -S Session.vim'
 
 alias fed='fd -tf | xargs sed -i'
 
