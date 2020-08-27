@@ -4,7 +4,7 @@ hash npm 2>/dev/null || { echo "Please install node and npm before installing gl
 
 packages=(
   browser-run                      # Runs JavaScript in a browser and sends the console logs to stdout.
-  bundle-size                      # Show bundle size of npm packages.
+  bundle-phobia-cli                # Query npm package sizes.
   dev-time-cli                     # Get the current local time of a GitHub user.
   empty-trash-cli                  # Empty trash.
   internal-ip                      # Show internal IP address.
