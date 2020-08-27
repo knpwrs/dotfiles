@@ -55,3 +55,6 @@ jq -r '[.dependencies | to_entries[] | .key][], [.devDependencies | to_entries[]
   | fzf --preview='jq . node_modules/{}/package.json' \
         --bind='ctrl-h:execute(open $(jq -r .homepage node_modules/{}/package.json))'
 }
+
+# Installed packages
+alias bp='bundle-phobia'
