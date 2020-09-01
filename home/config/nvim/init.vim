@@ -380,8 +380,8 @@ let g:vim_markdown_fenced_languages = [
    \ 'py=python',
    \]
 "" sideways.vim
-nnoremap <leader>H :SidewaysLeft<cr>
-nnoremap <leader>L :SidewaysRight<cr>
+nnoremap <leader>h :SidewaysLeft<cr>
+nnoremap <leader>l :SidewaysRight<cr>
 "" vim-fugitive
 nmap <leader>b :Gblame<cr>
 "" vim-simple-todo
