@@ -9,6 +9,7 @@ crates=(
   cargo-watch # Watch for file changes and run cargo commands
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
+  rm-improved # rip, a safer rm
   tokei       # A fast cloc alternative
   zoxide      # A cd command that learns your habits
 )
