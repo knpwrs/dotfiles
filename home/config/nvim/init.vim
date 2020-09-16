@@ -86,7 +86,7 @@ endfunction
 
 "" \, edits the vi config file.
 nnoremap <leader>, :tabedit $MYVIMRC<CR>
-"" allow executing local vimrc files
+"" allow executing local nvimrc files
 set exrc
 "" disable :autocmd, shell, and write commands in local vimrc files
 set secure
