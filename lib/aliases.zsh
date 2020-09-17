@@ -80,6 +80,8 @@ alias vims='nvim -S Session.vim'
 
 alias fed='fd -tf | xargs sed -i'
 
+alias x='xargs'
+
 # reload zsh
 alias zshr='exec zsh -l'
 
