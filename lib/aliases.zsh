@@ -80,6 +80,8 @@ alias vims='nvim -S Session.vim'
 
 alias fed='fd -tf | xargs sed -i'
 
+alias tf='terraform'
+
 alias x='xargs'
 
 # reload zsh
