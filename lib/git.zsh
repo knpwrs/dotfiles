@@ -146,9 +146,14 @@ alias gga='git gui citool --amend'
 alias ggc='git gc'
 ggf() {
   [[ "$#" != 1 ]] && b="$(current_branch)"
-  git push --force origin "${b:=$1}"
+  git push --force-with-lease origin "${b:=$1}"
 }
 compdef _git ggf=git-checkout
+ggf!() {
+  [[ "$#" != 1 ]] && b="$(current_branch)"
+  git push --force origin "${b:=$1}"
+}
+compdef _git ggf!=git-checkout
 ggl() {
   [[ "$#" != 1 ]] && local b="$(current_branch)"
   git pull origin "${b:=$1}" "${*[2,-1]}"
