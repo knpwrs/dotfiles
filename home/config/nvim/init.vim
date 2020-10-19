@@ -111,7 +111,6 @@ noremap <leader>P :set paste!<cr>
 "" Split mappings
 noremap <leader>- :<C-u>split<CR>
 noremap <leader>\| :<C-u>vsplit<CR>
-noremap <leader>w <C-w>w
 
 "" Close quickfix
 noremap <leader>c :ccl<CR>
