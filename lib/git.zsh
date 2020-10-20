@@ -448,6 +448,20 @@ fa() {
   [[ -n "$files" ]] && git add "${files[@]}"
 }
 
+# frs [FUZZY PATTERN] - Restore file(s)
+frs() {
+  local files
+  IFS=$'\n' files=($(git diff --name-only | fzf --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && git restore --staged "${files[@]}"
+}
+
+# frss [FUZZY PATTERN] - Restore staged file(s)
+frss() {
+  local files
+  IFS=$'\n' files=($(git diff --staged --name-only | fzf --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && git restore --staged "${files[@]}"
+}
+
 # Initialize git environment variables for a workspace
 genvrc() {
   cat >> .envrc <<EOF
