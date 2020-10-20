@@ -452,7 +452,7 @@ fa() {
 frs() {
   local files
   IFS=$'\n' files=($(git diff --name-only | fzf --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && git restore --staged "${files[@]}"
+  [[ -n "$files" ]] && git restore "${files[@]}"
 }
 
 # frss [FUZZY PATTERN] - Restore staged file(s)
