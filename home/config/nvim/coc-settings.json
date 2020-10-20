@@ -1,5 +1,8 @@
 {
   "git.addGBlameToVirtualText": true,
+  "list.normalMappings": {
+    "<C-d>": "do:exit"
+  },
   "list.insertMappings": {
     "<C-d>": "do:exit"
   }
