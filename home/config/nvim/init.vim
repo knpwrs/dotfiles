@@ -212,6 +212,7 @@ call plug#begin('~/.config/nvim/plugged')
 "" Start Plugs
 
 "" Interface Plugs
+Plug 'Yggdroot/indentLine'
 Plug 'bling/vim-bufferline'
 Plug 'w0ng/vim-hybrid'
 "" Enhancement Plugs
@@ -284,6 +285,8 @@ hi clear SignColumn
 hi SignColumn ctermbg=bg
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
+"" IndentLine
+let g:indentLine_char = '⦙'
 "" Misc Key bindings
 nmap <silent> dsf ds(db
   \:call repeat#set("dsf")<CR>
