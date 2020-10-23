@@ -261,6 +261,9 @@ Plug 'racer-rust/vim-racer'
 Plug 'rhysd/vim-wasm'
 Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
+"" Motions
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent' "| Plug 'kana/vim-textobj-user'
 
 "" End Plugs
 ""
