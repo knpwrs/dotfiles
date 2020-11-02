@@ -307,9 +307,9 @@ let g:tagbar_autofocus=1
 "" delimitMate
 let delimitMate_expand_cr=1
 "" ack.vim
-" let g:ackprg='ag --vimgrep' " The Silver Searcher
 let g:ackprg='rg --vimgrep --no-heading --smart-case' " ripgrep
 noremap <leader>f :Ack!<Space>''<Left>
+noremap <leader>* :Ack! <cword><CR>
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
