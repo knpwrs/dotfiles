@@ -310,17 +310,6 @@ let delimitMate_expand_cr=1
 let g:ackprg='rg --vimgrep --no-heading --smart-case' " ripgrep
 noremap <leader>f :Ack!<Space>''<Left>
 noremap <leader>* :Ack! <cword><CR>
-nmap <silent> [W <Plug>(ale_first)
-nmap <silent> [w <Plug>(ale_previous)
-nmap <silent> ]w <Plug>(ale_next)
-nmap <silent> ]W <Plug>(ale_last)
-imap <C-Space> <Plug>(ale_complete)
-nmap <silent> <leader>aa <Plug>(ale_toggle)
-nmap <silent> <leader>ad <Plug>(ale_go_to_definition)
-nmap <silent> <leader>at <Plug>(ale_go_to_definition_in_tab)
-nmap <silent> <leader>ah <Plug>(ale_hover)
-nmap <silent> <leader>ar <Plug>(ale_find_references)
-nmap <silent> <leader>aw <Plug>(ale_detail)
 
 "" coc.nvim
 let g:coc_global_extensions = [
