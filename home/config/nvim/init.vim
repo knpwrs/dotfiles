@@ -96,6 +96,9 @@ set secure
 "" <C-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
+"" Do not jump on invocation of *
+nnoremap * :keepjumps normal! mi*`i<CR>
+
 "" Spell check settings
 set spelllang=en
 set spellfile=$DOTLIB/spell/en.utf-8.add
