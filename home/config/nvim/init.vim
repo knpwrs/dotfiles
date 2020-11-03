@@ -15,6 +15,7 @@ endif
 "" Use <C-d> as escape sequence
 imap <C-d> <Esc>
 cmap <C-d> <Esc>
+vmap <C-d> <Esc>
 "" Load plugins according to detected filetype.
 filetype plugin indent on
 "" Enable syntax highlighting.
