@@ -4,7 +4,7 @@
 [alias]
 	branches = branch -avv
 [pull]
-  ff = only
+	ff = only
 [push]
 	default = simple
 [merge]
@@ -22,7 +22,7 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [core]
 	excludesfile = ~/.gitignore_global
-        pager = delta
+	pager = delta
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
