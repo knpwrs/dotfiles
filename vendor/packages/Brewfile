@@ -86,6 +86,7 @@ cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 cask 'paw'                       # The most advanced API tool for Mac
+cask 'rocket'                    # Emoji autocomplete for any app 🚀
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
