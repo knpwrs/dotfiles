@@ -467,7 +467,7 @@ genvrc() {
   cat >> .envrc <<EOF
   export GIT_AUTHOR_NAME="$1"
   export GIT_AUTHOR_EMAIL="$2"
-  export GIT_COMMITTER_NAME="$1"
-  export GIT_COMMITTER_EMAIL="$2"
+  export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
+  export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 EOF
 }
