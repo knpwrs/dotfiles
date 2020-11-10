@@ -229,8 +229,8 @@ Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
+Plug 'junegunn/vim-peekaboo'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'junegunn/vim-peekaboo'
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'sickill/vim-pasta'
