@@ -299,7 +299,7 @@ let g:indentLine_char = '⦙'
 nmap <silent> dsf ds(db
   \:call repeat#set("dsf")<CR>
 "" FZF
-nmap <C-p> :FZF<CR>
+nmap <C-t> :FZF<CR>
 nmap <leader>F :FZF<CR>
 "" NERDTree
 let NERDTreeShowHidden=1
