@@ -120,6 +120,10 @@ noremap <leader>\| :<C-u>vsplit<CR>
 "" Close quickfix
 noremap <leader>c :ccl<CR>
 
+"" Copy file paths
+nmap cp :let @*=expand("%")<CR>
+nmap cl :let @*=expand("%:p")<CR> " Overrides `cl`, which is the same as `s`
+
 "" Tab mappings
 noremap <leader>1 1gt
 noremap <leader>2 2gt
