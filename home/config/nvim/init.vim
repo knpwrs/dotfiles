@@ -244,6 +244,7 @@ Plug 'tommcdo/vim-fugitive-blame-ext' " requires tpope/vim-fugitive
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
