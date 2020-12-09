@@ -258,7 +258,8 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
 "" Navigation Plugs
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tyok/nerdtree-ack'
 Plug 'Xuyuanp/nerdtree-git-plugin'
