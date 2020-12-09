@@ -326,6 +326,7 @@ let g:coc_global_extensions = [
   \'coc-eslint',
   \'coc-git',
   \'coc-json',
+  \'coc-snippets',
   \'coc-tsserver',
   \'coc-yaml',
   \'coc-yank',
@@ -368,6 +369,21 @@ nmap <silent><nowait> <space>o :<C-u>CocList outline<cr>
 nmap <silent><nowait> <space>s :<C-u>CocList -I symbols<cr>
 " coc-yank
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+" coc-snippet
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+nmap <leader>cs :CocCommand snippets.editSnippets<cr>
+nmap <leader>cf :CocCommand snippets.openSnippetFiles<cr>
 " formatting
 xmap <leader>q  <Plug>(coc-format-selected)
 nmap <leader>q  <Plug>(coc-format-selected)
