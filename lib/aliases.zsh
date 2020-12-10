@@ -74,9 +74,10 @@ alias osvg='svgo -i - -o - --pretty --multipass --enable=removeXMLNS'
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
 
 alias v='nvim'
-alias vv='nvim .'
+alias vii='vidir'
 alias vim='nvim'
 alias vims='nvim -S Session.vim'
+alias vv='nvim .'
 
 alias fed='fd -tf | xargs sed -i'
 
