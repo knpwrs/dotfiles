@@ -1,5 +1,12 @@
 {
   "git.addGBlameToVirtualText": true,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  },
   "list.normalMappings": {
     "<C-d>": "do:exit"
   },
