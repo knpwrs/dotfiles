@@ -88,6 +88,8 @@ endfunction
 
 "" \, edits the vi config file.
 nnoremap <leader>, :tabedit $MYVIMRC<CR>
+"" :bufo closes all open buffers except the current buffer
+cnoreabbrev bufo %bd\|e#\|bd#<CR>\|'"
 "" allow executing local nvimrc files
 set exrc
 "" disable :autocmd, shell, and write commands in local vimrc files
@@ -253,7 +255,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vitalk/vim-simple-todo'
-Plug 'vim-scripts/BufOnly.vim'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
@@ -418,8 +419,6 @@ nmap <leader>m <Plug>(simple-todo-mark-switch)
 vmap <leader>x <Plug>(simple-todo-mark-as-done)
 vmap <leader>X <Plug>(simple-todo-mark-as-undone)
 vmap <leader>m <Plug>(simple-todo-mark-switch)
-"" BufOnly.vim
-cnoreabbrev bufo BufO
 "" vim-prettier
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 1
