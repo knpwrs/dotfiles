@@ -16,3 +16,6 @@ alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
 alias dcr="docker-compose run --rm"
 alias dcrs="docker-compose restart"
+
+# docker-wipe all
+alias dwa="echo y | docker-wipe all"
