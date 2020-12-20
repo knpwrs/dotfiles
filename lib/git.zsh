@@ -264,6 +264,8 @@ alias gmum='git merge upstream/master'
 alias gmv='git mv'
 
 alias gp='git push'
+alias gpar='git remote | xargs -L1 -I R git push R'
+alias gparf='git remote | xargs -L1 -I R git push --force R'
 alias gpd='git push --dry-run'
 alias gpoat='git push origin --all && git push origin --tags'
 compdef _git gpoat=git-push
