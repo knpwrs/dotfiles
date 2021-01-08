@@ -261,10 +261,12 @@ set statusline+=%=%l,%c " ruler
 set statusline+=\ %f
 
 "" Write with sudo
-command! -nargs=0 WriteWithSudo :w !sudo tee % > /dev/null
-cnoreabbrev ww WriteWithSudo
+"" https://github.com/neovim/neovim/issues/1716
+"" https://github.com/lambdalisue/suda.vim
+" command! -nargs=0 WriteWithSudo :w !sudo tee % > /dev/null
+" cnoreabbrev ww WriteWithSudo
+cnoreabbrev ww SudaWrite
 
-"
 " Begin vim-plug
 " Run :PlugInstall to install plugins.
 "
@@ -293,6 +295,7 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
 Plug 'junegunn/vim-peekaboo'
+Plug 'lambdalisue/suda.vim' " Temporary, see above
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
