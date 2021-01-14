@@ -95,7 +95,10 @@ set exrc
 "" disable :autocmd, shell, and write commands in local vimrc files
 set secure
 
-"" <C-l> redraws the screen and removes any search highlighting.
+"" \r replaces the word under the cursor
+nmap <leader>r :%s/<C-r><C-w>//g<Left><Left>
+
+" <C-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 "" Do not jump on invocation of *
@@ -317,6 +320,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vitalk/vim-simple-todo'
 "" Movement Plugs
 Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
 Plug 'majutsushi/tagbar'
 "" Navigation Plugs
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -484,3 +488,5 @@ let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 1
 "" rust.vim
 let g:rustfmt_autosave = 1
+"" vim-sneak
+let g:sneak#label = 1
