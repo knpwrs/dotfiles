@@ -297,6 +297,7 @@ Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jreybert/vimagit'
+Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/suda.vim' " Temporary, see above
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
