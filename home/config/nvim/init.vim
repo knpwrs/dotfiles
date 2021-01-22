@@ -127,7 +127,7 @@ noremap <leader>c :ccl<CR>
 
 "" Copy file paths
 nmap cp :let @*=expand("%")<CR>
-nmap cl :let @*=expand("%:p")<CR> " Overrides `cl`, which is the same as `s`
+nmap cP :let @*=expand("%:p")<CR>
 
 "" Tab mappings
 noremap <leader>1 1gt
