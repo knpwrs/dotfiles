@@ -104,6 +104,7 @@ alias gcmsg='git commit -m'
 alias gcnv='git commit --no-verify'
 alias gco='git checkout'
 alias gcod='git checkout -- .'
+alias gcof='git checkout $(gfirst)'
 alias gcoo='git checkout --ours'
 alias gcot='git checkout --theirs'
 alias gcount='git shortlog -sn'
@@ -131,6 +132,7 @@ alias gf='git fetch'
 alias gfa='git fetch --all --prune'
 function gfg() { git ls-files | grep $@ }
 compdef gfg=grep
+alias gfirst='git rev-list --max-parents=0 HEAD | tail -n 1'
 alias gfo='git fetch origin'
 function gfp() {
   git show $(git merge-base --fork-point $1)
@@ -307,6 +309,7 @@ alias grv='git remote -v'
 
 alias gsb='git status -sb'
 alias gsd='git svn dcommit'
+alias gsf='git show $(gfirst)'
 alias gsh='git show HEAD'
 alias gsi='git submodule init'
 alias gsps='git show --pretty=short --show-signature'
