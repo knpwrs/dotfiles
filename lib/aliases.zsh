@@ -66,6 +66,8 @@ function keygen() {
 }
 alias KILL='killall -KILL'
 alias resume="kill -CONT"
+# Kill suspended process
+alias kz='kill -9 %1'
 
 alias hb='HandBrakeCLI'
 
