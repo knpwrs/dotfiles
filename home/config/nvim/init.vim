@@ -423,7 +423,7 @@ nmap <silent> gI :call CocAction('jumpImplementation', 'tab drop')<CR>
 nmap <silent> gr <Plug>(coc-references)
 " Diagnostics
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 nmap <leader>qf <Plug>(coc-fix-current)
 " coc-git
 nmap <leader>hs :CocCommand git.chunkStage<cr>
