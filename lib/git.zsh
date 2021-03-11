@@ -192,10 +192,10 @@ compdef _git ggu=git-checkout
 alias ggpur='ggu'
 compdef _git ggpur=git-checkout
 
-alias gh="git rev-parse HEAD | tr -d '\n'"
-alias ghpb='git rev-parse HEAD | pbcopy'
-alias ghs='git rev-parse HEAD | head -c 7'
-alias ghspb='git rev-parse HEAD | head -c 7 | pbcopy'
+alias gha="git rev-parse HEAD | tr -d '\n'"
+alias ghapb='git rev-parse HEAD | pbcopy'
+alias ghas='git rev-parse HEAD | head -c 7'
+alias ghaspb='git rev-parse HEAD | head -c 7 | pbcopy'
 
 function ghcd() {
   glcd "git@github.com:$1"
