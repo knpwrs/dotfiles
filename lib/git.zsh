@@ -43,6 +43,19 @@ function work_in_progress() {
   fi
 }
 
+# Determine to use either the master or main branch
+function git_main_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local branch
+  for branch in main trunk; do
+    if command git show-ref -q --verify refs/heads/$branch; then
+      echo $branch
+      return
+    fi
+  done
+  echo master
+}
+
 # Aliases
 # (sorted alphabetically)
 #
@@ -58,7 +71,7 @@ alias gba='git branch -a'
 alias gbc='git branch --contains'
 alias gbd='git branch -D'
 function gbda() {
-  local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v 'master\|svn\|develop\|release-candidate')
+  local branches=$(git branch --no-color --merged | grep -v "\*" | grep -v '$(git_main_branch)\|svn\|develop\|release-candidate')
   if [ "$1" = "-r" ]; then
     # Delete all merged branches (including remote and tracking)
     # Requires git-extras to be installed.
@@ -79,7 +92,7 @@ alias gbpb='current_branch | pbcopy'
 alias gbr='git branch --remote'
 alias gbsrd='git bisect reset develop'
 alias gbsrh='git bisect reset HEAD'
-alias gbsrm='git bisect reset master'
+alias gbsrm='git bisect reset $(git_main_branch)'
 alias gbs='git bisect'
 alias gbsb='git bisect bad'
 alias gbsg='git bisect good'
@@ -98,9 +111,7 @@ alias gcb='git checkout -b'
 alias gcd='git checkout develop'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
-function gcm() {
-  git checkout master || git checkout main
-}
+alias gcm='git checkout $(git_main_branch)'
 alias gcmsg='git commit -m'
 alias gcnv='git commit --no-verify'
 alias gco='git checkout'
@@ -121,7 +132,7 @@ alias gcz='git cz'
 alias gcza='git cz -a'
 
 alias gd='git diff'
-alias gdm='git diff master'
+alias gdm='git diff $(git_main_branch)'
 alias gds='git diff --staged'
 alias gdt='git difftool'
 alias gdtr='git diff-tree --no-commit-id --name-only -r'
@@ -138,7 +149,7 @@ alias gfo='git fetch origin'
 function gfp() {
   git show $(git merge-base --fork-point $1)
 }
-alias gfpm='gfp master'
+alias gfpm='gfp $(git_main_branch)'
 gfr() {
   [[ "$#" != 1 ]] && local r="origin"
   git fetch --all && git reset --hard "${r:=$1}/$(current_branch)"
@@ -215,7 +226,7 @@ alias ginit='git init'
 function gicd() {
   git init $1 && cd $1
 }
-alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
+alias git-svn-dcommit-push='git svn dcommit && git push github $(git_main_branch):svntrunk'
 compdef git-svn-dcommit-push=git
 
 alias ggk='\gitk --all --branches'
@@ -246,24 +257,24 @@ alias glrb="git pull --rebase"
 alias glrbd="git pull --rebase origin develop"
 alias glrbi="git pull --rebase=interactive"
 alias glrbid="git pull --rebase=interactive origin develop"
-alias glrbim="git pull --rebase=interactive origin master"
-alias glrbm="git pull --rebase origin master"
+alias glrbim="git pull --rebase=interactive origin $(git_main_branch)"
+alias glrbm="git pull --rebase origin $(git_main_branch)"
 alias glu="git pull upstream"
-alias glum="git pull upstream master"
-alias glump="git pull upstream master && git push origin master"
+alias glum="git pull upstream $(git_main_branch)"
+alias glump="git pull upstream $(git_main_branch) && git push origin $(git_main_branch)"
 
 alias gm='git merge'
 alias gma='git merge --abort'
 alias gmd='git merge develop'
-alias gmm='git merge master'
+alias gmm='git merge $(git_main_branch)'
 alias gmrc='git merge release-candidate'
 alias gmnff='git merge --no-ff'
 alias gmnffd='git merge develop --no-ff'
-alias gmnffm='git merge master --no-ff'
-alias gmom='git merge origin/master'
+alias gmnffm='git merge $(git_main_branch) --no-ff'
+alias gmom='git merge origin/$(git_main_branch)'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
-alias gmum='git merge upstream/master'
+alias gmum='git merge upstream/$(git_main_branch)'
 alias gmv='git mv'
 
 alias gp='git push'
@@ -284,12 +295,12 @@ alias grbc='git rebase --continue'
 alias grbd='git rebase develop'
 alias grbi='git rebase -i'
 alias grbid='git rebase -i develop'
-alias grbim='git rebase -i master'
+alias grbim='git rebase -i $(git_main_branch)'
 alias grbiod='git rebase -i origin/develop'
-alias grbiom='git rebase -i origin/master'
+alias grbiom='git rebase -i origin/$(git_main_branch)'
 alias grbir='git rebase -i --root'
-alias grbm='git rebase master'
-alias grbm='git rebase master'
+alias grbm='git rebase $(git_main_branch)'
+alias grbm='git rebase $(git_main_branch)'
 alias grbs='git rebase --skip'
 alias grc='git rerere clear'
 alias grh='git reset HEAD'
