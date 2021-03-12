@@ -128,6 +128,8 @@ noremap <leader>c :ccl<CR>
 "" Copy file paths
 nmap cp :let @*=expand("%")<CR>
 nmap cP :let @*=expand("%:p")<CR>
+nmap yp :let @"=expand("%")<CR>
+nmap yP :let @"=expand("%:p")<CR>
 
 "" Tab mappings
 noremap <leader>1 1gt
