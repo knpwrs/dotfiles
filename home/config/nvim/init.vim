@@ -291,6 +291,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'bling/vim-bufferline'
 Plug 'w0ng/vim-hybrid'
 "" Enhancement Plugs
+Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'bronson/vim-trailing-whitespace'
@@ -367,11 +368,11 @@ hi clear SignColumn
 hi SignColumn ctermbg=bg
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
+"" dsf.vim
+let g:dsf_brackets = '([{<'
+set matchpairs+=<:>
 "" IndentLine
 let g:indentLine_char = '⦙'
-"" Misc Key bindings
-nmap <silent> dsf ds(db
-  \:call repeat#set("dsf")<CR>
 "" FZF
 nmap <C-t> :FZF<CR>
 nmap <leader>F :FZF<CR>
