@@ -322,7 +322,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vitalk/vim-simple-todo'
 "" Movement Plugs
-Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
 Plug 'majutsushi/tagbar'
 Plug 'unblevable/quick-scope'
