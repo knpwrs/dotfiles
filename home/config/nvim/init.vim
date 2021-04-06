@@ -260,7 +260,6 @@ function! CurrentModeString()
   return get(s:modemap, mode(), '')
 endfunction
 set noshowmode
-let g:bufferline_echo=0
 set statusline=%{CurrentModeString()}
 set statusline+=%=%l,%c " ruler
 set statusline+=\ %f
@@ -288,7 +287,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 "" Interface Plugs
 Plug 'Yggdroot/indentLine'
-Plug 'bling/vim-bufferline'
 Plug 'chriskempson/base16-vim'
 "" Enhancement Plugs
 Plug 'AndrewRadev/dsf.vim'
