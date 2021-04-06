@@ -325,6 +325,7 @@ Plug 'vitalk/vim-simple-todo'
 Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
 Plug 'majutsushi/tagbar'
+Plug 'unblevable/quick-scope'
 "" Navigation Plugs
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -498,3 +499,5 @@ let g:prettier#autoformat_config_present = 1
 let g:rustfmt_autosave = 1
 "" vim-sneak
 let g:sneak#label = 1
+"" quick-scope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
