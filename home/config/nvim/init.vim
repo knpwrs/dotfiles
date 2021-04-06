@@ -501,5 +501,8 @@ let g:prettier#autoformat_config_present = 1
 let g:rustfmt_autosave = 1
 "" vim-sneak
 let g:sneak#label = 1
+hi Sneak ctermfg=black ctermbg=201
+hi SneakScope ctermfg=black ctermbg=201
+hi SneakLabel ctermfg=black ctermbg=201
 "" quick-scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
