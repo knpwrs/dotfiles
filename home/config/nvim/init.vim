@@ -289,7 +289,7 @@ call plug#begin('~/.config/nvim/plugged')
 "" Interface Plugs
 Plug 'Yggdroot/indentLine'
 Plug 'bling/vim-bufferline'
-Plug 'w0ng/vim-hybrid'
+Plug 'chriskempson/base16-vim'
 "" Enhancement Plugs
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/sideways.vim'
@@ -353,14 +353,14 @@ call plug#end()
 "
 
 "" Colorscheme
-set background=dark
-colorscheme hybrid
+let base16colorspace=256
+colorscheme base16-bright
 hi vertsplit ctermfg=238 ctermbg=235
-hi LineNr ctermfg=grey
+hi LineNr ctermfg=grey ctermbg=bg
 hi StatusLine ctermfg=white ctermbg=bg cterm=bold
 hi StatusLineNC ctermfg=235 ctermbg=bg
 hi TabLineFill ctermfg=bg ctermbg=bg
-hi TabLine ctermfg=bg ctermbg=fg
+hi TabLine ctermfg=fg ctermbg=bg
 hi TabLineSel ctermfg=red ctermbg=bg
 hi Search ctermbg=58 ctermfg=15
 hi Default ctermfg=1
