@@ -25,6 +25,7 @@ path=(
   $HOME/bin # Custom home bin directory
   $HOME/.bin # bin directory from this repo
   /usr/local/opt/coreutils/libexec/gnubin # GNU coreutils
+  /usr/local/opt/make/libexec/gnubin # GNU make
   /usr/local/{bin,sbin}
   $path
 )
