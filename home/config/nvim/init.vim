@@ -297,14 +297,11 @@ Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim' | Plug 'vim-scripts/PreserveNoEOL'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
-Plug 'jreybert/vimagit'
-Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/suda.vim' " Temporary, see above
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-Plug 'rhysd/committia.vim'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-exchange'
