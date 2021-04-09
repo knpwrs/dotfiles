@@ -300,7 +300,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/suda.vim' " Temporary, see above
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -326,7 +326,6 @@ Plug 'unblevable/quick-scope'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'tyok/nerdtree-ack'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
 Plug 'hail2u/vim-css3-syntax'
@@ -384,10 +383,12 @@ nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
 "" delimitMate
 let delimitMate_expand_cr=1
-"" ack.vim
-let g:ackprg='rg --vimgrep --no-heading --smart-case' " ripgrep
-noremap <leader>f :Ack!<Space>''<Left>
-noremap <leader>* :Ack! <cword><CR>
+"" vim-grepper
+let g:grepper = {}
+let g:grepper.tools = ['rg', 'git']
+nnoremap <leader>g :Grepper<cr>
+nnoremap <leader>G :Grepper -buffers<cr>
+nnoremap <leader>* :Grepper -cword -noprompt<cr>
 
 "" coc.nvim
 let g:coc_global_extensions = [
