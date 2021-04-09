@@ -164,6 +164,10 @@ ttfb() {
 # Generate 256-bit secret
 alias gensec='openssl rand -base64 32'
 
+# Get public IP address
+alias ip{4,}='dig @resolver4.opendns.com myip.opendns.com +short -4'
+alias ip6='dig @ns1.google.com TXT o-o.myaddr.l.google.com +short -6'
+
 # Make aliases available to sudo
 alias sudo='sudo '
 
