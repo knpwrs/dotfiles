@@ -388,6 +388,8 @@ let g:grepper = {}
 let g:grepper.tools = ['rg', 'git']
 nnoremap <leader>g :Grepper<cr>
 nnoremap <leader>G :Grepper -buffers<cr>
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 nnoremap <leader>* :Grepper -cword -noprompt<cr>
 
 "" coc.nvim
