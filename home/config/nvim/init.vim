@@ -377,8 +377,6 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>T :NERDTreeFind<CR>
-"" delimitMate
-let delimitMate_expand_cr=1
 "" vim-grepper
 let g:grepper = {}
 let g:grepper.tools = ['rg', 'git']
