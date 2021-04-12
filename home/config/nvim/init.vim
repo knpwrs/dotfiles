@@ -320,7 +320,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vitalk/vim-simple-todo'
 "" Movement Plugs
 Plug 'justinmk/vim-sneak'
-Plug 'majutsushi/tagbar'
 Plug 'unblevable/quick-scope'
 "" Navigation Plugs
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -378,9 +377,6 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>T :NERDTreeFind<CR>
-"" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus=1
 "" delimitMate
 let delimitMate_expand_cr=1
 "" vim-grepper
