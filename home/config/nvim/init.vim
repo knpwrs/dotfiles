@@ -1,4 +1,4 @@
-
+"
 " Neovim default settings
 " :h defaults
 "
