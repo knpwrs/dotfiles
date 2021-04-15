@@ -498,3 +498,7 @@ let g:sneak#label = 1
 hi Sneak ctermfg=black ctermbg=201
 hi SneakScope ctermfg=black ctermbg=201
 hi SneakLabel ctermfg=black ctermbg=201
+nmap z <Plug>Sneak_s
+nmap Z <Plug>Sneak_S
+xmap z <Plug>Sneak_s
+xmap Z <Plug>Sneak_S
