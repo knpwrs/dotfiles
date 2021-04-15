@@ -307,7 +307,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-fugitive-blame-ext' " requires tpope/vim-fugitive
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-dadbod', { 'on': 'DB' }
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -323,15 +323,15 @@ Plug 'unblevable/quick-scope'
 "" Navigation Plugs
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
 Plug 'hail2u/vim-css3-syntax'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown' " requires 'godlygeek/tabular'
-Plug 'rhysd/vim-wasm'
-Plug 'rust-lang/rust.vim'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " requires 'godlygeek/tabular'
+Plug 'rhysd/vim-wasm', { 'for': 'wast' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'sheerun/vim-polyglot'
 "" Motions
 Plug 'kana/vim-textobj-user'
