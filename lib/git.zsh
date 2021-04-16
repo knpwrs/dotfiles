@@ -158,7 +158,7 @@ gfr() {
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
-alias ggc='git gc'
+alias ggc='git gc --prune=now'
 ggf() {
   [[ "$#" != 1 ]] && b="$(current_branch)"
   git push --force-with-lease origin "${b:=$1}"
