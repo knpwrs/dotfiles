@@ -241,6 +241,7 @@ function glcd() {
   git clone $1 && cd $(basename -s .git $1)
 }
 alias glean='git clean -df'
+alias glep='git log --all -i --grep'
 alias glg='git log --stat --color'
 alias glgp='git log --stat --color -p'
 alias glgg='git log --graph --color'
