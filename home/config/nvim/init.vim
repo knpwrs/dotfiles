@@ -328,10 +328,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "" Language Plugs
 Plug 'hail2u/vim-css3-syntax'
 Plug 'mattn/emmet-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " requires 'godlygeek/tabular'
-Plug 'rhysd/vim-wasm', { 'for': 'wast' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+" Plug 'pangloss/vim-javascript'
+" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " requires 'godlygeek/tabular'
+" Plug 'rhysd/vim-wasm', { 'for': 'wast' }
+" Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'sheerun/vim-polyglot'
 "" Motions
 Plug 'kana/vim-textobj-user'
