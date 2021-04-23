@@ -18,6 +18,7 @@ export DOTVENDOR="$DOTFILES/vendor"
 export WORKSPACE="$HOME/Workspace"
 export GITHUB="$WORKSPACE/github.com"
 export KNPWRS="$GITHUB/knpwrs"
+export NAVI_PATH="$HOME/.config/navi"
 
 # Load zmv command
 # http://zshwiki.org/home/builtin/functions/zmv
