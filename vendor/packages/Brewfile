@@ -39,6 +39,7 @@ brew 'jpegoptim'                               # Optimize/compress JPEG files wi
 brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
 brew 'moreutils'                               # Other useful utilities.
+brew 'navi'                                    # An interactive cheatsheet tool for the command-line.
 brew 'neofetch'                                # A command-line system information tool written in bash 3.2+
 brew 'neovim'                                  # Neovim
 brew 'netcat'                                  # Utility for managing network connections.
