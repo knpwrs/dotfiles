@@ -9,3 +9,9 @@ curl -s "wttr.in" \
 curl -s "wttr.in/<location>" \
    | grep -v "New feature" \
    | grep -v Follow
+
+# Create a QR code with some content
+echo <content> | curl -F-=\<- qrenco.de
+
+# Create a QR code with some content and copy
+echo <content> | curl -F-=\<- qrenco.de | pbcopy
