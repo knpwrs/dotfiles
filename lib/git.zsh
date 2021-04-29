@@ -132,7 +132,6 @@ alias gcz='git cz'
 alias gcza='git cz -a'
 
 alias gd='git diff'
-alias gde='git diff --name-only | xargs -o $EDITOR -p'
 alias gdm='git diff $(git_main_branch)'
 alias gds='git diff --staged'
 alias gdt='git difftool'
