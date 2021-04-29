@@ -18,3 +18,8 @@ echo <content> | curl -F-=\<- qrenco.de | pbcopy
 
 # Format JSON on clipboard
 pbpaste | jq | pbcopy
+
+# Optimize pngs
+oxipng -o max <pngs>
+
+$ pngs: fd -e png --- --multi --map "navi fn map::expand"
