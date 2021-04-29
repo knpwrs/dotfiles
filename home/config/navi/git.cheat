@@ -6,4 +6,7 @@ git log --all -i --grep '<search-text>'
 # Checkout the main branch
 git checkout <main_branch>
 
+# Open dirty files in $EDITOR
+git diff --name-only | xargs -o $EDITOR -p
+
 $ main_branch: git symbolic-ref refs/remotes/origin/HEAD | sed 's|^refs/remotes/origin/||'
