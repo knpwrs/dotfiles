@@ -15,3 +15,6 @@ echo <content> | curl -F-=\<- qrenco.de
 
 # Create a QR code with some content and copy
 echo <content> | curl -F-=\<- qrenco.de | pbcopy
+
+# Format JSON on clipboard
+pbpaste | jq | pbcopy

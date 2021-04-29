@@ -170,7 +170,6 @@ alias ip6='dig @ns1.google.com TXT o-o.myaddr.l.google.com +short -6'
 
 # Pasteboard jq
 alias pbjq='pbpaste | jq'
-alias pbjqpb='pbjq | pbcopy'
 
 # Make aliases available to sudo
 alias sudo='sudo '
