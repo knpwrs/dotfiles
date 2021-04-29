@@ -321,10 +321,11 @@ Plug 'vitalk/vim-simple-todo'
 Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
 "" Navigation Plugs
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'yssl/QFEnter'
 "" Language Plugs
 Plug 'hail2u/vim-css3-syntax'
 Plug 'mattn/emmet-vim'
