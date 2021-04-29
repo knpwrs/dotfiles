@@ -2,3 +2,8 @@
 
 # Search all git commit messages for a given string, case-insensitive
 git log --all -i --grep '<search-text>'
+
+# Checkout the main branch
+git checkout <main_branch>
+
+$ main_branch: git symbolic-ref refs/remotes/origin/HEAD | sed 's|^refs/remotes/origin/||'
