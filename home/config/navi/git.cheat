@@ -12,5 +12,9 @@ git diff --name-only | xargs -o $EDITOR -p
 # Commit with co-author
 git commit -e -m "commit message" -m "<co_authors>"
 
+# Restore staged files
+git restore --staged <staged_files>
+
 $ main_branch: git symbolic-ref refs/remotes/origin/HEAD | sed 's|^refs/remotes/origin/||'
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
+$ staged_files: git diff --staged --name-only --- --multi
