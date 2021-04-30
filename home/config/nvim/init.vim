@@ -16,6 +16,13 @@ endif
 imap <C-d> <Esc>
 cmap <C-d> <Esc>
 vmap <C-d> <Esc>
+"" Close quickfix
+function CloseQuickfixIfInQuickfix()
+  if &buftype ==# 'quickfix'
+    execute "ccl"
+  endif
+endfunction
+noremap <C-d> :call CloseQuickfixIfInQuickfix()<cr>
 "" Load plugins according to detected filetype.
 filetype plugin indent on
 "" Enable syntax highlighting.
@@ -121,9 +128,6 @@ noremap <leader>P :set paste!<cr>
 "" Split mappings
 noremap <leader>- :<C-u>split<CR>
 noremap <leader>\| :<C-u>vsplit<CR>
-
-"" Close quickfix
-noremap <C-d> :ccl<CR>
 
 "" Copy file paths
 nmap cp :let @*=expand("%")<CR>
