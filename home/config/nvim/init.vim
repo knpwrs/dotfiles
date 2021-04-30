@@ -496,7 +496,7 @@ let g:rustfmt_autosave = 1
 "" vim-sneak
 let g:sneak#label = 1
 hi Sneak ctermfg=black ctermbg=201
-hi SneakScope ctermfg=black ctermbg=201
+hi SneakScope ctermfg=black ctermbg=white
 hi SneakLabel ctermfg=black ctermbg=201
 nmap z <Plug>Sneak_s
 nmap Z <Plug>Sneak_S
