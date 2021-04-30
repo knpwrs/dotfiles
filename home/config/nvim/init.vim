@@ -502,3 +502,7 @@ nmap z <Plug>Sneak_s
 nmap Z <Plug>Sneak_S
 xmap z <Plug>Sneak_s
 xmap Z <Plug>Sneak_S
+"" QFEnter
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.open = ['<cr>']
+let g:qfenter_keymap.topen = ['t']
