@@ -123,7 +123,7 @@ noremap <leader>- :<C-u>split<CR>
 noremap <leader>\| :<C-u>vsplit<CR>
 
 "" Close quickfix
-noremap <leader>c :ccl<CR>
+noremap <C-d> :ccl<CR>
 
 "" Copy file paths
 nmap cp :let @*=expand("%")<CR>
