@@ -16,13 +16,8 @@ endif
 imap <C-d> <Esc>
 cmap <C-d> <Esc>
 vmap <C-d> <Esc>
-"" Close quickfix
-function CloseQuickfixIfInQuickfix()
-  if &buftype ==# 'quickfix'
-    execute "ccl"
-  endif
-endfunction
-noremap <C-d> :call CloseQuickfixIfInQuickfix()<cr>
+"" Close quickfix if in quickfix
+nnoremap <expr> <C-d> &bt ==# 'quickfix' ? ':ccl<cr>' : '<C-d>'
 "" Load plugins according to detected filetype.
 filetype plugin indent on
 "" Enable syntax highlighting.
