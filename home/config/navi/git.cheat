@@ -18,6 +18,9 @@ git restore --staged <staged_files>
 # Delete local branches not on origin
 git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D
 
+# Checkout last branch
+git checkout -
+
 $ main_branch: git symbolic-ref refs/remotes/origin/HEAD | sed 's|^refs/remotes/origin/||'
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
