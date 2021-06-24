@@ -1,0 +1,4 @@
+% vim
+
+# Resume obsession default session
+vim -S Session.vim
