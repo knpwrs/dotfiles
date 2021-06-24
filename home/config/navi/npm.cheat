@@ -1,0 +1,75 @@
+% npm
+
+# Audit the current package
+npm audit
+
+# Fix issues found in audit
+npm audit fix
+
+# Install dependencies with a clean slate
+npm ci
+
+# Install dependency
+npm install <dependency>
+
+# Install dev dependency
+npm install -D <dependency>
+
+# Install package globally
+npm install -g <package>
+
+# Install dependency with peer dependencies
+npx install-peerdeps <dependency>
+
+# Install dev dependency with peer dependencies
+npx install-peerdeps --dev <dependency>
+
+# Initialize an npm project
+npm init
+
+# Initialize an npm project and accept defaults
+npm init -y
+
+# Symlink a package folder
+npm link
+
+# Run an arbitrary npm script
+npm run <script>
+
+# Run the build script
+npm run build
+
+# Run the check script
+npm run check
+
+# Run the dev script
+npm run dev
+
+# Run the lint script
+npm run lint
+
+# Run the release script
+npm run release
+
+# Run the start script
+npm start
+
+# Run tests
+npm test
+
+# Get version of current package
+echo "v$(jq -r .version < package.json)"
+
+# Bump major version
+npm version major
+
+# Bump minor version
+npm version minor
+
+# Bump patch version
+npm version patch
+
+# Open Package Homepage
+open $(npm view <package> homepage)
+
+$ script: jq -r '.scripts | keys | .[]' package.json
