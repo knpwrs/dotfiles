@@ -21,9 +21,6 @@ git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep
 # Checkout last branch
 git checkout -
 
-# Edit changed files
-git diff --name-only | xargs -o $EDITOR -p
-
 $ main_branch: git symbolic-ref refs/remotes/origin/HEAD | sed 's|^refs/remotes/origin/||'
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
