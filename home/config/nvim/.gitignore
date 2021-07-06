@@ -1,4 +1,8 @@
 *
 !.gitignore
 !*.vim
+!*.lua
 !coc-settings.json
+!lua
+!plugin
+plugin/packer_compiled.lua
