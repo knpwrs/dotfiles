@@ -25,7 +25,7 @@ if exists("+showtabline")
       let buflist = tabpagebuflist(tabnum)
       let file_path = ''
       let tab_name = bufname(buflist[0])
-      if tab_name =~ 'NERD_tree' && len(buflist) > 1
+      if tab_name =~ 'NvimTree' && len(buflist) > 1
         let tab_name = bufname(buflist[1])
       end
       let is_custom_name = 0
