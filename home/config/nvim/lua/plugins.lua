@@ -24,7 +24,7 @@ require('packer').startup(function ()
   use 'nvim-lua/plenary.nvim'
   -- Interface Plugins
   use 'chriskempson/base16-vim'
-  use { 'Yggdroot/indentLine', config = [[require('p-indent-line')]] }
+  use { 'lukas-reineke/indent-blankline.nvim', config = [[require('p-indent-blankline')]] }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }
   use { 'AndrewRadev/sideways.vim', config = [[require('p-sideways')]] }
