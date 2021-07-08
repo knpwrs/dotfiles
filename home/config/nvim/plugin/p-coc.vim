@@ -5,7 +5,6 @@ let g:coc_global_extensions = [
   \'coc-snippets',
   \'coc-tsserver',
   \'coc-yaml',
-  \'coc-yank',
   \]
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>rn <Plug>(coc-rename)
@@ -37,9 +36,6 @@ nmap <silent><nowait> <space>d :<C-u>CocList diagnostics<cr>
 nmap <silent><nowait> <space>c :<C-u>CocList commands<cr>
 nmap <silent><nowait> <space>o :<C-u>CocList outline<cr>
 nmap <silent><nowait> <space>s :<C-u>CocList -I symbols<cr>
-
-" coc-yank
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 " coc-snippet
 inoremap <silent><expr> <TAB>

@@ -13,3 +13,9 @@ hi clear SignColumn
 hi SignColumn ctermbg=bg
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set laststatus=2
+
+" Highlight yanked regions
+augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+augroup END
