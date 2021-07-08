@@ -20,6 +20,7 @@ require('packer').startup(function ()
   -- Package manager
   use 'wbthomason/packer.nvim'
   -- Base Dependencies
+  use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
   -- Interface Plugins
   use 'chriskempson/base16-vim'
@@ -68,7 +69,6 @@ require('packer').startup(function ()
   use { 'justinmk/vim-sneak', config = [[require('p-vim-sneak')]] }
   use 'unblevable/quick-scope'
   -- Navigation Plugins
-  use 'Xuyuanp/nerdtree-git-plugin'
   use {
     'junegunn/fzf',
     run = [[fn['fzf#install']()]],
@@ -76,9 +76,9 @@ require('packer').startup(function ()
   }
   use 'junegunn/fzf.vim'
   use {
-    'scrooloose/nerdtree',
-    keys = {'<leader>t', '<leader>T'},
-    config = [[require('p-nerdtree')]],
+    'kyazdani42/nvim-tree.lua',
+    requires = {{'plenary.nvim', 'nvim-web-devicons'}},
+    config = [[require('p-nvim-tree')]],
   }
   use { 'yssl/QFEnter', config = [[require('p-qfenter')]] }
   -- Motion Plugins
