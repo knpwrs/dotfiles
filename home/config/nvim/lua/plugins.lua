@@ -14,6 +14,8 @@ cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 require('packer').startup(function ()
   -- Package manager
   use 'wbthomason/packer.nvim'
+  -- Base Dependencies
+  use 'nvim-lua/plenary.nvim'
   -- Interface Plugins
   use 'chriskempson/base16-vim'
   use { 'Yggdroot/indentLine', config = [[require('p-indent-line')]] }
@@ -23,11 +25,16 @@ require('packer').startup(function ()
   use 'AndrewRadev/splitjoin.vim'
   use 'bronson/vim-trailing-whitespace'
   use { 'editorconfig/editorconfig-vim', requires = {{'vim-scripts/PreserveNoEOL'}} }
-  use { 'famiu/nvim-reload', requires = {{'nvim-lua/plenary.nvim'}} }
+  use { 'famiu/nvim-reload', requires = {{'plenary.nvim'}} }
   use 'godlygeek/tabular'
   use 'jiangmiao/auto-pairs'
   use 'junegunn/vim-peekaboo'
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {{'plenary.nvim'}},
+    config = [[require('p-gitsigns')]],
+  }
   use { 'neoclide/coc.nvim', branch = 'release' }
   use {
     'mhinz/vim-grepper',

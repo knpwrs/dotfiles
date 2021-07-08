@@ -1,6 +1,5 @@
 let g:coc_global_extensions = [
   \'coc-eslint',
-  \'coc-git',
   \'coc-json',
   \'coc-rust-analyzer',
   \'coc-snippets',
@@ -19,9 +18,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Highlights
-hi CocCodeLens ctermfg=242
-
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD :call CocAction('jumpDefinition', 'tab drop')<CR>
@@ -35,12 +31,6 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
 nmap <leader>qf <Plug>(coc-fix-current)
-
-" coc-git
-nmap <leader>hs :CocCommand git.chunkStage<cr>
-nmap <leader>hu :CocCommand git.chunkUndo<cr>
-nmap ]h <Plug>(coc-git-nextchunk)
-nmap [h <Plug>(coc-git-prevchunk)
 
 " coc-list
 nmap <silent><nowait> <space>d :<C-u>CocList diagnostics<cr>
