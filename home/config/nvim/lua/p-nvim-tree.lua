@@ -25,7 +25,7 @@ g.nvim_tree_auto_open = 1
 g.nvim_tree_show_icons = {
   git = 1,
   folders = 1,
-  files = 1,
+  files = 0,
   folder_arrows = 1,
 }
 
