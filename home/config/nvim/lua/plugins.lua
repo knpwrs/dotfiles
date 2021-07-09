@@ -62,7 +62,7 @@ require('packer').startup(function ()
   use 'tpope/vim-speeddating'
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
-  use{ 'vitalk/vim-simple-todo', config = [[require('p-vim-simple-todo')]] }
+  use { 'vitalk/vim-simple-todo', config = [[require('p-vim-simple-todo')]] }
   use { 'windwp/nvim-autopairs', config = [[require('p-nvim-autopairs')]] }
   -- Movement Plugins
   use { 'justinmk/vim-sneak', config = [[require('p-vim-sneak')]] }
