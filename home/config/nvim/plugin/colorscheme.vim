@@ -19,3 +19,11 @@ augroup highlight_yank
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
+
+" LSP
+hi LspDiagnosticsSignError ctermfg=red ctermbg=bg
+hi LspDiagnosticsVirtualTextError ctermfg=red ctermbg=bg
+hi LspDiagnosticsSignWarn ctermfg=yellow ctermbg=bg
+hi LspDiagnosticsVirtualTextWarn ctermfg=yellow ctermbg=bg
+hi LspDiagnosticsSignInformation ctermfg=blue ctermbg=bg
+hi LspDiagnosticsVirtualTextInformation ctermfg=blue ctermbg=bg

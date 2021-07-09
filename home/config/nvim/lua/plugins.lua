@@ -33,7 +33,6 @@ require('packer').startup(function ()
   use { 'editorconfig/editorconfig-vim', requires = {{'vim-scripts/PreserveNoEOL'}} }
   use { 'famiu/nvim-reload', requires = {{'plenary.nvim'}} }
   use 'godlygeek/tabular'
-  use 'jiangmiao/auto-pairs'
   use 'junegunn/vim-peekaboo'
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
   use {
@@ -41,7 +40,6 @@ require('packer').startup(function ()
     requires = {{'plenary.nvim'}},
     config = [[require('p-gitsigns')]],
   }
-  use { 'neoclide/coc.nvim', branch = 'release' }
   use {
     'mhinz/vim-grepper',
     cmd = {'Grepper'},
@@ -65,6 +63,7 @@ require('packer').startup(function ()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use{ 'vitalk/vim-simple-todo', config = [[require('p-vim-simple-todo')]] }
+  use { 'windwp/nvim-autopairs', config = [[require('p-nvim-autopairs')]] }
   -- Movement Plugins
   use { 'justinmk/vim-sneak', config = [[require('p-vim-sneak')]] }
   use 'unblevable/quick-scope'
@@ -87,7 +86,12 @@ require('packer').startup(function ()
   -- Language Plugins
   use 'hail2u/vim-css3-syntax'
   use 'mattn/emmet-vim'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('p-nvim-treesitter')]] }
   use { 'plasticboy/vim-markdown', config = [[require('p-vim-markdown')]] }
   use { 'rust-lang/rust.vim', config = [[require('p-rust')]] }
+  -- LSP
+  use { 'folke/trouble.nvim', requires = {'nvim-web-devicons'}, config = [[require('p-trouble')]] }
+  use { 'hrsh7th/nvim-compe', config = [[require('p-nvim-compe')]]}
+  use 'kabouzeid/nvim-lspinstall'
+  use { 'neovim/nvim-lspconfig', config = [[require('p-nvim-lspconfig')]] }
 end)
