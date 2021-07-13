@@ -66,7 +66,6 @@ require('packer').startup(function ()
   use { 'windwp/nvim-autopairs', config = [[require('p-nvim-autopairs')]] }
   -- Movement Plugins
   use { 'justinmk/vim-sneak', config = [[require('p-vim-sneak')]] }
-  use 'unblevable/quick-scope'
   -- Navigation Plugins
   use {
     'junegunn/fzf',
