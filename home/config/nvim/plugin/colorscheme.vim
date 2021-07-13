@@ -1,7 +1,7 @@
 let base16colorspace=256
 colorscheme base16-bright
 hi vertsplit ctermfg=238 ctermbg=235
-hi LineNr ctermfg=grey ctermbg=bg
+hi LineNr ctermfg=242 ctermbg=bg
 hi StatusLine ctermfg=white ctermbg=bg cterm=bold
 hi StatusLineNC ctermfg=235 ctermbg=bg
 hi TabLineFill ctermfg=bg ctermbg=bg
