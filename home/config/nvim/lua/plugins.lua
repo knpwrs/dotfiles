@@ -65,7 +65,7 @@ require('packer').startup(function ()
   use { 'vitalk/vim-simple-todo', config = [[require('p-vim-simple-todo')]] }
   use { 'windwp/nvim-autopairs', config = [[require('p-nvim-autopairs')]] }
   -- Movement Plugins
-  use { 'justinmk/vim-sneak', config = [[require('p-vim-sneak')]] }
+  use { 'ggandor/lightspeed.nvim', config = [[require('p-lightspeed')]] }
   -- Navigation Plugins
   use {
     'junegunn/fzf',
