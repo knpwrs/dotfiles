@@ -18,9 +18,6 @@ g.nvim_tree_bindings = {
 -- Close tree when opening file
 g.nvim_tree_quit_on_open = 1
 
--- Automatically open in directory
-g.nvim_tree_auto_open = 1
-
 -- Icons
 g.nvim_tree_show_icons = {
   git = 1,
