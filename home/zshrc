@@ -53,6 +53,11 @@ if type starship > /dev/null; then
   eval "$(starship init zsh)"
 fi
 
+# snm
+if type snm > /dev/null; then
+  eval "$(snm env zsh)"
+fi
+
 # rbenv
 if type rbenv > /dev/null; then
   eval "$(rbenv init -)"
