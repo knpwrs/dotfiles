@@ -7,6 +7,7 @@ RUSTUP="$HOME/.cargo/bin/rustup"
 crates=(
   cargo-edit  # Add, remove, and upgrade cargo dependencies from the command line
   cargo-watch # Watch for file changes and run cargo commands
+  exa         # A modern replacement for ls
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
   rm-improved # rip, a safer rm

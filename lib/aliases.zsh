@@ -1,5 +1,11 @@
 # Custom aliases
-ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
+if type exa > /dev/null; then
+  alias ls='exa'
+elif ls --color -d . &>/dev/null 2>&1; then
+  alias ls='ls --color=tty'
+else
+  alias ls='ls -G'
+fi
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -41,10 +47,9 @@ function mkcd() {
   md $1 && cd $1
 }
 
-alias lsa='ls -lah'
 alias l='ls -lah'
+alias la='ls -lah'
 alias ll='ls -lh'
-alias la='ls -lAh'
 
 alias pu='pushd'
 alias po='popd'
