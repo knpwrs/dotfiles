@@ -23,7 +23,9 @@ require('gitsigns').setup {
     ['x ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>'
   },
   current_line_blame = true,
-  current_line_blame_delay = 250,
+  current_line_blame_opts = {
+    delay = 250,
+  },
 }
 
 vim.cmd('hi GitSignsAdd ctermfg=green ctermbg=bg')
