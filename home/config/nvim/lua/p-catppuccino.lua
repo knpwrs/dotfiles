@@ -6,6 +6,7 @@ catppuccino.setup(
   {
     colorscheme = 'dark_catppuccino',
     integrations = {
+      bufferline = true,
       gitsigns = true,
       indent_blankline = true,
       lsp_trouble = true,
@@ -32,10 +33,6 @@ catppuccino.setup(
 )
 
 catppuccino.load()
-
-vim.cmd('hi TabLineFill ctermfg=black ctermbg=black guifg=lightblack guibg=lightblack')
-vim.cmd('hi TabLine ctermfg=white ctermbg=black guifg=brightwhite guibg=lightblack')
-vim.cmd('hi TabLineSel cterm=bold ctermfg=white ctermbg=black guifg=white guibg=lightblack')
 
 -- Highlight yanked regions
 vim.api.nvim_exec(

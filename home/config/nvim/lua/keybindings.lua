@@ -67,20 +67,6 @@ nvim_set_keymap('n', 'cP', ':let @*=expand("%:p")<CR>', {})
 nvim_set_keymap('n', 'yp', ':let @"=expand("%")<CR>', {})
 nvim_set_keymap('n', 'yP', ':let @"=expand("%:p")<CR>', {})
 
--- Tab mappings
-nvim_set_keymap('', '<Leader>1', '1gt', {})
-nvim_set_keymap('', '<Leader>2', '2gt', {})
-nvim_set_keymap('', '<Leader>3', '3gt', {})
-nvim_set_keymap('', '<Leader>4', '4gt', {})
-nvim_set_keymap('', '<Leader>5', '5gt', {})
-nvim_set_keymap('', '<Leader>6', '6gt', {})
-nvim_set_keymap('', '<Leader>7', '7gt', {})
-nvim_set_keymap('', '<Leader>8', '8gt', {})
-nvim_set_keymap('', '<Leader>9', '9gt', {})
-nvim_set_keymap('', '<Leader>0', ':tablast<CR>', {})
-nvim_set_keymap('', '<Leader>[', ':tabm -1<CR>', {})
-nvim_set_keymap('', '<Leader>]', ':tabm +1<CR>', {})
-
 -- Write with sudo (temporary)
 -- https://github.com/neovim/neovim/issues/1716
 -- https://github.com/lambdalisue/suda.vim

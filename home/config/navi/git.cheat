@@ -7,7 +7,7 @@ git log --all -i --grep '<search-text>'
 git checkout <main_branch>
 
 # Open dirty files in $EDITOR
-git diff --name-only | xargs -o $EDITOR -p
+git diff --name-only | xargs -o $EDITOR
 
 # Commit with co-author
 git commit -e -m "commit message" -m "<co_authors>"

@@ -113,7 +113,7 @@ alias fw='fzf < /usr/share/dict/words'
 fe() {
   local files
   IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-vim} -p "${files[@]}"
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
 # Modified version where you can press

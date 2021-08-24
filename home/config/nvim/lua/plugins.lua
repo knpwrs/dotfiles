@@ -78,6 +78,11 @@ require('packer').startup(function ()
     requires = {{'plenary.nvim', 'nvim-web-devicons'}},
     config = [[require('p-nvim-tree')]],
   }
+  use {
+    'akinsho/bufferline.nvim',
+    requires = {{'nvim-web-devicons'}},
+    config = [[require('p-bufferline')]],
+  }
   use { 'yssl/QFEnter', config = [[require('p-qfenter')]] }
   -- Motion Plugins
   use 'kana/vim-textobj-user'
