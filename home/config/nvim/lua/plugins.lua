@@ -68,12 +68,6 @@ require('packer').startup(function ()
   use { 'ggandor/lightspeed.nvim', config = [[require('p-lightspeed')]] }
   -- Navigation Plugins
   use {
-    'junegunn/fzf',
-    run = [[fn['fzf#install']()]],
-    config = [[require('p-fzf')]],
-  }
-  use 'junegunn/fzf.vim'
-  use {
     'kyazdani42/nvim-tree.lua',
     requires = {{'plenary.nvim', 'nvim-web-devicons'}},
     config = [[require('p-nvim-tree')]],
@@ -82,6 +76,11 @@ require('packer').startup(function ()
     'akinsho/bufferline.nvim',
     requires = {{'nvim-web-devicons'}},
     config = [[require('p-bufferline')]],
+  }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'plenary.nvim'}},
+    config = [[require('p-telescope')]]
   }
   use { 'yssl/QFEnter', config = [[require('p-qfenter')]] }
   -- Motion Plugins
