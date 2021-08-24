@@ -23,8 +23,8 @@ require('packer').startup(function ()
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
   -- Interface Plugins
-  use 'chriskempson/base16-vim'
-  use { 'lukas-reineke/indent-blankline.nvim', config = [[require('p-indent-blankline')]] }
+  use { 'Pocco81/Catppuccino.nvim', config = [[require('p-catppuccino')]] }
+  use { 'lukas-reineke/indent-blankline.nvim' }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }
   use { 'AndrewRadev/sideways.vim', config = [[require('p-sideways')]] }

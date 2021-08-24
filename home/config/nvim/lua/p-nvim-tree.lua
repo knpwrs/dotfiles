@@ -25,10 +25,3 @@ g.nvim_tree_show_icons = {
   files = 0,
   folder_arrows = 1,
 }
-
--- Colors
-cmd('highlight NvimTreeFolderIcon ctermfg=blue')
-cmd('highlight NvimTreeGitDirty ctermfg=green')
-cmd('highlight NvimTreeGitStaged ctermfg=yellow')
-cmd('highlight NvimTreeGitNew ctermfg=blue')
-  -- File icon colors don't work without `set termguicolors`

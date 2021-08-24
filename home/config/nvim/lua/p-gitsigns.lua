@@ -27,8 +27,3 @@ require('gitsigns').setup {
     delay = 250,
   },
 }
-
-vim.cmd('hi GitSignsAdd ctermfg=green ctermbg=bg')
-vim.cmd('hi GitSignsChange ctermfg=yellow ctermbg=bg')
-vim.cmd('hi GitSignsDelete ctermfg=red ctermbg=bg')
-vim.cmd('hi GitSignsCurrentLineBlame ctermfg=242')

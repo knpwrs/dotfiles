@@ -3,14 +3,14 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: alacritty
+  TERM: xterm-256color
 
 #window:
   # Window dimensions (changes require restart)
@@ -159,48 +159,44 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Base16 Bright 256 - alacritty color config
-# Chris Kempson (http://chriskempson.com)
+# Catppuccino
+# Based on https://github.com/Pocco81/Catppuccino.nvim/blob/5914d62d8bae3b11da985f0a8d1a19087c13cd5f/lua/catppuccino/color_schemes/catppuccino.lua
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xe0e0e0'
+    background: '0x121212' # Changed from original (0x0e171c)
+    foreground: '0xabb2bf'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x000000'
-    cursor: '0xe0e0e0'
+    text: '0xabb2bf'
+    cursor: '0x121212' # Changed from original (0x0e171c)
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xfb0120'
-    green:   '0xa1c659'
-    yellow:  '0xfda331'
-    blue:    '0x6fb3d2'
-    magenta: '0xd381c3'
-    cyan:    '0x76c7b7'
-    white:   '0xe0e0e0'
+    black:   '0x393b44'
+    red:     '0xc94f6d'
+    green:   '0x97c374'
+    yellow:  '0xdbc074'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x63cdcf'
+    white:   '0xdfdfe0'
 
   # Bright colors
   bright:
-    black:   '0xb0b0b0'
-    red:     '0xfb0120'
-    green:   '0xa1c659'
-    yellow:  '0xfda331'
-    blue:    '0x6fb3d2'
-    magenta: '0xd381c3'
-    cyan:    '0x76c7b7'
-    white:   '0xffffff'
+    black:   '0x7f8c98'
+    red:     '0xe06c75'
+    green:   '0x58cd8b'
+    yellow:  '0xffe37e'
+    blue:    '0x84cee4'
+    magenta: '0xb8a1e3'
+    cyan:    '0x59f0ff'
+    white:   '0xffffff' # Changed from original (0xfdebc3)
 
   indexed_colors:
-    - { index: 16, color: '0xfc6d24' }
-    - { index: 17, color: '0xbe643c' }
-    - { index: 18, color: '0x303030' }
-    - { index: 19, color: '0x505050' }
-    - { index: 20, color: '0xd0d0d0' }
-    - { index: 21, color: '0xf5f5f5' }
+    - { index: 16, color: '0xffe37e' }
+    - { index: 17, color: '0xe06c75' }
 
 # Visual Bell
 #
