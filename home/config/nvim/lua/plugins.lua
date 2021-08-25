@@ -33,6 +33,7 @@ require('packer').startup(function ()
   use { 'editorconfig/editorconfig-vim', requires = {{'vim-scripts/PreserveNoEOL'}} }
   use { 'famiu/nvim-reload', requires = {{'plenary.nvim'}} }
   use 'godlygeek/tabular'
+  use { 'jenterkin/vim-autosource', config = [[require('p-autosource')]] }
   use 'junegunn/vim-peekaboo'
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
   use {
