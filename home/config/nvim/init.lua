@@ -1,4 +1,4 @@
 require 'settings'
 require 'plugins'
-require 'keybindings'
+require 'keymaps'
 require('local-rc').load()

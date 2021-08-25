@@ -1,5 +1,5 @@
 --
--- Global Keybindings
+-- Global Keymaps
 --
 
 local cmd = vim.cmd
