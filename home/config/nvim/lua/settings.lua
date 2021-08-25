@@ -70,7 +70,7 @@ o.inccommand = 'nosplit'
 -- Show line numbers
 o.number = true
 
--- exrc currently doesn't work, there are a few solutions here: https://github.com/neovim/neovim/issues/13501
+-- exrc currently doesn't work, see local-rc.lua
 -- allow executing local nvimrc files
 -- o.exrc = true
 -- disable :autocmd, shell, and write commands in local vimrc files
