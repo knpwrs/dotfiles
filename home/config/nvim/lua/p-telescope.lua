@@ -25,10 +25,10 @@ require('telescope').setup {
 }
 
 local opts = { noremap = true }
-nvim_set_keymap('n', '<Leader>ff', '<Cmd>Telescope git_files<cr>', opts)
-nvim_set_keymap('n', '<Leader>fg', '<Cmd>Telescope live_grep<cr>', opts)
-nvim_set_keymap('n', '<Leader>fs', '<Cmd>Telescope grep_string<cr>', opts)
-nvim_set_keymap('n', '<Leader>fb', '<Cmd>Telescope buffers<cr>', opts)
-nvim_set_keymap('n', '<Leader>fh', '<Cmd>Telescope help_tags<cr>', opts)
-nvim_set_keymap('n', '<Leader>fc', '<Cmd>Telescope commands<cr>', opts)
-nvim_set_keymap('n', '<Leader>f=', '<Cmd>Telescope spell_suggest<cr>', opts)
+nvim_set_keymap('n', '<Leader>ff', '<Cmd>Telescope git_files<Cr>', opts)
+nvim_set_keymap('n', '<Leader>fg', '<Cmd>Telescope live_grep<Cr>', opts)
+nvim_set_keymap('n', '<Leader>fs', '<Cmd>Telescope grep_string<Cr>', opts)
+nvim_set_keymap('n', '<Leader>fb', '<Cmd>Telescope buffers<Cr>', opts)
+nvim_set_keymap('n', '<Leader>fh', '<Cmd>Telescope help_tags<Cr>', opts)
+nvim_set_keymap('n', '<Leader>fc', '<Cmd>Telescope commands<Cr>', opts)
+nvim_set_keymap('n', '<Leader>f=', '<Cmd>Telescope spell_suggest<Cr>', opts)
