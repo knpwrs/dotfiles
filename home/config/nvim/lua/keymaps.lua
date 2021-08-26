@@ -42,6 +42,9 @@ nvim_set_keymap('n', '<Leader>,', ':tabe $MYVIMRC<CR>', {})
 -- :bufo closes all open buffers except the current buffer
 cmd([[cnoreabbrev bufo %bd\|e#\|bd#<CR>\|'"']])
 
+-- \bd deletes the current buffer
+nvim_set_keymap('n', '<Leader>bd', ':bdelete<CR>', {})
+
 -- \r replaces the word under the cursor
 nvim_set_keymap('n', '<Leader>r', ':%s/<C-r><C-w>//g<Left><Left>', {})
 
