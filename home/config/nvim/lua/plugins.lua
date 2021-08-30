@@ -70,7 +70,7 @@ require('packer').startup(function ()
   -- Navigation Plugins
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = {{'plenary.nvim', 'nvim-web-devicons'}},
+    requires = {{'plenary.nvim'}, {'nvim-web-devicons'}},
     config = [[require('p-nvim-tree')]],
   }
   use {
