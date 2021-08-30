@@ -16,8 +16,8 @@ wk.register(
       I = { '<Cmd>Telescope lsp_implementations<Cr>', 'Implementations' },
       d = { '<Cmd>Telescope lsp_definitions<Cr>', 'Definitions' },
       e = { '<Cmd>Telescope lsp_code_actions<Cr>', 'Code Actions' },
-      p = { '<Cmd>Telescope lsp_document_symbols<Cr>', 'Symbols' },
       r = { '<Cmd>Telescope lsp_references<Cr>', 'References' },
+      s = { '<Cmd>Telescope lsp_document_symbols<Cr>', 'Symbols' },
     },
   },
   {
