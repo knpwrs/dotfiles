@@ -14,6 +14,7 @@ catppuccino.setup(
         enabled = true,
       },
       telescope = true,
+      which_key = true,
     },
   },
   -- Color Overrides

@@ -24,6 +24,7 @@ require('packer').startup(function ()
   use 'nvim-lua/plenary.nvim'
   -- Interface Plugins
   use { 'Pocco81/Catppuccino.nvim', config = [[require('p-catppuccino')]] }
+  use 'folke/which-key.nvim'
   use { 'lukas-reineke/indent-blankline.nvim' }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }
@@ -34,7 +35,6 @@ require('packer').startup(function ()
   use { 'famiu/nvim-reload', requires = {{'plenary.nvim'}} }
   use 'godlygeek/tabular'
   use { 'jenterkin/vim-autosource', config = [[require('p-autosource')]] }
-  use 'junegunn/vim-peekaboo'
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
   use {
     'lewis6991/gitsigns.nvim',

@@ -1,29 +1,68 @@
-local cmd = vim.cmd
+local gsa = require('gitsigns.actions')
+local wk = require('which-key')
 
 require('gitsigns').setup {
-  keymaps = {
-    noremap = false,
-
-    -- Move between hunks
-    ['n ]h'] = { expr = true, "&diff ? ']h' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'"},
-    ['n [h'] = { expr = true, "&diff ? '[h' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'"},
-
-    -- Hunk operations
-    ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-    ['v <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-    ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-    ['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-    ['v <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-    ['n <leader>hR'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
-    ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-    ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
-
-    -- Text objects
-    ['o ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>',
-    ['x ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>'
-  },
   current_line_blame = true,
   current_line_blame_opts = {
     delay = 250,
   },
 }
+
+wk.register(
+  {
+    ['[h'] = { function() gsa.prev_hunk() end, 'Previous Git Hunk' },
+    [']h'] = { function() gsa.next_hunk() end, 'Next Git Hunk' },
+  }
+)
+
+wk.register(
+  {
+    h = {
+      name = 'Git Hunks',
+      s = { function() gsa.stage_hunk() end, 'Stage Hunk' },
+      u = { function() gsa.undo_stage_hunk() end, 'Unstage Hunk' },
+      r = { function() gsa.reset_hunk() end, 'Reset Hunk' },
+      R = { function() gsa.reset_buffer() end, 'Reset Buffer' },
+      p = { function() gsa.preview_hunk() end, 'Preview Hunk' },
+    },
+  },
+  {
+    prefix = '<Leader>',
+  }
+)
+
+wk.register(
+  {
+    h = {
+      name = 'Git Hunks',
+      s = { function() gsa.stage_hunk({vim.fn.line("."), vim.fn.line("v")}) end, 'Stage Hunks' },
+      r = { function() gsa.reset_hunk({vim.fn.line("."), vim.fn.line("v")}) end, 'Reset Hunks' },
+    },
+  },
+  {
+    prefix = '<Leader>',
+    mode = 'v',
+  }
+)
+
+wk.register(
+  {
+    i = {
+      h = { function() gsa.select_hunk() end, 'Hunk' },
+    },
+  },
+  {
+    mode = 'o',
+  }
+)
+
+wk.register(
+  {
+    i = {
+      h = { function() gsa.select_hunk() end, 'Hunk' },
+    },
+  },
+  {
+    mode = 'x',
+  }
+)

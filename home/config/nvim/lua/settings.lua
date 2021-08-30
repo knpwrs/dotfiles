@@ -61,6 +61,8 @@ o.foldmethod = 'syntax'
 o.foldenable = false
 -- Command timeout
 o.ttimeoutlen = 50
+-- Mapping timeout
+o.timeoutlen = 200
 -- Swapfile write time
 o.updatetime = 300
 -- Don't pass messages to |ins-completion-menu|.

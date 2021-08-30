@@ -1,5 +1,5 @@
 local cmd = vim.cmd
-local nvim_set_keymap = vim.api.nvim_set_keymap
+local wk = require('which-key')
 
 require('bufferline').setup({
   options = {
@@ -10,10 +10,25 @@ require('bufferline').setup({
 
 local opts = { noremap = true, silent = true }
 
-nvim_set_keymap('n', '[b', ':BufferLineCyclePrev<cr>', opts)
-nvim_set_keymap('n', ']b', ':BufferLineCycleNext<cr>', opts)
-nvim_set_keymap('n', '<Leader>[', ':BufferLineMovePrev<cr>', opts)
-nvim_set_keymap('n', '<Leader>]', ':BufferLineMoveNext<cr>', opts)
-nvim_set_keymap('n', '<Leader>gb', ':BufferLinePick<cr>', opts)
-nvim_set_keymap('n', '<Leader>gd', ':BufferLinePickClose<cr>', opts)
-nvim_set_keymap('n', '<Leader>bd', ':bd<cr>', opts)
+wk.register(
+  {
+    ['['] = { '<Cmd>BufferLineMovePrev<Cr>', 'Move Buffer Left' },
+    [']'] = { '<Cmd>BufferLineMoveNext<Cr>', 'Move Buffer Right' },
+    b = {
+      name = 'Buffers',
+      g = { '<Cmd>BufferLinePick<Cr>', 'Pick Buffer' },
+      c = { '<Cmd>BufferLinePickClose<Cr>', 'Pick and Close Buffer' },
+      d = { '<Cmd>bd<Cr>', 'Delete Current Buffer' },
+    }
+  },
+  {
+    prefix = '<Leader>',
+  }
+)
+
+wk.register(
+  {
+    ['[b'] = { ':BufferLineCyclePrev<Cr>', 'Previous Buffer' },
+    [']b'] = { ':BufferLineCycleNext<Cr>', 'Next Buffer' },
+  }
+)

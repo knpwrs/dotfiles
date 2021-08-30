@@ -1,27 +1,36 @@
-local nvim_set_keymap = vim.api.nvim_set_keymap
+local wk = require('which-key')
+local lsp = vim.lsp
 
--- Mappings
-local opts = { noremap = true, silent = true }
+wk.register(
+  {
+    l = {
+      name = 'LSP',
+      f = { function() lsp.buf.formatting() end, 'Format' },
+      i = { function() lsp.buf.implementation() end, 'Implementation' },
+      k = { function() lsp.buf.hover() end, 'Hover' },
+      q = { function() lsp.diagnostic.set_loclist() end, 'Set Location List' },
+      r = { function() lsp.buf.rename() end, 'Rename' },
+      y = { function() lsp.buf.type_definition() end, 'Type Definition' },
+      -- Telescope lsp maps
+      D = { '<Cmd>Telescope lsp_document_diagnostics<Cr>', 'Diagnostics' },
+      I = { '<Cmd>Telescope lsp_implementations<Cr>', 'Implementations' },
+      d = { '<Cmd>Telescope lsp_definitions<Cr>', 'Definitions' },
+      e = { '<Cmd>Telescope lsp_code_actions<Cr>', 'Code Actions' },
+      p = { '<Cmd>Telescope lsp_document_symbols<Cr>', 'Symbols' },
+      r = { '<Cmd>Telescope lsp_references<Cr>', 'References' },
+    },
+  },
+  {
+    prefix = '<Leader>'
+  }
+)
 
--- See `:help vim.lsp.*` for documentation on any of the below functions
-nvim_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<Cr>', opts)
-nvim_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<Cr>', opts)
-nvim_set_keymap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<Cr>', opts)
-nvim_set_keymap('n', 'gy', '<Cmd>lua vim.lsp.buf.type_definition()<Cr>', opts)
-nvim_set_keymap('n', '<Leader>rn', '<Cmd>lua vim.lsp.buf.rename()<Cr>', opts)
-nvim_set_keymap('n', '<Leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<Cr>', opts)
-nvim_set_keymap('n', '[d', '<Cmd>lua vim.lsp.diagnostic.goto_prev()<Cr>', opts)
-nvim_set_keymap('n', ']d', '<Cmd>lua vim.lsp.diagnostic.goto_next()<Cr>', opts)
-nvim_set_keymap('n', '<Leader>q', '<Cmd>lua vim.lsp.diagnostic.set_loclist()<Cr>', opts)
-nvim_set_keymap('n', '<Leader>f', '<Cmd>lua vim.lsp.buf.formatting()<Cr>', opts)
-
--- Telescope lsp maps
-nvim_set_keymap('n', 'gd', '<Cmd>Telescope lsp_definitions<Cr>', opts)
-nvim_set_keymap('n', 'gr', '<Cmd>Telescope lsp_references<Cr>', opts)
-nvim_set_keymap('n', 'gp', '<Cmd>Telescope lsp_document_symbols<Cr>', opts)
-nvim_set_keymap('n', 'ge', '<Cmd>Telescope lsp_code_actions<Cr>', opts)
-nvim_set_keymap('n', 'gD', '<Cmd>Telescope lsp_document_diagnostics<Cr>', opts)
-nvim_set_keymap('n', 'gI', '<Cmd>Telescope lsp_implementations<Cr>', opts)
+wk.register(
+  {
+    ['[d'] = { function() lsp.diagnostic.goto_prev() end, 'Previous Diagnostic' },
+    [']d'] = { function() lsp.diagnostic.goto_next() end, 'Next Diagnostic' },
+  }
+)
 
 local function setup_servers()
   require('lspinstall').setup()

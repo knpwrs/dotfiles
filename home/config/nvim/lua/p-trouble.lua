@@ -1,16 +1,30 @@
-local nvim_set_keymap = vim.api.nvim_set_keymap
+local wk = require('which-key')
 
 if not pcall(require, 'trouble') then
   return
 end
 
-require('trouble').setup {}
+require('trouble').setup {
+  action_keys = {
+    close = '<C-d>'
+  },
+}
 
 local opts = { silent = true, noremap = true }
 
-nvim_set_keymap('n', '<Leader>xx', '<CMD>TroubleToggle<CR>', opts)
-nvim_set_keymap('n', '<Leader>xw', '<CMD>TroubleToggle lsp_workspace_diagnostics<CR>', opts)
-nvim_set_keymap('n', '<Leader>xd', '<CMD>TroubleToggle lsp_document_diagnostics<CR>', opts)
-nvim_set_keymap('n', '<Leader>xl', '<CMD>TroubleToggle loclist<CR>', opts)
-nvim_set_keymap('n', '<Leader>xq', '<CMD>TroubleToggle quickfix<CR>', opts)
-nvim_set_keymap('n', '<Leader>gR', '<CMD>TroubleToggle lsp_references<CR>', opts)
+wk.register(
+  {
+    lx = {
+      name = 'Trouble',
+      x = { '<Cmd>TroubleToggle<Cr>', 'Toggle Trouble' },
+      w = { '<Cmd>TroubleToggle lsp_workspace_diagnostics<Cr>', 'Toggle Workspace Diagnostics' },
+      d = { '<Cmd>TroubleToggle lsp_document_diagnostics<Cr>', 'Toggle Document Diagnostics' },
+      l = { '<Cmd>TroubleToggle loclist<Cr>', 'Toggle Loclist Diagnostics' },
+      q = { '<Cmd>TroubleToggle quickfix<Cr>', 'Toggle Quickfix Diagnostics' },
+      r = { '<Cmd>TroubleToggle lsp_references<Cr>', 'Toggle LSP References' },
+    },
+  },
+  {
+    prefix = '<Leader>',
+  }
+)
