@@ -1,8 +1,10 @@
 local cmd = vim.cmd
 local wk = require('which-key')
+local telescope = require 'telescope'
 local actions = require 'telescope.actions'
+local sorters = require 'telescope.sorters'
 
-require('telescope').setup {
+telescope.setup {
   defaults = {
     mappings = {
       i = {
@@ -19,9 +21,11 @@ require('telescope').setup {
         ['<C-d>'] = actions.close,
         ['<Up>'] = actions.preview_scrolling_up,
         ['<Down>'] = actions.preview_scrolling_down,
-      }
-    }
-  }
+      },
+    },
+    file_sorter = sorters.get_fzy_sorter,
+    generic_sorter = sorters.get_fzy_sorter,
+  },
 }
 
 wk.register(
