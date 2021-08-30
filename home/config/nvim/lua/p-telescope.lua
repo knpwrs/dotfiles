@@ -28,7 +28,7 @@ wk.register(
   {
     f = {
       name = 'Telescope',
-      f = { '<Cmd>Telescope git_files<Cr>', 'Files' },
+      f = { '<Cmd>Telescope fd<Cr>', 'Files' },
       g = { '<Cmd>Telescope live_grep<Cr>', 'Live Grep' },
       s = { '<Cmd>Telescope grep_string<Cr>', 'Grep String Under Cursor' },
       b = { '<Cmd>Telescope buffers<Cr>', 'Buffers' },
