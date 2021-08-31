@@ -17,7 +17,12 @@ wk.register(
     b = {
       name = 'Buffers',
       g = { '<Cmd>BufferLinePick<Cr>', 'Pick Buffer' },
-      c = { '<Cmd>BufferLinePickClose<Cr>', 'Pick and Close Buffer' },
+      x = {
+        name = 'Close Buffers',
+        x = { '<Cmd>BufferLinePickClose<Cr>', 'Pick and Close Buffer' },
+        h = { '<Cmd>BufferLineCloseLeft<Cr>', 'Close Buffers to the Left' },
+        l = { '<Cmd>BufferLineCloseRight<Cr>', 'Close Buffers to the Right' },
+      },
       d = { '<Cmd>bd<Cr>', 'Delete Current Buffer' },
     }
   },
