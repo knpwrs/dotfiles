@@ -71,6 +71,8 @@ opt.shortmess:append({ c = true })
 o.inccommand = 'nosplit'
 -- Show line numbers
 o.number = true
+-- Do not show default statusline
+o.showmode = false
 
 -- Invisible characters
 if vim.fn.has('multi_byte') and o.encoding == 'utf-8' then

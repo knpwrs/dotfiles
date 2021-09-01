@@ -31,6 +31,7 @@ require('packer').startup(function ()
   -- Interface Plugins
   use { 'Pocco81/Catppuccino.nvim', config = [[require('p-catppuccino')]] }
   use 'folke/which-key.nvim'
+  use { 'hoob3rt/lualine.nvim', config = [[require('p-lualine')]] }
   use { 'lukas-reineke/indent-blankline.nvim' }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }

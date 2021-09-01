@@ -3,5 +3,3 @@
 !*.vim
 !*.lua
 !lua
-!plugin
-plugin/packer_compiled.lua
