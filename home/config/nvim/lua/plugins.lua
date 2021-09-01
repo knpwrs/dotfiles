@@ -30,6 +30,11 @@ require('packer').startup(function ()
   }
   -- Interface Plugins
   use { 'Pocco81/Catppuccino.nvim', config = [[require('p-catppuccino')]] }
+  use {
+    'SmiteshP/nvim-gps',
+    requires = 'nvim-treesitter',
+    config = [[require('p-nvim-gps')]],
+  }
   use 'folke/which-key.nvim'
   use { 'hoob3rt/lualine.nvim', config = [[require('p-lualine')]] }
   use { 'lukas-reineke/indent-blankline.nvim' }
