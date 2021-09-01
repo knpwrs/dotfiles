@@ -9,7 +9,7 @@ wk.register(
       i = { function() lsp.buf.implementation() end, 'Implementation' },
       k = { function() lsp.buf.hover() end, 'Hover' },
       q = { function() lsp.diagnostic.set_loclist() end, 'Set Location List' },
-      r = { function() lsp.buf.rename() end, 'Rename' },
+      m = { function() lsp.buf.rename() end, 'Rename' },
       y = { function() lsp.buf.type_definition() end, 'Type Definition' },
       -- Telescope lsp maps
       D = { '<Cmd>Telescope lsp_document_diagnostics<Cr>', 'Diagnostics' },
