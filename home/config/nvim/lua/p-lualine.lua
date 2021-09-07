@@ -3,8 +3,6 @@ local gps = require('nvim-gps')
 require('lualine').setup({
   options = {
     theme = 'catppuccino',
-    section_separators = '',
-    component_separators = '',
   },
   sections = {
     lualine_a = {'mode'},
