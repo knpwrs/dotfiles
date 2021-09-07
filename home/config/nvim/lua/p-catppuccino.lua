@@ -1,24 +1,30 @@
 local catppuccino = require('catppuccino')
-local colors = require('catppuccino.color_schemes.dark_catppuccino')
+local catppuccino_api = require('catppuccino.api.colors')
 local cmd = vim.cmd
 
-catppuccino.setup(
-  {
-    colorscheme = 'dark_catppuccino',
-    integrations = {
-      bufferline = true,
-      gitsigns = true,
-      indent_blankline = true,
-      lsp_trouble = true,
-      nvimtree = {
-        enabled = true,
-      },
-      telescope = true,
-      which_key = true,
+catppuccino.setup({
+  colorscheme = 'dark_catppuccino',
+  integrations = {
+    bufferline = true,
+    gitsigns = true,
+    indent_blankline = {
+      enabled = true,
+      colored_indent_levels = false,
     },
+    lightspeed = true,
+    lsp_trouble = true,
+    nvimtree = {
+      enabled = true,
+    },
+    telescope = true,
+    which_key = true,
   },
-  -- Color Overrides
-  {
+})
+
+local err, colors = catppuccino_api.get_colors('dark_catppuccino')
+
+if err.status then -- good
+  catppuccino.remap({
     bg = '#121212',
     bg_float = '#090909',
     bg_popup = '#090909',
@@ -30,8 +36,8 @@ catppuccino.setup(
       delete = colors.red,
       change = colors.yellow,
     }
-  }
-)
+  })
+end
 
 catppuccino.load()
 
