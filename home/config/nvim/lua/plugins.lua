@@ -115,4 +115,5 @@ require('packer').startup(function ()
   use { 'hrsh7th/nvim-compe', config = [[require('p-nvim-compe')]]}
   use 'kabouzeid/nvim-lspinstall'
   use { 'neovim/nvim-lspconfig', config = [[require('p-nvim-lspconfig')]] }
+  use { 'ray-x/lsp_signature.nvim', config = [[require('p-lsp-signature')]] }
 end)
