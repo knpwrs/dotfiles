@@ -5,6 +5,12 @@ require('bufferline').setup({
   options = {
     show_close_icon = false,
     show_buffer_close_icons = false,
+    custom_filter = function(buf_number)
+      -- don't show DAP REPL in buffline
+      if vim.bo[buf_number].filetype ~= 'dap-repl' then
+        return true
+      end
+    end,
   },
 })
 

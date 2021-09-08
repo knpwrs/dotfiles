@@ -116,4 +116,17 @@ require('packer').startup(function ()
   use 'kabouzeid/nvim-lspinstall'
   use { 'neovim/nvim-lspconfig', config = [[require('p-nvim-lspconfig')]] }
   use { 'ray-x/lsp_signature.nvim', config = [[require('p-lsp-signature')]] }
+  -- DAP
+  use { 'mfussenegger/nvim-dap', config = [[require('p-nvim-dap')]] }
+  use {
+    'nvim-telescope/telescope-dap.nvim',
+    requires = {{'nvim-dap'}, {'telescope.nvim'}},
+    config = [[require('p-telescope-dap')]],
+  }
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {'nvim-dap'},
+    config = [[require('p-nvim-dap-ui')]],
+  }
+  use { 'theHamsta/nvim-dap-virtual-text', config = [[require('p-nvim-dap-virtual-text')]] }
 end)

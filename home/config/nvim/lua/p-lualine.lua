@@ -1,5 +1,12 @@
 local gps = require('nvim-gps')
 
+local dap_ui = {
+  sections = {
+    lualine_z = {'filetype'},
+  },
+  filetypes = {'dapui_scopes', 'dapui_breakpoints', 'dapui_stacks', 'dapui_watches'},
+}
+
 require('lualine').setup({
   options = {
     theme = 'catppuccino',
@@ -35,5 +42,5 @@ require('lualine').setup({
     lualine_z = {}
   },
   tabline = {},
-  extensions = {'nvim-tree'},
+  extensions = {'nvim-tree', dap_ui},
 })
