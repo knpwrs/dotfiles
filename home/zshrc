@@ -17,11 +17,6 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
 source $DOTVENDOR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# zoxide
-if type zoxide > /dev/null; then
-  eval "$(zoxide init zsh)"
-fi
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -46,19 +41,4 @@ if [ "$TERM_PROGRAM" = "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ]; then
     printf '\e]7;%s\a' "$PWD_URL"
   }
   PROMPT_COMMAND="update_terminal_cwd; $PROMPT_COMMAND"
-fi
-
-# starship
-if type starship > /dev/null; then
-  eval "$(starship init zsh)"
-fi
-
-# snm
-if type snm > /dev/null; then
-  eval "$(snm env zsh)"
-fi
-
-# rbenv
-if type rbenv > /dev/null; then
-  eval "$(rbenv init -)"
 fi
