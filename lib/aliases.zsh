@@ -106,6 +106,18 @@ port() {
   lsof -n -i:$1 | grep LISTEN
 }
 
+# kill what is listening on a given port
+killport() {
+  local pid=$(port $1 | awk '{print $2}')
+  if [[ $pid ]]; then
+    kill -9 $pid
+  else
+    echo "No process found on port ${1}"
+  fi
+}
+
+alias kp='killport'
+
 # open a man page as a pdf
 mdf() {
   man -t "${1}" | open -f -a Preview
