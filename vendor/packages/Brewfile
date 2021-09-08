@@ -17,6 +17,7 @@ brew 'ffmpeg'                                  # Play, record, convert, and stre
 brew 'figlet'                                  # Make large letters out of ordinary text.
 brew 'findutils'                               # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew 'fzf'                                     # Fuzzy finder.
+brew 'gcc'                                     # GNU Compiler Collection
 brew 'gh'                                      # GitHub official CLI
 brew 'git'                                     # Distributed revision control system.
 brew 'git-cal'                                 # Visual commits calendar for git.
