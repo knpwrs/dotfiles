@@ -17,6 +17,7 @@ catppuccino.setup({
       enabled = true,
     },
     telescope = true,
+    treesitter = true,
     which_key = true,
   },
 })

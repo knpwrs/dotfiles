@@ -112,7 +112,17 @@ require('packer').startup(function ()
   use { 'rust-lang/rust.vim', config = [[require('p-rust')]] }
   -- LSP
   use { 'folke/trouble.nvim', requires = {'nvim-web-devicons'}, config = [[require('p-trouble')]] }
-  use { 'hrsh7th/nvim-compe', config = [[require('p-nvim-compe')]]}
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'hrsh7th/vim-vsnip', -- required for autocompletion to work, even without snippets
+      'onsails/lspkind-nvim',
+    },
+    config = [[require('p-nvim-cmp')]],
+  }
   use 'kabouzeid/nvim-lspinstall'
   use { 'neovim/nvim-lspconfig', config = [[require('p-nvim-lspconfig')]] }
   use { 'ray-x/lsp_signature.nvim', config = [[require('p-lsp-signature')]] }
