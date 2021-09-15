@@ -35,6 +35,7 @@ require('packer').startup(function ()
     requires = 'nvim-treesitter',
     config = [[require('p-nvim-gps')]],
   }
+  use { 'folke/todo-comments.nvim', config = [[require('p-todo-comments')]] }
   use 'folke/which-key.nvim'
   use { 'hoob3rt/lualine.nvim', config = [[require('p-lualine')]] }
   use { 'lukas-reineke/indent-blankline.nvim' }

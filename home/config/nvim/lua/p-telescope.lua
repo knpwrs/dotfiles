@@ -39,7 +39,7 @@ wk.register(
       c = { '<Cmd>Telescope commands<Cr>', 'Commands' },
       k = { '<Cmd>Telescope keymaps<Cr>', 'Keymaps' },
       v = { '<Cmd>Telescope vim_options<Cr>', 'Vim Options' },
-      t = { '<Cmd>Telescope builtin<Cr>', 'Built-in Telescope Finders' },
+      T = { '<Cmd>Telescope builtin<Cr>', 'Built-in Telescope Finders' },
       ['='] = { '<Cmd>Telescope spell_suggest<Cr>', 'Spelling Suggestions' },
     },
   },
