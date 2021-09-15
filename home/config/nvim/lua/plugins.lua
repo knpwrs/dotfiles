@@ -38,6 +38,11 @@ require('packer').startup(function ()
   use { 'folke/todo-comments.nvim', config = [[require('p-todo-comments')]] }
   use 'folke/which-key.nvim'
   use { 'hoob3rt/lualine.nvim', config = [[require('p-lualine')]] }
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {{'plenary.nvim'}},
+    config = [[require('p-gitsigns')]],
+  }
   use { 'lukas-reineke/indent-blankline.nvim' }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }
@@ -49,11 +54,6 @@ require('packer').startup(function ()
   use 'godlygeek/tabular'
   use { 'jenterkin/vim-autosource', config = [[require('p-autosource')]] }
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {{'plenary.nvim'}},
-    config = [[require('p-gitsigns')]],
-  }
   use {
     'mhinz/vim-grepper',
     cmd = {'Grepper'},
