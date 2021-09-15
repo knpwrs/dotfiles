@@ -10,17 +10,15 @@ telescope.setup {
       i = {
         ['<C-d>'] = actions.close,
         ['<Esc>'] = actions.close,
-        ['<C-j>'] = actions.move_selection_next,
-        ['<C-k>'] = actions.move_selection_previous,
-        ['<Up>'] = actions.preview_scrolling_up,
-        ['<Down>'] = actions.preview_scrolling_down,
+        ['<C-j>'] = actions.preview_scrolling_down,
+        ['<C-k>'] = actions.preview_scrolling_up,
         -- Unmap <C-u> ( https://github.com/nvim-telescope/telescope.nvim/issues/499 )
         ['<C-u>'] = false,
       },
       n = {
         ['<C-d>'] = actions.close,
-        ['<Up>'] = actions.preview_scrolling_up,
-        ['<Down>'] = actions.preview_scrolling_down,
+        ['<C-j>'] = actions.preview_scrolling_down,
+        ['<C-k>'] = actions.preview_scrolling_up,
       },
     },
     file_sorter = sorters.get_fzy_sorter,

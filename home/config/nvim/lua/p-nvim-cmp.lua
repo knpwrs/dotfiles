@@ -10,7 +10,8 @@ cmp.setup {
   },
   mapping = {
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-j>'] = cmp.mapping.select_next_item(),
+    ['<C-j>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-k>'] = cmp.mapping.scroll_docs(4),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
   },
   formatting = {
