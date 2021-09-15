@@ -43,7 +43,7 @@ require('packer').startup(function ()
     requires = {{'plenary.nvim'}},
     config = [[require('p-gitsigns')]],
   }
-  use { 'lukas-reineke/indent-blankline.nvim' }
+  use 'lukas-reineke/indent-blankline.nvim'
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }
   use { 'AndrewRadev/sideways.vim', config = [[require('p-sideways')]] }
