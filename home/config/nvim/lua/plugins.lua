@@ -63,6 +63,7 @@ require('packer').startup(function ()
   use { 'prettier/vim-prettier', run = 'npm install', config = [[require('p-vim-prettier')]] }
   use 'sickill/vim-pasta'
   use { 'sindrets/winshift.nvim', config = [[require('p-winshift')]] }
+  use { 'szw/vim-maximizer', config = [[require('p-vim-maximizer')]] }
   use 'tmux-plugins/vim-tmux-focus-events'
   use 'tommcdo/vim-exchange'
   use 'tomtom/tcomment_vim'
