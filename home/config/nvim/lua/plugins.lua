@@ -43,7 +43,7 @@ require('packer').startup(function ()
   use { 'AndrewRadev/sideways.vim', config = [[require('p-sideways')]] }
   use 'AndrewRadev/splitjoin.vim'
   use 'bronson/vim-trailing-whitespace'
-  use { 'editorconfig/editorconfig-vim', requires = {{'vim-scripts/PreserveNoEOL'}} }
+  use 'editorconfig/editorconfig-vim'
   use { 'famiu/nvim-reload', requires = {{'plenary.nvim'}} }
   use 'godlygeek/tabular'
   use { 'jenterkin/vim-autosource', config = [[require('p-autosource')]] }
