@@ -7,6 +7,7 @@ packages=(
   bundle-phobia-cli                # Query npm package sizes.
   dev-time-cli                     # Get the current local time of a GitHub user.
   empty-trash-cli                  # Empty trash.
+  eslint_d                         # ESLint daemon, uses locally-installed ESLint if available.
   internal-ip                      # Show internal IP address.
   is-online-cli                    # Check if the Internet connection is up.
   is-up-cli                        # Check if a website is up or down using ititup.org.

@@ -126,6 +126,11 @@ require('packer').startup(function ()
     },
     config = [[require('p-nvim-cmp')]],
   }
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = {'plenary.nvim', 'nvim-lspconfig'},
+    config = [[require('p-null-ls')]],
+  }
   use 'kabouzeid/nvim-lspinstall'
   use { 'neovim/nvim-lspconfig', config = [[require('p-nvim-lspconfig')]] }
   use { 'ray-x/lsp_signature.nvim', config = [[require('p-lsp-signature')]] }
