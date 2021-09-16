@@ -1,6 +1,13 @@
 local wk = require('which-key')
 
-require('todo-comments').setup()
+require('todo-comments').setup({
+  highlight = {
+    pattern = [[.*<(KEYWORDS)(\([^\)]*\))?:]],
+  },
+  search = {
+    pattern = [[\b(KEYWORDS)(\([^\)]*\))?:]],
+  }
+})
 
 wk.register(
   {
