@@ -28,8 +28,10 @@ wk.register(
         x = { '<Cmd>BufferLinePickClose<Cr>', 'Pick and Close Buffer' },
         h = { '<Cmd>BufferLineCloseLeft<Cr>', 'Close Buffers to the Left' },
         l = { '<Cmd>BufferLineCloseRight<Cr>', 'Close Buffers to the Right' },
+        o = { [[<Cmd>%bd|e#|bd#<Cr>|'"<Cr>]], 'Close All Other Buffers' },
       },
       d = { '<Cmd>bd<Cr>', 'Delete Current Buffer' },
+      o = { [[<Cmd>%bd|e#|bd#<Cr>|'"<Cr>]], 'Close All Other Buffers' },
     }
   },
   {

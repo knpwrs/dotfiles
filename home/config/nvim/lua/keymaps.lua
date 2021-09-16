@@ -69,6 +69,3 @@ nvim_set_keymap('n', 'yP', ':let @"=expand("%:p")<Cr>', {})
 -- command! -nargs=0 WriteWithSudo :w !sudo tee % > /dev/null
 -- cnoreabbrev ww WriteWithSudo
 cmd('cnoreabbrev ww SudaWrite')
-
--- :bufo closes all open buffers except the current buffer
-cmd([[cnoreabbrev bufo %bd\|e#\|bd#<Cr>\|'"']])
