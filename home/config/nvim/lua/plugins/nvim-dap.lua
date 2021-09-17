@@ -1,6 +1,7 @@
 local sd = vim.fn.sign_define
 local wk = require('which-key')
 local dap = require('dap')
+local duw = require('dap.ui.widgets')
 
 wk.register(
   {
@@ -21,9 +22,11 @@ wk.register(
         i = { function() dap.step_into() end, 'Step Into' },
         O = { function() dap.step_out() end, 'Step Out' },
       },
+      t = { function () dap.run_to_cursor() end, 'Run to Cursor' },
       c = { function() dap.continue() end, 'Continue' },
       C = { '<Cmd>Telescope dap configurations<Cr>', 'Configurations' },
       R = { function() dap.run_last() end, 'Run Last' },
+      k = { function() duw.hover() end, 'Hover' },
       x = {
         name = 'Stop',
         x = { function() dap.disconnect({ terminateDebuggee = true }) end; 'Terminate and Disconnect' },
