@@ -26,43 +26,43 @@ require('packer').startup(function ()
     'nvim-treesitter/nvim-treesitter',
     branch = '0.5-compat',
     run = ':TSUpdate',
-    config = [[require('p-nvim-treesitter')]],
+    config = [[require('plugins.nvim-treesitter')]],
   }
   -- Interface Plugins
-  use { 'Pocco81/Catppuccino.nvim', config = [[require('p-catppuccino')]] }
+  use { 'Pocco81/Catppuccino.nvim', config = [[require('plugins.catppuccino')]] }
   use {
     'SmiteshP/nvim-gps',
     requires = 'nvim-treesitter',
-    config = [[require('p-nvim-gps')]],
+    config = [[require('plugins.nvim-gps')]],
   }
-  use { 'folke/todo-comments.nvim', config = [[require('p-todo-comments')]] }
+  use { 'folke/todo-comments.nvim', config = [[require('plugins.todo-comments')]] }
   use 'folke/which-key.nvim'
-  use { 'hoob3rt/lualine.nvim', config = [[require('p-lualine')]] }
+  use { 'hoob3rt/lualine.nvim', config = [[require('plugins.lualine')]] }
   use {
     'lewis6991/gitsigns.nvim',
     requires = {{'plenary.nvim'}},
-    config = [[require('p-gitsigns')]],
+    config = [[require('plugins.gitsigns')]],
   }
   use 'lukas-reineke/indent-blankline.nvim'
   -- Enhancement Plugins
-  use { 'AndrewRadev/dsf.vim', config = [[require('p-dsf')]] }
-  use { 'AndrewRadev/sideways.vim', config = [[require('p-sideways')]] }
+  use { 'AndrewRadev/dsf.vim', config = [[require('plugins.dsf')]] }
+  use { 'AndrewRadev/sideways.vim', config = [[require('plugins.sideways')]] }
   use 'AndrewRadev/splitjoin.vim'
   use 'bronson/vim-trailing-whitespace'
   use 'editorconfig/editorconfig-vim'
   use 'godlygeek/tabular'
-  use { 'jenterkin/vim-autosource', config = [[require('p-autosource')]] }
+  use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
   use {
     'mhinz/vim-grepper',
     cmd = {'Grepper'},
     keys = {'gs', '<Leader>g', '<Leader>G'},
-    config = [[require('p-vim-grepper')]],
+    config = [[require('plugins.vim-grepper')]],
   }
-  use { 'prettier/vim-prettier', run = 'npm install', config = [[require('p-vim-prettier')]] }
+  use { 'prettier/vim-prettier', run = 'npm install', config = [[require('plugins.vim-prettier')]] }
   use 'sickill/vim-pasta'
-  use { 'sindrets/winshift.nvim', config = [[require('p-winshift')]] }
-  use { 'szw/vim-maximizer', config = [[require('p-vim-maximizer')]] }
+  use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
+  use { 'szw/vim-maximizer', config = [[require('plugins.vim-maximizer')]] }
   use 'tmux-plugins/vim-tmux-focus-events'
   use 'tommcdo/vim-exchange'
   use 'tomtom/tcomment_vim'
@@ -77,29 +77,29 @@ require('packer').startup(function ()
   use 'tpope/vim-speeddating'
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
-  use { 'vitalk/vim-simple-todo', config = [[require('p-vim-simple-todo')]] }
-  use { 'windwp/nvim-autopairs', config = [[require('p-nvim-autopairs')]] }
+  use { 'vitalk/vim-simple-todo', config = [[require('plugins.vim-simple-todo')]] }
+  use { 'windwp/nvim-autopairs', config = [[require('plugins.nvim-autopairs')]] }
   -- Movement Plugins
-  use { 'ggandor/lightspeed.nvim', config = [[require('p-lightspeed')]] }
+  use { 'ggandor/lightspeed.nvim', config = [[require('plugins.lightspeed')]] }
   -- Navigation Plugins
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {{'plenary.nvim'}, {'nvim-web-devicons'}},
-    config = [[require('p-nvim-tree')]],
+    config = [[require('plugins.nvim-tree')]],
   }
   use {
     'akinsho/bufferline.nvim',
     requires = {{'nvim-web-devicons'}},
-    config = [[require('p-bufferline')]],
+    config = [[require('plugins.bufferline')]],
   }
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'plenary.nvim'}},
-    config = [[require('p-telescope')]]
+    config = [[require('plugins.telescope')]]
   }
-  use { 'yssl/QFEnter', config = [[require('p-qfenter')]] }
+  use { 'yssl/QFEnter', config = [[require('plugins.qfenter')]] }
   -- Text Object Plugins
-  use { 'David-Kunz/treesitter-unit', config = [[require('p-treesitter-unit')]] }
+  use { 'David-Kunz/treesitter-unit', config = [[require('plugins.treesitter-unit')]] }
   use 'kana/vim-textobj-user'
   use { 'kana/vim-textobj-indent', requires = {{'kana/vim-textobj-user'}} }
   use {
@@ -110,40 +110,40 @@ require('packer').startup(function ()
   -- Language Plugins
   use 'hail2u/vim-css3-syntax'
   use 'mattn/emmet-vim'
-  use { 'plasticboy/vim-markdown', config = [[require('p-vim-markdown')]] }
-  use { 'rust-lang/rust.vim', config = [[require('p-rust')]] }
+  use { 'plasticboy/vim-markdown', config = [[require('plugins.vim-markdown')]] }
+  use { 'rust-lang/rust.vim', config = [[require('plugins.rust')]] }
   -- LSP
-  use { 'folke/trouble.nvim', requires = {'nvim-web-devicons'}, config = [[require('p-trouble')]] }
+  use { 'folke/trouble.nvim', requires = {'nvim-web-devicons'}, config = [[require('plugins.trouble')]] }
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
+      'hrsh7th/cmplugins.buffer',
+      'hrsh7th/cmplugins.nvim-lsp',
+      'hrsh7th/cmplugins.path',
       'hrsh7th/vim-vsnip', -- required for autocompletion to work, even without snippets
       'onsails/lspkind-nvim',
     },
-    config = [[require('p-nvim-cmp')]],
+    config = [[require('plugins.nvim-cmp')]],
   }
   use {
     'jose-elias-alvarez/null-ls.nvim',
     requires = {'plenary.nvim', 'nvim-lspconfig'},
-    config = [[require('p-null-ls')]],
+    config = [[require('plugins.null-ls')]],
   }
   use 'kabouzeid/nvim-lspinstall'
-  use { 'neovim/nvim-lspconfig', config = [[require('p-nvim-lspconfig')]] }
-  use { 'ray-x/lsp_signature.nvim', config = [[require('p-lsp-signature')]] }
+  use { 'neovim/nvim-lspconfig', config = [[require('plugins.nvim-lspconfig')]] }
+  use { 'ray-x/lsp_signature.nvim', config = [[require('plugins.lsp-signature')]] }
   -- DAP
-  use { 'mfussenegger/nvim-dap', config = [[require('p-nvim-dap')]] }
+  use { 'mfussenegger/nvim-dap', config = [[require('plugins.nvim-dap')]] }
   use {
     'nvim-telescope/telescope-dap.nvim',
     requires = {{'nvim-dap'}, {'telescope.nvim'}},
-    config = [[require('p-telescope-dap')]],
+    config = [[require('plugins.telescope-dap')]],
   }
   use {
-    'rcarriga/nvim-dap-ui',
+    'rcarriga/nvim-dap-ui.ui',
     requires = {'nvim-dap'},
-    config = [[require('p-nvim-dap-ui')]],
+    config = [[require('plugins.nvim-dap-ui')]],
   }
-  use { 'theHamsta/nvim-dap-virtual-text', config = [[require('p-nvim-dap-virtual-text')]] }
+  use { 'theHamsta/nvim-dap-virtual-text', config = [[require('plugins.nvim-dap-virtual-text')]] }
 end)
