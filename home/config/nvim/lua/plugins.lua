@@ -50,7 +50,6 @@ require('packer').startup(function ()
   use 'AndrewRadev/splitjoin.vim'
   use 'bronson/vim-trailing-whitespace'
   use 'editorconfig/editorconfig-vim'
-  use { 'famiu/nvim-reload', requires = {{'plenary.nvim'}} }
   use 'godlygeek/tabular'
   use { 'jenterkin/vim-autosource', config = [[require('p-autosource')]] }
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
