@@ -2,3 +2,9 @@
 
 # Resume obsession default session
 vim -S Session.vim
+
+# Tail nvim LSP log
+tail -f /Users/knpwrs/.cache/nvim/lsp.log
+
+# Tail nvim DAP log
+tail -f /Users/knpwrs/.cache/nvim/dap.log

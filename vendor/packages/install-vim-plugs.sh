@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-nvim +PlugInstall +qall
+nvim +PackerSync +qall

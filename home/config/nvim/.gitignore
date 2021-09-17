@@ -1,4 +1,6 @@
 *
 !.gitignore
 !*.vim
-!coc-settings.json
+!*.lua
+!lua
+!lua/*

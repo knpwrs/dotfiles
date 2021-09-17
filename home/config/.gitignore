@@ -2,9 +2,6 @@
 !.gitignore
 !alacritty
 !alacritty/**
-!coc
-!coc/ultisnips
-!coc/ultisnips/**
 !kitty
 !kitty/**
 !nvim
