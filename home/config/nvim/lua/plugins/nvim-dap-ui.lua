@@ -14,9 +14,6 @@ dapui.setup({
     elements = { 'repl' },
   },
   floating = {
-    mappings = {
-      close = { '<C-d>' },
-    },
     max_width = 0.5,
     max_height = 0.5,
   },
