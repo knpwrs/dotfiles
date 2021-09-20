@@ -117,9 +117,9 @@ require('packer').startup(function ()
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      'hrsh7th/cmplugins.buffer',
-      'hrsh7th/cmplugins.nvim-lsp',
-      'hrsh7th/cmplugins.path',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
       'hrsh7th/vim-vsnip', -- required for autocompletion to work, even without snippets
       'onsails/lspkind-nvim',
     },
@@ -141,7 +141,7 @@ require('packer').startup(function ()
     config = [[require('plugins.telescope-dap')]],
   }
   use {
-    'rcarriga/nvim-dap-ui.ui',
+    'rcarriga/nvim-dap-ui',
     requires = {'nvim-dap'},
     config = [[require('plugins.nvim-dap-ui')]],
   }
