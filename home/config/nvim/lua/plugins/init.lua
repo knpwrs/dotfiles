@@ -97,7 +97,6 @@ require('packer').startup(function ()
     requires = {{'nvim-lua/popup.nvim'}, {'plenary.nvim'}},
     config = [[require('plugins.telescope')]]
   }
-  use { 'yssl/QFEnter', config = [[require('plugins.qfenter')]] }
   -- Text Object Plugins
   use { 'David-Kunz/treesitter-unit', config = [[require('plugins.treesitter-unit')]] }
   use 'kana/vim-textobj-user'
