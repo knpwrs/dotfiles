@@ -12,7 +12,7 @@ function repeat_ft(reverse)
   ls.ft:to(reverse, ls.ft['prev-t-like?'])
 end
 
-opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', ';', '<cmd>lua repeat_ft(false)<cr>', opts)
 vim.api.nvim_set_keymap('x', ';', '<cmd>lua repeat_ft(false)<cr>', opts)
 vim.api.nvim_set_keymap('n', ',', '<cmd>lua repeat_ft(true)<cr>', opts)
