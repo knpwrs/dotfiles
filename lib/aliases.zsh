@@ -85,6 +85,7 @@ alias vii='vidir'
 alias vim='nvim'
 alias vims='nvim -S Session.vim'
 alias vv='nvim .'
+alias tim='nvim +terminal'
 
 alias fed='fd -tf | xargs sed -i'
 

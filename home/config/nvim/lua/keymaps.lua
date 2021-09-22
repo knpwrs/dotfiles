@@ -13,6 +13,9 @@ nvim_set_keymap('n', '<C-d>', '&bt ==# "quickfix" ? ":ccl<Cr>" : "<C-d>"', { nor
 nvim_set_keymap('i', '<C-d>', '<Esc>', {})
 nvim_set_keymap('c', '<C-d>', '<Esc>', {})
 nvim_set_keymap('v', '<C-d>', '<Esc>', {})
+nvim_set_keymap('t', '<C-d>', [[<C-\><C-n>]], { noremap = true })
+-- Allow <C-d> to be sent to terminal
+nvim_set_keymap('t', '<C-f>', '<C-d>', { noremap = true })
 
 -- Toggle relative line numbers
 cmd([[
