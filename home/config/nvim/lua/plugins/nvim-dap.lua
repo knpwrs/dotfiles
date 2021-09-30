@@ -49,5 +49,6 @@ local err, colors = catppuccino_api.get_colors('dark_catppuccino')
 
 if err.status then -- good
   sd('DapBreakpoint', { text = '', texthl = 'LspDiagnosticsSignError' })
+  sd('DapBreakpointCondition', { text = '', texthl = 'LspDiagnosticsSignWarning' })
   sd('DapLogPoint', { text = '', texthl = 'LspDiagnosticsSignError' })
 end
