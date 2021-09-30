@@ -4,12 +4,10 @@ local wk = require('which-key')
 
 dapui.setup({
   sidebar = {
-    open_on_start = false,
     position = 'right',
     elements = { 'scopes', 'breakpoints', 'stacks', 'watches' },
   },
   tray = {
-    open_on_start = true,
     position = 'bottom',
     elements = { 'repl' },
   },
