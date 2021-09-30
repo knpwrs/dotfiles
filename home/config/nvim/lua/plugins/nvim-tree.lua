@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local g = vim.g
+local tree = require('nvim-tree')
 local wk = require('which-key')
 
 wk.register(
@@ -32,3 +33,5 @@ g.nvim_tree_show_icons = {
   files = 1,
   folder_arrows = 1,
 }
+
+tree.setup()
