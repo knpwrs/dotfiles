@@ -30,6 +30,9 @@ git checkout -
 # Pull and rebase on main branch
 git pull --rebase origin <main_branch>
 
+# Revert Without Committing
+git revert --no-commit <ref>
+
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
 $ branch: git branch | cut -c 3-
