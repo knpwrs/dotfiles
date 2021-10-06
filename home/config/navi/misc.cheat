@@ -16,8 +16,11 @@ echo <content> | curl -F-=\<- qrenco.de
 # Create a QR code with some content and copy
 echo <content> | curl -F-=\<- qrenco.de | pbcopy
 
-# Format JSON on clipboard
+# Format JSON on Clipboard
 pbpaste | jq | pbcopy
+
+# Edit Clipboard Contents
+pbpaste | vipe | pbcopy
 
 # Optimize pngs
 oxipng -o max <pngs>
