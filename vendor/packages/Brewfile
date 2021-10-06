@@ -39,7 +39,7 @@ brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
 brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
-brew 'moreutils'                               # Other useful utilities.
+brew 'moreutils'                               # Other useful utilities (vipe, vidir, etc) (https://joeyh.name/code/moreutils/)
 brew 'navi'                                    # An interactive cheatsheet tool for the command-line.
 brew 'neofetch'                                # A command-line system information tool written in bash 3.2+
 brew 'neovim'                                  # Neovim
