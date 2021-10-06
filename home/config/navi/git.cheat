@@ -6,6 +6,9 @@ git log --all -i --grep '<search-text>'
 # Checkout the main branch
 git checkout <main_branch>
 
+# Rebase on a given branch
+git rebase <branch>
+
 # Open dirty files in $EDITOR
 git diff --name-only | xargs -o $EDITOR
 
@@ -24,3 +27,4 @@ git checkout -
 $ main_branch: git symbolic-ref refs/remotes/origin/HEAD | sed 's|^refs/remotes/origin/||'
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
+$ branch: git branch | cut -c 3-
