@@ -9,6 +9,9 @@ git log --all -S '<search-text>'
 # Checkout the main branch
 git checkout <main_branch>
 
+# Checkout target branch or tag
+git checkout <branch_or_tag>
+
 # Rebase on a given branch
 git rebase <branch>
 
@@ -46,3 +49,4 @@ $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-
 $ staged_files: git diff --staged --name-only --- --multi
 $ branch: git branch | cut -c 3-
 $ main_branch: git branch | cut -c 3- | grep -m 1 'main\|master\|dev\|development\|trunk'
+$ branch_or_tag: (git branch | cut -c 3-; git tag)
