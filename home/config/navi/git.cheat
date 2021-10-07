@@ -12,6 +12,9 @@ git checkout <main_branch>
 # Rebase on a given branch
 git rebase <branch>
 
+# Rebase interactively on a given branch
+git rebase -i <branch>
+
 # Open dirty files in $EDITOR
 git diff --name-only | xargs -o $EDITOR
 
@@ -32,6 +35,9 @@ git checkout -
 
 # Pull and rebase on main branch
 git pull --rebase origin <main_branch>
+
+# Pull and rebase interactively on main branch
+git pull --rebase=interactive origin <main_branch>
 
 # Revert Without Committing
 git revert --no-commit <ref>
