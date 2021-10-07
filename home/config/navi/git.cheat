@@ -15,6 +15,9 @@ git rebase <branch>
 # Open dirty files in $EDITOR
 git diff --name-only | xargs -o $EDITOR
 
+# Open files from HEAD commit in $EDITOR
+git diff-tree --no-commit-id --name-only -r HEAD | xargs -o $EDITOR
+
 # Commit with co-author
 git commit -e -m "commit message" -m "<co_authors>"
 
