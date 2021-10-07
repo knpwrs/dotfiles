@@ -16,7 +16,7 @@ require('bufferline').setup({
     show_buffer_close_icons = false,
     diagnostics = 'nvim_lsp',
     custom_filter = function(buf_number)
-      -- don't show DAP REPL in buffline
+      -- don't show DAP REPL in bufferline
       if vim.bo[buf_number].filetype ~= 'dap-repl' then
         return true
       end
