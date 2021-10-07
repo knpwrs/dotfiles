@@ -1,0 +1,7 @@
+% macOS
+
+# List quarantined files matching pattern
+xattr -r <pattern> -d com.apple.quarantine
+
+# Remove quarantine from files matching pattern
+xattr -r -d com.apple.quarantine <pattern>
