@@ -1,6 +1,15 @@
 local cmd = vim.cmd
 local wk = require('which-key')
 
+-- Due to an upstream bug we need an autocmd to prevent quickfix from appearing in bufferline
+-- https://github.com/akinsho/bufferline.nvim/issues/176
+cmd([[
+  augroup BufferlineUserConfig
+    autocmd!
+    autocmd FileType qf set nobuflisted
+  augroup end
+]])
+
 require('bufferline').setup({
   options = {
     show_close_icon = false,
