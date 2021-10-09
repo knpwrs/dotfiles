@@ -25,3 +25,17 @@ useful eggs.
 
 Installs Homebrew (if necessary) and installs everything listed in `Brewfile`.
 Exits if not running on macOS.
+
+### QuickLook Plugins and Quarantine
+
+To see the quarantine status of installed QuickLook plugins:
+
+```sh
+xattr -r ~/Library/QuickLook/QL* -d com.apple.quarantine
+```
+
+To remove quarantine from QuickLook plugins:
+
+```sh
+xattr -r -d com.apple.quarantine ~/Library/QuickLook/QL*
+```
