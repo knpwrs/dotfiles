@@ -60,7 +60,6 @@ require('packer').startup(function ()
     keys = {'gs', '<Leader>g', '<Leader>G'},
     config = [[require('plugins.vim-grepper')]],
   }
-  use { 'prettier/vim-prettier', run = 'npm install', config = [[require('plugins.vim-prettier')]] }
   use 'sickill/vim-pasta'
   use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
   use { 'szw/vim-maximizer', config = [[require('plugins.vim-maximizer')]] }

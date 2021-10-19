@@ -39,6 +39,7 @@ packages=(
   trash-cli                        # Move files to trash.
   ttystudio                        # Record terminal to GIF.
   wscat                            # WebSocket debugging tool.
+  @fsouza/prettierd                # prettier, as a daemon, for ludicrous formatting speed
 )
 
 npm i -g "${packages[@]///}"

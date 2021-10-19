@@ -44,10 +44,13 @@ li.on_server_ready(function(server)
     capabilities = capabilities,
   }
 
-  -- (optional) Customize the options passed to the server
-  -- if server.name == "tsserver" then
-  --     opts.root_dir = function() ... end
-  -- end
+  if server.name == 'tsserver' then
+    opts.on_attach = function(client)
+      -- Prefer prettier over tsserver formatting
+      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
+    end
+  end
 
   -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
   server:setup(opts)
