@@ -30,6 +30,7 @@ require('packer').startup(function ()
   }
   -- Interface Plugins
   use { 'Pocco81/Catppuccino.nvim', config = [[require('plugins.catppuccino')]] }
+  use { 'chentau/marks.nvim', config = [[require('marks').setup({})]] }
   use {
     'SmiteshP/nvim-gps',
     requires = 'nvim-treesitter',
