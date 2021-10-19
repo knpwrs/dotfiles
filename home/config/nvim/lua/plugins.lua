@@ -129,9 +129,9 @@ require('packer').startup(function ()
     requires = {'plenary.nvim', 'nvim-lspconfig'},
     config = [[require('plugins.null-ls')]],
   }
-  use 'kabouzeid/nvim-lspinstall'
   use { 'neovim/nvim-lspconfig', config = [[require('plugins.nvim-lspconfig')]] }
   use { 'ray-x/lsp_signature.nvim', config = [[require('plugins.lsp-signature')]] }
+  use 'williamboman/nvim-lsp-installer'
   -- DAP
   use { 'mfussenegger/nvim-dap', config = [[require('plugins.nvim-dap')]] }
   use {
