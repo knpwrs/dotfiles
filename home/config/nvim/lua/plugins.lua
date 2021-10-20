@@ -45,6 +45,7 @@ require('packer').startup(function ()
     config = [[require('plugins.gitsigns')]],
   }
   use 'lukas-reineke/indent-blankline.nvim'
+  use { 'luukvbaal/stabilize.nvim', config = [[require('stabilize').setup()]] }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('plugins.dsf')]] }
   use { 'AndrewRadev/sideways.vim', config = [[require('plugins.sideways')]] }
