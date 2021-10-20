@@ -449,7 +449,7 @@ fshow() {
 FZF-EOF"
 }
 
-# fcs - get git commit SHA
+# fsha - get git commit SHA
 # example: git rebase -i $(fsha)
 fsha() {
   local commits commit
