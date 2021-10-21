@@ -48,9 +48,16 @@ git pull --rebase=interactive origin <main_branch>
 # Revert Without Committing
 git revert --no-commit <ref>
 
+# Checkout contents of file
+git checkout -- <git_file>
+
+# Checkout contents of file on another branch
+git checkout <branch_or_tag> -- <git_file>
+
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
 $ branch: git branch | cut -c 3-
 $ main_branch: git branch | cut -c 3- | grep -m 1 'main\|master\|dev\|development\|trunk'
 $ branch_or_tag: (git branch | cut -c 3-; git tag)
 $ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
+$ git_file: git ls-files
