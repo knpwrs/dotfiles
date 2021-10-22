@@ -38,7 +38,6 @@ require('packer').startup(function ()
   }
   use { 'folke/todo-comments.nvim', config = [[require('plugins.todo-comments')]] }
   use 'folke/which-key.nvim'
-  use { 'hoob3rt/lualine.nvim', config = [[require('plugins.lualine')]] }
   use {
     'lewis6991/gitsigns.nvim',
     requires = {{'plenary.nvim'}},
@@ -61,6 +60,7 @@ require('packer').startup(function ()
     keys = {'gs', '<Leader>g', '<Leader>G'},
     config = [[require('plugins.vim-grepper')]],
   }
+  use { 'nvim-lualine/lualine.nvim', config = [[require('plugins.lualine')]] }
   use 'sickill/vim-pasta'
   use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
   use { 'szw/vim-maximizer', config = [[require('plugins.vim-maximizer')]] }
