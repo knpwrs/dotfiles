@@ -54,6 +54,9 @@ git checkout -- <git_file>
 # Checkout contents of file on another branch
 git checkout <branch_or_tag> -- <git_file>
 
+# Show contents of a given commit
+git show <commit>
+
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
 $ branch: git branch | cut -c 3-
