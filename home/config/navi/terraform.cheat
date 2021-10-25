@@ -1,0 +1,6 @@
+% Terraform
+
+# Remove Instance of Given Resource
+terraform state rm <resource>
+
+$ resource: terraform state list
