@@ -13,6 +13,7 @@ cmp.setup {
     ['<C-j>'] = cmp.mapping.scroll_docs(-4),
     ['<C-k>'] = cmp.mapping.scroll_docs(4),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
+    ['<Cr>'] = cmp.mapping.confirm({ select = true }),
   },
   formatting = {
     format = function(entry, vim_item)
@@ -27,12 +28,6 @@ cmp.setup {
   },
 }
 
-require('nvim-autopairs.completion.cmp').setup({
-  map_cr = true,
-  map_complete = true,
-  auto_select = true,
-  map_char = {
-    all = '(',
-    tex = '{'
-  }
-})
+-- nvim-autopairs
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
