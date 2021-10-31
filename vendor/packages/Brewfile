@@ -134,3 +134,5 @@ cask 'google-chrome-canary'
 
 # Mac App Store
 mas 'Amphetamine', id: 937984704
+mas 'System Color Picker', id: 1545870783
+mas 'Shareful', id: 1522267256
