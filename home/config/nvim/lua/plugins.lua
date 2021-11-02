@@ -145,5 +145,5 @@ require('packer').startup(function ()
     requires = {'nvim-dap'},
     config = [[require('plugins.nvim-dap-ui')]],
   }
-  use { 'theHamsta/nvim-dap-virtual-text', config = [[require('plugins.nvim-dap-virtual-text')]] }
+  use { 'theHamsta/nvim-dap-virtual-text', config = [[require('nvim-dap-virtual-text').setup()]] }
 end)
