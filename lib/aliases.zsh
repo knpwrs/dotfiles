@@ -163,11 +163,6 @@ typed() {
   open "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/$1"
 }
 
-# Clear out Neovim Swap
-nvcswp() {
-  rm -f $HOME/.local/share/nvim/swap/*.swp
-}
-
 # Measure time to first byte with CURL
 ttfb() {
   curl -o /dev/null \
