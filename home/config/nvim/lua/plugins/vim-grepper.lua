@@ -2,6 +2,9 @@ local wk = require('which-key')
 
 vim.g.grepper = {
   tools = {'rg', 'git'},
+  rg = {
+    grepprg = 'rg -H --no-heading --vimgrep --hidden'
+  },
 }
 
 
