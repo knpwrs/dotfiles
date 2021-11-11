@@ -21,6 +21,12 @@ git rebase -i <branch>
 # Rebase interactively on a given commit
 git rebase -i <commit>
 
+# cherry-pick a given branch
+git cherry-pick -i <branch>
+
+# cherry-pick a given commit
+git cherry-pick -i <commit>
+
 # Open dirty files in $EDITOR
 git diff --name-only | xargs -o $EDITOR
 
