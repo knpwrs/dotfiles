@@ -12,6 +12,3 @@ vim.api.nvim_set_keymap('n', ';', '<Plug>Lightspeed_;_ft', opts)
 vim.api.nvim_set_keymap('x', ';', '<Plug>Lightspeed_;_ft', opts)
 vim.api.nvim_set_keymap('n', ',', '<Plug>Lightspeed_,_ft', opts)
 vim.api.nvim_set_keymap('x', ',', '<Plug>Lightspeed_,_ft', opts)
-
-cmd('unmap s')
-cmd('unmap S')
