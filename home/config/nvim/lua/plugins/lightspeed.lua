@@ -5,6 +5,8 @@ local opts = { silent = true }
 
 nvim_set_keymap('n', 'z', '<Plug>Lightspeed_s', opts)
 nvim_set_keymap('n', 'Z', '<Plug>Lightspeed_S', opts)
+nvim_set_keymap('v', 'z', '<Plug>Lightspeed_s', opts)
+nvim_set_keymap('v', 'Z', '<Plug>Lightspeed_S', opts)
 nvim_set_keymap('x', 'z', '<Plug>Lightspeed_x', opts)
 nvim_set_keymap('x', 'Z', '<Plug>Lightspeed_X', opts)
 
