@@ -29,3 +29,6 @@ $ pngs: fd -e png --- --multi --map "navi fn map::expand"
 
 # Copy command stdout and stderr to system clipboard
 <cmd> 2>&1 | pbcopy
+
+# Expand Short URL on Clipboard
+curl -sIL $(pbpaste) | grep -i '^location' | cut -c 11- | pbcopy
