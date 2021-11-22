@@ -147,4 +147,9 @@ require('packer').startup(function ()
     config = [[require('plugins.nvim-dap-ui')]],
   }
   use { 'theHamsta/nvim-dap-virtual-text', config = [[require('nvim-dap-virtual-text').setup()]] }
+  -- Fun
+  use {
+    'tamton-aquib/duck.nvim',
+    config = [[require('plugins.duck')]]
+  }
 end)
