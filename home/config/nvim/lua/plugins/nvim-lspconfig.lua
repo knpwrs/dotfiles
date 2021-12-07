@@ -1,6 +1,7 @@
 local wk = require('which-key')
 local li = require('nvim-lsp-installer')
 local lsp = vim.lsp
+local diag = vim.diagnostic
 
 wk.register(
   {
@@ -9,8 +10,8 @@ wk.register(
       f = { function() lsp.buf.formatting() end, 'Format' },
       i = { function() lsp.buf.implementation() end, 'Implementation' },
       k = { function() lsp.buf.hover() end, 'Hover' },
-      l = { function() lsp.diagnostic.show_line_diagnostics() end, 'Show Line Diagnostics' },
-      q = { function() lsp.diagnostic.set_loclist() end, 'Set Location List' },
+      l = { function() diag.open_float() end, 'Show Line Diagnostics' },
+      q = { function() diag.set_loclist() end, 'Set Location List' },
       m = { function() lsp.buf.rename() end, 'Rename' },
       y = { function() lsp.buf.type_definition() end, 'Type Definition' },
       -- Telescope lsp maps
