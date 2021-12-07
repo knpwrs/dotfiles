@@ -83,7 +83,7 @@ cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
 cask 'firefox'                   # Web browser from Mozilla.
 cask 'google-chrome'             # Web browser from Google.
-cask 'google-backup-and-sync'    # Google Drive
+cask 'google-drive'              # Google Drive
 cask 'keka'                      # Archive extraction and creation.
 cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
