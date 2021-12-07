@@ -60,13 +60,17 @@ require('packer').startup(function ()
     keys = {'gs', '<Leader>g', '<Leader>G'},
     config = [[require('plugins.vim-grepper')]],
   }
+  use {
+    'numToStr/Comment.nvim',
+    requires = {{'JoosepAlviste/nvim-ts-context-commentstring'}},
+    config = [[require('plugins.comment-nvim')]],
+  }
   use { 'nvim-lualine/lualine.nvim', config = [[require('plugins.lualine')]] }
   use 'sickill/vim-pasta'
   use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
   use { 'szw/vim-maximizer', config = [[require('plugins.vim-maximizer')]] }
   use 'tmux-plugins/vim-tmux-focus-events'
   use 'tommcdo/vim-exchange'
-  use 'tomtom/tcomment_vim'
   use 'tpope/vim-abolish'
   use { 'tpope/vim-dadbod', cmd = {'DB'} }
   use 'tpope/vim-endwise'
