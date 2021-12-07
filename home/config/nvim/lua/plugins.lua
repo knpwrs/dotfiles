@@ -29,7 +29,7 @@ require('packer').startup(function ()
     config = [[require('plugins.nvim-treesitter')]],
   }
   -- Interface Plugins
-  use { 'Pocco81/Catppuccino.nvim', config = [[require('plugins.catppuccino')]], branch = 'dev' }
+  use { 'catppuccin/nvim', config = [[require('plugins.catppuccino')]], branch = 'old-catppuccino' }
   use { 'chentau/marks.nvim', config = [[require('marks').setup({})]] }
   use {
     'SmiteshP/nvim-gps',
