@@ -22,12 +22,7 @@ require('packer').startup(function ()
   -- Base Dependencies
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    branch = '0.5-compat',
-    run = ':TSUpdate',
-    config = [[require('plugins.nvim-treesitter')]],
-  }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('plugins.nvim-treesitter')]] }
   -- Interface Plugins
   use { 'catppuccin/nvim', config = [[require('plugins.catppuccino')]], branch = 'old-catppuccino' }
   use { 'chentau/marks.nvim', config = [[require('marks').setup({})]] }
@@ -106,11 +101,7 @@ require('packer').startup(function ()
   use { 'David-Kunz/treesitter-unit', config = [[require('plugins.treesitter-unit')]] }
   use 'kana/vim-textobj-user'
   use { 'kana/vim-textobj-indent', requires = {{'kana/vim-textobj-user'}} }
-  use {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    branch = '0.5-compat',
-    requires = {{'nvim-treesitter'}},
-  }
+  use { 'nvim-treesitter/nvim-treesitter-textobjects', requires = {{'nvim-treesitter'}} }
   -- Language Plugins
   use 'hail2u/vim-css3-syntax'
   use 'mattn/emmet-vim'
