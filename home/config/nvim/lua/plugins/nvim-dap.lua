@@ -44,11 +44,6 @@ wk.register(
   }
 )
 
-local catppuccino_api = require('catppuccino.api.colors')
-local err, colors = catppuccino_api.get_colors('dark_catppuccino')
-
-if err.status then -- good
-  sd('DapBreakpoint', { text = '', texthl = 'DiagnosticSignError' })
-  sd('DapBreakpointCondition', { text = '', texthl = 'DiagnosticSignWarn' })
-  sd('DapLogPoint', { text = '', texthl = 'DiagnosticSignError' })
-end
+sd('DapBreakpoint', { text = '', texthl = 'DiagnosticSignError' })
+sd('DapBreakpointCondition', { text = '', texthl = 'DiagnosticSignWarn' })
+sd('DapLogPoint', { text = '', texthl = 'DiagnosticSignError' })

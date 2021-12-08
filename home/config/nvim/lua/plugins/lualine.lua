@@ -9,7 +9,7 @@ local dap_ui = {
 
 require('lualine').setup({
   options = {
-    theme = 'catppuccino',
+    theme = 'tokyonight',
   },
   sections = {
     lualine_a = {'mode'},

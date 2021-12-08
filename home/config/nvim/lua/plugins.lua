@@ -24,7 +24,7 @@ require('packer').startup(function ()
   use 'nvim-lua/plenary.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('plugins.nvim-treesitter')]] }
   -- Interface Plugins
-  use { 'catppuccin/nvim', config = [[require('plugins.catppuccino')]], branch = 'old-catppuccino' }
+  use { 'folke/tokyonight.nvim', config = [[require('plugins.tokyonight')]] }
   use { 'chentau/marks.nvim', config = [[require('marks').setup({})]] }
   use {
     'SmiteshP/nvim-gps',
