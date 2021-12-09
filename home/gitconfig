@@ -1,6 +1,8 @@
 [user]
 	name = Ken Powers
 	email = ken@kenpowers.net
+[init]
+	defaultBranch = main
 [alias]
 	branches = branch -avv
 [pull]
