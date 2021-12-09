@@ -11,7 +11,7 @@ wk.register(
       i = { function() lsp.buf.implementation() end, 'Implementation' },
       k = { function() lsp.buf.hover() end, 'Hover' },
       l = { function() diag.open_float() end, 'Show Line Diagnostics' },
-      q = { function() diag.set_loclist() end, 'Set Location List' },
+      q = { function() diag.setloclist() end, 'Set Location List' },
       m = { function() lsp.buf.rename() end, 'Rename' },
       y = { function() lsp.buf.type_definition() end, 'Type Definition' },
       -- Telescope lsp maps
