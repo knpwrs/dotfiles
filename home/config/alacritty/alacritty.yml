@@ -163,7 +163,7 @@ font:
 colors:
   # default colors
   primary:
-    background: '0x1a1b26'
+    background: '0x121212' # Overridden from default purply color
     foreground: '0xc0caf5'
 
   # Normal colors
