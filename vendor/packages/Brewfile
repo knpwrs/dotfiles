@@ -35,6 +35,7 @@ brew 'gron'                                    # Make JSON greppable!
 brew 'htop'                                    # Improved top (interactive process viewer)
 brew 'httpie'                                  # cURL-like tool for humans.
 brew 'imagemagick'                             # CLI image manipulation utilities.
+brew 'jcamiel/hurl/hurl'                       # Hurl CLI for HTTP testing.
 brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
 brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
