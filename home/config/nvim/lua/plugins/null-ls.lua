@@ -1,6 +1,12 @@
 local nls = require('null-ls')
 local lspconfig = require('lspconfig')
 
+local function on_attach(client)
+  if client.resolved_capabilities.document_formatting then
+    vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+  end
+end
+
 local function prettier_condition(utils)
   -- See https://prettier.io/docs/en/configuration.html
   local files = {
@@ -30,14 +36,7 @@ local sources = {
   })
 }
 
-nls.config({ sources = sources })
-
-local function on_attach(client)
-  if client.resolved_capabilities.document_formatting then
-    vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-  end
-end
-
-lspconfig['null-ls'].setup({
+nls.config({
   on_attach = on_attach,
+  sources = sources,
 })
