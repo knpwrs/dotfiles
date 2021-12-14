@@ -45,6 +45,7 @@ require('packer').startup(function ()
   use { 'AndrewRadev/sideways.vim', config = [[require('plugins.sideways')]] }
   use 'AndrewRadev/splitjoin.vim'
   use 'bronson/vim-trailing-whitespace'
+  use 'dhruvasagar/vim-table-mode'
   use 'editorconfig/editorconfig-vim'
   use 'godlygeek/tabular'
   use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
