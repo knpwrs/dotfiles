@@ -107,3 +107,25 @@ gh repo view
 
 # View current repository in web browser
 gh repo view --web
+
+#
+# Extensions
+#
+
+# List extensions
+gh extension list
+
+# Install extension
+gh extension install <extension>
+
+# Uninstall / remove extension
+gh extension remove <extension>
+
+# Upgrade extension
+gh extension upgrade <extension>
+
+# Clean branches in current repo
+gh clean-branches
+
+# Force-clean branches in current repo
+gh clean-branches --force

@@ -11,6 +11,10 @@ Calls all other install scripts in the appropriate order.
 
 Uses system `ruby` and `sudo gem` to install a set of useful gems.
 
+## `install-gh.sh`
+
+Installs extensions for [`gh`].
+
 ## `install-npm.sh`
 
 Installs global npm packages (cli tools). Requires `node` and `npm` to be
@@ -39,3 +43,5 @@ To remove quarantine from QuickLook plugins:
 ```sh
 xattr -r -d com.apple.quarantine ~/Library/QuickLook/QL*
 ```
+
+[`gh`]: https://github.com/cli/cli "GitHub's official command line tool"
