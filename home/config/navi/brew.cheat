@@ -1,0 +1,30 @@
+% Homebrew
+
+# Install a formula
+brew install <formula>
+
+# Install a cask
+brew install --cask <cask>
+
+# Upgrade an installed formula
+brew upgrade <installed_formula>
+
+# Upgrade an installed cask
+brew upgrade <installed_cask>
+
+# Uninstall a formula
+brew uninstall <installed_formula>
+
+# Uninstall a cask
+brew uninstall --cask --zap <installed_cask>
+
+# Search Homebrew
+brew search <query>
+
+# Update Homebrew
+brew update
+
+$ formula: find $(brew --prefix)/Homebrew/Library/Taps -type f \( -name '*.rb' ! -path '*cask*' ! -path '*/\.*' \) | sed 's|.*/\(.*\)\.rb|\1|'
+$ cask: find $(brew --prefix)/Homebrew/Library/Taps -type f \( -name '*.rb' -and -path '*cask*' ! -path '*/\.*' \) | sed 's|.*/\(.*\)\.rb|\1|'
+$ installed_formula: brew list --formulae -1
+$ installed_cask: brew list --casks -1
