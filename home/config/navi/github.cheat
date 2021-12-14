@@ -1,0 +1,109 @@
+% GitHub
+
+# Show CI status for a single pull request
+gh pr checks
+
+# Close a pull request
+gh pr close
+
+# Create a new pr comment
+gh pr comment
+
+# Create a pull request
+gh pr create
+
+# Create draft pull request
+gh pr create --draft
+
+# View changes in a pull request
+gh pr diff <pr>
+
+# Edit a pull request
+gh pr edit <pr>
+
+# List and filter pull requests in this repository
+gh pr list
+
+# Merge a pull request
+gh pr merge <pr>
+
+# Mark pull request for current branch as ready for review
+gh pr ready
+
+# Mark a pull request as ready for review
+gh pr ready <pr>
+
+# Reopen pull request for current branch
+gh pr reopen
+
+# Reopen a pull request
+gh pr reopen <pr>
+
+# Approve pull request for current branch
+gh pr review --approve
+
+# Request changes for pull request for current branch
+gh pr review --request-changes --body "<body>"
+
+# Comment on pull request for current branch
+gh pr review --comment --body "<body>"
+
+# Show status of relevant pull requests
+gh pr status
+
+# View pull request for current branch
+gh pr view
+
+# View pull request for current branch in web browser
+gh pr view --web
+
+# View pull a request
+gh pr view <pr>
+
+# View a pull request in web browser
+gh pr view --web <pr>
+
+# Archive current repository
+gh repo archive
+
+# Archive a repository
+gh repo archive <repo>
+
+# Clone a repository locally
+gh repo clone <repo>
+
+# Create a new repository
+gh repo create <repo>
+
+# Delete current repository
+gh repo delete
+
+# Delete a repository
+gh repo delete <repo>
+
+# Create a fork of current repository
+gh repo fork
+
+# Create a fork of a repository
+gh repo fork <repo>
+
+# List repositories owned by current user
+gh repo list
+
+# List repositories owned by user or organization
+gh repo list <user>
+
+# Rename current repository
+gh repo rename <new_name>
+
+# Rename a repository
+gh repo rename <new_name> --repo <repo>
+
+# Sync current branch with remote
+gh repo sync
+
+# View current repository
+gh repo view
+
+# View current repository in web browser
+gh repo view --web
