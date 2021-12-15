@@ -25,6 +25,10 @@ installed.
 Uses system `python` and `easy_install` to install `pip` to install a set of
 useful eggs.
 
+## `install-nvim.sh`
+
+Installs neovim plugins and Treesitter parsers.
+
 ## `install-mac.sh`
 
 Installs Homebrew (if necessary) and installs everything listed in `Brewfile`.
