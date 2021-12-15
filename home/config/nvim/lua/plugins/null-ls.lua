@@ -36,7 +36,7 @@ local sources = {
   })
 }
 
-nls.config({
+nls.setup({
   on_attach = on_attach,
   sources = sources,
 })
