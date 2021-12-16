@@ -1,5 +1,6 @@
 local wk = require('which-key')
 local li = require('nvim-lsp-installer')
+local illum = require('illuminate')
 local lsp = vim.lsp
 local diag = vim.diagnostic
 
@@ -34,6 +35,9 @@ wk.register(
   {
     ['[d'] = { function() lsp.diagnostic.goto_prev() end, 'Previous Diagnostic' },
     [']d'] = { function() lsp.diagnostic.goto_next() end, 'Next Diagnostic' },
+    -- vim-illuminate maps
+    [']i'] = { function() illum.next_reference({ wrap = true }) end, 'Move to next doc highlight' },
+    ['[i'] = { function() illum.next_reference({ wrap = true, reverse = true }) end, 'Move to prev doc highlight' },
   }
 )
 
@@ -45,12 +49,15 @@ li.on_server_ready(function(server)
     capabilities = capabilities,
   }
 
-  if server.name == 'tsserver' then
-    opts.on_attach = function(client)
+  opts.on_attach = function(client)
+    if server.name == 'tsserver' then
       -- Prefer prettier over tsserver formatting
       client.resolved_capabilities.document_formatting = false
       client.resolved_capabilities.document_range_formatting = false
     end
+
+    -- Attach vim-illuminate
+    illum.on_attach(client)
   end
 
   -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)

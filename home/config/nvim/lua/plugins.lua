@@ -127,7 +127,7 @@ require('packer').startup(function ()
     requires = {'plenary.nvim', 'nvim-lspconfig'},
     config = [[require('plugins.null-ls')]],
   }
-  use { 'neovim/nvim-lspconfig', config = [[require('plugins.nvim-lspconfig')]] }
+  use { 'neovim/nvim-lspconfig', config = [[require('plugins.nvim-lspconfig')]], requires = {{'vim-illuminate'}} }
   use { 'ray-x/lsp_signature.nvim', config = [[require('plugins.lsp-signature')]] }
   use 'williamboman/nvim-lsp-installer'
   -- DAP
@@ -142,6 +142,7 @@ require('packer').startup(function ()
     requires = {'nvim-dap'},
     config = [[require('plugins.nvim-dap-ui')]],
   }
+  use 'RRethy/vim-illuminate'
   use { 'theHamsta/nvim-dap-virtual-text', config = [[require('nvim-dap-virtual-text').setup()]] }
   -- Fun
   use {
