@@ -2,7 +2,6 @@
 
 brew 'aria2'                                   # Multi-protocol download client.
 brew 'bat'                                     # A cat clone with wings.
-brew 'cloc'                                    # Count lines of code in a directory.
 brew 'cmatrix'                                 # Matrix in the terminal.
 brew 'coreutils'                               # GNU core utilities (Mac is BSD).
 brew 'cowsay'                                  # Configurable talking characters in ASCII art.
@@ -48,10 +47,8 @@ brew 'netcat'                                  # Utility for managing network co
 brew 'node'                                    # Node.js.
 brew 'nyancat'                                 # Nyancat in your terminal, rendered through ANSI escape sequences.
 brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
-brew 'pigz'                                    # Parallel Implementation of GZip
 brew 'pv'                                      # Monitor the progress of data through a pipe.
 brew 'python3'                                 # Python 3
-brew 'ranger'                                  # File browser.
 brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
 brew 'rename'                                  # File renaming utilities.
 brew 'rig'                                     # Random Identity Generator
@@ -63,7 +60,6 @@ brew 'sshuttle'                                # Proxy server that works as a po
 brew 'starship'                                # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 brew 'svn'                                     # Subversion, required for some of the font casks
 brew 'teamookla/speedtest/speedtest'           # Ookla Speedtest
-brew 'tig'                                     # Text-mode interface for git.
 brew 'tmux'                                    # Terminal multiplexer.
 brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
 brew 'vim'                                     # Vi "workalike" with many additional features.
@@ -79,7 +75,6 @@ cask '1password'                 # Password manager.
 cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
 cask 'alfred'                    # Power-user spotlight.
 cask 'appcleaner'                # Mac app uninstaller.
-cask 'atom'                      # Open source hackable text editor from GitHub.
 cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
 cask 'firefox'                   # Web browser from Mozilla.
@@ -90,7 +85,6 @@ cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 cask 'paw'                       # The most advanced API tool for Mac
-cask 'rocket'                    # Emoji autocomplete for any app 🚀
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
