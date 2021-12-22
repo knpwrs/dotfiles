@@ -17,9 +17,6 @@ nvim_set_keymap('t', '<C-d>', [[<C-\><C-n>]], { noremap = true })
 -- Allow <C-d> to be sent to terminal
 nvim_set_keymap('t', '<C-f>', '<C-d>', { noremap = true })
 
--- Map <Cr> to : in normal mode
-nvim_set_keymap('n', '<Cr>', ':', { noremap = true })
-
 -- Toggle relative line numbers
 cmd([[
   function! NumberToggle()
