@@ -66,6 +66,18 @@ git show <commit>
 # Optimize Git Repo
 git gc --prune=now --aggressive
 
+# Print hash of HEAD
+git rev-parse HEAD | tr -d '\n'
+
+# Copy hash of HEAD
+git rev-parse HEAD | tr -d '\n' | pbcopy
+
+# Print short hash of HEAD
+git rev-parse HEAD | head -c 7
+
+# Copy short hash of HEAD
+git rev-parse HEAD | head -c 7 | pbcopy
+
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
 $ branch: git branch | cut -c 3-
