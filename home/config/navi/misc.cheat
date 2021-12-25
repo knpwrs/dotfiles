@@ -32,3 +32,6 @@ $ pngs: fd -e png --- --multi --map "navi fn map::expand"
 
 # Expand Short URL on Clipboard
 curl -sIL $(pbpaste) | grep -i '^location' | cut -c 11- | pbcopy
+
+# Tunnel localhost to public URL
+ssh -R 80:localhost:<local_port> nokey@localhost.run
