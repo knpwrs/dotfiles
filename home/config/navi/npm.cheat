@@ -33,7 +33,7 @@ npm init -y
 # Symlink a package folder
 npm link
 
-# Run an arbitrary npm script
+# Select and run an npm script
 npm run <script>
 
 # Run the build script
