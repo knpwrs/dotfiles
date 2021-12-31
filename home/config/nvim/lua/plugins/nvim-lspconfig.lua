@@ -56,6 +56,11 @@ li.on_server_ready(function(server)
       client.resolved_capabilities.document_range_formatting = false
     end
 
+    -- Automatically format for servers which support it
+    if client.resolved_capabilities.document_formatting then
+      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    end
+
     -- Attach vim-illuminate
     illum.on_attach(client)
   end
