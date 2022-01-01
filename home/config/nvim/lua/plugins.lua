@@ -75,6 +75,7 @@ require('packer').startup(function ()
   use { 'tommcdo/vim-fugitive-blame-ext', requires = {{'vim-fugitive'}} }
   use 'tpope/vim-obsession'
   use 'tpope/vim-repeat'
+  use 'tpope/vim-sleuth'
   use 'tpope/vim-speeddating'
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
