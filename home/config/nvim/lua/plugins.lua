@@ -67,12 +67,12 @@ require('packer').startup(function ()
   use { 'szw/vim-maximizer', config = [[require('plugins.vim-maximizer')]] }
   use 'tmux-plugins/vim-tmux-focus-events'
   use 'tommcdo/vim-exchange'
+  use { 'tommcdo/vim-fugitive-blame-ext', requires = {{'vim-fugitive'}} }
   use 'tpope/vim-abolish'
   use { 'tpope/vim-dadbod', cmd = {'DB'} }
   use 'tpope/vim-endwise'
   use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
-  use { 'tommcdo/vim-fugitive-blame-ext', requires = {{'vim-fugitive'}} }
   use 'tpope/vim-obsession'
   use 'tpope/vim-repeat'
   use 'tpope/vim-sleuth'
