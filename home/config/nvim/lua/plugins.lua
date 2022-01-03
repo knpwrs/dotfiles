@@ -38,7 +38,7 @@ require('packer').startup(function ()
     requires = {{'plenary.nvim'}},
     config = [[require('plugins.gitsigns')]],
   }
-  use 'lukas-reineke/indent-blankline.nvim'
+  use { 'lukas-reineke/indent-blankline.nvim', config = [[require('plugins.indent-blankline')]] }
   use { 'luukvbaal/stabilize.nvim', config = [[require('stabilize').setup()]] }
   -- Enhancement Plugins
   use { 'AndrewRadev/dsf.vim', config = [[require('plugins.dsf')]] }
@@ -48,6 +48,7 @@ require('packer').startup(function ()
   use 'dhruvasagar/vim-table-mode'
   use 'editorconfig/editorconfig-vim'
   use 'godlygeek/tabular'
+  use { 'goolord/alpha-nvim', config = [[require('plugins.alpha')]] }
   use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
   use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
   use {
