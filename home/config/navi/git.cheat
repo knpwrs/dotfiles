@@ -42,6 +42,12 @@ git restore --staged <staged_files>
 # Delete local branches not on origin
 git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D
 
+# Delete a branch
+git branch -d <branch>
+
+# Force-Delete a branch
+git branch -D <branch>
+
 # Checkout last branch
 git checkout -
 
