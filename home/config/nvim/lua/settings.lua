@@ -5,6 +5,7 @@
 
 local cmd = vim.cmd
 local env = vim.env
+local g = vim.g
 local o = vim.o
 local opt = vim.opt
 
@@ -27,6 +28,8 @@ cmd('hi Search cterm=NONE ctermbg=0 ctermfg=white')
 cmd('hi Pmenu cterm=NONE ctermbg=white ctermfg=0')
 cmd('hi MatchParen cterm=NONE ctermbg=NONE ctermfg=red')
 
+-- Set <Leader> to <Space>
+g.mapleader = ' '
 -- Use spaces instead of tabs.
 o.expandtab = true
 -- Tab key indents by 2 spaces.
