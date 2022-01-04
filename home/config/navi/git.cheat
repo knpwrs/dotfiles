@@ -84,6 +84,14 @@ git rev-parse HEAD | head -c 7
 # Copy short hash of HEAD
 git rev-parse HEAD | head -c 7 | pbcopy
 
+# Create new "Workspace" with a different git author
+cat >> .envrc <<EOF
+export GIT_AUTHOR_NAME="<git_author_name>"
+export GIT_AUTHOR_EMAIL="<git_author_email>"
+export GIT_COMMITTER_NAME=\$GIT_AUTHOR_NAME
+export GIT_COMMITTER_EMAIL=\$GIT_AUTHOR_EMAIL
+EOF
+
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi
 $ branch: git branch | cut -c 3-
