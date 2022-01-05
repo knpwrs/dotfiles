@@ -61,7 +61,7 @@ git pull --rebase=interactive origin <main_branch>
 git revert --no-commit <ref>
 
 # Checkout contents of file
-git checkout -- <git_file>
+git checkout -- <git_changed_file>
 
 # Checkout contents of file on another branch
 git checkout <branch_or_tag> -- <git_file>
@@ -98,4 +98,5 @@ $ branch: git branch | cut -c 3-
 $ main_branch: git branch | cut -c 3- | grep -m 1 'main\|master\|dev\|development\|trunk'
 $ branch_or_tag: (git branch | cut -c 3-; git tag)
 $ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
+$ git_changed_file: git diff --name-only
 $ git_file: git ls-files
