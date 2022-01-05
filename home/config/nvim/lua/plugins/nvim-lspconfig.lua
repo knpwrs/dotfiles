@@ -50,8 +50,8 @@ li.on_server_ready(function(server)
   }
 
   opts.on_attach = function(client)
-    if server.name == 'tsserver' then
-      -- Prefer prettier over tsserver formatting
+    -- Prefer prettier formatting over null-ls
+    if server.name == 'tsserver' or server.name == 'jsonls' then
       client.resolved_capabilities.document_formatting = false
       client.resolved_capabilities.document_range_formatting = false
     end
