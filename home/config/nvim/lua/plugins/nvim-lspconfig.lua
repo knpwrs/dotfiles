@@ -13,6 +13,7 @@ wk.register(
       k = { function() lsp.buf.hover() end, 'Hover' },
       l = { function() diag.open_float() end, 'Show Line Diagnostics' },
       q = { function() diag.setloclist() end, 'Set Location List' },
+      R = { '<Cmd>LspRestart<Cr>', 'Restart LSP' },
       m = { function() lsp.buf.rename() end, 'Rename' },
       y = { function() lsp.buf.type_definition() end, 'Type Definition' },
       -- Telescope lsp maps
