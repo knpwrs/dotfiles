@@ -62,6 +62,7 @@ brew 'svn'                                     # Subversion, required for some o
 brew 'teamookla/speedtest/speedtest'           # Ookla Speedtest
 brew 'tmux'                                    # Terminal multiplexer.
 brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
+brew 'up'                                      # Ultimate Plumber
 brew 'vim'                                     # Vi "workalike" with many additional features.
 brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit).
 brew 'watch'                                   # Executes a program periodically, showing output fullscreen
