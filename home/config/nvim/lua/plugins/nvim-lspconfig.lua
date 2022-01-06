@@ -36,8 +36,8 @@ wk.register(
 
 wk.register(
   {
-    ['[d'] = { function() lsp.diagnostic.goto_prev() end, 'Previous Diagnostic' },
-    [']d'] = { function() lsp.diagnostic.goto_next() end, 'Next Diagnostic' },
+    ['[d'] = { function() diag.goto_prev() end, 'Previous Diagnostic' },
+    [']d'] = { function() diag.goto_next() end, 'Next Diagnostic' },
     -- vim-illuminate maps
     [']i'] = { function() illum.next_reference({ wrap = true }) end, 'Move to next doc highlight' },
     ['[i'] = { function() illum.next_reference({ wrap = true, reverse = true }) end, 'Move to prev doc highlight' },
