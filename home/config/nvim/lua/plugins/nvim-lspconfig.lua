@@ -1,6 +1,7 @@
 local wk = require('which-key')
 local li = require('nvim-lsp-installer')
 local illum = require('illuminate')
+local aerial = require('aerial')
 local lsp = vim.lsp
 local diag = vim.diagnostic
 
@@ -8,6 +9,7 @@ wk.register(
   {
     l = {
       name = 'LSP',
+      a = { '<Cmd>AerialToggle<Cr>', 'Toggle Aerial' } ,
       f = { function() lsp.buf.formatting() end, 'Format' },
       i = { function() lsp.buf.implementation() end, 'Implementation' },
       k = { function() lsp.buf.hover() end, 'Hover' },
@@ -50,7 +52,7 @@ li.on_server_ready(function(server)
     capabilities = capabilities,
   }
 
-  opts.on_attach = function(client)
+  opts.on_attach = function(client, bufnr)
     -- Prefer prettier formatting over null-ls
     if server.name == 'tsserver' or server.name == 'jsonls' then
       client.resolved_capabilities.document_formatting = false
@@ -64,6 +66,9 @@ li.on_server_ready(function(server)
 
     -- Attach vim-illuminate
     illum.on_attach(client)
+
+    -- Attach aerial.nvim
+    aerial.on_attach(client, bufnr)
   end
 
   -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)

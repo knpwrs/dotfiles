@@ -132,6 +132,7 @@ require('packer').startup({
     }
     use { 'neovim/nvim-lspconfig', config = [[require('plugins.nvim-lspconfig')]], requires = {{'vim-illuminate'}} }
     use { 'ray-x/lsp_signature.nvim', config = [[require('plugins.lsp-signature')]] }
+    use { 'stevearc/aerial.nvim', config = [[require('plugins.aerial')]] }
     use 'williamboman/nvim-lsp-installer'
     -- DAP
     use { 'mfussenegger/nvim-dap', config = [[require('plugins.nvim-dap')]] }
