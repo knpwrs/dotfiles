@@ -39,6 +39,12 @@ ssh -R 80:localhost:<local_port> nokey@localhost.run
 # TTS Read a File and Output an AIFF
 say -v <voice> -f <file_to_read> -o <aiff_file_name>.aiff --progress
 
+# TTS Read a File and Output an M4A
+say -v <voice> -f <file_to_read> -o <tmp_file> --progress && \
+ffmpeg -i <tmp_file> <m4a_file_name>.m4a && \
+rm <tmp_file>
+
 $ voice: say -v '?' | grep en_US | cut -d' ' -f1
 $ file_to_read: fd
 $ aiff_file_name: basename <file_to_read>
+$ tmp_file: mktemp
