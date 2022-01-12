@@ -2,7 +2,7 @@ local g = vim.g
 local cmd = vim.cmd
 
 g.tokyonight_style = 'night'
-g.tokyonight_colors = { bg = '#121212', bg_dark = '#101010', bg_sidebar = '#101010' }
+g.tokyonight_colors = { bg = '#000000', bg_dark = '#000000', bg_sidebar = '#000000' }
 
 cmd[[colorscheme tokyonight]]
 
