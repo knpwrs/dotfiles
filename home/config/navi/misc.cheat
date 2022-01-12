@@ -48,3 +48,8 @@ $ voice: say -v '?' | grep en_US | cut -d' ' -f1
 $ file_to_read: fd
 $ aiff_file_name: basename <file_to_read>
 $ tmp_file: mktemp
+
+# Pick a command from $PATH
+<cmd>
+
+$ cmd: zsh -c "whence -pm '*'"
