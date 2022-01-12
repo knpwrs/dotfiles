@@ -1,0 +1,4 @@
+% Docker
+
+# Run new container and bind a port
+docker run -p <host_port>:<container_port> <image>
