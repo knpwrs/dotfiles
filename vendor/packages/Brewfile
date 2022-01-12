@@ -38,6 +38,7 @@ brew 'jcamiel/hurl/hurl'                       # Hurl CLI for HTTP testing.
 brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
 brew 'lazygit'                                 # Simple terminal UI for git commands
+brew 'lazydocker'                              # Simple terminal UI for docker commands
 brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
 brew 'moreutils'                               # Other useful utilities (vipe, vidir, etc) (https://joeyh.name/code/moreutils/)
