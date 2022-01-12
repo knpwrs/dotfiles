@@ -51,6 +51,7 @@ require('packer').startup({
     use 'godlygeek/tabular'
     use { 'goolord/alpha-nvim', config = [[require('plugins.alpha')]] }
     use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
+    use { 'jpalardy/vim-slime', config = [[require('plugins.vim-slime')]] }
     use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
     use {
       'mhinz/vim-grepper',
