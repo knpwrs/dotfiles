@@ -1,0 +1,22 @@
+name: Check Brewfile
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+jobs:
+  check-homebrew:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Tap and Update
+        working-directory: vendor/packages
+        run: |
+          brew bundle list --tap | xargs -n1 brew tap
+          brew bundle list --formula | grep / | xargs -n1 dirname | xargs -n1 brew tap
+          brew update
+      - name: Check Formulae
+        working-directory: vendor/packages
+        run: brew bundle list --formula | xargs brew info --formulae
+      - name: Check Casks
+        working-directory: vendor/packages
+        run: brew bundle list --cask | xargs brew info --casks
