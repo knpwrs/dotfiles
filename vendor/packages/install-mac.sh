@@ -2,7 +2,7 @@
 
 if  [[ "$OSTYPE" = darwin* ]]; then
   sudo xcodebuild -license
-  hash brew 2>/dev/null || { ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && echo "Please agree to the Xcode license." && sudo xcodebuild -license }
+  hash brew 2>/dev/null || { /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" }
   brew update
   brew upgrade
   brew bundle
