@@ -26,10 +26,13 @@ telescope.setup {
   },
 }
 
+telescope.load_extension('env')
+
 wk.register(
   {
     f = {
       name = 'Telescope',
+      e = { '<Cmd>Telescope env<Cr>', 'Environment Variables' },
       f = { '<Cmd>Telescope fd hidden=true<Cr>', 'Files' },
       g = { '<Cmd>Telescope live_grep<Cr>', 'Live Grep' },
       s = { '<Cmd>Telescope grep_string<Cr>', 'Grep String Under Cursor' },
