@@ -8,10 +8,10 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   brew bundle
   brew cleanup
   # Use brew-installed zsh if we are not in CI and not using it already
-  fgrep -q '/usr/local/bin/zsh' /etc/shells 2> /dev/null
+  fgrep -q $(brew --prefix)/bin/zsh /etc/shells 2> /dev/null
   if [ $? -ne 0 ] && [ -z ${CI+x} ]; then
-    echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells
-    chsh -s /usr/local/bin/zsh
+    echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells
+    chsh -s $(brew --prefix)/bin/zsh
   fi
   # Setup fzf
   yes | $(brew --prefix)/opt/fzf/install

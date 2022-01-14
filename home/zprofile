@@ -20,12 +20,15 @@ fi
 ## Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
+BREW_PREFIX=$(/opt/homebrew/bin/brew --prefix)
+
 ## Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/bin # Custom home bin directory
   $HOME/.bin # bin directory from this repo
-  /usr/local/opt/coreutils/libexec/gnubin # GNU coreutils
-  /usr/local/opt/make/libexec/gnubin # GNU make
+  $BREW_PREFIX/opt/coreutils/libexec/gnubin # GNU coreutils
+  $BREW_PREFIX/opt/make/libexec/gnubin # GNU make
+  $BREW_PREFIX/bin
   /usr/local/{bin,sbin}
   $path
 )
