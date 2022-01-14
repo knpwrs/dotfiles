@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 if  [[ "$OSTYPE" = darwin* ]]; then
-  sudo xcodebuild -license
+  sudo xcodebuild -license accept
   hash brew 2>/dev/null || { /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" }
   brew update
   brew upgrade
