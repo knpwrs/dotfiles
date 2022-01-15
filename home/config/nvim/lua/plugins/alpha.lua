@@ -25,10 +25,6 @@ dashboard.section.buttons.val = {
   button('q', '  Quit NVIM', ':qa<Cr>'),
 }
 
-local handle = io.popen('fortune')
-
-handle:close()
-
 dashboard.opts.opts.noautocmd = true
 
 dashboard.section.footer.val = 'Soli Deo Gloria'
