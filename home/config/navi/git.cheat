@@ -21,6 +21,9 @@ git rebase -i <branch>
 # Rebase interactively on a given commit
 git rebase -i <commit>
 
+# Rebase interactively before the root
+git rebase -i --root
+
 # cherry-pick a given branch
 git cherry-pick -i <branch>
 
