@@ -17,7 +17,7 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # Paths
-## Ensure path arrays do not contain duplicates.
+## Ensure path arrays do not contain duplicates (except manpath, which needs gnuman placed at the start)
 typeset -gU cdpath fpath mailpath path
 
 BREW_PREFIX=$(brew --prefix || /opt/homebrew/bin/brew --prefix)
@@ -43,7 +43,10 @@ if [[ -d "$RUST_BIN" ]]; then
 fi
 
 # GNU coreutils man path fix
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
+manpath=(
+  /usr/local/opt/coreutils/libexec/gnuman
+  $manpath
+)
 
 # Temporary Files
 if [[ ! -d "$TMPDIR" ]]; then
