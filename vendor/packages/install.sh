@@ -11,3 +11,4 @@ $DOTPACKAGES/install-crates.sh
 $DOTPACKAGES/install-npm.sh
 $DOTPACKAGES/install-gems.sh
 $DOTPACKAGES/install-pip.sh
+$DOTPACKAGES/install-gh.sh
