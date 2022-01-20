@@ -85,6 +85,7 @@ require('packer').startup({
     use 'tpope/vim-unimpaired'
     use { 'vitalk/vim-simple-todo', config = [[require('plugins.vim-simple-todo')]] }
     use { 'windwp/nvim-autopairs', config = [[require('plugins.nvim-autopairs')]] }
+    use { 'windwp/nvim-ts-autotag', config = [[require('plugins.nvim-ts-autotag')]] }
     -- Movement Plugins
     use { 'ggandor/lightspeed.nvim', config = [[require('plugins.lightspeed')]] }
     -- Navigation Plugins
