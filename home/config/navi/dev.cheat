@@ -1,0 +1,4 @@
+% Dev
+
+# Generate a LICENSE file
+npx lice
