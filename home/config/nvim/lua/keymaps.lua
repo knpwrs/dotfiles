@@ -31,8 +31,8 @@ cmd([[
 ]])
 nvim_set_keymap('n', '<C-n>', ':call NumberToggle()<Cr>', { noremap = true })
 
--- <C-l> redraws the screen and removes any search highlighting.
-nvim_set_keymap('n', '<C-l>', ':nohl<Cr><C-l>', { noremap = true })
+-- <Leader>/ redraws the screen and removes any search highlighting.
+nvim_set_keymap('n', '<Leader>/', '<Cmd>nohl<Cr>', { noremap = true })
 
 -- Do not jump on invocation of *
 nvim_set_keymap('n', '*', ':keepjumps normal! mi*`i<Cr>', {})
