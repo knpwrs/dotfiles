@@ -21,13 +21,8 @@ local function prettier_condition(utils)
     '.prettier.config.cjs',
     '.prettierrc.toml',
   }
-  for i=1,#files do
-    if utils.root_has_file(files[i]) then
-      return true
-    end
-  end
 
-  return false
+  return utils.root_has_file(files)
 end
 
 local sources = {
