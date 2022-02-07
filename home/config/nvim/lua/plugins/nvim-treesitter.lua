@@ -12,6 +12,9 @@ require('nvim-treesitter.configs').setup {
     'toml',
     'typescript',
   },
+  endwise = {
+    enable = true,
+  },
   highlight = {
     enable = true,
   },

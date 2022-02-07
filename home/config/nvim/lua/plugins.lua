@@ -66,6 +66,7 @@ require('packer').startup({
       config = [[require('plugins.comment-nvim')]],
     }
     use { 'nvim-lualine/lualine.nvim', config = [[require('plugins.lualine')]] }
+    use { 'RRethy/nvim-treesitter-endwise', requires = {{'nvim-treesitter/nvim-treesitter'}} }
     use 'sickill/vim-pasta'
     use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
     use { 'szw/vim-maximizer', config = [[require('plugins.vim-maximizer')]] }
@@ -74,7 +75,6 @@ require('packer').startup({
     use { 'tommcdo/vim-fugitive-blame-ext', requires = {{'vim-fugitive'}} }
     use 'tpope/vim-abolish'
     use { 'tpope/vim-dadbod', cmd = {'DB'} }
-    use 'tpope/vim-endwise'
     use 'tpope/vim-eunuch'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-obsession'
