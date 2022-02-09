@@ -41,6 +41,7 @@ brew 'lazygit'                                 # Simple terminal UI for git comm
 brew 'lazydocker'                              # Simple terminal UI for docker commands
 brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
+brew 'miller'                                  # Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON
 brew 'mkcert'                                  # Simple tool to make locally trusted development certificates
 brew 'moreutils'                               # Other useful utilities (vipe, vidir, etc) (https://joeyh.name/code/moreutils/)
 brew 'navi'                                    # An interactive cheatsheet tool for the command-line.
