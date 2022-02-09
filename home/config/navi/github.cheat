@@ -3,6 +3,9 @@
 # Show CI status for a single pull request
 gh pr checks
 
+# Checkout a Pull Request
+gh pr checkout <pr_number>
+
 # Close a pull request
 gh pr close
 
@@ -129,3 +132,5 @@ gh clean-branches
 
 # Force-clean branches in current repo
 gh clean-branches --force
+
+$ pr_number: gh pr list --- --map 'cut -f1'
