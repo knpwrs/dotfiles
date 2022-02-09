@@ -20,7 +20,7 @@ fi
 ## Ensure path arrays do not contain duplicates (except manpath, which needs gnuman placed at the start)
 typeset -gU cdpath fpath mailpath path
 
-BREW_PREFIX=$(brew --prefix || /opt/homebrew/bin/brew --prefix)
+BREW_PREFIX=$(hash brew 2>/dev/null && brew --prefix || /opt/homebrew/bin/brew --prefix)
 
 ## Set the list of directories that Zsh searches for programs.
 path=(
