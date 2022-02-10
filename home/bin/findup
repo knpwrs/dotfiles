@@ -1,0 +1,47 @@
+#!/bin/sh
+
+#
+# findup: locate a given filename in the nearest ancestor directory.
+#
+# Copyright 2019 Michael F. Lamb <http://datagrok.org>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free
+# Software Foundation, either version 3 of the License, or (at your option) any
+# later version.
+#
+# License: AGPLv3+ http://www.gnu.org/licenses/agpl.html
+#
+
+usage(){ cat <<- USAGE >&2
+	Usage: $0 FILENAME
+
+	Look for FILENAME in the current directory and all of its ancestors until
+	found. Return the full path of the closest match on standard output.
+
+	Example:
+
+	    Run 'make' from deep within your source hierarchy, like 'ant -find':
+	        make -f "\$(findup Makefile)"
+	USAGE
+}
+
+if [ ! "$1" ]; then
+	usage
+	exit 1
+fi
+
+path="$(pwd)"
+target="$1"
+
+while
+    if [ -e "$path/$target" ]; then
+        echo "$path/$target"
+        exit 0
+    fi
+    [ "$path" ]
+do
+    path="${path%/*}"
+done
+
+exit 1
