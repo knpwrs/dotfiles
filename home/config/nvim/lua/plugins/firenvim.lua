@@ -2,6 +2,25 @@ local wk = require('which-key')
 
 vim.o.guifont='monospace:h11'
 
+vim.g.firenvim_config = {
+  localSettings = {
+    [ [[.*]] ] = {
+      cmdline = 'firenvim',
+      priority = 0,
+      selector = 'textarea:not([readonly]):not([class="handsontableInput"]), div[role="textbox"]',
+      takeover = 'always',
+    },
+    [ [[.*docs\.google\.com.*]] ] = {
+      prioirty = 9,
+      takeover = 'never',
+    },
+    [ [[.*notion\.so.*]] ] = {
+      priority = 9,
+      takeover = 'never',
+    },
+  },
+}
+
 wk.register(
   {
     l = {
