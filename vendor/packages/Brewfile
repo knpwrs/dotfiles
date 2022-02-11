@@ -74,6 +74,7 @@ brew 'watch'                                   # Executes a program periodically
 brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
 brew 'wget'                                    # Internet file retriever.
 brew 'yarn'                                    # JavaScript package manager.
+brew 'yq'                                      # Like jq for yaml
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
 # Casks

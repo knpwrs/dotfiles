@@ -2,3 +2,15 @@
 
 # Generate a LICENSE file
 npx lice
+
+# Convert YAML to JSON
+<source> | yq -o=json -P | <dest>
+
+# Format JSON
+<source> | jq | <dest>
+
+# Tunnel localhost to public URL
+ssh -R 80:localhost:<local_port> nokey@localhost.run
+
+$ source: echo -e 'pbpaste\n'
+$ dest: echo -e 'pbcopy\n'
