@@ -12,6 +12,12 @@ npx lice
 # Format JSON
 <source> | jq | <dest>
 
+# URL-Encode Text
+<source> | tr -d '\n' | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync("/dev/stdin", "utf-8")))' | <dest>
+
+# URL-Decode Text
+<source> | node -e 'process.stdout.write(decodeURIComponent(require("fs").readFileSync("/dev/stdin", "utf-8")))' | tr -d '\n' | <dest>
+
 # Tunnel localhost to public URL
 ssh -R 80:localhost:<local_port> nokey@localhost.run
 
