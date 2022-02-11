@@ -152,6 +152,12 @@ require('packer').startup({
     }
     use 'RRethy/vim-illuminate'
     use { 'theHamsta/nvim-dap-virtual-text', config = [[require('nvim-dap-virtual-text').setup()]] }
+    -- Integration
+    use {
+      'glacambre/firenvim',
+      run = function() vim.fn['firenvim#install'](0) end,
+      config = [[require('plugins.firenvim')]],
+    }
     -- Fun
     use {
       'tamton-aquib/duck.nvim',
