@@ -13,10 +13,10 @@ npx lice
 <source> | jq | <dest>
 
 # URL-Encode Text
-<source> | tr -d '\n' | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync("/dev/stdin", "utf-8")))' | <dest>
+<source> | tr -d '\n' | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))' | <dest>
 
 # URL-Decode Text
-<source> | node -e 'process.stdout.write(decodeURIComponent(require("fs").readFileSync("/dev/stdin", "utf-8")))' | tr -d '\n' | <dest>
+<source> | node -e 'process.stdout.write(decodeURIComponent(require("fs").readFileSync(0, "utf-8")))' | tr -d '\n' | <dest>
 
 # Generate UUID
 uuidgen
