@@ -46,6 +46,7 @@ require('packer').startup({
     use { 'AndrewRadev/dsf.vim', config = [[require('plugins.dsf')]] }
     use { 'AndrewRadev/sideways.vim', config = [[require('plugins.sideways')]] }
     use 'AndrewRadev/splitjoin.vim'
+    use { 'bfredl/nvim-luadev', config = [[require('plugins.nvim-luadev')]] }
     use 'bronson/vim-trailing-whitespace'
     use 'dhruvasagar/vim-table-mode'
     use 'editorconfig/editorconfig-vim'
