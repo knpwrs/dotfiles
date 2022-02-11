@@ -18,6 +18,12 @@ npx lice
 # URL-Decode Text
 <source> | node -e 'process.stdout.write(decodeURIComponent(require("fs").readFileSync(0, "utf-8")))' | tr -d '\n' | <dest>
 
+# Base64-Encode
+<source> | base64 | <dest>
+
+# Base64-Decode
+<source> | base64 -d | <dest>
+
 # Generate UUID
 uuidgen
 
