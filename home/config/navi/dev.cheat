@@ -6,6 +6,9 @@ npx lice
 # Convert YAML to JSON
 <source> | yq -o=json -P | <dest>
 
+# Convert JSON to YAML
+<source> | yq -o=yaml -P | <dest>
+
 # Format JSON
 <source> | jq | <dest>
 
