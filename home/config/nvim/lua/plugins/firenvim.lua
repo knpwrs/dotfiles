@@ -23,15 +23,24 @@ vim.g.firenvim_config = {
 
 wk.register(
   {
-    l = {
-      function()
-        if vim.o.lines < 10 or vim.o.lines == 20 then
-          vim.o.lines = 10
-        else
-          vim.o.lines = 20
-        end
-      end,
-      'Toggle number of lines between 10 and 20',
+    f = {
+      name = 'firenvim',
+      l = {
+        function()
+          if vim.o.lines < 10 or vim.o.lines == 20 then
+            vim.o.lines = 10
+          else
+            vim.o.lines = 20
+          end
+        end,
+        'Toggle number of lines between 10 and 20',
+      },
+      m = {
+        function()
+          vim.o.filetype = 'markdown'
+        end,
+        'Set filetype to markdown',
+      },
     },
   },
   {
