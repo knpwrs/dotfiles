@@ -24,6 +24,24 @@ npx lice
 # Base64-Decode
 <source> | base64 -d | <dest>
 
+# Encode JWT (Plain Text Secret)
+<source> | jwt encode --secret <secret> | <dest>
+
+# Encode JWT (File Secret)
+<source> | jwt encode --secret @<file> | <dest>
+
+# Encode JWT (Base64 Secret)
+<source> | jwt encode --secret b64:<secret> | <dest>
+
+# Decode JWT (Plain Text Secret)
+<source> | jwt decode --secret <secret> | <dest>
+
+# Decode JWT (File Secret)
+<source> | jwt decode --secret @<file> | <dest>
+
+# Decode JWT (Base64 Secret)
+<source> | jwt decode --secret b64:<secret> | <dest>
+
 # Generate UUID
 uuidgen
 
@@ -32,3 +50,4 @@ ssh -R 80:localhost:<local_port> nokey@localhost.run
 
 $ source: echo -e 'pbpaste\n'
 $ dest: echo -e 'pbcopy\n'
+$ file: fd
