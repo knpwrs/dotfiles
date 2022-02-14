@@ -1,5 +1,4 @@
 local nls = require('null-ls')
-local lspconfig = require('lspconfig')
 
 local function on_attach(client)
   if client.resolved_capabilities.document_formatting then
@@ -26,7 +25,7 @@ local function prettier_condition(utils)
 end
 
 local sources = {
-  nls.builtins.formatting.prettierd.with({
+  nls.builtins.formatting.prettier.with({
     condition = prettier_condition,
   })
 }
