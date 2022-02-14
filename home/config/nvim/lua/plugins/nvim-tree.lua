@@ -27,6 +27,9 @@ g.nvim_tree_show_icons = {
 }
 
 tree.setup({
+  update_to_buf_dir = {
+     enable = false, -- Required for dirbuf.nvim
+  },
   view = {
     mappings = {
       list = {
