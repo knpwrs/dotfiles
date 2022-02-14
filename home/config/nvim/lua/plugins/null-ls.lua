@@ -22,7 +22,7 @@ local function prettier_condition(utils)
     '.prettierrc.toml',
   }
 
-  return utils.root_has_file(files)
+  return utils.has_file(files) or utils.root_has_file(files)
 end
 
 local sources = {
