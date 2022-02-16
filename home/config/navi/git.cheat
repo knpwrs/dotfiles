@@ -103,3 +103,4 @@ $ branch_or_tag: (git branch | cut -c 3-; git tag)
 $ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
 $ git_changed_file: git diff --name-only
 $ git_file: git ls-files
+$ ref: echo -e 'HEAD\n'
