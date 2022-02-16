@@ -182,6 +182,11 @@ alias ip6='dig @ns1.google.com TXT o-o.myaddr.l.google.com +short -6'
 # Pasteboard jq
 alias pbjq='pbpaste | jq'
 
+# Explain Previous Command
+explain() {
+  open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
+}
+
 # Make aliases available to sudo
 alias sudo='sudo '
 

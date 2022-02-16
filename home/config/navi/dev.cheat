@@ -72,6 +72,9 @@ cht.sh --shell
 # Get quick help for a command
 cht.sh <command>
 
+# Explain Previous Command
+open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
+
 $ source: echo -e 'pbpaste\n'
 $ dest: echo -e 'pbcopy\n'
 $ fd_pattern: echo -e '.\n'
