@@ -20,13 +20,8 @@ tools. `vendor` contains subtrees for external repositories.
 
 ## Other Tips
 
-### `tmux` and `neovim` sessions
+### `tmux`
 
-* In `neovim` run `:Obsess` to start recording your neovim session
-  * Restore session with `vim -S Session.vim`
-  * `:Obsess` can also be passed a filename to record to
-  * I am not using `set -g @resurrect-strategy-nvim 'session'` in tmux because
-    it cannot restore multiple vim sessions in the same working directory
 * In `tmux` press `C-a C-s` to save your tmux session
 * In `tmux` press `C-a C-r` to restore your tmux session
 

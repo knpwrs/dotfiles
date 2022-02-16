@@ -51,7 +51,6 @@ require('packer').startup({
     use 'dhruvasagar/vim-table-mode'
     use 'editorconfig/editorconfig-vim'
     use 'godlygeek/tabular'
-    use { 'goolord/alpha-nvim', config = [[require('plugins.alpha')]] }
     use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
     use { 'jpalardy/vim-slime', config = [[require('plugins.vim-slime')]] }
     use 'lambdalisue/suda.vim' -- temporary, see keybindings.lua
@@ -67,6 +66,7 @@ require('packer').startup({
       config = [[require('plugins.comment-nvim')]],
     }
     use { 'nvim-lualine/lualine.nvim', config = [[require('plugins.lualine')]] }
+    use { 'rmagatti/auto-session', config = [[require('auto-session').setup()]] }
     use { 'RRethy/nvim-treesitter-endwise', requires = {{'nvim-treesitter/nvim-treesitter'}} }
     use 'sickill/vim-pasta'
     use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
@@ -78,7 +78,6 @@ require('packer').startup({
     use { 'tpope/vim-dadbod', cmd = {'DB'} }
     use 'tpope/vim-eunuch'
     use 'tpope/vim-fugitive'
-    use 'tpope/vim-obsession'
     use 'tpope/vim-repeat'
     use 'tpope/vim-sleuth'
     use 'tpope/vim-speeddating'
