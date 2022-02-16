@@ -66,6 +66,12 @@ fd '<fd_pattern>' -x rg '<find_pattern>' '{}'
 # Find Across Specific Files
 rg '<find_pattern>' <files>
 
+# Launch cheat.sh shell
+cht.sh --shell
+
+# Get quick help for a command
+cht.sh <command>
+
 $ source: echo -e 'pbpaste\n'
 $ dest: echo -e 'pbcopy\n'
 $ fd_pattern: echo -e '.\n'
