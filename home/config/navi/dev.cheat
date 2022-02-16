@@ -60,6 +60,12 @@ sd '<find_pattern>' '<replace_pattern>' <files>
 # Find and Replace Literal Strings Across Specific Files
 sd -s '<find_string>' '<replace_string>' <files>
 
+# Find Across Files
+fd '<fd_pattern>' -x rg '<find_pattern>' '{}'
+
+# Find Across Specific Files
+rg '<find_pattern>' <files>
+
 $ source: echo -e 'pbpaste\n'
 $ dest: echo -e 'pbcopy\n'
 $ fd_pattern: echo -e '.\n'
