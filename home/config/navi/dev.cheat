@@ -49,11 +49,12 @@ uuidgen
 ssh -R 80:localhost:<local_port> nokey@localhost.run
 
 # Find and Replace Across Files
-fd '<file_pattern>' -x sd '<find_pattern>' '<replace_pattern>' '{}'
+fd '<fd_pattern>' -x sd '<find_pattern>' '<replace_pattern>' '{}'
 
 # Find and Replace Literal Strings Across Files
-fd '<file_pattern>' -x sd -s '<find_string>' '<replace_string>' '{}'
+fd '<fd_pattern>' -x sd -s '<find_string>' '<replace_string>' '{}'
 
 $ source: echo -e 'pbpaste\n'
 $ dest: echo -e 'pbcopy\n'
+$ fd_pattern: echo -e '.\n'
 $ file: fd
