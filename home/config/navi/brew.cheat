@@ -21,6 +21,12 @@ brew uninstall --cask --zap <installed_cask>
 # Search Homebrew
 brew search <query>
 
+# Open a Formula Homepage
+open $(brew info --json <formula> | jq -r '.[].homepage')
+
+# Open a Cask Homepage
+open $(brew info --json <cask> | jq -r '.[].homepage')
+
 # Update Homebrew
 brew update
 
