@@ -12,3 +12,4 @@ $DOTPACKAGES/install-npm.sh
 $DOTPACKAGES/install-gems.sh
 $DOTPACKAGES/install-pip.sh
 $DOTPACKAGES/install-gh.sh
+$DOTPACKAGES/install-bin.sh

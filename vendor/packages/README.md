@@ -34,6 +34,10 @@ Installs neovim plugins and Treesitter parsers.
 Installs Homebrew (if necessary) and installs everything listed in `Brewfile`.
 Exits if not running on macOS.
 
+## `install-bin.sh`
+
+Installs miscellaneous binaries not available in package managers.
+
 ### QuickLook Plugins and Quarantine
 
 To see the quarantine status of installed QuickLook plugins:

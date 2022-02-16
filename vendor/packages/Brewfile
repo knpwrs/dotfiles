@@ -59,6 +59,7 @@ brew 'reattach-to-user-namespace'              # Utility for tighter macOS and t
 brew 'rename'                                  # File renaming utilities.
 brew 'rig'                                     # Random Identity Generator
 brew 'ripgrep'                                 # Faster Silver Searcher.
+brew 'rlwrap'                                  # A small utility that uses the GNU Readline library to allow the editing of keyboard input for any command.
 brew 'rsync'                                   # Utility that provides fast incremental file transfer
 brew 'sd'                                      # Intuitive find & replace CLI (sed alternative)
 brew 'sl'                                      # Steam Locomotive
