@@ -54,7 +54,14 @@ fd '<fd_pattern>' -x sd '<find_pattern>' '<replace_pattern>' '{}'
 # Find and Replace Literal Strings Across Files
 fd '<fd_pattern>' -x sd -s '<find_string>' '<replace_string>' '{}'
 
+# Find and Replace Across Specific Files
+sd '<find_pattern>' '<replace_pattern>' <files>
+
+# Find and Replace Literal Strings Across Specific Files
+sd -s '<find_string>' '<replace_string>' <files>
+
 $ source: echo -e 'pbpaste\n'
 $ dest: echo -e 'pbcopy\n'
 $ fd_pattern: echo -e '.\n'
 $ file: fd
+$ files: fd --- --multi --map 'navi fn map::expand'
