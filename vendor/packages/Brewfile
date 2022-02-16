@@ -60,6 +60,7 @@ brew 'rename'                                  # File renaming utilities.
 brew 'rig'                                     # Random Identity Generator
 brew 'ripgrep'                                 # Faster Silver Searcher.
 brew 'rsync'                                   # Utility that provides fast incremental file transfer
+brew 'sd'                                      # Intuitive find & replace CLI (sed alternative)
 brew 'sl'                                      # Steam Locomotive
 brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file.
 brew 'sshuttle'                                # Proxy server that works as a poor man's VPN.
