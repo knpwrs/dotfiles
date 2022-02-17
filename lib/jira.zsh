@@ -40,5 +40,5 @@ function jurl() {
   echo "https://$JIRA_TEAM.atlassian.net/browse/$ticket"
 }
 
-alias jo='open $(jurl)'
+alias jopen='open $(jurl)'
 alias jcp='jurl | pbcopy'
