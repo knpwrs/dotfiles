@@ -1,4 +1,3 @@
-local cmd = vim.cmd
 local wk = require('which-key')
 local telescope = require 'telescope'
 local actions = require 'telescope.actions'
@@ -45,6 +44,7 @@ wk.register(
       T = { '<Cmd>Telescope builtin<Cr>', 'Built-in Telescope Finders' },
       ['='] = { '<Cmd>Telescope spell_suggest<Cr>', 'Spelling Suggestions' },
     },
+    [';'] = { '<Cmd>Telescope commands<Cr>', 'Commands' },
   },
   {
     prefix = '<Leader>'
