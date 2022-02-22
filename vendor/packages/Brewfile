@@ -81,6 +81,9 @@ brew 'yarn'                                    # JavaScript package manager.
 brew 'yq'                                      # Like jq for yaml
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
+# My fomrulae
+brew 'knpwrs/tap/woodo'                        # It's a weird tree
+
 # Casks
 cask '1password'                 # Password manager.
 cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
