@@ -44,7 +44,8 @@ fi
 
 # GNU coreutils man path fix
 manpath=(
-  /usr/local/opt/coreutils/libexec/gnuman
+  $BREW_PREFIX/opt/coreutils/libexec/gnuman
+  $BREW_PREFIX/share/man
   $manpath
 )
 
