@@ -2,16 +2,11 @@
 export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ -d $ZINIT_HOME ]; then
-  # Customization: https://github.com/zsh-users/zsh-syntax-highlighting/blob/9523d6d49cb3d4db5bd84c3cec6168a2057fe3ab/docs/highlighters/main.md
-  typeset -A ZSH_HIGHLIGHT_STYLES
-  ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
-  ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
-
   source $ZINIT_HOME/zinit.zsh
   zinit light Aloxaf/fzf-tab
   zinit light Tarrasch/zsh-bd
+  zinit light zdharma-continuum/fast-syntax-highlighting
   zinit light zsh-users/zsh-autosuggestions
-  zinit light zsh-users/zsh-syntax-highlighting
 fi
 
 # Load zsh modules
