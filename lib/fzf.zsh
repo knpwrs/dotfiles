@@ -1,4 +1,4 @@
-#!/usr/local/bin zsh
+#!/usr/bin/env zsh
 
 # Use fd instead of find for speed
 export FZF_DEFAULT_COMMAND='fd --type f --hidden -E .git'
