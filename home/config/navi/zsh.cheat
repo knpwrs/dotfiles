@@ -1,0 +1,13 @@
+% zsh
+
+# Self update
+zinit self-update
+
+# Plugin update
+zinit update
+
+# Plugin parallel update
+zinit update --parallel
+
+# Increase the number of jobs in a concurrent-set to 40
+zinit update --parallel 40
