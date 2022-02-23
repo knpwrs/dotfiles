@@ -7,6 +7,10 @@ packages.
 
 Calls all other install scripts in the appropriate order.
 
+## `install-zsh.sh`
+
+Sets up [`zinit`] for managing zsh plugins.
+
 ## `install-gems.sh`
 
 Uses system `ruby` and `sudo gem` to install a set of useful gems.
@@ -53,3 +57,4 @@ xattr -r -d com.apple.quarantine ~/Library/QuickLook/QL*
 ```
 
 [`gh`]: https://github.com/cli/cli "GitHub's official command line tool"
+[`zinit`]: https://github.com/zdharma-continuum/zinit "Flexible and fast ZSH plugin manager"

@@ -1,3 +1,17 @@
+# Set up zinit
+export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+if [ -d $ZINIT_HOME ]; then
+  # Customization: https://github.com/zsh-users/zsh-syntax-highlighting/blob/9523d6d49cb3d4db5bd84c3cec6168a2057fe3ab/docs/highlighters/main.md
+  typeset -A ZSH_HIGHLIGHT_STYLES
+  ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
+  ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
+
+  source $ZINIT_HOME/zinit.zsh
+  zinit light Tarrasch/zsh-bd
+  zinit light zsh-users/zsh-syntax-highlighting
+fi
+
 # Load zsh modules
 autoload -U colors && colors
 autoload -Uz compinit && compinit
@@ -7,16 +21,6 @@ for rcfile in $DOTLIB/*.zsh; do
   source $rcfile
 done
 
-# Load zsh-bd
-source $DOTVENDOR/zsh-bd/bd.zsh
-
-# Load syntax highlighting
-# Customization: https://github.com/zsh-users/zsh-syntax-highlighting/blob/9523d6d49cb3d4db5bd84c3cec6168a2057fe3ab/docs/highlighters/main.md
-typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
-source $DOTVENDOR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -24,9 +28,6 @@ source $DOTVENDOR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if type navi > /dev/null; then
   eval "$(navi widget zsh)"
 fi
-
-# zsh-interactive-cd
-source $DOTVENDOR/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
 # Tell the terminal about the working directory at each prompt.
 # http://apple.stackexchange.com/a/128999
