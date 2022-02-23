@@ -79,7 +79,7 @@ cht.sh <command>
 open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
 
 $ source: echo -e 'pbpaste\n'
-$ dest: echo -e 'pbcopy\n'
+$ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'
 $ file: fd
 $ files: fd --- --multi --map 'navi fn map::expand'
