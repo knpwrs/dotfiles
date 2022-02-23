@@ -27,6 +27,16 @@ open $(brew info --json <formula> | jq -r '.[].homepage')
 # Open a Cask Homepage
 open $(brew info --json <cask> | jq -r '.[].homepage')
 
+# Create a Formula
+brew create --tap <tap> <template> --set-license <license> https://github.com/<repo>/archive/refs/tags/<version>.tar.gz
+
+$ tap: echo -e 'knpwrs/tap\nhomebew/core'
+$ template: echo -e '--rust\n--node\n--go\n'
+$ license: echo -e 'MIT\n'
+$ github_user: echo -e 'knpwrs\n'
+$ repo: gh repo list --json nameWithOwner | jq -r '.[].nameWithOwner'
+$ version: git tag
+
 # Update Homebrew
 brew update
 
