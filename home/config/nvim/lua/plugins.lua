@@ -129,6 +129,7 @@ require('packer').startup({
       },
       config = [[require('plugins.nvim-cmp')]],
     }
+    use { 'j-hui/fidget.nvim', config = [[require('fidget').setup()]] }
     use {
       'jose-elias-alvarez/null-ls.nvim',
       requires = {'plenary.nvim', 'nvim-lspconfig'},
