@@ -42,6 +42,9 @@ npx lice
 # Decode JWT (Base64 Secret)
 <source> | jwt decode --secret b64:<secret> | <dest>
 
+# Get SHA-256 Hash
+<source> | shasum -a 256 | cut -d' ' -f1 | <dest>
+
 # Generate UUID
 uuidgen
 
