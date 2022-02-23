@@ -47,16 +47,31 @@ wk.register(
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+local function disable_formatting(client)
+  client.resolved_capabilities.document_formatting = false
+  client.resolved_capabilities.document_range_formatting = false
+end
+
+local enhance_server_opts = {
+  ['tsserver'] = function(opts, client)
+    -- Prefer prettier formatting over null-ls
+    disable_formatting(client)
+  end,
+  ['jsonls'] = function(opts, client)
+    -- Prefer prettier formatting over null-ls
+    disable_formatting(client)
+  end,
+}
+
 li.on_server_ready(function(server)
   local opts = {
     capabilities = capabilities,
   }
 
   opts.on_attach = function(client, bufnr)
-    -- Prefer prettier formatting over null-ls
-    if server.name == 'tsserver' or server.name == 'jsonls' then
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
+    if enhance_server_opts[server.name] then
+      -- Enhance the default opts with the server-specific ones
+      enhance_server_opts[server.name](opts, client)
     end
 
     -- Automatically format for servers which support it
@@ -71,7 +86,7 @@ li.on_server_ready(function(server)
     aerial.on_attach(client, bufnr)
   end
 
-  -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+  -- This setp() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
   server:setup(opts)
   vim.cmd([[ do User LspAttachBuffers ]])
 end)
