@@ -83,6 +83,7 @@ brew 'yq'                                      # Like jq for yaml
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
 # My fomrulae
+brew 'knpwrs/tap/guy'                          # Take your terminal to Flavortown
 brew 'knpwrs/tap/woodo'                        # It's a weird tree
 
 # Casks
