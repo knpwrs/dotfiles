@@ -1,4 +1,3 @@
-local cmd = vim.cmd
 local g = vim.g
 local tree = require('nvim-tree')
 local wk = require('which-key')
