@@ -86,7 +86,7 @@ gh repo create <repo> --<create_mode> --remote <remote_name> --push
 $ repo: echo -e "$(basename $PWD)\n"
 $ remote_name: echo -e 'origin\n'
 
-# Create and clone a new repository and push exiting commits
+# Create and clone a new repository
 gh repo create <repo> --<create_mode> --clone
 $ create_mode: echo -e 'public\nprivate\ninternal'
 
