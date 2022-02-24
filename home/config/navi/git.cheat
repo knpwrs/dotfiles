@@ -30,8 +30,11 @@ git cherry-pick -i <branch>
 # cherry-pick a given commit
 git cherry-pick -i <commit>
 
+# List dirty files
+cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard)
+
 # Open dirty files in $EDITOR
-git diff --name-only | xargs -o $EDITOR
+cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -o $EDITOR
 
 # Open files from HEAD commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r HEAD | xargs -o $EDITOR
