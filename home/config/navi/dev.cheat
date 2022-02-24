@@ -57,6 +57,12 @@ fd '<fd_pattern>' -x sd '<find_pattern>' '<replace_pattern>' '{}'
 # Find and Replace Literal Strings Across Files
 fd '<fd_pattern>' -x sd -s '<find_string>' '<replace_string>' '{}'
 
+# Find and Replace Across Dirty Files
+cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -n1 sd '<find_pattern>' '<replace_pattern>'
+
+# Find and Replace Literal Strings Across Dirty Files
+cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -n1 sd '<find_pattern>' '<replace_pattern>'
+
 # Find and Replace Across Specific Files
 sd '<find_pattern>' '<replace_pattern>' <files>
 
