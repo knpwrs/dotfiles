@@ -45,6 +45,9 @@ npx lice
 # Get SHA-256 Hash
 <source> | shasum -a 256 | cut -d' ' -f1 | <dest>
 
+# Get XXHASH
+<source> | xxhsum | <dest>
+
 # Generate UUID
 uuidgen
 

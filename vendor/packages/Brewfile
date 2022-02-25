@@ -78,6 +78,7 @@ brew 'wabt'                                    # The WebAssembly Binary Toolkit 
 brew 'watch'                                   # Executes a program periodically, showing output fullscreen
 brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
 brew 'wget'                                    # Internet file retriever.
+brew 'xxhash'                                  # XXHASH library and xxsum CLI.
 brew 'yarn'                                    # JavaScript package manager.
 brew 'yq'                                      # Like jq for yaml
 brew 'zsh'                                     # UNIX shell (command interpreter).
