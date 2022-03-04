@@ -63,11 +63,17 @@ gh pr view
 # View pull request for current branch in web browser
 gh pr view --web
 
+# Copy URL for pull request for current branch
+gh pr view --json url --jq .url | pbcopy
+
 # View pull a request
 gh pr view <pr>
 
 # View a pull request in web browser
 gh pr view --web <pr>
+
+# Copy URL for pull request
+gh pr view --json url --jq .url <pr> | pbcopy
 
 # Archive current repository
 gh repo archive
