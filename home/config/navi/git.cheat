@@ -63,8 +63,14 @@ git pull --rebase origin <main_branch>
 # Pull and rebase interactively on main branch
 git pull --rebase=interactive origin <main_branch>
 
-# Revert Without Committing
+# Revert without committing
 git revert --no-commit <ref>
+
+# Revert a given commit without committing
+git revert --no-commit <commit>
+
+# Revert a given commit
+git revert <commit>
 
 # Checkout contents of file
 git checkout -- <git_changed_file>
