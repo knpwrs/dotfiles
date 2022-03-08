@@ -90,7 +90,7 @@ git rev-parse HEAD | head -c 7
 # Copy short hash of HEAD
 git rev-parse HEAD | head -c 7 | pbcopy
 
-# "Undo" last comit
+# "Undo" last commit
 git reset HEAD~1
 
 # Create new "Workspace" with a different git author
