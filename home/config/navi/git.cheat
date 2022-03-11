@@ -81,6 +81,12 @@ git checkout <branch_or_tag> -- <git_file>
 # Show contents of a given commit
 git show <commit>
 
+# Show file on a given branch
+git show <branch>:<git_file>
+
+# Show file at a given commit
+git show <commit>:<git_file>
+
 # Optimize Git Repo
 git gc --prune=now --aggressive
 
