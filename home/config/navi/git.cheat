@@ -105,6 +105,12 @@ git rev-parse HEAD | head -c 7 | pbcopy
 # "Undo" last commit
 git reset HEAD~1
 
+# Create a commit to make current branch look like a given branch
+git diff HEAD <branch> | git apply
+
+# Create a commit to make current branch look like a given commit
+git diff HEAD <commit> | git apply
+
 # Create new "Workspace" with a different git author
 cat >> .envrc <<EOF
 export GIT_AUTHOR_NAME="<git_author_name>"
