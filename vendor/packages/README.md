@@ -42,6 +42,10 @@ Exits if not running on macOS.
 
 Installs miscellaneous binaries not available in package managers.
 
+## `install-whalebrew.sh`
+
+Installs whalebrew packages.
+
 ### QuickLook Plugins and Quarantine
 
 To see the quarantine status of installed QuickLook plugins:

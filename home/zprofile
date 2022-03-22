@@ -21,11 +21,13 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 BREW_PREFIX=$(hash brew 2>/dev/null && brew --prefix || /opt/homebrew/bin/brew --prefix)
+export WHALEBREW_INSTALL_PATH=$HOME/.whalebin
 
 ## Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/bin # Custom home bin directory
   $HOME/.bin # bin directory from this repo
+  $WHALEBREW_INSTALL_PATH
   $BREW_PREFIX/opt/coreutils/libexec/gnubin # GNU coreutils
   $BREW_PREFIX/opt/make/libexec/gnubin # GNU make
   $BREW_PREFIX/bin

@@ -14,3 +14,4 @@ $DOTPACKAGES/install-gems.sh
 $DOTPACKAGES/install-pip.sh
 $DOTPACKAGES/install-gh.sh
 $DOTPACKAGES/install-bin.sh
+$DOTPACKAGES/install-whalebrew.sh
