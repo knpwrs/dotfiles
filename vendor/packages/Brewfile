@@ -65,6 +65,7 @@ brew 'rlwrap'                                  # A small utility that uses the G
 brew 'rsync'                                   # Utility that provides fast incremental file transfer
 brew 'sd'                                      # Intuitive find & replace CLI (sed alternative)
 brew 'sl'                                      # Steam Locomotive
+brew 'slides'                                  # Terminal presentation tool
 brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file.
 brew 'sshuttle'                                # Proxy server that works as a poor man's VPN.
 brew 'starship'                                # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
