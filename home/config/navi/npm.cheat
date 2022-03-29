@@ -72,7 +72,7 @@ npm version patch
 # Open Package Homepage
 open $(npm view <package> homepage)
 
-# See what would be packed for publishing to npm
+# Preview what will be published to npm
 npm pack --dry-run
 
 # Generate a LICENSE file
