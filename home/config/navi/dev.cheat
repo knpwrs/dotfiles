@@ -25,22 +25,25 @@ npx lice
 <source> | base64 -d | <dest>
 
 # Encode JWT (Plain Text Secret)
-<source> | jwt encode --secret <secret> | <dest>
+<source> | jwt encode --secret <secret> - | <dest>
 
 # Encode JWT (File Secret)
-<source> | jwt encode --secret @<file> | <dest>
+<source> | jwt encode --secret @<file> - | <dest>
 
 # Encode JWT (Base64 Secret)
-<source> | jwt encode --secret b64:<secret> | <dest>
+<source> | jwt encode --secret b64:<secret> - | <dest>
+
+# Decode JWT (No Secret)
+<source> | jwt decode - | <dest>
 
 # Decode JWT (Plain Text Secret)
-<source> | jwt decode --secret <secret> | <dest>
+<source> | jwt decode --secret <secret> - | <dest>
 
 # Decode JWT (File Secret)
-<source> | jwt decode --secret @<file> | <dest>
+<source> | jwt decode --secret @<file> - | <dest>
 
 # Decode JWT (Base64 Secret)
-<source> | jwt decode --secret b64:<secret> | <dest>
+<source> | jwt decode --secret b64:<secret> - | <dest>
 
 # Get SHA-256 Hash
 <source> | shasum -a 256 | cut -d' ' -f1 | <dest>
@@ -112,3 +115,4 @@ $ fd_pattern: echo -e '.\n'
 $ file: fd
 $ files: fd --- --multi --map 'navi fn map::expand'
 $ directory: fd --type d
+$ extension: fd --full-path ./app --type f | sed 's/^.*\.//' | sort | uniq
