@@ -60,6 +60,18 @@ fd '<fd_pattern>' -x sd '<find_pattern>' '<replace_pattern>' '{}'
 # Find and Replace Literal Strings Across Files
 fd '<fd_pattern>' -x sd -s '<find_string>' '<replace_string>' '{}'
 
+# Find and Replace in Specific Directory
+fd --full-path <directory> -x sd '<find_pattern>' '<replace_pattern>' '{}'
+
+# Find and Replace Literal Strings in Specific Directory
+fd --full-path <directory> -x sd -s '<find_string>' '<replace_string>' '{}'
+
+# Find and Replace in Specific Directory with Extension
+fd --full-path <directory> --extension <extension> -x sd '<find_pattern>' '<replace_pattern>' '{}'
+
+# Find and Replace Literal Strings in Specific Directory with Extension
+fd --full-path <directory> --extension <extension> -x sd -s '<find_string>' '<replace_string>' '{}'
+
 # Find and Replace Across Dirty Files
 cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -n1 sd '<find_pattern>' '<replace_pattern>'
 
@@ -99,3 +111,4 @@ $ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'
 $ file: fd
 $ files: fd --- --multi --map 'navi fn map::expand'
+$ directory: fd --type d
