@@ -24,6 +24,9 @@ gh pr create --draft
 # View changes in a pull request
 gh pr diff <pr>
 
+# Edit pull request for current branch
+gh pr edit
+
 # Edit a pull request
 gh pr edit <pr>
 
