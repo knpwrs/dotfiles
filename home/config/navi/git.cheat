@@ -39,11 +39,20 @@ cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o -
 # Open files from HEAD commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r HEAD | xargs -o $EDITOR
 
+# Git diff specific file
+git diff <git_file>
+
+# Git diff specific file with another branch
+git diff <branch> -- <git_file>
+
 # Git diff with difftastic
 GIT_EXTERNAL_DIFF=difft git diff
 
 # Git diff specific file with difftastic
 GIT_EXTERNAL_DIFF=difft git diff <git_file>
+
+# Git diff specific file with another branch with difftastic
+GIT_EXTERNAL_DIFF=difft git diff <branch> -- <git_file>
 
 # Git log with difftastic
 GIT_EXTERNAL_DIFF=difft git log -p --ext-diff
