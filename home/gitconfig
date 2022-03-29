@@ -1,6 +1,7 @@
 [user]
 	name = Ken Powers
 	email = ken@kenpowers.net
+	website = https://knpw.rs
 [init]
 	defaultBranch = main
 [alias]
