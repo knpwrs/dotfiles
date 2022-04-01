@@ -39,6 +39,9 @@ cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o -
 # Open files from HEAD commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r HEAD | xargs -o $EDITOR
 
+# Open files from given commit in $EDITOR
+git diff-tree --no-commit-id --name-only -r <commit> | xargs -o $EDITOR
+
 # Git diff specific file
 git diff <git_file>
 
@@ -66,8 +69,8 @@ git commit -e -m "commit message" -m "<co_authors>"
 # Restore staged files
 git restore --staged <staged_files>
 
-# Delete local branches not on origin
-git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D
+# Delete local branches not on remote
+git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep <remote>) | awk '{print $1}' | xargs git branch -D
 
 # Delete a branch
 git branch -d <branch>
@@ -79,10 +82,13 @@ git branch -D <branch>
 git checkout -
 
 # Pull and rebase on main branch
-git pull --rebase origin <main_branch>
+git pull --rebase <remote> <main_branch>
 
 # Pull and rebase interactively on main branch
-git pull --rebase=interactive origin <main_branch>
+git pull --rebase=interactive <remote> <main_branch>
+
+# Fetch and merge remote main branch
+git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
 
 # Revert without committing
 git revert --no-commit <ref>
@@ -155,3 +161,4 @@ $ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
 $ git_changed_file: git diff --name-only
 $ git_file: git ls-files
 $ ref: echo -e 'HEAD\n'
+$ remote: git remote
