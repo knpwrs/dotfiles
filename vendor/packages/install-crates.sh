@@ -13,6 +13,7 @@ crates=(
   hyperfine   # A command-line benchmarking tool
   rm-improved # rip, a safer rm
   snm         # smol node manager
+  toipe       # Terminal-based typing test
   tokei       # A fast cloc alternative
   zoxide      # A cd command that learns your habits
 )
