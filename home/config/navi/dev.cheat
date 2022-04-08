@@ -109,7 +109,7 @@ diff <(<cmd1>) <(<cmd2>)
 diff -u <(<cmd1>) <(<cmd2>) | delta
 
 
-$ source: echo -e 'pbpaste\n'
+$ source: echo -e 'pbpaste\nvipe\n'
 $ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'
 $ file: fd
