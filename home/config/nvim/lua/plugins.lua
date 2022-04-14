@@ -32,6 +32,7 @@ require('packer').startup({
       requires = 'nvim-treesitter',
       config = [[require('plugins.nvim-gps')]],
     }
+    use { 'edluffy/specs.nvim', config = [[require('plugins.specs-nvim')]] }
     use { 'elihunter173/dirbuf.nvim', config = [[require('plugins.dirbuf')]] }
     use { 'folke/todo-comments.nvim', config = [[require('plugins.todo-comments')]] }
     use 'folke/which-key.nvim'
