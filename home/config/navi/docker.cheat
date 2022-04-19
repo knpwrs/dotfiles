@@ -5,3 +5,6 @@ docker run -p <host_port>:<container_port> <image>
 
 # Stop all containers and wipe everything from Docker
 docker stop $(docker ps -aq); docker system prune --all
+
+# Prune / Wipe all Volumes
+docker system prune --volumes
