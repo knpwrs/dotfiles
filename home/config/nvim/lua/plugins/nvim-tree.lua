@@ -14,9 +14,6 @@ wk.register(
 
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
--- Close tree when opening file
-g.nvim_tree_quit_on_open = 1
-
 -- Icons
 g.nvim_tree_show_icons = {
   git = 1,
@@ -26,6 +23,11 @@ g.nvim_tree_show_icons = {
 }
 
 tree.setup({
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
   update_to_buf_dir = {
      enable = false, -- Required for dirbuf.nvim
   },
