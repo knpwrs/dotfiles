@@ -5,3 +5,6 @@ xattr -r <pattern> -d com.apple.quarantine
 
 # Remove quarantine from files matching pattern
 xattr -r -d com.apple.quarantine <pattern>
+
+# Restart Dock (Mission Control, etc)
+killall Dock
