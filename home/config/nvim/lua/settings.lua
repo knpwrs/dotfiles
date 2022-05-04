@@ -76,6 +76,8 @@ o.inccommand = 'nosplit'
 o.number = true
 -- Do not show default statusline
 o.showmode = false
+-- Enable mouse integration for all modes
+o.mouse = 'a'
 
 -- Invisible characters
 if vim.fn.has('multi_byte') and o.encoding == 'utf-8' then
