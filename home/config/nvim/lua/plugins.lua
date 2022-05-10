@@ -103,7 +103,12 @@ require('packer').startup({
     }
     use {
       'nvim-telescope/telescope.nvim',
-      requires = {{'nvim-lua/popup.nvim', 'LinArcX/telescope-env.nvim'}, {'plenary.nvim'}},
+      requires = {
+        {'nvim-lua/popup.nvim', 'LinArcX/telescope-env.nvim'},
+        {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
+        {'nvim-telescope/telescope-ui-select.nvim'},
+        {'plenary.nvim'},
+      },
       config = [[require('plugins.telescope')]]
     }
     -- Text Object Plugins

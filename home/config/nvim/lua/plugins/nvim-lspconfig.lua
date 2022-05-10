@@ -10,6 +10,7 @@ wk.register(
     l = {
       name = 'LSP',
       a = { '<Cmd>AerialToggle<Cr>', 'Toggle Aerial' } ,
+      e = { '<Cmd>lua vim.lsp.buf.code_action()<Cr>', 'Code Actions' },
       f = { function() lsp.buf.formatting() end, 'Format' },
       i = { function() lsp.buf.implementation() end, 'Implementation' },
       k = { function() lsp.buf.hover() end, 'Hover' },
@@ -22,7 +23,6 @@ wk.register(
       D = { '<Cmd>Telescope lsp_document_diagnostics<Cr>', 'Diagnostics' },
       I = { '<Cmd>Telescope lsp_implementations<Cr>', 'Implementations' },
       d = { '<Cmd>Telescope lsp_definitions<Cr>', 'Definitions' },
-      e = { '<Cmd>Telescope lsp_code_actions<Cr>', 'Code Actions' },
       r = { '<Cmd>Telescope lsp_references<Cr>', 'References' },
       s = { '<Cmd>Telescope lsp_document_symbols<Cr>', 'Symbols' },
       -- nvim-lsp-installer maps
@@ -30,7 +30,7 @@ wk.register(
     },
   },
   {
-    prefix = '<Leader>'
+    prefix = '<Leader>',
   }
 )
 

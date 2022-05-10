@@ -26,6 +26,7 @@ telescope.setup {
 }
 
 telescope.load_extension('env')
+telescope.load_extension('ui-select')
 
 wk.register(
   {
