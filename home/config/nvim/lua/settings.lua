@@ -97,3 +97,24 @@ cmd([[
     endif
   endfor
 ]])
+
+local mouse_focus_augroup = vim.api.nvim_create_augroup('MouseFocus', { clear = true })
+vim.api.nvim_create_autocmd(
+  'FocusGained',
+  {
+    callback = function()
+      o.mouse = 'a'
+    end,
+    group = mouse_focus_augroup,
+  }
+)
+
+vim.api.nvim_create_autocmd(
+  'FocusLost',
+  {
+    callback = function()
+      o.mouse = ''
+    end,
+    group = mouse_focus_augroup
+  }
+)
