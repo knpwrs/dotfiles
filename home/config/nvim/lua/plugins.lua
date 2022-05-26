@@ -26,7 +26,7 @@ require('packer').startup({
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('plugins.nvim-treesitter')]] }
     -- Interface Plugins
     use { 'folke/tokyonight.nvim', config = [[require('plugins.tokyonight')]] }
-    use { 'chentau/marks.nvim', config = [[require('marks').setup({})]] }
+    use { 'chentoast/marks.nvim', config = [[require('marks').setup({})]] }
     use {
       'SmiteshP/nvim-gps',
       requires = 'nvim-treesitter',
