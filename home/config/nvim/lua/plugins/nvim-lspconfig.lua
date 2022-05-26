@@ -1,5 +1,6 @@
 local wk = require('which-key')
-local li = require('nvim-lsp-installer')
+local lspinstaller = require('nvim-lsp-installer')
+local lspconfig = require('lspconfig')
 local illum = require('illuminate')
 local aerial = require('aerial')
 local lsp = vim.lsp
@@ -63,30 +64,29 @@ local enhance_server_opts = {
   end,
 }
 
-li.on_server_ready(function(server)
-  local opts = {
+lspinstaller.setup()
+
+local servers = { 'tsserver', 'jsonls', 'eslint' }
+
+for _, server in ipairs(servers) do
+  lspconfig[server].setup({
     capabilities = capabilities,
-  }
+    on_attach = function(client, bufnr)
+      if enhance_server_opts[server] then
+        -- Enhance the default opts with the server-specific ones
+        enhance_server_opts[server](opts, client)
+      end
 
-  opts.on_attach = function(client, bufnr)
-    if enhance_server_opts[server.name] then
-      -- Enhance the default opts with the server-specific ones
-      enhance_server_opts[server.name](opts, client)
-    end
+      -- Automatically format for servers which support it
+      if client.resolved_capabilities.document_formatting then
+        vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+      end
 
-    -- Automatically format for servers which support it
-    if client.resolved_capabilities.document_formatting then
-      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-    end
+      -- Attach vim-illuminate
+      illum.on_attach(client)
 
-    -- Attach vim-illuminate
-    illum.on_attach(client)
-
-    -- Attach aerial.nvim
-    aerial.on_attach(client, bufnr)
-  end
-
-  -- This setp() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-  server:setup(opts)
-  vim.cmd([[ do User LspAttachBuffers ]])
-end)
+      -- Attach aerial.nvim
+      aerial.on_attach(client, bufnr)
+    end,
+  })
+end
