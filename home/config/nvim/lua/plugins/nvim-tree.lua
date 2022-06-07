@@ -14,14 +14,6 @@ wk.register(
 
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
--- Icons
-g.nvim_tree_show_icons = {
-  git = 1,
-  folders = 1,
-  files = 1,
-  folder_arrows = 1,
-}
-
 tree.setup({
   actions = {
     open_file = {
@@ -39,6 +31,16 @@ tree.setup({
         { key = 'M', cb = tree_cb('full_rename') },
         { key = 'r', cb = tree_cb('refresh') },
         { key = {'<Esc>', '<C-d>', 'q'}, cb = tree_cb('close') }
+      },
+    },
+  },
+  renderer = {
+    icons = {
+      show = {
+        git = true,
+        file = true,
+        folder = true,
+        folder_arrow = true,
       },
     },
   },
