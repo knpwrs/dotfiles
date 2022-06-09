@@ -90,3 +90,6 @@ for _, server in ipairs(servers) do
     end,
   })
 end
+
+-- Disable illuminate in fugitiveblame
+vim.g.Illuminate_ftblacklist = { 'fugitiveblame' }
