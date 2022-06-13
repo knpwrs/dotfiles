@@ -33,6 +33,9 @@ gh pr edit <pr>
 # List and filter pull requests in this repository
 gh pr list
 
+# Merge pull request for current branch
+gh pr merge
+
 # Merge a pull request
 gh pr merge <pr>
 
