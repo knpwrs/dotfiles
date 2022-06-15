@@ -39,6 +39,12 @@ gh pr merge
 # Merge a pull request
 gh pr merge <pr>
 
+# Automatically merge pull request for current branch
+gh pr merge --auto
+
+# Automatically merge a pull request
+gh pr merge --auto <pr>
+
 # Mark pull request for current branch as ready for review
 gh pr ready
 
