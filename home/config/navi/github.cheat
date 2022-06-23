@@ -1,5 +1,8 @@
 % GitHub
 
+# Copy URL to GitHub Repo
+gh browse --no-browser | pbcopy
+
 # Copy URL to Github Commit (HEAD)
 gh browse --commit --no-browser | sed 's|/tree|/commit|' | pbcopy
 
