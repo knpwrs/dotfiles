@@ -3,13 +3,25 @@ local dapui = require('dapui')
 local wk = require('which-key')
 
 dapui.setup({
-  sidebar = {
-    position = 'right',
-    elements = { 'scopes', 'breakpoints', 'stacks', 'watches' },
-  },
-  tray = {
-    position = 'bottom',
-    elements = { 'repl' },
+  layouts = {
+    {
+      elements = {
+        'scopes',
+        'breakpoints',
+        'stacks',
+        'watches',
+      },
+      size = 40,
+      position = 'left',
+    },
+    {
+      elements = {
+        'repl',
+        'console',
+      },
+      size = 10,
+      position = 'bottom',
+    },
   },
   floating = {
     max_width = 0.5,
