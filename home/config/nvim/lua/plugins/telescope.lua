@@ -37,6 +37,7 @@ wk.register(
       g = { '<Cmd>Telescope live_grep<Cr>', 'Live Grep' },
       s = { '<Cmd>Telescope grep_string<Cr>', 'Grep String Under Cursor' },
       b = { '<Cmd>Telescope buffers<Cr>', 'Buffers' },
+      l = { '<Cmd>Telescope current_buffer_fuzzy_find<Cr>', 'Current Buffer Lines' },
       r = { '<Cmd>Telescope registers<Cr>', 'Registers' },
       h = { '<Cmd>Telescope help_tags<Cr>', 'Help Tags' },
       c = { '<Cmd>Telescope commands<Cr>', 'Commands' },
