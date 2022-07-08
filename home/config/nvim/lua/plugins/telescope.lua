@@ -1,7 +1,6 @@
 local wk = require('which-key')
 local telescope = require 'telescope'
 local actions = require 'telescope.actions'
-local sorters = require 'telescope.sorters'
 
 telescope.setup {
   defaults = {
@@ -20,12 +19,11 @@ telescope.setup {
         ['<C-k>'] = actions.preview_scrolling_up,
       },
     },
-    file_sorter = sorters.get_fzy_sorter,
-    generic_sorter = sorters.get_fzy_sorter,
   },
 }
 
 telescope.load_extension('env')
+telescope.load_extension('fzf')
 telescope.load_extension('ui-select')
 
 wk.register(
