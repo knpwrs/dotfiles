@@ -52,9 +52,12 @@ wk.register(
 
 wk.register(
   {
-    ['[b'] = { ':BufferLineCyclePrev<Cr>', 'Previous Buffer' },
-    ['[['] = { ':BufferLineCyclePrev<Cr>', 'Previous Buffer' },
-    [']b'] = { ':BufferLineCycleNext<Cr>', 'Next Buffer' },
-    [']]'] = { ':BufferLineCycleNext<Cr>', 'Next Buffer' },
+    ['[b'] = { '<Cmd>BufferLineCyclePrev<Cr>', 'Previous Buffer' },
+    ['[['] = { '<Cmd>BufferLineCyclePrev<Cr>', 'Previous Buffer' },
+    [']b'] = { '<Cmd>BufferLineCycleNext<Cr>', 'Next Buffer' },
+    [']]'] = { '<Cmd>BufferLineCycleNext<Cr>', 'Next Buffer' },
+  },
+  {
+    silent = true
   }
 )
