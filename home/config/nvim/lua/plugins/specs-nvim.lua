@@ -1,4 +1,4 @@
-local sepcs = require('specs')
+local specs = require('specs')
 
 specs.setup({
   popup = {
