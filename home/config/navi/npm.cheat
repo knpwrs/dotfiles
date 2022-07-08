@@ -60,6 +60,11 @@ npm test
 # Get version of current package
 echo "v$(jq -r .version < package.json)"
 
+# Upgrade a dependency to latest
+npm install <dependency>@latest
+
+$ dependency: jq -r '.dependencies | keys[]' < package.json
+
 # Bump major version
 npm version major
 
