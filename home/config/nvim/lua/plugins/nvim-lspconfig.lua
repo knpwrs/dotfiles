@@ -66,7 +66,7 @@ local enhance_server_opts = {
 
 lspinstaller.setup()
 
-local servers = { 'tsserver', 'jsonls', 'eslint' }
+local servers = { 'tsserver', 'jsonls', 'eslint', 'prismals' }
 
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
