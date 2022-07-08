@@ -94,7 +94,6 @@ brew 'knpwrs/tap/woodo'                        # It's a weird tree
 # Casks
 cask '1password'                 # Password manager.
 cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
-cask 'alfred'                    # Power-user spotlight.
 cask 'appcleaner'                # Mac app uninstaller.
 cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
@@ -106,6 +105,7 @@ cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 cask 'paw'                       # The most advanced API tool for Mac
+cask 'raycast'                   # Supercharged productivity
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
