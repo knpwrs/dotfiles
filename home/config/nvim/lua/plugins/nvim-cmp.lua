@@ -8,13 +8,13 @@ cmp.setup {
       vim.fn['vsnip#anonymous'](args.body)
     end,
   },
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     ['<C-j>'] = cmp.mapping.scroll_docs(-4),
     ['<C-k>'] = cmp.mapping.scroll_docs(4),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<Cr>'] = cmp.mapping.confirm({ select = true }),
-  },
+  }),
   formatting = {
     format = function(entry, vim_item)
       vim_item.kind = lspkind.presets.default[vim_item.kind]
