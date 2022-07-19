@@ -144,6 +144,9 @@ gh repo view
 # View current repository in web browser
 gh repo view --web
 
+# View current branch in web browser
+gh repo view --web --branch <current_branch>
+
 #
 # Extensions
 #
@@ -166,4 +169,5 @@ gh clean-branches
 # Force-clean branches in current repo
 gh clean-branches --force
 
-$ pr_number: gh pr list --- --map 'cut -f1'
+$ pr_number: gh pr list --limit 100 --- --map 'cut -f1'
+$ current_branch: git branch --show-current
