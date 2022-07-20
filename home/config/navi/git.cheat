@@ -48,6 +48,12 @@ git diff <git_file>
 # Git diff specific file with another branch
 git diff <branch> -- <git_file>
 
+# Git stash specific files
+git stash push <git_dirty_files>
+
+# Git stash specific files with message
+git stash push -m <message> <git_dirty_files>
+
 # Git diff with difftastic
 GIT_EXTERNAL_DIFF=difft git diff
 
@@ -160,5 +166,6 @@ $ branch_or_tag: (git branch | cut -c 3-; git tag)
 $ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
 $ git_changed_files: git diff --name-only --- --multi --expand
 $ git_file: git ls-files
+$ git_dirty_files: git diff --name-only --- --multi
 $ ref: echo -e 'HEAD\n'
 $ remote: git remote
