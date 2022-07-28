@@ -3,8 +3,14 @@
 # Run new container and bind a port
 docker run -p <host_port>:<container_port> <image>
 
-# Stop all containers and wipe everything from Docker
+# Stop all containers and prune everything from Docker
 docker stop $(docker ps -aq); docker system prune --all
 
-# Prune / Wipe all Volumes
+# Stop all containers and prune stopped containers from Docker
+docker stop $(docker ps -aq); docker container prune
+
+# Prune all stopped containers from Docker
+docker container prune
+
+# Prune all Volumes
 docker system prune --volumes
