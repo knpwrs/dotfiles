@@ -20,7 +20,7 @@ tree.setup({
       quit_on_open = true,
     },
   },
-  update_to_buf_dir = {
+  hijack_directories = {
      enable = false, -- Required for dirbuf.nvim
   },
   view = {
