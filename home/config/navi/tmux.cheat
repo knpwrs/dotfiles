@@ -4,7 +4,7 @@
 tmux split-window -h && \
 tmux split-window -v && \
 tmux split-window -h && \
-tmux send-keys 'vim todo.ignore.md' C-m && \
+tmux send-keys '$EDITOR todo.ignore.md' C-m && \
 tmux resize-pane -x '20%' && \
 tmux select-pane -t 1 && \
 tmux resize-pane -x '60%'
