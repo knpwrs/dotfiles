@@ -28,8 +28,10 @@ local opts = { noremap = true, silent = true }
 
 wk.register(
   {
-    ['['] = { '<Cmd>BufferLineMovePrev<Cr>', 'Move Buffer Left' },
-    [']'] = { '<Cmd>BufferLineMoveNext<Cr>', 'Move Buffer Right' },
+    ['['] = { '<Cmd>BufferLineCyclePrev<Cr>', 'Previous Buffer' },
+    [']'] = { '<Cmd>BufferLineCycleNext<Cr>', 'Next Buffer' },
+    ['{'] = { '<Cmd>BufferLineMovePrev<Cr>', 'Move Buffer Right' },
+    ['}'] = { '<Cmd>BufferLineMoveNext<Cr>', 'Move Buffer Left' },
     b = {
       name = 'Buffers',
       g = { '<Cmd>BufferLinePick<Cr>', 'Pick Buffer' },
@@ -47,17 +49,6 @@ wk.register(
   },
   {
     prefix = '<Leader>',
-  }
-)
-
-wk.register(
-  {
-    ['[b'] = { '<Cmd>BufferLineCyclePrev<Cr>', 'Previous Buffer' },
-    ['[['] = { '<Cmd>BufferLineCyclePrev<Cr>', 'Previous Buffer' },
-    [']b'] = { '<Cmd>BufferLineCycleNext<Cr>', 'Next Buffer' },
-    [']]'] = { '<Cmd>BufferLineCycleNext<Cr>', 'Next Buffer' },
-  },
-  {
-    silent = true
+    silent = true,
   }
 )
