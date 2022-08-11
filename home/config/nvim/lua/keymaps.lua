@@ -51,9 +51,11 @@ wk.register(
     r = {  ':%s/<C-r><C-w>//g<Left><Left>', 'Replace Word Under Cursor' },
     s = { '<Cmd>set spell!<Cr>', 'Toggle Spellchecking' },
     P = { '<Cmd>set paste!<Cr>', 'Toggle Paste Mode' },
+    c = { '<Cmd>close<Cr>', 'Close Window' },
+    C = { '<Cmd>close!<Cr>', 'CLOSE Window' },
     [','] = { '<Cmd>e $MYVIMRC<Cr>', 'Edit init.lua' },
     ['-'] = { '<Cmd>split<Cr>', 'Horizontal Split' },
-    ['|'] = { '<Cmd>vsplit<Cr>', 'Vertical Split' },
+    ['\\'] = { '<Cmd>vsplit<Cr>', 'Vertical Split' },
   },
   {
     prefix = '<Leader>',
