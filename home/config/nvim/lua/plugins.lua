@@ -43,6 +43,7 @@ require('packer').startup({
     }
     use { 'lukas-reineke/indent-blankline.nvim', config = [[require('plugins.indent-blankline')]] }
     use { 'luukvbaal/stabilize.nvim', config = [[require('stabilize').setup()]] }
+    use { 'https://gitlab.com/yorickpeterse/nvim-window.git', config = [[require('plugins.nvim-window')]]}
     -- Enhancement Plugins
     use { 'AndrewRadev/dsf.vim', config = [[require('plugins.dsf')]] }
     use { 'AndrewRadev/sideways.vim', config = [[require('plugins.sideways')]] }
