@@ -10,6 +10,9 @@ curl -s "wttr.in/<location>" \
    | grep -v "New feature" \
    | grep -v Follow
 
+# Show Dictionary Definition of a Word
+curl dict.org/d:<word>
+
 # Create a QR code with some content
 echo <content> | curl -F-=\<- qrenco.de
 
