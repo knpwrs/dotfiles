@@ -13,6 +13,9 @@ curl -s "wttr.in/<location>" \
 # Show Dictionary Definition of a Word
 curl dict.org/d:<word>
 
+# Party Parrot
+curl parrot.live
+
 # Create a QR code with some content
 echo <content> | curl -F-=\<- qrenco.de
 
