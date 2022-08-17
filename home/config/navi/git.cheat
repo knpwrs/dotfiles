@@ -96,6 +96,9 @@ git pull --rebase=interactive <remote> <main_branch>
 # Fetch and merge remote main branch
 git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
 
+# Push to specific remote
+git push <remote>
+
 # Revert without committing
 git revert --no-commit <ref>
 
