@@ -159,7 +159,7 @@ export GIT_COMMITTER_EMAIL=\$GIT_AUTHOR_EMAIL
 EOF
 
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
-$ staged_files: git diff --staged --name-only --- --multi
+$ staged_files: git diff --staged --name-only --- --multi --expand
 $ branch: git branch | cut -c 3-
 $ main_branch: git branch | cut -c 3- | grep -m 1 '^\(main\|master\|dev\|development\|trunk\)$'
 $ branch_or_tag: (git branch | cut -c 3-; git tag)
