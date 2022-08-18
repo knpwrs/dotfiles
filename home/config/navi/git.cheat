@@ -99,6 +99,9 @@ git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
 # Push to specific remote
 git push <remote>
 
+# Push to all remotes
+git remote | xargs -n1 git push
+
 # Revert without committing
 git revert --no-commit <ref>
 
