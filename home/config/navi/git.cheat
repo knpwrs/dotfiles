@@ -156,6 +156,9 @@ git apply <(pbpaste)
 # Reverse patch on clipboard
 git apply --reverse <(pbpaste)
 
+# Create an empty commit
+git commit --allow-empty
+
 # Create new "Workspace" with a different git author
 cat >> .envrc <<EOF
 export GIT_AUTHOR_NAME="<git_author_name>"
