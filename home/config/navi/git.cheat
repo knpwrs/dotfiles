@@ -54,6 +54,9 @@ git stash push <git_dirty_files>
 # Git stash specific files with message
 git stash push -m <message> <git_dirty_files>
 
+# Git stash all files including untracked files
+git stash --include-untracked
+
 # Git diff with difftastic
 GIT_EXTERNAL_DIFF=difft git diff
 
