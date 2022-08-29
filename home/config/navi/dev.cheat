@@ -108,6 +108,11 @@ diff <(<cmd1>) <(<cmd2>)
 # Fancy diff the output of two commands
 diff -u <(<cmd1>) <(<cmd2>) | delta
 
+# Generate 256-bit secret
+openssl rand -hex 32
+
+# Generate 512-bit secret
+openssl rand -hex 64
 
 $ source: echo -e 'pbpaste\nvipe\n'
 $ dest: echo -e 'pbcopy\ncat\ntee\n'
