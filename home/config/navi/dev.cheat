@@ -114,6 +114,11 @@ openssl rand -hex 32
 # Generate 512-bit secret
 openssl rand -hex 64
 
+# Generate Bacon Lipsum
+curl https://baconipsum.com/api/\?type=meat-and-filler\&paras=<paras>\&format=text
+
+$ paras: echo -e '5\n'
+
 $ source: echo -e 'pbpaste\nvipe\n'
 $ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'
