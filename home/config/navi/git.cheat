@@ -6,6 +6,12 @@ git log --all -i --grep '<search-text>'
 # Search all git commit contents for a given string
 git log --all -S '<search-text>'
 
+# Search my git commit messages for a given string, case-insensitive
+git log --all -i --author '<user_name>' --grep '<search-text>'
+
+# Search my git commit contents for a given string
+git log --all --author '<user_name>' -S '<search-text>'
+
 # Checkout the main branch
 git checkout <main_branch>
 
@@ -187,3 +193,4 @@ $ git_file: git ls-files
 $ git_dirty_files: git diff --name-only --- --multi
 $ ref: echo -e 'HEAD\n'
 $ remote: git remote
+$ user_name: git config user.name
