@@ -170,6 +170,12 @@ export GIT_COMMITTER_NAME=\$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=\$GIT_AUTHOR_EMAIL
 EOF
 
+# Configure SSH Signing for Current Repo
+git config user.signingKey '<ssh_public_key_text>' && git config gpg.format ssh && git config commit.gpgSign true && git config tag.gpgSign true
+
+$ ssh_public_key_text: cat <ssh_public_key_file>
+$ ssh_public_key_file: fd . ~/.ssh -e pub
+
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi --expand
 $ branch: git branch | cut -c 3-
