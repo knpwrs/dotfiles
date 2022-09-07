@@ -53,6 +53,7 @@ require('packer').startup({
     use 'bronson/vim-trailing-whitespace'
     use 'dhruvasagar/vim-table-mode'
     use 'editorconfig/editorconfig-vim'
+    use 'github/copilot.vim'
     use 'godlygeek/tabular'
     use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
     use { 'jpalardy/vim-slime', config = [[require('plugins.vim-slime')]] }
