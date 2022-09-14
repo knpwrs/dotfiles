@@ -14,3 +14,24 @@ docker container prune
 
 # Prune all Volumes
 docker system prune --volumes
+
+# Backup docker volume
+docker run --rm \
+  -v "<volume>":/backup-volume \
+  -v "$(pwd)":/backup \
+  busybox \
+  tar -czvf /backup/<backup-name>.tar.gz /backup-volume
+
+
+$ backup-name: echo -e "my-backup\n"
+
+# Restore docker volume
+docker run --rm \
+  -v "<volume>":/backup-volume \
+  -v "$(pwd)":/backup \
+  busybox \
+  tar -xzvf /backup/<backup-file> /backup-volume -C
+
+$ backup-file: fd . -e tar.gz
+
+$ volume: docker volume ls -q
