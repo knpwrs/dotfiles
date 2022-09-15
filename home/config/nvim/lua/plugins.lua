@@ -71,7 +71,7 @@ require('packer').startup({
       config = [[require('plugins.comment-nvim')]],
     }
     use { 'nvim-lualine/lualine.nvim', config = [[require('plugins.lualine')]] }
-    use { 'rmagatti/auto-session', config = [[require('auto-session').setup()]] }
+    use { 'rmagatti/auto-session', config = [[require('plugins.auto-session')]] }
     use { 'RRethy/nvim-treesitter-endwise', requires = {{'nvim-treesitter/nvim-treesitter'}} }
     use 'sickill/vim-pasta'
     use { 'sindrets/winshift.nvim', config = [[require('plugins.winshift')]] }
