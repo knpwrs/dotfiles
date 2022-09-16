@@ -8,3 +8,6 @@ xattr -r -d com.apple.quarantine <pattern>
 
 # Restart Dock (Mission Control, etc)
 killall Dock
+
+# Clear DNS Cache
+sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
