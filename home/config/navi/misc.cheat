@@ -63,6 +63,9 @@ echo <text> | figlet -f <font>
 # Figlet Boxes Design
 echo <text> | figlet -f <font> | boxes -a c -d <figboxdesign>
 
+# Take a Typing Test
+toipe
+
 $ design: boxes -l | grep -v ' ' | grep -v -e '^$' | sed 1d --- --preview "(echo $text | boxes -a c -d {})"
 $ font: showfigfonts | grep -e '[[:alpha:]] :$' | cut -d' ' -f1 --- --preview "(echo $text | figlet -f {})"
 $ figboxdesign: boxes -l | grep -v ' ' | grep -v -e '^$' | sed 1d --- --preview "(echo $text | figlet -f $font | boxes -a c -d {})"
