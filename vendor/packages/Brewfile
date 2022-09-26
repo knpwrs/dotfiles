@@ -82,6 +82,7 @@ brew 'watch'                                   # Executes a program periodically
 brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
 brew 'wget'                                    # Internet file retriever.
 brew 'whalebrew'                               # Homebrew but with docker
+brew 'wrk'                                     # Modern HTTP benchmarking tool
 brew 'xxhash'                                  # XXHASH library and xxsum CLI.
 brew 'yarn'                                    # JavaScript package manager.
 brew 'yq'                                      # Like jq for yaml
