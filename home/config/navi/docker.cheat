@@ -3,6 +3,9 @@
 # Run new container and bind a port
 docker run -p <host_port>:<container_port> <image>
 
+# Run new container and mount current working directory
+docker run -it --rm -v $(pwd):/host -w /host <image>
+
 # Stop all containers and prune everything from Docker
 docker stop $(docker ps -aq); docker system prune --all
 
