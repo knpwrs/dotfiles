@@ -60,6 +60,12 @@ git stash push <git_dirty_files>
 # Git stash specific files with message
 git stash push -m <message> <git_dirty_files>
 
+# Git stash staged changes
+git stash push --staged
+
+# Git stash staged changes with message
+git stash push --staged -m <message>
+
 # Git stash all files including untracked files
 git stash --include-untracked
 
