@@ -99,6 +99,9 @@ git branch -d <branch>
 # Force-Delete a branch
 git branch -D <branch>
 
+# Rename current branch
+git branch -m <current_branch>
+
 # Checkout last branch
 git checkout -
 
@@ -188,6 +191,7 @@ git config user.signingKey '<ssh_public_key_text>' && git config gpg.format ssh 
 $ ssh_public_key_text: cat <ssh_public_key_file>
 $ ssh_public_key_file: fd . ~/.ssh -e pub
 
+$ current_branch: git branch --show-current
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi --expand
 $ branch: git branch | cut -c 3-
