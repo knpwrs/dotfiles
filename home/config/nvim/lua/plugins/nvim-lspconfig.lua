@@ -66,15 +66,13 @@ local enhance_server_opts = {
 
 lspinstaller.setup()
 
-local servers = { 'tsserver', 'jsonls', 'eslint', 'prismals' }
-
-for _, server in ipairs(servers) do
-  lspconfig[server].setup({
+for _, server in ipairs(lspinstaller.get_installed_servers()) do
+  lspconfig[server.name].setup({
     capabilities = capabilities,
     on_attach = function(client, bufnr)
-      if enhance_server_opts[server] then
+      if enhance_server_opts[server.name] then
         -- Enhance the default opts with the server-specific ones
-        enhance_server_opts[server](opts, client)
+        enhance_server_opts[server.name](opts, client)
       end
 
       -- Automatically format for servers which support it
