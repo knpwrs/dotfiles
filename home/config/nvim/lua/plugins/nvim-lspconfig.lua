@@ -49,8 +49,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local function disable_formatting(client)
-  client.resolved_capabilities.document_formatting = false
-  client.resolved_capabilities.document_range_formatting = false
+  client.server_capabilities.documentFormattingProvider = nil
+  client.server_capabilities.documentFormattingProvider = nil
 end
 
 local enhance_server_opts = {
@@ -78,7 +78,7 @@ for _, server in ipairs(servers) do
       end
 
       -- Automatically format for servers which support it
-      if client.resolved_capabilities.document_formatting then
+      if client.server_capabilities.documentFormattingProvider then
         vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
       end
 
