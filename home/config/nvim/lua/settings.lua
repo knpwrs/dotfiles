@@ -78,6 +78,8 @@ o.number = true
 o.showmode = false
 -- Enable mouse integration for all modes
 o.mouse = 'a'
+-- Disable always visible command line
+o.cmdheight = 0
 
 -- Invisible characters
 if vim.fn.has('multi_byte') and o.encoding == 'utf-8' then
