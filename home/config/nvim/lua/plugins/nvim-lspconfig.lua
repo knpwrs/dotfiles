@@ -48,36 +48,34 @@ wk.register(
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local function disable_formatting(client)
-  client.server_capabilities.documentFormattingProvider = nil
-  client.server_capabilities.documentFormattingProvider = nil
+lspinstaller.setup()
+
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      -- Prefer prettier for TypeScript, JSON, and YAML
+      return client.name ~= 'tsserver' and client.name ~= 'jsonls' and client.name ~= 'yamlls'
+    end,
+    bufnr = bufnr,
+  })
 end
 
-local enhance_server_opts = {
-  ['tsserver'] = function(opts, client)
-    -- Prefer prettier formatting over null-ls
-    disable_formatting(client)
-  end,
-  ['jsonls'] = function(opts, client)
-    -- Prefer prettier formatting over null-ls
-    disable_formatting(client)
-  end,
-}
-
-lspinstaller.setup()
+local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 for _, server in ipairs(lspinstaller.get_installed_servers()) do
   lspconfig[server.name].setup({
     capabilities = capabilities,
     on_attach = function(client, bufnr)
-      if enhance_server_opts[server.name] then
-        -- Enhance the default opts with the server-specific ones
-        enhance_server_opts[server.name](opts, client)
-      end
-
       -- Automatically format for servers which support it
-      if client.server_capabilities.documentFormattingProvider then
-        vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+      if client.supports_method('textDocument/formatting') then
+        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          group = augroup,
+          buffer = bufnr,
+          callback = function()
+            lsp_formatting(bufnr)
+          end,
+        })
       end
 
       -- Attach vim-illuminate
