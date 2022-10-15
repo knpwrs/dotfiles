@@ -36,6 +36,7 @@ brew 'htop'                                    # Improved top (interactive proce
 brew 'httpie'                                  # cURL-like tool for humans.
 brew 'imagemagick'                             # CLI image manipulation utilities.
 brew 'jcamiel/hurl/hurl'                       # Hurl CLI for HTTP testing.
+brew 'just'
 brew 'jo'                                      # A small utility to create JSON objects.
 brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.

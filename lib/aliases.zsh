@@ -74,6 +74,8 @@ alias kz='kill -9 %1'
 
 alias hb='HandBrakeCLI'
 
+alias j='just'
+
 alias osvg='svgo -i - -o - --pretty --multipass --enable=removeXMLNS'
 
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
