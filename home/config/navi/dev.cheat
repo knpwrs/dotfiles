@@ -119,6 +119,11 @@ curl https://baconipsum.com/api/\?type=meat-and-filler\&paras=<paras>\&format=te
 
 $ paras: echo -e '5\n'
 
+# Add SSH Key to Agent
+ssh-add <key>
+
+$ key: fd '^[^.]+$' ~/.ssh/keys
+
 $ source: echo -e 'pbpaste\nvipe\n'
 $ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'
