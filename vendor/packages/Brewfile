@@ -56,6 +56,7 @@ brew 'node'                                    # Node.js.
 brew 'nss'                                     # Libraries for security-enabled client and server applications, required for mkcert and Firefox
 brew 'nyancat'                                 # Nyancat in your terminal, rendered through ANSI escape sequences.
 brew 'onefetch'                                # Git repository summary on your terminal
+brew 'p7zip'                                   # Extract 7z archives
 brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
 brew 'pv'                                      # Monitor the progress of data through a pipe.
 brew 'python3'                                 # Python 3
