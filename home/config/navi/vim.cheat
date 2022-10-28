@@ -10,4 +10,4 @@ tail -f /Users/knpwrs/.cache/nvim/lsp.log
 tail -f /Users/knpwrs/.cache/nvim/dap.log
 
 # Clear all neovim swap files
-rm $HOME/.local/share/nvim/swap/*.swp
+rm $HOME/.local/state/nvim/swap/*.swp
