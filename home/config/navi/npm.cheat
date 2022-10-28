@@ -83,4 +83,7 @@ npm pack --dry-run
 # Generate a LICENSE file
 npx lice
 
+# Check for updates and upgrade packages
+npx npm-check-updates
+
 $ script: jq -r '.scripts | keys | .[]' package.json
