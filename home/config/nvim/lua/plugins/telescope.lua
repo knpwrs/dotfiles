@@ -4,6 +4,7 @@ local actions = require 'telescope.actions'
 
 telescope.setup {
   defaults = {
+    scroll_lines = 1,
     mappings = {
       i = {
         ['<C-d>'] = actions.close,
