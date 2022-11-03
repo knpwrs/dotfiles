@@ -145,7 +145,6 @@ require('packer').startup({
       config = [[require('plugins.null-ls')]],
     }
     use { 'ray-x/lsp_signature.nvim', config = [[require('plugins.lsp-signature')]] }
-    use { 'stevearc/aerial.nvim', config = [[require('plugins.aerial')]] }
     use {
       'williamboman/nvim-lsp-installer',
       {

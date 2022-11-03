@@ -2,7 +2,6 @@ local wk = require('which-key')
 local lspinstaller = require('nvim-lsp-installer')
 local lspconfig = require('lspconfig')
 local illum = require('illuminate')
-local aerial = require('aerial')
 local lsp = vim.lsp
 local diag = vim.diagnostic
 
@@ -10,7 +9,6 @@ wk.register(
   {
     l = {
       name = 'LSP',
-      a = { '<Cmd>AerialToggle<Cr>', 'Toggle Aerial' } ,
       e = { '<Cmd>lua vim.lsp.buf.code_action()<Cr>', 'Code Actions' },
       f = { function() lsp.buf.formatting() end, 'Format' },
       i = { function() lsp.buf.implementation() end, 'Implementation' },
@@ -80,9 +78,6 @@ for _, server in ipairs(lspinstaller.get_installed_servers()) do
 
       -- Attach vim-illuminate
       illum.on_attach(client)
-
-      -- Attach aerial.nvim
-      aerial.on_attach(client, bufnr)
     end,
   })
 end
