@@ -51,7 +51,6 @@ require('packer').startup({
     use 'AndrewRadev/splitjoin.vim'
     use 'andymass/vim-matchup'
     use { 'bfredl/nvim-luadev', config = [[require('plugins.nvim-luadev')]] }
-    use 'bronson/vim-trailing-whitespace'
     use 'dhruvasagar/vim-table-mode'
     use 'editorconfig/editorconfig-vim'
     use 'github/copilot.vim'

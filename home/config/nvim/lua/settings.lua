@@ -83,9 +83,9 @@ o.cmdheight = 0
 
 -- Invisible characters
 if vim.fn.has('multi_byte') and o.encoding == 'utf-8' then
-  o.listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+  o.listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:•'
 else
-  o.listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
+  o.listchars = 'tab:> ,extends:>,precedes:<,nbsp:.,trail:~'
 end
 
 -- Spell check settings
