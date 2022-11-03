@@ -103,16 +103,7 @@ require('packer').startup({
       requires = {{'nvim-web-devicons'}},
       config = [[require('plugins.bufferline')]],
     }
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = {
-        {'nvim-lua/popup.nvim', 'LinArcX/telescope-env.nvim'},
-        {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
-        {'nvim-telescope/telescope-ui-select.nvim'},
-        {'plenary.nvim'},
-      },
-      config = [[require('plugins.telescope')]]
-    }
+    use { 'ibhagwan/fzf-lua', config = [[require('plugins.fzf-lua')]] }
     -- Text Object Plugins
     use { 'David-Kunz/treesitter-unit', config = [[require('plugins.treesitter-unit')]] }
     use 'kana/vim-textobj-user'
@@ -154,11 +145,6 @@ require('packer').startup({
     }
     -- DAP
     use { 'mfussenegger/nvim-dap', config = [[require('plugins.nvim-dap')]] }
-    use {
-      'nvim-telescope/telescope-dap.nvim',
-      requires = {{'nvim-dap'}, {'telescope.nvim'}},
-      config = [[require('plugins.telescope-dap')]],
-    }
     use {
       'rcarriga/nvim-dap-ui',
       requires = {'nvim-dap'},

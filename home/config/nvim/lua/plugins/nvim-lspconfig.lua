@@ -9,7 +9,6 @@ wk.register(
   {
     l = {
       name = 'LSP',
-      e = { '<Cmd>lua vim.lsp.buf.code_action()<Cr>', 'Code Actions' },
       f = { function() lsp.buf.formatting() end, 'Format' },
       i = { function() lsp.buf.implementation() end, 'Implementation' },
       k = { function() lsp.buf.hover() end, 'Hover' },
@@ -18,12 +17,13 @@ wk.register(
       R = { '<Cmd>LspRestart<Cr>', 'Restart LSP' },
       m = { function() lsp.buf.rename() end, 'Rename' },
       y = { function() lsp.buf.type_definition() end, 'Type Definition' },
-      -- Telescope lsp maps
-      D = { '<Cmd>Telescope lsp_document_diagnostics<Cr>', 'Diagnostics' },
-      I = { '<Cmd>Telescope lsp_implementations<Cr>', 'Implementations' },
-      d = { '<Cmd>Telescope lsp_definitions<Cr>', 'Definitions' },
-      r = { '<Cmd>Telescope lsp_references<Cr>', 'References' },
-      s = { '<Cmd>Telescope lsp_document_symbols<Cr>', 'Symbols' },
+      -- FzfLua lsp maps
+      d = { '<Cmd>FzfLua lsp_definitions<Cr>', 'Definitions' },
+      D = { '<Cmd>FzfLua diagnostics_document<Cr>', 'Diagnostics' },
+      e = { '<Cmd>FzfLua lsp_code_actions<Cr>', 'Code Actions' },
+      I = { '<Cmd>FzfLua lsp_implementations<Cr>', 'Implementations' },
+      r = { '<Cmd>FzfLua lsp_references<Cr>', 'References' },
+      s = { '<Cmd>FzfLua lsp_document_symbols<Cr>', 'Symbols' },
       -- nvim-lsp-installer maps
       L = { '<Cmd>LspInstallInfo<Cr>', 'nvim-lsp-installer UI' },
     },

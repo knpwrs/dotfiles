@@ -14,7 +14,7 @@ wk.register(
         e = { function() dap.set_exception_breakpoints() end, 'Set Exception Breakpoints' },
         E = { function() dap.set_exception_breakpoints({}) end, 'Clear Exception Breakpoints' },
         l = { function() dap.set_breakpoint(nil, nil, vim.fn.input('Logpoint message: ')) end, 'Set Logpoint' },
-        L = { '<Cmd>Telescope dap list_breakpoints<Cr>', 'Breakpoints' },
+        L = { '<Cmd>FzfLua dap_breakpoints<Cr>', 'Breakpoints' },
       },
       s = {
         name = 'Steps',
@@ -24,7 +24,7 @@ wk.register(
       },
       t = { function () dap.run_to_cursor() end, 'Run to Cursor' },
       c = { function() dap.continue() end, 'Continue' },
-      C = { '<Cmd>Telescope dap configurations<Cr>', 'Configurations' },
+      C = { '<Cmd>FzfLua dap_configurations<Cr>', 'Configurations' },
       R = { function() dap.run_last() end, 'Run Last' },
       k = { function() duw.hover() end, 'Hover' },
       x = {
@@ -33,10 +33,10 @@ wk.register(
         c = { function() dap.close() end; 'Close DAP Session' },
       },
       r = { function() dap.repl.open() end; 'Open Repl' },
-      -- Telescope Commands
-      e = { '<Cmd>Telescope dap commands<Cr>', 'Commands' },
-      v = { '<Cmd>Telescope dap variables<Cr>', 'Variables' },
-      f = { '<Cmd>Telescope dap frames<Cr>', 'Frames' },
+      -- FzfLua Commands
+      e = { '<Cmd>FzfLua dap_commands<Cr>', 'Commands' },
+      v = { '<Cmd>FzfLua dap_variables<Cr>', 'Variables' },
+      f = { '<Cmd>FzfLua dap_frames<Cr>', 'Frames' },
     },
   },
   {
