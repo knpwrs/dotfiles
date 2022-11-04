@@ -18,10 +18,24 @@ local function prettier_condition(utils)
   return utils.has_file(files) or utils.root_has_file(files)
 end
 
+local function vale_condition(utils)
+  return utils.has_file('.vale.ini') or utils.root_has_file('.vale.ini')
+end
+
+local function sqlfluff_condition(utils)
+  return utils.has_file('.sqlfluff') or utils.root_has_file('.sqlfluff')
+end
+
 local sources = {
   nls.builtins.formatting.prettier.with({
     condition = prettier_condition,
-  })
+  }),
+  nls.builtins.formatting.sqlfluff.with({
+    condition = sqlfluff_condition,
+  }),
+  nls.builtins.diagnostics.vale.with({
+    condition = vale_condition,
+  }),
 }
 
 nls.setup({
