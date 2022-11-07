@@ -32,6 +32,7 @@ brew 'gnu-which', args: ['with-default-names'] # GNU version of the tar utility.
 brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) package.
 brew 'graphviz'                                # Rich set of graph drawing tools.
 brew 'gron'                                    # Make JSON greppable!
+brew 'gum'                                     # A tool for glamorous shell scripts 🎀
 brew 'htop'                                    # Improved top (interactive process viewer)
 brew 'httpie'                                  # cURL-like tool for humans.
 brew 'imagemagick'                             # CLI image manipulation utilities.
