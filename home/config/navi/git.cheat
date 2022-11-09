@@ -69,6 +69,9 @@ git stash push --staged -m <message>
 # Git stash all files including untracked files
 git stash --include-untracked
 
+# View most recent git stash
+git stash show -p
+
 # Git diff with difftastic
 GIT_EXTERNAL_DIFF=difft git diff
 
