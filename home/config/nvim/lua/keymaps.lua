@@ -52,6 +52,8 @@ wk.register(
     P = { '<Cmd>set paste!<Cr>', 'Toggle Paste Mode' },
     c = { '<Cmd>close<Cr>', 'Close Window' },
     C = { '<Cmd>close!<Cr>', 'CLOSE Window' },
+    j = { '<C-w>w', 'Next window' },
+    k = { '<C-w>W', 'Previous window' },
     [','] = { '<Cmd>e $MYVIMRC<Cr>', 'Edit init.lua' },
     ['-'] = { '<Cmd>split<Cr>', 'Horizontal Split' },
     ['\\'] = { '<Cmd>vsplit<Cr>', 'Vertical Split' },

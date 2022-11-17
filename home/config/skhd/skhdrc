@@ -1,0 +1,7 @@
+hyper - r: launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+hyper - l: yabai -m display --focus next
+hyper - h: yabai -m display --focus prev
+hyper - j : yabai -m window --focus next
+hyper - k : yabai -m window --focus prev
+hyper - n : yabai -m window --swap next
+hyper - p : yabai -m window --swap prev

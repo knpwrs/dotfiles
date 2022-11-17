@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+yabai -m config layout bsp
+yabai -m config window_border on
+yabai -m config window_border_width 1
+yabai -m config active_window_border_color 0xFFFFFFFF
+yabai -m config mouse_follows_focus on
+
+# Ignore some apps
+yabai -m rule --add app="1Password" sticky=on layer=above manage=off
+yabai -m rule --add app="ExpressVPN" sticky=on layer=above manage=off
+yabai -m rule --add app="System Preferences" sticky=on layer=above manage=off
+
+# When focusing Alacritty don't move the mouse to follow
+yabai -m rule --add app="Alacritty" mouse_follows_focus=off
