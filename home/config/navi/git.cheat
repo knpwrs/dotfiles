@@ -194,8 +194,11 @@ export GIT_COMMITTER_NAME=\$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=\$GIT_AUTHOR_EMAIL
 EOF
 
-# Configure SSH Signing for Current Repo
+# Configure SSH Signing Key for Current Repo
 git config user.signingKey '<ssh_public_key_text>' && git config gpg.format ssh && git config commit.gpgSign true && git config tag.gpgSign true
+
+# Configure SSH Signing via 1Password for Current Repo
+git config gpg.ssh.program /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 
 $ ssh_public_key_text: cat <ssh_public_key_file>
 $ ssh_public_key_file: fd . ~/.ssh -e pub
