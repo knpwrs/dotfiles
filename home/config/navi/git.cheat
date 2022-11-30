@@ -138,8 +138,11 @@ git revert <commit>
 # Checkout contents of file
 git checkout -- <git_changed_files>
 
-# Checkout contents of file on another branch
+# Checkout contents of file on another branch or tag
 git checkout <branch_or_tag> -- <git_file>
+
+# Checkout contents of file at a commit
+git checkout <commit> -- <git_file>
 
 # Show contents of a given commit
 git show <commit>
