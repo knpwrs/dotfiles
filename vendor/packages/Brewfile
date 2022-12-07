@@ -112,7 +112,6 @@ cask 'paw'                       # The most advanced API tool for Mac
 cask 'raycast'                   # Supercharged productivity
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
-cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
 cask 'vlc'                       # Open source media player.
 
