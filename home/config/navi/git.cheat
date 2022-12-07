@@ -209,6 +209,11 @@ git config user.signingKey '<ssh_public_key_text>' && git config gpg.format ssh 
 # Configure SSH Signing via 1Password for Current Repo
 git config gpg.ssh.program /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 
+# Configure SSH Signing Key from 1Password for Current Repo
+git config user.signingKey '<op_ssh_key_public_key_text>' && git config gpg.format ssh && git config commit.gpgSign true && git config tag.gpgSign true
+
+$ op_ssh_key_public_key_text: op item get <op_ssh_key> --format json | jq -r '.fields[] | select(.id == "public_key") | .value'
+$ op_ssh_key: op item list --categories "SSH Key" | tail -n +2 --- --map "cut -d ' ' -f1"
 $ ssh_public_key_text: cat <ssh_public_key_file>
 $ ssh_public_key_file: fd . ~/.ssh -e pub
 
