@@ -80,6 +80,8 @@ o.showmode = false
 o.mouse = 'a'
 -- Disable always visible command line
 o.cmdheight = 0
+-- Persistent Undo
+o.undofile = true
 
 -- Invisible characters
 if vim.fn.has('multi_byte') and o.encoding == 'utf-8' then
