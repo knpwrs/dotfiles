@@ -134,5 +134,5 @@ fo() {
 fb() {
   local files
   IFS=$'\n' files=($(fzf --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && bat "${files[@]}" --paging
+  [[ -n "$files" ]] && bat "${files[@]}" --paging auto
 }
