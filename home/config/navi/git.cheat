@@ -198,6 +198,15 @@ git commit --allow-empty
 # Remove merge/rebase leftover/backup files
 fd '_(BACKUP|BASE|LOCAL|REMOTE)_' . | xargs rm
 
+# Bisect with HEAD as bad and <commit> as good
+git bisect start HEAD <commit>
+
+# Bisect with HEAD as bad and <branch> as good
+git bisect start HEAD <branch>
+
+# See what git bisect has tested so far
+git bisect log
+
 # Create new "Workspace" with a different git author
 cat >> .envrc <<EOF
 export GIT_AUTHOR_NAME="<git_author_name>"
