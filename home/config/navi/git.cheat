@@ -1,5 +1,8 @@
 % Git
 
+# Show my git commits
+git log --all -i --author '<user_name>'
+
 # Search all git commit messages for a given string, case-insensitive
 git log --all -i --grep '<search-text>'
 
