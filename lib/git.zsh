@@ -221,12 +221,22 @@ fsha() {
   echo -n $(echo "$commit" | sed "s/ .*//")
 }
 
-# fa [FUZZY PATTERN] - Add file to git staging area
-#   - Bypass fuzzy finder if there's only one match (--select-1)
-#   - Exit if there's no match (--exit-0)
+# fa [FUZZY PATTERN] - Add file to git staging area (based on forgit::add)
 fa() {
-  local files
-  IFS=$'\n' files=($(git diff --name-only | fzf --query="$1" --multi --select-1 --exit-0))
+  local files preview extract diff_pager
+  extract="
+        sed 's/^.*]  //' |
+        sed 's/.* -> //' |
+        sed -e 's/^\\\"//' -e 's/\\\"\$//'"
+  diff_pager=$(git config pager.diff || git config core.pager)
+  preview="
+    file=\$(echo {} | $extract)
+    if (git status -s -- \$file | grep '^??') &>/dev/null; then  # diff with /dev/null for untracked files
+        git diff --color=always --no-index -- /dev/null \$file | $diff_pager | sed '2 s/added:/untracked:/'
+    else
+        git diff --color=always -- \$file | $diff_pager
+    fi"
+  IFS=$'\n' files=($(git diff --name-only | fzf --query="$1" --multi --preview "$preview" --select-1 --exit-0))
   [[ -n "$files" ]] && git add "${files[@]}"
 }
 
