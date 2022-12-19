@@ -90,6 +90,9 @@ gh pr view --web <pr>
 # Copy URL for pull request
 gh pr view --json url --jq .url <pr> | pbcopy
 
+# Open PR files in $EDITOR
+gh pr diff --name-only | xargs -o $EDITOR
+
 # Archive current repository
 gh repo archive
 
