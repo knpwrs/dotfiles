@@ -48,7 +48,6 @@ require('packer').startup({
     -- Enhancement Plugins
     use { 'AndrewRadev/dsf.vim', config = [[require('plugins.dsf')]] }
     use { 'AndrewRadev/sideways.vim', config = [[require('plugins.sideways')]] }
-    use 'AndrewRadev/splitjoin.vim'
     use 'andymass/vim-matchup'
     use { 'bfredl/nvim-luadev', config = [[require('plugins.nvim-luadev')]] }
     use 'dhruvasagar/vim-table-mode'
@@ -88,6 +87,7 @@ require('packer').startup({
     use 'tpope/vim-surround'
     use 'tpope/vim-unimpaired'
     use { 'vitalk/vim-simple-todo', config = [[require('plugins.vim-simple-todo')]] }
+    use { 'Wansmer/treesj', requires = { 'nvim-treesitter' }, config = [[require('plugins.treesj')]] }
     use { 'windwp/nvim-autopairs', config = [[require('plugins.nvim-autopairs')]] }
     use { 'windwp/nvim-ts-autotag', config = [[require('plugins.nvim-ts-autotag')]] }
     -- Movement Plugins
