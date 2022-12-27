@@ -26,9 +26,9 @@ brew 'git-extras'                              # Extra git commands.
 brew 'git-imerge'                              # Incremental merge helper for git.
 brew 'git-lfs'                                 # Git extension for versioning large files.
 brew 'git-open'                                # Open the GitHub page or website for the current repository.
-brew 'gnu-sed', args: ['with-default-names']   # GNU version of the sed utility.
-brew 'gnu-tar', args: ['with-default-names']   # GNU version of the tar utility.
-brew 'gnu-which', args: ['with-default-names'] # GNU version of the tar utility.
+brew 'gnu-sed'                                 # GNU version of the sed utility.
+brew 'gnu-tar'                                 # GNU version of the tar utility.
+brew 'gnu-which'                               # GNU version of the tar utility.
 brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) package.
 brew 'graphviz'                                # Rich set of graph drawing tools.
 brew 'gron'                                    # Make JSON greppable!
@@ -43,7 +43,7 @@ brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
 brew 'lazygit'                                 # Simple terminal UI for git commands
 brew 'lazydocker'                              # Simple terminal UI for docker commands
-brew 'make', args: ['with-default-names']      # GNU make utility to maintain groups of programs.
+brew 'make'                                    # GNU make utility to maintain groups of programs.
 brew 'mas'                                     # Mac App Store CLI
 brew 'mike-engel/jwt-cli/jwt-cli'              # JWT CLI Tool
 brew 'miller'                                  # Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON

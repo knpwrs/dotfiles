@@ -29,6 +29,9 @@ path=(
   $HOME/.bin # bin directory from this repo
   $WHALEBREW_INSTALL_PATH
   $BREW_PREFIX/opt/coreutils/libexec/gnubin # GNU coreutils
+  $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # GNU sed
+  $BREW_PREFIX/opt/gnu-tar/libexec/gnubin # GNU tar
+  $BREW_PREFIX/opt/gnu-which/libexec/gnubin # GNU which
   $BREW_PREFIX/opt/make/libexec/gnubin # GNU make
   $BREW_PREFIX/bin
   /usr/local/{bin,sbin}
