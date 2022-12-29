@@ -7,5 +7,3 @@ git submodules. Google around and you'll see why not.
 
 This directory contains installation scripts for various packages I use from
 popular package managers.
-
-[`vim-plug`]: https://github.com/junegunn/vim-plug "vim-plug"
