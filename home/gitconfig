@@ -32,7 +32,7 @@
 	diffFilter = delta --color-only
 [delta]
 	features = line-numbers decorations
-	syntax-theme = ansi-dark
+	syntax-theme = ansi
 	plus-style = syntax "#003800"
 	minus-style = syntax "#3f0001"
 	# minus-style = red bold
