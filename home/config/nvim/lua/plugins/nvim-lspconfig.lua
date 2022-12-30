@@ -1,5 +1,6 @@
 local wk = require('which-key')
-local lspinstaller = require('nvim-lsp-installer')
+local mason = require('mason')
+local mason_lspc = require('mason-lspconfig')
 local lspconfig = require('lspconfig')
 local illum = require('illuminate')
 local lsp = vim.lsp
@@ -25,7 +26,7 @@ wk.register(
       r = { '<Cmd>FzfLua lsp_references<Cr>', 'References' },
       s = { '<Cmd>FzfLua lsp_document_symbols<Cr>', 'Symbols' },
       -- nvim-lsp-installer maps
-      L = { '<Cmd>LspInstallInfo<Cr>', 'nvim-lsp-installer UI' },
+      L = { '<Cmd>Mason<Cr>', 'mason UI' },
     },
   },
   {
@@ -46,7 +47,8 @@ wk.register(
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-lspinstaller.setup()
+mason.setup()
+mason_lspc.setup()
 
 local lsp_formatting = function(bufnr)
   vim.lsp.buf.format({
@@ -60,27 +62,29 @@ end
 
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
-for _, server in ipairs(lspinstaller.get_installed_servers()) do
-  lspconfig[server.name].setup({
-    capabilities = capabilities,
-    on_attach = function(client, bufnr)
-      -- Automatically format for servers which support it
-      if client.supports_method('textDocument/formatting') then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd('BufWritePre', {
-          group = augroup,
-          buffer = bufnr,
-          callback = function()
-            lsp_formatting(bufnr)
-          end,
-        })
-      end
+mason_lspc.setup_handlers({
+  function (server_name)
+    require('lspconfig')[server_name].setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        -- Automatically format for servers which support it
+        if client.supports_method('textDocument/formatting') then
+          vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+              lsp_formatting(bufnr)
+            end,
+          })
+        end
 
-      -- Attach vim-illuminate
-      illum.on_attach(client)
-    end,
-  })
-end
+        -- Attach vim-illuminate
+        illum.on_attach(client)
+      end,
+    })
+  end,
+})
 
 -- Disable illuminate in fugitiveblame
 vim.g.Illuminate_ftblacklist = { 'fugitiveblame' }

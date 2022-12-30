@@ -136,7 +136,8 @@ require('packer').startup({
     }
     use { 'ray-x/lsp_signature.nvim', config = [[require('plugins.lsp-signature')]] }
     use {
-      'williamboman/nvim-lsp-installer',
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
       {
        'neovim/nvim-lspconfig',
         config = [[require('plugins.nvim-lspconfig')]],
