@@ -124,7 +124,7 @@ ssh-add <key>
 
 $ key: fd '^[^.]+$' ~/.ssh/keys
 
-$ source: echo -e 'pbpaste\nvipe\n'
+$ source: echo -e 'pbpaste\nvipe\ncurl -fL\n'
 $ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'
 $ file: fd
