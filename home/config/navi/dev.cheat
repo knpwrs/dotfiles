@@ -46,7 +46,7 @@ npx lice
 <source> | jwt decode --secret b64:<secret> - | <dest>
 
 # Get SHA-256 Hash
-<source> | shasum -a 256 | cut -d' ' -f1 | <dest>
+<source> | shasum -a 256 | cut -d' ' -f1 | tr -d '\n' | <dest>
 
 # Get XXHASH
 <source> | xxhsum | <dest>
