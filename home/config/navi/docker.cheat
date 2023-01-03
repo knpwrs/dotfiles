@@ -36,5 +36,24 @@ docker run --rm \
   tar -xzvf /backup/<backup-file> /backup-volume -C
 
 $ backup-file: fd . -e tar.gz
-
 $ volume: docker volume ls -q
+
+# Start Docker Compose
+docker-compose up -d
+
+# Start Specific Docker Compose Service
+docker-compose start <service>
+
+# Stop Docker Compose
+docker-compose down
+
+# Stop Specific Docker Compose Service
+docker-compose stop <service>
+
+# Restart Docker Compose
+docker-compose restart
+
+# Restart specific Docker Compose service
+docker-compose restart <service>
+
+$ service: docker-compose config --services
