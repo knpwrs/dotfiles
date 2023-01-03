@@ -13,7 +13,7 @@ Code Pro Nerd Font`] is installed before opening.
 
 ## BetterTouchTool
 
-Load [`gestures.json`] into Better Touch Tool for awesome gestures.
+Load [`knpwrs.bttpreset`] into Better Touch Tool for awesome gestures.
 
 [`macos.sh`]: ./macos.sh "macOS Settings Script"
 [`knpwrs.terminal`]: ./knpwrs.terminal "knpwrs Terminal.app theme"
