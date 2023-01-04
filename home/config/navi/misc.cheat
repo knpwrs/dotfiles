@@ -66,6 +66,9 @@ echo <text> | figlet -f <font> | boxes -a c -d <figboxdesign>
 # Take a Typing Test
 toipe
 
+# Sign in to 1Password on the CLI
+eval $(op signin)
+
 $ design: boxes -l | grep -v ' ' | grep -v -e '^$' | sed 1d --- --preview "(echo $text | boxes -a c -d {})"
 $ font: showfigfonts | grep -e '[[:alpha:]] :$' | cut -d' ' -f1 --- --preview "(echo $text | figlet -f {})"
 $ figboxdesign: boxes -l | grep -v ' ' | grep -v -e '^$' | sed 1d --- --preview "(echo $text | figlet -f $font | boxes -a c -d {})"
