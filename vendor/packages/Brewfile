@@ -112,6 +112,7 @@ cask 'kitty'                     # the fast, featureful, GPU based terminal emul
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 cask 'paw'                       # The most advanced API tool for Mac
 cask 'raycast'                   # Supercharged productivity
+cask 'shottr'                    # Screenshot app for Mac for Designers and UI Developers
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
