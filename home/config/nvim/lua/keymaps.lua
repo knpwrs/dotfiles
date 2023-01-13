@@ -54,6 +54,7 @@ wk.register(
     C = { '<Cmd>close!<Cr>', 'CLOSE Window' },
     j = { '<C-w>w', 'Next window' },
     k = { '<C-w>W', 'Previous window' },
+    y = { '"*y', 'Yank to System Clipboard' },
     [','] = { '<Cmd>e $MYVIMRC<Cr>', 'Edit init.lua' },
     ['-'] = { '<Cmd>split<Cr>', 'Horizontal Split' },
     ['\\'] = { '<Cmd>vsplit<Cr>', 'Vertical Split' },
