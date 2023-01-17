@@ -64,6 +64,16 @@ wk.register(
   }
 )
 
+wk.register(
+  {
+    y = { '"*y', 'Yank to System Clipboard' },
+  },
+  {
+    prefix = '<Leader>',
+    mode = 'v',
+  }
+)
+
 -- Copy/yank file paths
 nvim_set_keymap('n', 'cp', ':let @*=expand("%")<Cr>', {})
 nvim_set_keymap('n', 'cP', ':let @*=expand("%:p")<Cr>', {})
