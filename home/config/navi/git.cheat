@@ -21,6 +21,12 @@ git checkout <main_branch>
 # Checkout target branch or tag
 git checkout <branch_or_tag>
 
+# Checkout "their" change for a conflicted file
+git checkout --theirs <conflicted_file>
+
+# Checkout "our" change for a conflicted file
+git checkout --ours <conflicted_file>
+
 # Rebase on a given branch
 git rebase <branch>
 
@@ -249,3 +255,4 @@ $ git_dirty_files: git diff --name-only --- --multi
 $ ref: echo -e 'HEAD\n'
 $ remote: git remote
 $ user_name: git config user.name
+$ conflicted_file: git diff --name-only --diff-filter=U --relative
