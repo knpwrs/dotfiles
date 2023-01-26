@@ -3,6 +3,7 @@ require('nvim-treesitter.configs').setup {
     'astro',
     'bash',
     'css',
+    'dockerfile',
     'git_rebase',
     'gitattributes',
     'gitcommit',
