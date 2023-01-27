@@ -57,3 +57,4 @@ docker-compose restart
 docker-compose restart <service>
 
 $ service: docker-compose config --services
+$ image: echo -e 'busybox\n'
