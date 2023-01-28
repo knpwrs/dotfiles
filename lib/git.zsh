@@ -50,10 +50,7 @@ alias gd='git diff'
 alias gds='git diff --staged'
 alias gdt='git difftool'
 alias gfa='git fetch --all --prune'
-gfr() {
-  [[ "$#" != 1 ]] && local r="origin"
-  git fetch --all && git reset --hard "${r:=$1}/$(current_branch)"
-}
+alias gfr='git fetch --all && git reset --hard @{upstream}'
 ggf() {
   [[ "$#" != 1 ]] && b="$(current_branch)"
   git push --force-with-lease origin "${b:=$1}"
