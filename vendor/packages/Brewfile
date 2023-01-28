@@ -51,6 +51,7 @@ brew 'miller'                                  # Miller is like awk, sed, cut, j
 brew 'mkcert'                                  # Simple tool to make locally trusted development certificates
 brew 'moreutils'                               # Other useful utilities (vipe, vidir, etc) (https://joeyh.name/code/moreutils/)
 brew 'navi'                                    # An interactive cheatsheet tool for the command-line.
+brew 'ncdu'                                    # NCurses Disk Usage
 brew 'neofetch'                                # A command-line system information tool written in bash 3.2+
 brew 'neovim'                                  # Neovim
 brew 'netcat'                                  # Utility for managing network connections.
