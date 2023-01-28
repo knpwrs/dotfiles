@@ -16,6 +16,15 @@ kubectl create deployment <name> --image=<image> --port=<port> --replicas=<repli
 
 kubectl create service <service_type> <name> --tcp=<port>:<target_port> --dry-run=client -o yaml | yq
 
+# Configure a Docker Registry Pull Secret
+kubectl create secret docker-registry <name> --docker-server=<docker_server> --docker-username=<docker_username> --docker-password=<secret_input>
+
+# Get Secret Value
+kubectl get secret <secret_name> -o jsonpath='{.data}'
+
 $ keyvals: echo -e 'cow=moo cat=meow\n'
 $ replicas: echo -e '1\n'
 $ service_type: echo -e 'loadbalancer\nclusterip\nexternalname\nnodeport'
+$ docker_server: echo -e 'registry.gitlab.com\n'
+$ secret_input: echo -e '$(gum input --password)\n'
+$ secret_name: kubectl get secrets | tail -1 | cut -d ' ' -f 1
