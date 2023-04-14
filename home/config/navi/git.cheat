@@ -51,11 +51,26 @@ cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o -
 # Open dirty files in $EDITOR
 cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
+# Pick dirty files to open in $EDITOR
+$EDITOR <dirty_files>
+
+$dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
+
 # Open files from HEAD commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
+# Pick files from HEAD commit to open in $EDITOR
+$EDITOR <haed_files>
+
+$head_files: git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
+
 # Open files from given commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
+
+# Pick files from given commit to open in $EDITOR
+$EDITOR <commit_files>
+
+$commit_files: git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
 
 # Git diff specific file
 git diff <git_file>
