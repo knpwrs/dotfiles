@@ -49,13 +49,13 @@ git cherry-pick -i <commit>
 cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard)
 
 # Open dirty files in $EDITOR
-cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -o $EDITOR
+cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Open files from HEAD commit in $EDITOR
-git diff-tree --no-commit-id --name-only -r HEAD | xargs -o $EDITOR
+git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Open files from given commit in $EDITOR
-git diff-tree --no-commit-id --name-only -r <commit> | xargs -o $EDITOR
+git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Git diff specific file
 git diff <git_file>
