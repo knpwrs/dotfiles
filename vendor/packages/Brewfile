@@ -85,7 +85,7 @@ brew 'viddy'                                   # A modern watch command. Time ma
 brew 'vim'                                     # Vi "workalike" with many additional features.
 brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit).
 brew 'watch'                                   # Executes a program periodically, showing output fullscreen
-brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
+brew 'watchexec'                               # Executes commands in response to file modifications
 brew 'wget'                                    # Internet file retriever.
 brew 'whalebrew'                               # Homebrew but with docker
 brew 'wrk'                                     # Modern HTTP benchmarking tool
