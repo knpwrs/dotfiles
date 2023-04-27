@@ -6,8 +6,11 @@ gh browse --no-browser | pbcopy
 # Copy URL to Github Commit (HEAD)
 gh browse --commit --no-browser | sed 's|/tree|/commit|' | pbcopy
 
-# Show CI status for a single pull request
+# Show CI status for current branch pull request
 gh pr checks
+
+# Watch CI status for current branch pull requst
+watch gh pr checks
 
 # Checkout a Pull Request
 gh pr checkout <pr_number>
@@ -48,10 +51,10 @@ gh pr merge --auto
 # Automatically merge a pull request
 gh pr merge --auto <pr>
 
-# Mark pull request for current branch as ready for review
+# Mark draft pull request for current branch as ready for review
 gh pr ready
 
-# Mark a pull request as ready for review
+# Mark a draft pull request as ready for review
 gh pr ready <pr>
 
 # Reopen pull request for current branch
