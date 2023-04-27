@@ -49,7 +49,6 @@ wk.register(
   {
     r = {  ':%s/<C-r><C-w>//g<Left><Left>', 'Replace Word Under Cursor' },
     s = { '<Cmd>set spell!<Cr>', 'Toggle Spellchecking' },
-    P = { '<Cmd>set paste!<Cr>', 'Toggle Paste Mode' },
     c = { '<Cmd>close<Cr>', 'Close Window' },
     C = { '<Cmd>close!<Cr>', 'CLOSE Window' },
     j = { '<C-w>w', 'Next window' },
