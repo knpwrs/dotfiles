@@ -33,6 +33,11 @@ $ pngs: fd -e png --- --multi --map "navi fn map::expand"
 # Copy command stdout and stderr to system clipboard
 <cmd> 2>&1 | pbcopy
 
+# Write command stdout and stderr to file
+<cmd> > <file> 2>&1
+
+$ file: echo -e 'out.txt\n'
+
 # Expand Short URL on Clipboard
 curl -sIL $(pbpaste) | grep -i '^location' | cut -c 11- | pbcopy
 
