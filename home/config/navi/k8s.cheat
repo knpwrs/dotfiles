@@ -1,5 +1,9 @@
 % Kubernetes
 
+# Create Kubernetes Namespace YAML
+
+kubectl create namespace <name> --dry-run=client -o yaml | yq
+
 # Create Kubernetes ConfigMap YAML
 
 kubectl create configmap <name> --from-env-file=<(jo <keyvals> | jq -r 'to_entries[] | "\(.key)=\(.value)"') --dry-run=client -o yaml | yq
