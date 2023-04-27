@@ -40,6 +40,7 @@ function mvd() {
 }
 alias rd=rmdir
 alias rf='rm -rf'
+alias rr='rm -r'
 alias d='dirs -v | head -10'
 function mkcd() {
   md $1 && cd $1
