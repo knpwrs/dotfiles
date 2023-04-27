@@ -4,6 +4,12 @@ local lspkind = require('lspkind')
 
 vim.g.copilot_no_tab_map = true
 
+lspkind.init({
+  symbol_map = {
+    Copilot = "",
+  },
+})
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -16,10 +22,10 @@ cmp.setup {
     ['<C-k>'] = cmp.mapping.scroll_docs(4),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
-    ['<Cr>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true)
-    end),
+    ['<Cr>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = false,
+    }),
   }),
   formatting = {
     format = lspkind.cmp_format({
@@ -28,6 +34,7 @@ cmp.setup {
   },
   sources = {
     { name = 'vsnip' },
+    { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' },

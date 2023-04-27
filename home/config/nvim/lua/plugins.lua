@@ -52,7 +52,6 @@ require('packer').startup({
     use { 'bfredl/nvim-luadev', config = [[require('plugins.nvim-luadev')]] }
     use 'dhruvasagar/vim-table-mode'
     use 'editorconfig/editorconfig-vim'
-    use 'github/copilot.vim'
     use 'godlygeek/tabular'
     use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
     use { 'jpalardy/vim-slime', config = [[require('plugins.vim-slime')]] }
@@ -114,7 +113,7 @@ require('packer').startup({
     use 'mattn/emmet-vim'
     use { 'plasticboy/vim-markdown', config = [[require('plugins.vim-markdown')]] }
     use { 'rust-lang/rust.vim', config = [[require('plugins.rust')]] }
-    -- LSP
+    -- Completion
     use { 'folke/trouble.nvim', requires = {'nvim-web-devicons'}, config = [[require('plugins.trouble')]] }
     use {
       'hrsh7th/nvim-cmp',
@@ -144,6 +143,8 @@ require('packer').startup({
         requires = {{'vim-illuminate'}},
       }
     }
+    use { 'zbirenbaum/copilot.lua', after = 'nvim-lspconfig', config = [[require('plugins.copilot')]] }
+    use { 'zbirenbaum/copilot-cmp', after = { 'copilot.lua', 'nvim-cmp' }, config = [[require('plugins.copilot-cmp')]] }
     -- DAP
     use { 'mfussenegger/nvim-dap', config = [[require('plugins.nvim-dap')]] }
     use {
