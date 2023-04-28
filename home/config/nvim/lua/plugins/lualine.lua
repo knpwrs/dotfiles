@@ -1,5 +1,3 @@
-local gps = require('nvim-gps')
-
 local dap_ui = {
   sections = {
     lualine_z = {'filetype'},
@@ -22,8 +20,9 @@ require('lualine').setup({
         path = 1,
       },
       {
-        gps.get_location,
-        condition = gps.is_available,
+        'navic',
+        color_correction = nil,
+        navic_opts = nil,
       },
     },
     lualine_x = {'encoding', 'fileformat', 'filetype'},

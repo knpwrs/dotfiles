@@ -28,9 +28,9 @@ require('packer').startup({
     use { 'folke/tokyonight.nvim', config = [[require('plugins.tokyonight')]] }
     use { 'chentoast/marks.nvim', config = [[require('marks').setup({})]] }
     use {
-      'SmiteshP/nvim-gps',
-      requires = 'nvim-treesitter',
-      config = [[require('plugins.nvim-gps')]],
+      'SmiteshP/nvim-navic',
+      requires = 'neovim/nvim-lspconfig',
+      config = [[require('plugins.nvim-navic')]],
     }
     use { 'edluffy/specs.nvim', config = [[require('plugins.specs-nvim')]] }
     use { 'elihunter173/dirbuf.nvim', config = [[require('plugins.dirbuf')]] }
