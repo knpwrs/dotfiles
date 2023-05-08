@@ -115,6 +115,7 @@ alias gsts='git stash show --text'
 alias gunwip='git log -n 1 | grep -q -c "WIP:" && git reset HEAD~1'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -t "$DOTLIB/gwip.template"'
 alias lg='lazygit'
+alias zap='gaa;gc -m ":zap:";gp'
 
 # Count lines of code in a git repository
 # Requires tokei crate to be installed
