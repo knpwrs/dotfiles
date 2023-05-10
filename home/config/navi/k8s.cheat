@@ -4,6 +4,10 @@
 
 kubectl create namespace <name> --dry-run=client -o yaml | yq
 
+# Create a Kubernetes Namespace
+
+kubectl create namespace <name>
+
 # Create Kubernetes ConfigMap YAML
 
 kubectl create configmap <name> --from-env-file=<(jo <keyvals> | jq -r 'to_entries[] | "\(.key)=\(.value)"') --dry-run=client -o yaml | yq
@@ -21,14 +25,22 @@ kubectl create deployment <name> --image=<image> --port=<port> --replicas=<repli
 kubectl create service <service_type> <name> --tcp=<port>:<target_port> --dry-run=client -o yaml | yq
 
 # Configure a Docker Registry Pull Secret
-kubectl create secret docker-registry <name> --docker-server=<docker_server> --docker-username=<docker_username> --docker-password=<secret_input>
+
+kubectl create secret docker-registry <pull_secret_name> --namespace=<k8s_namespace> --docker-server=<docker_server> --docker-username=<docker_username> --docker-password=<secret_input>
 
 # Get Secret Value
 kubectl get secret <secret_name> -o jsonpath='{.data}'
 
+# Describe a node
+
+kubectl describe node/<node_name>
+
+$ k8s_namespace: kubectl get namespaces | tail -n +2 | cut -d ' ' -f 1
 $ keyvals: echo -e 'cow=moo cat=meow\n'
 $ replicas: echo -e '1\n'
 $ service_type: echo -e 'loadbalancer\nclusterip\nexternalname\nnodeport'
 $ docker_server: echo -e 'registry.gitlab.com\n'
 $ secret_input: echo -e '$(gum input --password)\n'
 $ secret_name: kubectl get secrets | tail -1 | cut -d ' ' -f 1
+$ pull_secret_name: echo -e 'regcred\n'
+$ node_name: kubectl get nodes | tail -n +2 | cut -d ' ' -f 1
