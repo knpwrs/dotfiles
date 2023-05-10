@@ -38,6 +38,9 @@ docker run --rm \
 $ backup-file: fd . -e tar.gz
 $ volume: docker volume ls -q
 
+# Save a Docker Image as a Tar File
+docker save <image> -o <image>.tar
+
 # Start Docker Compose
 docker-compose up -d
 
