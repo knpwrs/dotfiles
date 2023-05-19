@@ -28,14 +28,52 @@ kubectl create service <service_type> <name> --tcp=<port>:<target_port> --dry-ru
 
 kubectl create secret docker-registry <pull_secret_name> --namespace=<k8s_namespace> --docker-server=<docker_server> --docker-username=<docker_username> --docker-password=<secret_input>
 
+# Get Kubernetes Namespaces
+
+kubectl get namespaces
+
 # Get Secret Value
-kubectl get secret <secret_name> -o jsonpath='{.data}'
+
+kubectl get secret --namespace <k8s_namespace> <secret_name> -o jsonpath='{.data}'
 
 # Describe a node
 
 kubectl describe node/<node_name>
 
+# Open a Shell for a Node
+
+kubectl debug node/<node_name> -it --image=<debug_image>
+
+$ debug_image: echo -e 'busybox\nubuntu'
+
+# Copy a file to a pod
+
+kubectl cp --namespace <k8s_namespace> <file> <pod>:<path>
+
+$ file: fd
+$ path: echo -e '.\n'
+
+# Get a shell in a pod
+
+kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <shell>
+
+# Forward a port for a k8s service
+
+kubectl --namespace <k8s_namespace> port-forward service/<service> <local_service_port>:<service_port>
+
+$ service_port: kubectl --namespace <k8s_namespace> get service <service> -o=jsonpath='{range .spec.ports[*]}{.port}{"\n"}{end}'
+$ local_service_port: echo -e "<service_port>\n"
+
+# Forward a port for a k8s pod
+
+kubectl --namespace <k8s_namespace> port-forward pod/<pod> <local_pod_port>:<pod_port>
+
+$ pod_port: kubectl --namespace <k8s_namespace> get pod <pod> -o=jsonpath='{range .spec.ports[*]}{.port}{"\n"}{end}'
+$ local_pod_port: echo -e "<pod_port>\n"
+
 $ k8s_namespace: kubectl get namespaces | tail -n +2 | cut -d ' ' -f 1
+$ pod: kubectl get --namespace <k8s_namespace> pods | tail -n +2 | cut -d ' ' -f 1
+$ service: kubectl get --namespace <k8s_namespace> services | tail -n +2 | cut -d ' ' -f 1
 $ keyvals: echo -e 'cow=moo cat=meow\n'
 $ replicas: echo -e '1\n'
 $ service_type: echo -e 'loadbalancer\nclusterip\nexternalname\nnodeport'
@@ -44,3 +82,4 @@ $ secret_input: echo -e '$(gum input --password)\n'
 $ secret_name: kubectl get secrets | tail -1 | cut -d ' ' -f 1
 $ pull_secret_name: echo -e 'regcred\n'
 $ node_name: kubectl get nodes | tail -n +2 | cut -d ' ' -f 1
+$ shell: echo -e '/bin/bash\n/bin/zsh\n/bin/sh'
