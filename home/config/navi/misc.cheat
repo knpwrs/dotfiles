@@ -25,6 +25,11 @@ echo <content> | curl -F-=\<- qrenco.de | pbcopy
 # Edit Clipboard Contents
 pbpaste | vipe | pbcopy
 
+# Edit Environment Variable
+$(echo $<var_name> | vipe | sed 's|^|export <var_name>=|')
+
+$ var_name: env --- --map "cut -d '=' -f 1"
+
 # Optimize pngs
 oxipng -o max <pngs>
 
