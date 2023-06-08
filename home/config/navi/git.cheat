@@ -216,6 +216,11 @@ git apply --reverse <(pbpaste)
 # Create an empty commit
 git commit --allow-empty
 
+# Commit with given date/time
+GIT_AUTHOR_DATE="<datetime_full>" GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE git commit
+
+$ datetime_full: date -d "<datetime>" +"%Y-%m-%d %H:%M:%S"
+
 # Remove merge/rebase leftover/backup files
 fd '_(BACKUP|BASE|LOCAL|REMOTE)_' . | xargs rm
 
