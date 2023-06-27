@@ -151,6 +151,7 @@ cask 'font-roboto'
 cask 'font-sauce-code-pro-nerd-font'
 cask 'font-source-code-pro'
 cask 'font-source-sans-3'
+cask 'font-source-serif-4'
 
 # Alternative cask versions
 tap 'homebrew/homebrew-cask-versions'
