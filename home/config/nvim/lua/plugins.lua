@@ -51,6 +51,7 @@ require('packer').startup({
     use 'andymass/vim-matchup'
     use { 'bfredl/nvim-luadev', config = [[require('plugins.nvim-luadev')]] }
     use 'dhruvasagar/vim-table-mode'
+    use { 'echasnovski/mini.files', config = [[require('plugins.mini-files')]] }
     use 'editorconfig/editorconfig-vim'
     use 'godlygeek/tabular'
     use { 'jenterkin/vim-autosource', config = [[require('plugins.autosource')]] }
@@ -92,11 +93,6 @@ require('packer').startup({
     -- Movement Plugins
     use { 'ggandor/lightspeed.nvim', config = [[require('plugins.lightspeed')]] }
     -- Navigation Plugins
-    use {
-      'kyazdani42/nvim-tree.lua',
-      requires = {{'plenary.nvim'}, {'nvim-web-devicons'}},
-      config = [[require('plugins.nvim-tree')]],
-    }
     use {
       'akinsho/bufferline.nvim',
       requires = {{'nvim-web-devicons'}},
