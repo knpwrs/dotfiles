@@ -51,6 +51,7 @@ require('packer').startup({
     use 'andymass/vim-matchup'
     use { 'bfredl/nvim-luadev', config = [[require('plugins.nvim-luadev')]] }
     use 'dhruvasagar/vim-table-mode'
+    use { 'echasnovski/mini.bracketed', branch = 'stable' }
     use { 'echasnovski/mini.files', config = [[require('plugins.mini-files')]] }
     use 'editorconfig/editorconfig-vim'
     use 'godlygeek/tabular'
@@ -85,7 +86,6 @@ require('packer').startup({
     use 'tpope/vim-sleuth'
     use 'tpope/vim-speeddating'
     use 'tpope/vim-surround'
-    use 'tpope/vim-unimpaired'
     use { 'vitalk/vim-simple-todo', config = [[require('plugins.vim-simple-todo')]] }
     use { 'Wansmer/treesj', requires = { 'nvim-treesitter' }, config = [[require('plugins.treesj')]] }
     use { 'windwp/nvim-autopairs', config = [[require('plugins.nvim-autopairs')]] }
