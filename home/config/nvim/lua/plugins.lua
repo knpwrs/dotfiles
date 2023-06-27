@@ -67,7 +67,7 @@ require('packer').startup({
       requires = {{'JoosepAlviste/nvim-ts-context-commentstring'}},
       config = [[require('plugins.comment-nvim')]],
     }
-    use { 'nvim-lualine/lualine.nvim', config = [[require('plugins.lualine')]] }
+    use { 'nvim-lualine/lualine.nvim', requires = { 'arkav/lualine-lsp-progress' }, config = [[require('plugins.lualine')]] }
     use { 'rmagatti/auto-session', config = [[require('plugins.auto-session')]] }
     use { 'RRethy/nvim-treesitter-endwise', requires = {{'nvim-treesitter/nvim-treesitter'}} }
     use 'sickill/vim-pasta'
@@ -127,7 +127,6 @@ require('packer').startup({
       },
       config = [[require('plugins.nvim-cmp')]],
     }
-    use { 'j-hui/fidget.nvim', config = [[require('fidget').setup()]] }
     use {
       'jose-elias-alvarez/null-ls.nvim',
       requires = {'plenary.nvim', 'nvim-lspconfig'},
