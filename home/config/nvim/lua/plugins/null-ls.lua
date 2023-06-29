@@ -29,6 +29,7 @@ end
 local sources = {
   nls.builtins.formatting.prettier.with({
     condition = prettier_condition,
+    extra_filetypes = { 'astro' },
   }),
   nls.builtins.formatting.sqlfluff.with({
     condition = sqlfluff_condition,
