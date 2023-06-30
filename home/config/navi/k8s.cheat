@@ -46,12 +46,16 @@ kubectl debug node/<node_name> -it --image=<debug_image>
 
 $ debug_image: echo -e 'busybox\nubuntu'
 
-# Copy a file to a pod
+# Copy file to a pod
 
 kubectl cp --namespace <k8s_namespace> <file> <pod>:<path>
 
 $ file: fd
 $ path: echo -e '.\n'
+
+# Copy file from a pod
+
+kubectl cp --namespace <k8s_namespace> <pod>:<path> <file>
 
 # Get a shell in a pod
 
