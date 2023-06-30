@@ -112,7 +112,7 @@ port() {
 killport() {
   local pid=$(port $1 | awk '{print $2}')
   if [[ $pid ]]; then
-    kill -9 $pid
+    echo $pid | sort | uniq | xargs -n1 kill -9
   else
     echo "No process found on port ${1}"
   fi
