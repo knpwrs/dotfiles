@@ -122,6 +122,9 @@ $ paras: echo -e '5\n'
 # Add SSH Key to Agent
 ssh-add <key>
 
+# Rerun a command until it succeeds
+until <cmd>; do echo "Restarting" && sleep 1; done
+
 $ key: fd '^[^.]+$' ~/.ssh/keys
 
 $ source: echo -e 'pbpaste\nvipe\ncurl -fL $(pbpaste)\n'
