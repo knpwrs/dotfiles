@@ -61,6 +61,9 @@ kubectl cp --namespace <k8s_namespace> <pod>:<path> <file>
 
 kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <shell>
 
+# Scale a deployment
+kubectl --namespace <k8s_namespace> scale --replicas=<replicas> deployment/<deployment>
+
 # Forward a port for a k8s service
 
 kubectl --namespace <k8s_namespace> port-forward service/<service> <local_service_port>:<service_port>
@@ -78,6 +81,7 @@ $ local_pod_port: echo -e "<pod_port>\n"
 $ k8s_namespace: kubectl get namespaces | tail -n +2 | cut -d ' ' -f 1
 $ pod: kubectl get --namespace <k8s_namespace> pods | tail -n +2 | cut -d ' ' -f 1
 $ service: kubectl get --namespace <k8s_namespace> services | tail -n +2 | cut -d ' ' -f 1
+$ deployment: kubectl get --namespace <k8s_namespace> deployments | tail -n +2 | cut -d ' ' -f 1
 $ keyvals: echo -e 'cow=moo cat=meow\n'
 $ replicas: echo -e '1\n'
 $ service_type: echo -e 'loadbalancer\nclusterip\nexternalname\nnodeport'
