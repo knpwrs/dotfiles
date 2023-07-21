@@ -60,7 +60,7 @@ $dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git
 git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Pick files from HEAD commit to open in $EDITOR
-$EDITOR <haed_files>
+$EDITOR <head_files>
 
 $head_files: git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
 
