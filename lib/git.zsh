@@ -95,6 +95,7 @@ function glcd() {
 alias globber='git reset --hard && git clean -dfx -e "*.ignore.*"'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glone='git clone'
+alias glrb='git pull --rebase'
 alias gm='git merge'
 alias gma='git merge --abort'
 alias gmt='git mergetool --no-prompt'
