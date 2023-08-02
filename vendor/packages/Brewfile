@@ -1,6 +1,7 @@
 # Base Packages
 
 brew 'aria2'                                   # Multi-protocol download client.
+brew 'ast-grep'                                # A CLI tool for code structrual search, lint and rewriting. Written in Rust.
 brew 'bat'                                     # A cat clone with wings.
 brew 'boxes'                                   # A command line program which draws, removes, and repairs ASCII art boxes.
 brew 'cmatrix'                                 # Matrix in the terminal.
