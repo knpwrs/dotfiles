@@ -1,69 +1,31 @@
-local gsa = require('gitsigns.actions')
-local wk = require('which-key')
+return {
+  "lewis6991/gitsigns.nvim",
+  opts = {
+    current_line_blame = true,
+    current_line_blame_opts = {
+      delay = 250,
+    },
+    current_line_blame_formatter = " <author>, <author_time:%Y-%m-%d> - <summary>",
+    on_attach = function(buffer)
+      local gs = package.loaded.gitsigns
 
-require('gitsigns').setup {
-  current_line_blame = true,
-  current_line_blame_opts = {
-    delay = 250,
+      local function map(mode, l, r, desc)
+        vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+      end
+
+      -- stylua: ignore start
+      map("n", "]h", gs.next_hunk, "Next Hunk")
+      map("n", "[h", gs.prev_hunk, "Prev Hunk")
+      map({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<cr>", "Stage Hunks")
+      map({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<cr>", "Reset Hunks")
+      map("n", "<leader>hS", gs.stage_buffer, "Stage Buffer")
+      map("n", "<leader>hu", gs.undo_stage_hunk, "Undo Stage Hunk")
+      map("n", "<leader>hR", gs.reset_buffer, "Reset Buffer")
+      map("n", "<leader>hp", gs.preview_hunk, "Preview Hunk")
+      map("n", "<leader>hb", function() gs.blame_line({ full = true }) end, "Blame Line")
+      map("n", "<leader>hd", gs.diffthis, "Diff This")
+      map("n", "<leader>hD", function() gs.diffthis("~") end, "Diff This ~")
+      map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<cr>", "GitSigns Select Hunk")
+    end,
   },
-  current_line_blame_formatter = ' <author>, <author_time:%Y-%m-%d> - <summary>',
 }
-
-wk.register(
-  {
-    ['[h'] = { function() gsa.prev_hunk() end, 'Previous Git Hunk' },
-    [']h'] = { function() gsa.next_hunk() end, 'Next Git Hunk' },
-  }
-)
-
-wk.register(
-  {
-    h = {
-      name = 'Git Hunks',
-      s = { function() gsa.stage_hunk() end, 'Stage Hunk' },
-      u = { function() gsa.undo_stage_hunk() end, 'Unstage Hunk' },
-      r = { function() gsa.reset_hunk() end, 'Reset Hunk' },
-      R = { function() gsa.reset_buffer() end, 'Reset Buffer' },
-      p = { function() gsa.preview_hunk() end, 'Preview Hunk' },
-    },
-  },
-  {
-    prefix = '<Leader>',
-  }
-)
-
-wk.register(
-  {
-    h = {
-      name = 'Git Hunks',
-      s = { function() gsa.stage_hunk({vim.fn.line("."), vim.fn.line("v")}) end, 'Stage Hunks' },
-      r = { function() gsa.reset_hunk({vim.fn.line("."), vim.fn.line("v")}) end, 'Reset Hunks' },
-    },
-  },
-  {
-    prefix = '<Leader>',
-    mode = 'v',
-  }
-)
-
-wk.register(
-  {
-    i = {
-      h = { function() gsa.select_hunk() end, 'Hunk' },
-    },
-  },
-  {
-    mode = 'o',
-  }
-)
-
-wk.register(
-  {
-    i = {
-      h = { function() gsa.select_hunk() end, 'Hunk' },
-    },
-  },
-  {
-    mode = 'x',
-  }
-)

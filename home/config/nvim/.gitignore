@@ -2,5 +2,8 @@
 !.gitignore
 !*.vim
 !*.lua
+!lazy-lock.json
 !lua
 !lua/*
+!README.md
+!stylua.toml
