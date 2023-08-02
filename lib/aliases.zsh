@@ -50,6 +50,11 @@ alias l='ls -lah'
 alias la='ls -lah'
 alias ll='ls -lh'
 
+superman() {
+  man $1 || $1 --help 2>&1 | bat -plhelp
+}
+alias man=superman
+
 alias pu='pushd'
 alias po='popd'
 

@@ -8,8 +8,14 @@ fi
 
 # Editors
 export EDITOR='nvim'
-export PAGER='less -R'
 export VISUAL='nvim' # Editor to be opened from $PAGER
+
+if type bat > /dev/null; then
+  export PAGER='bat -p'
+  export MANPAGER="sh -c 'col -bx | bat -plman'"
+else
+  export PAGER='less -R'
+fi
 
 # Language
 if [[ -z "$LANG" ]]; then
