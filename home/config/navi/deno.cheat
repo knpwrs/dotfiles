@@ -1,0 +1,12 @@
+% npm
+
+# Pick and run a deno task
+deno task <task>
+
+# Run deno formatter
+deno fmt
+
+# Run deno linter
+deno lint
+
+$ task: jq -r '.tasks | keys | .[]' deno.json

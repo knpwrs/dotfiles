@@ -21,12 +21,6 @@ alias c8='cd -8'
 alias c9='cd -9'
 
 alias cdd='cd -'
-
-alias dr="cd ~/Google\ Drive/"
-alias dl="cd ~/Downloads/"
-alias dt="cd ~/Desktop/"
-alias w="cd ~/Workspace/"
-
 alias cpr="cp -r"
 
 duu() {
