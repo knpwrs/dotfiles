@@ -78,10 +78,3 @@ nvim_set_keymap('n', 'cp', ':let @*=expand("%")<Cr>', {})
 nvim_set_keymap('n', 'cP', ':let @*=expand("%:p")<Cr>', {})
 nvim_set_keymap('n', 'yp', ':let @"=expand("%")<Cr>', {})
 nvim_set_keymap('n', 'yP', ':let @"=expand("%:p")<Cr>', {})
-
--- :ww writes with sudo (temporary)
--- https://github.com/neovim/neovim/issues/1716
--- https://github.com/lambdalisue/suda.vim
--- command! -nargs=0 WriteWithSudo :w !sudo tee % > /dev/null
--- cnoreabbrev ww WriteWithSudo
-cmd('cnoreabbrev ww SudaWrite')
