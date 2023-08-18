@@ -34,6 +34,22 @@ require("lazy").setup({
     "tpope/vim-abolish",
     "tpope/vim-eunuch",
     "tpope/vim-sleuth",
+    {
+      "alpha-nvim",
+      opts = function(_, dashboard)
+        -- Generated via `echo neovim | figlet -f ANSIShadow`
+        -- Font from https://github.com/xero/figlet-fonts/blob/master/ANSI%20Shadow.flf
+        local logo = {
+          "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
+          "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
+          "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
+          "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
+          "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
+          "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
+        }
+        dashboard.section.header.val = logo
+      end,
+    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
