@@ -21,7 +21,7 @@ return {
     keys[#keys + 1] = {
       "<leader>ld",
       function()
-        require("telescope.builtin").lsp_type_definitions({ reuse_win = true })
+        require("telescope.builtin").lsp_definitions({ reuse_win = true })
       end,
       desc = "Goto Definition",
       has = "definition",
