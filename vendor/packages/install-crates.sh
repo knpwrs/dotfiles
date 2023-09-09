@@ -8,7 +8,7 @@ crates=(
   cargo-edit  # Add, remove, and upgrade cargo dependencies from the command line
   cargo-watch # Watch for file changes and run cargo commands
   difftastic  # Syntax-aware diff tool
-  exa         # A modern replacement for ls
+  eza         # A modern replacement for ls
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
   rm-improved # rip, a safer rm

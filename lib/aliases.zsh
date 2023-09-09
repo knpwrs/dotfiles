@@ -1,6 +1,6 @@
 # Custom aliases
-if type exa > /dev/null; then
-  alias ls='exa'
+if type eza > /dev/null; then
+  alias ls='eza'
 elif ls --color -d . &>/dev/null 2>&1; then
   alias ls='ls --color=tty'
 else
