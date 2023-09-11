@@ -33,6 +33,7 @@ export WHALEBREW_INSTALL_PATH=$HOME/.whalebin
 path=(
   $HOME/bin # Custom home bin directory
   $HOME/.bin # bin directory from this repo
+  $HOME/.local/bin
   $WHALEBREW_INSTALL_PATH
   $BREW_PREFIX/opt/coreutils/libexec/gnubin # GNU coreutils
   $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # GNU sed
