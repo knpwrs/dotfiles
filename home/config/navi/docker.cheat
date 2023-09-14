@@ -7,7 +7,7 @@ docker run -p <host_port>:<container_port> <image>
 docker run -it --rm -v $(pwd):/host -w /host <image>
 
 # Stop all containers and prune everything from Docker
-docker stop $(docker ps -aq); docker system prune --all --volumes
+docker stop $(docker ps -aq); docker system prune --all; docker volume prune --all
 
 # Stop all containers and prune stopped containers from Docker
 docker stop $(docker ps -aq); docker container prune
@@ -16,7 +16,7 @@ docker stop $(docker ps -aq); docker container prune
 docker container prune
 
 # Prune all Volumes
-docker system prune --volumes
+docker volume prune --volumes
 
 # Backup docker volume
 docker run --rm \
