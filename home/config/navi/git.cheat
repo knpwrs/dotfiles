@@ -129,6 +129,9 @@ git branch -D <branch>
 # Rename current branch
 git branch -m <current_branch>
 
+# Checkout a branch with name based on current branch
+git checkout -b <current_branch>
+
 # Copy current branch name
 echo <current_branch> | pbcopy
 
