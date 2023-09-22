@@ -193,10 +193,10 @@ git rev-parse HEAD | tr -d '\n'
 git rev-parse HEAD | tr -d '\n' | pbcopy
 
 # Print short hash of HEAD
-git rev-parse HEAD | head -c 7
+git rev-parse HEAD | head -c 8
 
 # Copy short hash of HEAD
-git rev-parse HEAD | head -c 7 | pbcopy
+git rev-parse HEAD | head -c 8 | pbcopy
 
 # "Undo" last commit
 git reset HEAD~1
