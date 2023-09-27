@@ -16,7 +16,7 @@ docker stop $(docker ps -aq); docker container prune
 docker container prune
 
 # Prune all Volumes
-docker volume prune --volumes
+docker volume prune --all
 
 # Backup docker volume
 docker run --rm \
