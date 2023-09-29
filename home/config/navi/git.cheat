@@ -162,6 +162,9 @@ git revert --no-commit <commit>
 # Revert a given commit
 git revert <commit>
 
+# Abort in-progress revert
+git revert --abort
+
 # Checkout contents of file
 git checkout -- <git_changed_files>
 
