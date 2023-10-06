@@ -42,6 +42,7 @@ brew 'hurl'                                    # Hurl CLI for HTTP testing.
 brew 'imagemagick'                             # CLI image manipulation utilities.
 brew 'just'
 brew 'jo'                                      # A small utility to create JSON objects.
+brew 'jpegoptim'                               # Utility to optimize JPEG files
 brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
 brew 'lazygit'                                 # Simple terminal UI for git commands

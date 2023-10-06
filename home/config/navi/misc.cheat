@@ -35,6 +35,11 @@ oxipng -o max <pngs>
 
 $ pngs: fd -e png --- --multi --map "navi fn map::expand"
 
+# Optimize jpegs
+jpegoptim <jpgs>
+
+$ jpgs: fd -e jpg -e jpeg --- --multi --map "navi fn map::expand"
+
 # Copy command stdout and stderr to system clipboard
 <cmd> 2>&1 | pbcopy
 
