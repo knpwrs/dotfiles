@@ -61,6 +61,10 @@ kubectl cp --namespace <k8s_namespace> <pod>:<path> <file>
 
 kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <shell>
 
+# Follow logs for a pod
+
+kubectl --namespace <k8s_namespace> logs --follow <pod>
+
 # Scale a deployment
 kubectl --namespace <k8s_namespace> scale --replicas=<replicas> deployment/<deployment>
 
