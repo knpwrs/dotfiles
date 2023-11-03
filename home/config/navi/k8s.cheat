@@ -66,7 +66,7 @@ kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <shell>
 kubectl --namespace <k8s_namespace> logs --follow <pod>
 
 # Scale a deployment
-kubectl --namespace <k8s_namespace> scale --replicas=<replicas> deployment/<deployment>
+kubectl --namespace <k8s_namespace> scale deployment/<deployment> --replicas=<replicas>
 
 # Forward a port for a k8s service
 
