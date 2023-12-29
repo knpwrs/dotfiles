@@ -84,6 +84,11 @@ toipe
 # Sign in to 1Password on the CLI
 eval $(op signin)
 
+# Copy an ssh key from 1Password to a host
+SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ssh-copy-id <user>@<host>
+
+$ user: echo -e "$(whoami)\n"
+
 $ design: boxes -l | grep -v ' ' | grep -v -e '^$' | sed 1d --- --preview "(echo $text | boxes -a c -d {})"
 $ font: showfigfonts | grep -e '[[:alpha:]] :$' | cut -d' ' -f1 --- --preview "(echo $text | figlet -f {})"
 $ figboxdesign: boxes -l | grep -v ' ' | grep -v -e '^$' | sed 1d --- --preview "(echo $text | figlet -f $font | boxes -a c -d {})"
