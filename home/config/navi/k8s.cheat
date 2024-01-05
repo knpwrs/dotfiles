@@ -59,7 +59,7 @@ kubectl cp --namespace <k8s_namespace> <pod>:<path> <file>
 
 # Get a shell in a pod
 
-kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <shell>
+kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <pod_shell>
 
 # Follow logs for a pod
 
@@ -94,4 +94,4 @@ $ secret_input: echo -e '$(gum input --password)\n'
 $ secret_name: kubectl get secrets | tail -1 | cut -d ' ' -f 1
 $ pull_secret_name: echo -e 'regcred\n'
 $ node_name: kubectl get nodes | tail -n +2 | cut -d ' ' -f 1
-$ shell: echo -e '/bin/bash\n/bin/zsh\n/bin/sh'
+$ pod_shell: echo -e '/bin/bash\n/bin/zsh\n/bin/sh'
