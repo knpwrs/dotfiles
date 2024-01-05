@@ -35,19 +35,20 @@ require("lazy").setup({
     "tpope/vim-eunuch",
     "tpope/vim-sleuth",
     {
-      "alpha-nvim",
+      "dashboard-nvim",
       opts = function(_, dashboard)
         -- Generated via `echo neovim | figlet -f ANSIShadow`
         -- Font from https://github.com/xero/figlet-fonts/blob/master/ANSI%20Shadow.flf
-        local logo = {
+        local logo = table.concat({
           "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
           "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
           "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
           "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
           "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
           "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
-        }
-        dashboard.section.header.val = logo
+        }, "\n")
+        logo = string.rep("\n", 8) .. logo .. "\n\n"
+        dashboard.config.header = vim.split(logo, "\n")
       end,
     },
   },
