@@ -51,6 +51,27 @@ require("lazy").setup({
         dashboard.config.header = vim.split(logo, "\n")
       end,
     },
+    {
+      "folke/noice.nvim",
+      opts = {
+        messages = {
+          enabled = false,
+        },
+        notify = {
+          enabled = false,
+        },
+      },
+    },
+    {
+      "echasnovski/mini.indentscope",
+      enabled = false,
+    },
+    {
+      "lukas-reineke/indent-blankline.nvim",
+      opts = {
+        scope = { enabled = true },
+      },
+    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -62,7 +83,7 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = false },
   performance = {
     rtp = {
       -- disable some rtp plugins
