@@ -138,6 +138,7 @@ cask 'webpquicklook'       # Quicklook for webp files.
 
 # Cask Fonts
 tap 'homebrew/cask-fonts' # official caskroom fonts tap
+cask 'font-cal-sans'
 cask 'font-dosis'
 cask 'font-fira-sans'
 cask 'font-fontawesome'
