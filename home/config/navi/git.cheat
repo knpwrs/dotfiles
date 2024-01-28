@@ -183,6 +183,12 @@ git checkout <commit> -- <git_dir>
 # Show contents of a given commit
 git show <commit>
 
+# Show file
+git show HEAD:<git_file>
+
+# Show file without text conversion (i.e., no encryption or other filtering)
+git show HEAD:<git_file> --no-textconv
+
 # Show file on a given branch
 git show <branch>:<git_file>
 
