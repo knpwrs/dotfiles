@@ -89,6 +89,7 @@ alias tim='nvim +terminal'
 
 alias fed='fd -tf | xargs sed -i'
 
+alias o='open'
 alias x='xargs'
 
 # reload zsh
