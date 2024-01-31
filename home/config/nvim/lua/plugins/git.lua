@@ -1,17 +1,18 @@
 return {
-  "lewis6991/gitsigns.nvim",
-  opts = {
-    current_line_blame = true,
-    current_line_blame_opts = {
-      delay = 250,
-    },
-    current_line_blame_formatter = " <author>, <author_time:%Y-%m-%d> - <summary>",
-    on_attach = function(buffer)
-      local gs = package.loaded.gitsigns
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = {
+        delay = 250,
+      },
+      current_line_blame_formatter = " <author>, <author_time:%Y-%m-%d> - <summary>",
+      on_attach = function(buffer)
+        local gs = package.loaded.gitsigns
 
-      local function map(mode, l, r, desc)
-        vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
-      end
+        local function map(mode, l, r, desc)
+          vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+        end
 
       -- stylua: ignore start
       map("n", "]h", gs.next_hunk, "Next Hunk")
@@ -26,6 +27,13 @@ return {
       map("n", "<leader>hd", gs.diffthis, "Diff This")
       map("n", "<leader>hD", function() gs.diffthis("~") end, "Diff This ~")
       map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<cr>", "GitSigns Select Hunk")
-    end,
+      end,
+    },
+  },
+  {
+    "FabijanZulj/blame.nvim",
+    keys = {
+      { "<leader>gb", "<cmd>ToggleBlame<cr>", desc = "Toggle Git Blame" },
+    },
   },
 }
