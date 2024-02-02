@@ -1,0 +1,7 @@
+% Nix
+
+# Run a shell with a particular set of packages
+nix-shell -p <pkgs>
+
+# Run a command from a nix package
+nix-shell -p <pkgs> --run "<cmd>"
