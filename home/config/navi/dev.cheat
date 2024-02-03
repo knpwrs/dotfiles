@@ -24,6 +24,9 @@ npx lice
 # Base64-Decode
 <source> | base64 -d | <dest>
 
+# Rot13
+<source> | tr 'A-Za-z' 'N-ZA-Mn-za-m' | <dest>
+
 # Encode JWT (Plain Text Secret)
 <source> | jwt encode --secret <secret> - | <dest>
 
