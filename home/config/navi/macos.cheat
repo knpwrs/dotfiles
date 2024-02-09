@@ -11,3 +11,6 @@ killall Dock
 
 # Clear DNS Cache
 sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
+
+# Sign Alacritty.app https://github.com/alacritty/alacritty/wiki/Self-Signing-Alacritty-on-macOS
+sudo codesign -fs Alacritty /Applications/Alacritty.app && xattr -d com.apple.quarantine /Applications/Alacritty.app
