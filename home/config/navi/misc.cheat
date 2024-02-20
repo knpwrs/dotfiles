@@ -40,6 +40,14 @@ jpegoptim <jpgs>
 
 $ jpgs: fd -e jpg -e jpeg --- --multi --map "navi fn map::expand"
 
+# Convert image to a shell script
+echo '#!/usr/bin/env bash' > <script>.sh && chafa -c full '<image>' | sed "s/^/echo -e '/; s/$/'/" >> <script>.sh && chmod +x <script>.sh
+
+# Convert image to a shell script and scale to given dimensions
+echo '#!/usr/bin/env bash' > <script>.sh && chafa -c full -s <cols> '<image>' | sed "s/^/echo -e '/; s/$/'/" >> <script>.sh && chmod +x <script>.sh
+
+$ image: fd -e png -e jpg -e jpeg -e gif
+
 # Copy command stdout and stderr to system clipboard
 <cmd> 2>&1 | pbcopy
 
