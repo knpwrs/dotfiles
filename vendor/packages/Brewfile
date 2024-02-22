@@ -9,6 +9,7 @@ brew 'cmatrix'                                 # Matrix in the terminal.
 brew 'coreutils'                               # GNU core utilities (Mac is BSD).
 brew 'cowsay'                                  # Configurable talking characters in ASCII art.
 brew 'curl'                                    # HTTP client.
+brew 'curlie'                                  # The power of curl, the ease of use of httpie.
 brew 'direnv'                                  # Shell environment switcher.
 brew 'doctl'                                   # DigitalOcean CLI
 brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
