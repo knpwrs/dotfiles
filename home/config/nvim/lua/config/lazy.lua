@@ -14,7 +14,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
@@ -72,6 +71,15 @@ require("lazy").setup({
       opts = {
         scope = { enabled = true },
       },
+    },
+    -- Markdown extra
+    {
+      import = "lazyvim.plugins.extras.lang.markdown",
+    },
+    -- Disable headline.nvim from markdown extra
+    {
+      "headlines.nvim",
+      enabled = false,
     },
   },
   defaults = {
