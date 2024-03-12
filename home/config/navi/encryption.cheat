@@ -1,0 +1,17 @@
+% Encryption
+
+# Encrypt a file with age for an ssh public key from 1Password
+
+age --encrypt  --recipient '<op_ssh_key_public_key_text>' <file>
+
+# Decrypt a file with age for an ssh private key from 1Password
+
+age --decrypt -i <(op item get <op_ssh_key> --format json | jq -r '.fields[] | select(.id == "private_key") | .value') <file>
+
+# Output an ssh public key from 1password
+
+op item get <op_ssh_key> --format json | jq -r '.fields[] | select(.id == "public_key") | .value'
+
+$ op_ssh_key: op item list --categories "SSH Key" | tail -n +2 --- --map "cut -d ' ' -f1"
+$ op_ssh_key_public_key_text: op item get <op_ssh_key> --format json | jq -r '.fields[] | select(.id == "public_key") | .value'
+$ file: fd

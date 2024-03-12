@@ -1,5 +1,6 @@
 # Base Packages
 
+brew 'age'                                     # A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.
 brew 'aria2'                                   # Multi-protocol download client.
 brew 'ast-grep'                                # A CLI tool for code structrual search, lint and rewriting. Written in Rust.
 brew 'bat'                                     # A cat clone with wings.
