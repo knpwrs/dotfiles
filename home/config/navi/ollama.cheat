@@ -10,3 +10,8 @@ $ ai_command_model: echo -e 'zephyr\nmistral\n'
 http POST http://localhost:11434/api/generate model=llava images\[0\]=$(base64 -w 0 < <image_path>) prompt="What is in this picture?" | jq -sr 'map(.response) | join("")'
 
 $ image_path: fd
+
+# Chat with an Ollama model
+ollama run <model>
+
+$ model: ollama list | tail -n +2 | cut -d : -f1
