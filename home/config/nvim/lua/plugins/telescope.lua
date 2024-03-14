@@ -24,6 +24,6 @@ return {
     { "<leader>fc", "<cmd>Telescope commands<cr>", desc = "Commands" },
     { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
     { "<leader>fT", "<cmd>Telescope<cr>", desc = "Built-in Pickers" },
-    { "<leader>=", "<cmd>Telescope spell_suggest<cr>", desc = "Spelling Suggestions" },
+    { "<leader>f=", "<cmd>Telescope spell_suggest<cr>", desc = "Spelling Suggestions" },
   },
 }
