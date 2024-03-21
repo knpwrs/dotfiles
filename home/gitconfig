@@ -11,12 +11,15 @@
 [push]
 	default = simple
 [merge]
-	tool = Kaleidoscope
+	tool = smerge
+[merge "npm-merge-driver"]
+  name = automatically merge npm lockfiles
+  driver = npx npm-merge-driver merge %A %O %B %P
 [mergetool]
 	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
-	trustexitcode = true
+[mergetool "smerge"]
+  cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+  trustExitCode = true
 [diff]
 	tool = Kaleidoscope
 [difftool]
@@ -83,6 +86,3 @@
 	insteadOf = "gst:"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
-[merge "npm-merge-driver"]
-	name = automatically merge npm lockfiles
-	driver = npx npm-merge-driver merge %A %O %B %P
