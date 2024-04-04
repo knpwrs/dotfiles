@@ -210,6 +210,9 @@ git rev-parse HEAD | head -c 8
 # Copy short hash of HEAD
 git rev-parse HEAD | head -c 8 | pbcopy
 
+# Count commits up to HEAD
+git rev-list --count @
+
 # "Undo" last commit
 git reset HEAD~1
 
