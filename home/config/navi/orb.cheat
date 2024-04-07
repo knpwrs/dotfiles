@@ -1,0 +1,6 @@
+% OrbStack
+
+# Open a shell in a specific machine
+orb -m <machine>
+
+$ machine: orbctl list --format json | jq -r '.[].name'
