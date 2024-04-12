@@ -15,6 +15,9 @@ git log --all -i --author '<user_name>' --grep '<search-text>'
 # Search my git commit contents for a given string
 git log --all --author '<user_name>' -S '<search-text>'
 
+# Blame ignoring whitespace and line copies
+git blame -wCCC <git_file>
+
 # Checkout the main branch
 git checkout <main_branch>
 
