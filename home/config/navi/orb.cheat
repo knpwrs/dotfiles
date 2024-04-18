@@ -4,3 +4,9 @@
 orb -m <machine>
 
 $ machine: orbctl list --format json | jq -r '.[].name'
+
+# Reset OrbStack data (docker and linux machines)
+orb reset
+
+# Reset OrbStack Docker Data
+orb delete docker
