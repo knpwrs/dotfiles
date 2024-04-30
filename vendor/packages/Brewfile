@@ -68,6 +68,7 @@ brew 'nyancat'                                 # Nyancat in your terminal, rende
 brew 'onefetch'                                # Git repository summary on your terminal
 brew 'p7zip'                                   # Extract 7z archives
 brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
+brew 'pigz'                                    # Parallel gzip
 brew 'pv'                                      # Monitor the progress of data through a pipe.
 brew 'python3'                                 # Python 3
 brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
