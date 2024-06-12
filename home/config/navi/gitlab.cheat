@@ -1,0 +1,7 @@
+% GitLab
+
+# Copy URL to GitLab Repo
+glab repo view -F json | jq -r .web_url | pbcopy
+
+# Copy URL to GitLab Commit (HEAD)
+echo "$(glab repo view -F json | jq -r .web_url)/-/commit/$(git rev-parse HEAD)" | pbcopy
