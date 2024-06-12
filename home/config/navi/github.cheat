@@ -10,7 +10,7 @@ gh browse --commit --no-browser | sed 's|/tree|/commit|' | pbcopy
 gh pr checks
 
 # Watch CI status for current branch pull requst
-watch gh pr checks
+viddy gh pr checks
 
 # Checkout a Pull Request
 gh pr checkout <pr_number>
