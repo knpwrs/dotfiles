@@ -114,6 +114,7 @@ cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
 cask 'firefox'                   # Web browser from Mozilla.
 cask 'google-chrome'             # Web browser from Google.
+cask 'google-chrome@canary'      # Web browser from Google (beta release).
 cask 'google-drive'              # Google Drive
 cask 'keka'                      # Archive extraction and creation.
 cask 'keybase'                   # Crypto for everyone.
@@ -141,7 +142,6 @@ cask 'suspicious-package'  # Quicklook for package files.
 cask 'webpquicklook'       # Quicklook for webp files.
 
 # Cask Fonts
-tap 'homebrew/cask-fonts' # official caskroom fonts tap
 cask 'font-cal-sans'
 cask 'font-dosis'
 cask 'font-fira-sans'
@@ -161,10 +161,6 @@ cask 'font-sauce-code-pro-nerd-font'
 cask 'font-source-code-pro'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
-
-# Alternative cask versions
-tap 'homebrew/homebrew-cask-versions'
-cask 'google-chrome-canary'
 
 # Mac App Store
 mas 'Amphetamine', id: 937984704
