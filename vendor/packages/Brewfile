@@ -9,6 +9,7 @@ brew 'chafa'                                   # Image viewer and converter for 
 brew 'cmatrix'                                 # Matrix in the terminal.
 brew 'coreutils'                               # GNU core utilities (Mac is BSD).
 brew 'cowsay'                                  # Configurable talking characters in ASCII art.
+brew 'cpufetch'                                # Simple yet fancy CPU architecture fetching tool.
 brew 'curl'                                    # HTTP client.
 brew 'curlie'                                  # The power of curl, the ease of use of httpie.
 brew 'direnv'                                  # Shell environment switcher.
