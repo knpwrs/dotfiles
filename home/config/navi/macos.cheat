@@ -14,3 +14,8 @@ sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
 
 # Sign Alacritty.app https://github.com/alacritty/alacritty/wiki/Self-Signing-Alacritty-on-macOS
 sudo codesign -fs Alacritty /Applications/Alacritty.app && xattr -d com.apple.quarantine /Applications/Alacritty.app
+
+# Change to iCloud directory
+cd '<icloud_dir>'
+
+$ icloud_dir: fd -t d Documents -d 1 --glob ~/Library/Mobile\ Documents/iCloud*
