@@ -19,3 +19,12 @@ sudo codesign -fs Alacritty /Applications/Alacritty.app && xattr -d com.apple.qu
 cd '<icloud_dir>'
 
 $ icloud_dir: fd -t d Documents -d 1 --glob ~/Library/Mobile\ Documents/iCloud*
+
+# Write a disk image to an external device
+diskutil unMountDisk /dev/<disk> \
+  && diskutil eraseDisk MS-DOS <device_name> /dev/<disk> \
+  && diskutil unMountDisk /dev/<disk> \
+  && sudo dd if=<img_file> of=/dev/r<disk> bs=1M
+
+$ img_file: fd -e img ---  --map "navi fn map::expand"
+$ disk: diskutil list | grep '^/dev/' | cut -f1 -d ' ' | cut -f3 -d '/' --- --preview 'diskutil info {}'
