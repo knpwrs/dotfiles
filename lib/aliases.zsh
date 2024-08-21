@@ -138,6 +138,7 @@ extract() {
       *.tar)      tar -xf "$1"                                  ;;
       *.tbz2)     tar -jxf "$1"                                 ;;
       *.tgz)      tar -zxf "$1"                                 ;;
+      *.xz)       unxz "$1"                                     ;;
       *.zip)      unzip "$1"                                    ;;
       *.ZIP)      unzip "$1"                                    ;;
       *.pax)      cat "$1" | pax -r                             ;;
