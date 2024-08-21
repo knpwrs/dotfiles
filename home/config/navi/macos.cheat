@@ -27,4 +27,11 @@ diskutil unMountDisk /dev/<disk> \
   && sudo dd if=<img_file> of=/dev/r<disk> bs=1M
 
 $ img_file: fd -e img ---  --map "navi fn map::expand"
+
+# Unmount a disk
+diskutil unmountDisk /dev/<disk>
+
+# Eject a disk
+diskutil eject /dev/<disk>
+
 $ disk: diskutil list | grep '^/dev/' | cut -f1 -d ' ' | cut -f3 -d '/' --- --preview 'diskutil info {}'
