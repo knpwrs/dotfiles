@@ -84,6 +84,6 @@ npm pack --dry-run
 npx lice
 
 # Check for updates and upgrade packages
-npx npm-check-updates '*<package>*' && gum confirm 'Upgrade?' && npx npm-check-updates -u '*<package>*'
+npx npm-check-updates -i
 
 $ script: jq -r '.scripts | keys | .[]' package.json
