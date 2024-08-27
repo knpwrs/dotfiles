@@ -29,6 +29,7 @@ require("lazy").setup({
       end,
     },
     "ku1ik/vim-pasta",
+    "yorickpeterse/nvim-tree-pairs",
     "tmux-plugins/vim-tmux-focus-events",
     "tommcdo/vim-exchange",
     "tpope/vim-abolish",
