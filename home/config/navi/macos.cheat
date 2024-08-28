@@ -20,6 +20,11 @@ cd '<icloud_dir>'
 
 $ icloud_dir: fd -t d Documents -d 1 --glob ~/Library/Mobile\ Documents/iCloud*
 
+# Change to "My Drive" Google Drive directory
+cd "$HOME/Library/CloudStorage/<google_drive_dir>My Drive"
+
+$ google_drive_dir: fd -t d -g 'GoogleDrive*' -d 1 --base-directory="$HOME/Library/CloudStorage"
+
 # Write a disk image to an external device
 diskutil unMountDisk /dev/<disk> \
   && diskutil eraseDisk MS-DOS <device_name> /dev/<disk> \
