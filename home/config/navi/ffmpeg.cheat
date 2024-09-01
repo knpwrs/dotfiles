@@ -1,0 +1,7 @@
+% ffmpeg
+
+# Probe media and output JSON
+
+ffprobe -v quiet -print_format json -show_format -show_streams <file>
+
+$ file: fd
