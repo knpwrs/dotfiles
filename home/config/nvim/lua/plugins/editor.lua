@@ -6,4 +6,18 @@ return {
       vim.opt.matchpairs:append("<:>")
     end,
   },
+  {
+    "folke/flash.nvim",
+    keys = {
+      -- disable the default flash keymap
+      { "s", mode = { "n", "x", "o" }, false },
+    },
+    opts = {
+      modes = {
+        search = {
+          enabled = true,
+        },
+      },
+    },
+  },
 }

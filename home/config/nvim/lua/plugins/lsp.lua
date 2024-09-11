@@ -17,11 +17,11 @@ return {
     keys[#keys + 1] = { "<leader>lm", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
     keys[#keys + 1] = { "<leader>lM", "<cmd>Mason<cr>", desc = "mason UI" }
 
-    -- Telescope
+    -- fzf
     keys[#keys + 1] = {
       "<leader>ld",
       function()
-        require("telescope.builtin").lsp_definitions({ reuse_win = true })
+        require("fzf-lua").lsp_definitions({ reuse_win = true })
       end,
       desc = "Goto Definition",
       has = "definition",
@@ -29,35 +29,35 @@ return {
     keys[#keys + 1] = {
       "<leader>lD",
       function()
-        require("telescope.builtin").diagnostics({ reuse_win = true })
+        require("fzf-lua").diagnostics({ reuse_win = true })
       end,
       desc = "Diagnostics",
     }
     keys[#keys + 1] = {
       "<leader>li",
       function()
-        require("telescope.builtin").lsp_implementations({ reuse_win = true })
+        require("fzf-lua").lsp_implementations({ reuse_win = true })
       end,
       desc = "Goto Implementation",
     }
     keys[#keys + 1] = {
       "<leader>ly",
       function()
-        require("telescope.builtin").lsp_type_definitions({ reuse_win = true })
+        require("fzf-lua").lsp_type_definitions({ reuse_win = true })
       end,
       desc = "Goto T[y]pe Definition",
     }
     keys[#keys + 1] = {
       "<leader>lr",
       function()
-        require("telescope.builtin").lsp_references({ reuse_win = true })
+        require("fzf-lua").lsp_references({ reuse_win = true })
       end,
       desc = "References",
     }
     keys[#keys + 1] = {
       "<leader>ls",
       function()
-        require("telescope.builtin").lsp_document_symbols({ reuse_win = true })
+        require("fzf-lua").lsp_document_symbols({ reuse_win = true })
       end,
       desc = "Document Symbols",
     }

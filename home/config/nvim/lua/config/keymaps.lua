@@ -1,6 +1,9 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
+-- Disable default lazy keymap
+vim.keymap.del("n", "<leader>l")
+
 -- Do not jump on invocation of *
 vim.keymap.set("n", "*", ":keepjumps normal! mi*`i<Cr>")
 
