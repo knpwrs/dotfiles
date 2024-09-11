@@ -1,0 +1,58 @@
+% Ansible
+
+# Ping one or more hosts
+ansible <comma_separated_hosts> -m ping
+
+# Ping all hosts in a group
+ansible <group> -m ping
+
+# Run an ad-hoc command on one or more hosts
+ansible <comma_separated_hosts> -a "<cmd>"
+
+# Run an ad-hoc command on all hosts in a group
+ansible <group> -a "<cmd>"
+
+# Run a module on one or more hosts
+ansible <comma_separated_hosts> -m <module> -a "<args>"
+
+# Run a module on all hosts in a group
+ansible <group> -m <module> -a "<args>"
+
+# Copy a file to one or more hosts
+ansible <comma_separated_hosts> -m ansible.builtin.copy -a "src=<file> dest=<dest>"
+
+# Copy a file to all hosts in a group
+ansible <group> -m ansible.builtin.copy -a "src=<file> dest=<dest>"
+
+# Start a service on one or more hosts
+ansible <comma_separated_hosts> -m ansible.builtin.service -a "name=<service> state=started"
+
+# Start a service on all hosts in a group
+ansible <group> -m ansible.builtin.service -a "name=<service> state=started"
+
+# Restart a service on one or more hosts
+ansible <comma_separated_hosts> -m ansible.builtin.service -a "name=<service> state=restarted"
+
+# Restart a service on all hosts in a group
+ansible <group> -m ansible.builtin.service -a "name=<service> state=restarted"
+
+# Stop a service on one or more hosts
+ansible <comma_separated_hosts> -m ansible.builtin.service -a "name=<service> state=stopped"
+
+# Stop a service on all hosts in a group
+ansible <group> -m ansible.builtin.service -a "name=<service> state=stopped"
+
+# Gather facts about one or more hosts
+ansible <comma_separated_hosts> -m ansible.builtin.setup
+
+# Gather facts about all hosts in a group
+ansible <group> -m ansible.builtin.setup
+
+# View documenantation for a module
+ansible-doc <module>
+
+$ comma_separated_hosts: echo <hosts> | tr ' ' ','
+$ file: fd
+$ group: ansible-inventory --list | jq -r '["all"] + [.all.children[]] | .[]'
+$ hosts: ansible-inventory --list | jq -r '.[] | .hosts? // empty | .[]' --- --multi --expand
+$ module: ansible-doc -l --- --column 1 --preview "echo {} | awk '{print $1}' | xargs ansible-doc"

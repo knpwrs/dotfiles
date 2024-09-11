@@ -1,0 +1,7 @@
+% psql
+
+# Dump a postgres schema
+pg_dump -h <host> -p <port> -U <username> -d <database_name> -s
+
+# Dump a postgres schema to a file
+pg_dump -h <host> -p <port> -U <username> -d <database_name> -s -f <output_file>
