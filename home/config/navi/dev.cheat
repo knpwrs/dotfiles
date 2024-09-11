@@ -128,8 +128,10 @@ ssh-add <key>
 # Rerun a command until it succeeds
 until <cmd>; do echo "Restarting" && sleep 1; done
 
-$ key: fd '^[^.]+$' ~/.ssh/keys
+# Generate an SSH Key https://blog.g3rt.nl/upgrade-your-ssh-keys.html
+ssh-keygen -o -a 100 -t ed25519 -C <comment>
 
+$ key: fd '^[^.]+$' ~/.ssh/keys
 $ source: echo -e 'pbpaste\nvipe\ncurl -fL $(pbpaste)\n'
 $ dest: echo -e 'pbcopy\ncat\ntee\n'
 $ fd_pattern: echo -e '.\n'

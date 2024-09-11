@@ -61,7 +61,7 @@ kubectl cp --namespace <k8s_namespace> <pod>:<path> <file>
 
 kubectl --namespace <k8s_namespace> exec --stdin --tty <pod> -- <pod_shell>
 
-# Follow logs for a pod
+# Follow (tail) logs for a pod
 
 kubectl --namespace <k8s_namespace> logs --follow <pod>
 

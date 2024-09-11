@@ -59,14 +59,6 @@ if  [[ "$OSTYPE" = darwin* ]]; then
   alias show='open -R'
 fi
 
-# https://blog.g3rt.nl/upgrade-your-ssh-keys.html
-function keygen() {
-  if [ -z "$1" ]; then
-    echo "Please pass a comment as the first argument."
-    return 1
-  fi
-  ssh-keygen -o -a 100 -t ed25519 -C $1
-}
 alias KILL='killall -KILL'
 alias resume="kill -CONT"
 # Kill suspended process
