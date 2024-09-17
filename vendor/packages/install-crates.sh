@@ -11,6 +11,7 @@ crates=(
   eza         # A modern replacement for ls
   hexyl       # A command-line hex viewer
   hyperfine   # A command-line benchmarking tool
+  pik         # An interactive TUI for killing processes
   rm-improved # rip, a safer rm
   snm         # smol node manager
   toipe       # Terminal-based typing test
