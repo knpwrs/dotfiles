@@ -43,7 +43,7 @@ return {
     keys[#keys + 1] = {
       "<leader>ly",
       function()
-        require("fzf-lua").lsp_type_definitions({ reuse_win = true, jump_to_single_result = true })
+        require("fzf-lua").lsp_typedefs({ reuse_win = true, jump_to_single_result = true })
       end,
       desc = "Goto T[y]pe Definition",
     }
