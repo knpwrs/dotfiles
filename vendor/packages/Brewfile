@@ -129,6 +129,7 @@ cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines.
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
 cask 'vlc'                       # Open source media player.
+cask 'wezterm'                   # A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
 
 # Cask Quick Look Plugins
 cask 'betterzip'           # Quicklook for zip files.
