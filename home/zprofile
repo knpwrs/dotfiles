@@ -26,22 +26,40 @@ fi
 ## Ensure path arrays do not contain duplicates (except manpath, which needs gnuman placed at the start)
 typeset -gU cdpath fpath mailpath path
 
-BREW_PREFIX=$(hash brew 2>/dev/null && brew --prefix || /opt/homebrew/bin/brew --prefix)
+if hash brew 2>/dev/null; then
+  BREW_PREFIX=$(brew --prefix)
+elif [ -x /opt/homebrew/bin/brew ]; then
+  BREW_PREFIX=$(/opt/homebrew/bin/brew --prefix)
+else
+  BREW_PREFIX=""
+fi
+
 export WHALEBREW_INSTALL_PATH=$HOME/.whalebin
 
-## Set the list of directories that Zsh searches for programs.
+if [[ -n "$BREW_PREFIX" ]]; then
+  path=(
+    $BREW_PREFIX/opt/coreutils/libexec/gnubin # GNU coreutils
+    $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # GNU sed
+    $BREW_PREFIX/opt/gnu-tar/libexec/gnubin # GNU tar
+    $BREW_PREFIX/opt/gnu-which/libexec/gnubin # GNU which
+    $BREW_PREFIX/opt/make/libexec/gnubin # GNU make
+    $BREW_PREFIX/bin
+    $path
+  )
+
+  # GNU coreutils man path fix
+  manpath=(
+    $BREW_PREFIX/opt/coreutils/libexec/gnuman
+    $BREW_PREFIX/share/man
+    $manpath
+  )
+fi
+
 path=(
   $HOME/bin # Custom home bin directory
   $HOME/.bin # bin directory from this repo
   $HOME/.local/bin
   $WHALEBREW_INSTALL_PATH
-  $BREW_PREFIX/opt/coreutils/libexec/gnubin # GNU coreutils
-  $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # GNU sed
-  $BREW_PREFIX/opt/gnu-tar/libexec/gnubin # GNU tar
-  $BREW_PREFIX/opt/gnu-which/libexec/gnubin # GNU which
-  $BREW_PREFIX/opt/make/libexec/gnubin # GNU make
-  $BREW_PREFIX/bin
-  /usr/local/{bin,sbin}
   $path
 )
 
@@ -53,13 +71,6 @@ if [[ -d "$RUST_BIN" ]]; then
     $path
   )
 fi
-
-# GNU coreutils man path fix
-manpath=(
-  $BREW_PREFIX/opt/coreutils/libexec/gnuman
-  $BREW_PREFIX/share/man
-  $manpath
-)
 
 # Temporary Files
 if [[ ! -d "$TMPDIR" ]]; then
