@@ -15,4 +15,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
   config.default_prog = { "wsl.exe" }
 end
 
+-- Misc
+config.automatically_reload_config = true
+
 return config
