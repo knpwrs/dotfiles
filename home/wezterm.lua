@@ -8,6 +8,7 @@ config.font_size = 12.0
 
 -- UI
 config.hide_tab_bar_if_only_one_tab = true
+config.native_macos_fullscreen_mode = true
 
 -- Windows
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
