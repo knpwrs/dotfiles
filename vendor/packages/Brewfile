@@ -42,6 +42,7 @@ brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) p
 brew 'graphviz'                                # Rich set of graph drawing tools.
 brew 'gron'                                    # Make JSON greppable!
 brew 'gum'                                     # A tool for glamorous shell scripts 🎀
+brew 'htmlq'                                   # Like jq, but for HTML
 brew 'htop'                                    # Improved top (interactive process viewer)
 brew 'httpie'                                  # cURL-like tool for humans.
 brew 'hurl'                                    # Hurl CLI for HTTP testing.

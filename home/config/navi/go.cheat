@@ -1,0 +1,6 @@
+% Go
+
+# Install a package
+go get <new_package>
+
+$ new_package: curl -s 'https://pkg.go.dev/search?q=<query>' | htmlq '.SearchSnippet-header-path' --text | sed 's/[()]//g' --- --preview "echo https://pkg.go.dev/{} | xargs curl -s | htmlq '.Documentation.js-documentation' | html2text"
