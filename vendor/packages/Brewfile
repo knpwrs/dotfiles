@@ -14,6 +14,7 @@ brew 'curl'                                    # HTTP client.
 brew 'curlie'                                  # The power of curl, the ease of use of httpie.
 brew 'direnv'                                  # Shell environment switcher.
 brew 'doctl'                                   # DigitalOcean CLI
+brew 'doggo'                                   # Command-line DNS Client for Humans. Written in Golang
 brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
 brew 'exiftool'                                # Image exif manipulation.
 brew 'fastfetch'                               # tool for fetching system information and displaying them in a pretty way.
