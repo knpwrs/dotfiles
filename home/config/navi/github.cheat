@@ -12,6 +12,9 @@ gh pr checks
 # Watch CI status for current branch pull requst
 viddy gh pr checks
 
+# Watch Github Actions run
+gh run watch
+
 # Checkout a Pull Request
 gh pr checkout <pr_number>
 
