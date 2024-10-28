@@ -219,6 +219,18 @@ git rev-list --count @
 # "Undo" last commit
 git reset HEAD~1
 
+# Soft reset to a given commit
+git reset --soft <commit>
+
+# Soft reset to a given branch
+git reset --soft <branch>
+
+# Hard reset to a given commit
+git reset --hard <commit>
+
+# Hard reset to a given branch
+git reset --hard <branch>
+
 # Create a commit to make current branch look like a given branch
 git diff HEAD <branch> | git apply
 
