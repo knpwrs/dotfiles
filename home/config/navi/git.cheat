@@ -237,6 +237,12 @@ git diff HEAD <branch> | git apply
 # Create a commit to make current branch look like a given commit
 git diff HEAD <commit> | git apply
 
+# Make working tree look like a given commit
+git restore --source <commit> .
+
+# Make working tree look like a given branch
+git restore --source <branch> .
+
 # Apply patch on clipboard
 git apply <(pbpaste)
 
