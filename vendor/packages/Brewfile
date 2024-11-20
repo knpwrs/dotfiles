@@ -117,6 +117,7 @@ cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal em
 cask 'appcleaner'                # Mac app uninstaller.
 cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
+cask 'devutils'                  # All-in-one toolbox for developers.
 cask 'firefox'                   # Web browser from Mozilla.
 cask 'google-chrome'             # Web browser from Google.
 cask 'google-chrome@canary'      # Web browser from Google (beta release).
