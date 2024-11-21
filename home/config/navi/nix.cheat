@@ -5,3 +5,6 @@ nix-shell -p <pkgs>
 
 # Run a command from a nix package
 nix-shell -p <pkgs> --run "<cmd>"
+
+# Reinstall nix
+sudo rm /etc/*.backup-before-nix || echo "No backups to remove." && curl -L https://nixos.org/nix/install | sh
