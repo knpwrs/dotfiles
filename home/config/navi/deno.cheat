@@ -1,4 +1,4 @@
-% npm
+% deno
 
 # Pick and run a deno task
 deno task <task>
