@@ -1,0 +1,62 @@
+% bun
+
+# Install dependencies with a clean slate
+bun install --frozen-lockfile
+
+# Install dependency
+bun install <dependency>
+
+# Install dev dependency
+bun install -d <dependency>
+
+# Install package globally
+bun install -g <package>
+
+# Initialize a bun project
+bun init
+
+# Initialize a bun project and accept defaults
+bun init -y
+
+# Symlink a package folder
+bun link
+
+# Pick and run a bun script
+bun run <script>
+
+# Run the build script
+bun run build
+
+# Run the check script
+bun run check
+
+# Run the dev script
+bun run dev
+
+# Run the lint script
+bun run lint
+
+# Run the release script
+bun run release
+
+# Run the start script
+bun start
+
+# Run tests
+bun test
+
+# Upgrade a dependency to latest
+bun install <dependency>@latest
+
+$ dependency: jq -r '.dependencies | keys[]' < package.json
+
+# Preview what will be published to npm
+bun publish --dry-run
+
+# Generate a LICENSE file
+bunx lice
+
+# Check for updates and upgrade packages
+bunx npm-check-updates -i
+
+$ script: jq -r '.scripts | keys | .[]' package.json
