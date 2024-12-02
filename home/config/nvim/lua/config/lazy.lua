@@ -54,21 +54,21 @@ require("lazy").setup({
     "tpope/vim-eunuch",
     "tpope/vim-sleuth",
     {
-      "dashboard-nvim",
-      opts = function(_, dashboard)
-        -- Generated via `echo neovim | figlet -f ANSIShadow`
-        -- Font from https://github.com/xero/figlet-fonts/blob/master/ANSI%20Shadow.flf
-        local logo = table.concat({
-          "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
-          "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
-          "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
-          "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
-          "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
-          "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
-        }, "\n")
-        logo = string.rep("\n", 8) .. logo .. "\n\n"
-        dashboard.config.header = vim.split(logo, "\n")
-      end,
+      "folke/snacks.nvim",
+      opts = {
+        dashboard = {
+          preset = {
+            header = table.concat({
+              "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
+              "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
+              "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
+              "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
+              "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
+              "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
+            }, "\n"),
+          },
+        },
+      },
     },
     {
       "folke/noice.nvim",
