@@ -54,5 +54,5 @@ ansible-doc <module>
 $ comma_separated_hosts: echo <hosts> | tr ' ' ','
 $ file: fd
 $ group: ansible-inventory --list | jq -r '["all"] + [.all.children[]] | .[]'
-$ hosts: ansible-inventory --list | jq -r '.[] | .hosts? // empty | .[]' --- --multi --expand
+$ hosts: ansible-inventory --list | jq -r '.[] | .hosts? // empty | .[]' | sort | uniq --- --multi --expand
 $ module: ansible-doc -l --- --column 1 --preview "echo {} | awk '{print $1}' | xargs ansible-doc"
