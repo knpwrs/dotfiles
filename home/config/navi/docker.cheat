@@ -42,31 +42,31 @@ $ volume: docker volume ls -q
 docker save <image> -o <image>.tar
 
 # Start Docker Compose
-docker-compose up -d
+docker compose up -d
 
 # Start Specific Docker Compose Service
-docker-compose start <service>
+docker compose start <service>
 
 # Stop Docker Compose
-docker-compose down
+docker compose down
 
 # Stop Specific Docker Compose Service
-docker-compose stop <service>
+docker compose stop <service>
 
 # Restart Docker Compose
-docker-compose restart
+docker compose restart
 
 # Restart specific Docker Compose service
-docker-compose restart <service>
+docker compose restart <service>
 
 # Run a one-off command on a Docker Compose service
-docker-compose run --rm <service> <command>
+docker compose run --rm <service> <command>
 
 # Run a one-off command on a Docker Compose service and mount current working directory
-docker-compose run --rm -v $(pwd):/host -w /host <service> <command>
+docker compose run --rm -v $(pwd):/host -w /host <service> <command>
 
 # Execute a command in a running Docker Compose service
-docker-compose exec <service> <command>
+docker compose exec <service> <command>
 
-$ service: docker-compose config --services
+$ service: docker compose config --services
 $ image: echo -e 'busybox\n'
