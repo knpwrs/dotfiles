@@ -9,11 +9,17 @@ git log --all -i --grep '<search-text>'
 # Search all git commit contents for a given string
 git log --all -S '<search-text>'
 
+# Search all git commit contents for a given string, restrict to a given glob
+git log --all -S '<search-text>' -- '<glob>'
+
 # Search my git commit messages for a given string, case-insensitive
 git log --all -i --author '<user_name>' --grep '<search-text>'
 
 # Search my git commit contents for a given string
 git log --all --author '<user_name>' -S '<search-text>'
+
+# Search my git commit contents for a given string, restrict to a given glob
+git log --all --author '<user_name>' -S '<search-text>' -- '<glob>'
 
 # Blame ignoring whitespace and line copies
 git blame -wCCC <git_file>
@@ -314,6 +320,7 @@ $ git_changed_files: git diff --name-only --- --multi --expand
 $ git_file: git ls-files
 $ git_dir: git ls-files | xargs -n1 dirname | uniq
 $ git_dirty_files: git diff --name-only --- --multi
+$ glob: fd -td
 $ ref: echo -e 'HEAD\n'
 $ remote: git remote
 $ user_name: git config user.name
