@@ -263,8 +263,8 @@ GIT_AUTHOR_DATE="<datetime_full>" GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE git commit
 
 $ datetime_full: date -d "<datetime>" +"%Y-%m-%d %H:%M:%S"
 
-# Remove merge/rebase leftover/backup files
-fd '_(BACKUP|BASE|LOCAL|REMOTE)_' . | xargs rm
+# Clean/remove merge/rebase leftover/backup files
+fd '_(BACKUP|BASE|LOCAL|REMOTE)_' . -x rm
 
 # Bisect with HEAD as bad and <commit> as good
 git bisect start HEAD <commit>
