@@ -147,6 +147,12 @@ git pull --rebase <remote> <main_branch>
 # Pull and rebase interactively on main branch
 git pull --rebase=interactive <remote> <main_branch>
 
+# Pull and rebase on given branch
+git pull --rebase <remote> <branch>
+
+# Pull and rebase interactively on given branch
+git pull --rebase=interactive <remote> <branch>
+
 # Fetch and merge remote main branch
 git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
 
