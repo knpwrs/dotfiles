@@ -60,6 +60,9 @@ uuidgen
 # Tunnel localhost to public URL
 ssh -R 80:localhost:<local_port> nokey@localhost.run
 
+# Shutdown remote host over ssh
+ssh -t <host> 'sudo shutdown -h now'
+
 # Find and Replace Across Files
 fd '<fd_pattern>' -x sd '<find_pattern>' '<replace_pattern>' '{}'
 
