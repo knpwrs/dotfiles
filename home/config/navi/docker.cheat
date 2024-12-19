@@ -68,5 +68,8 @@ docker compose run --rm -v $(pwd):/host -w /host <service> <command>
 # Execute a command in a running Docker Compose service
 docker compose exec <service> <command>
 
+# Stop all containers and prune everything from docker compose project
+docker compose down --rmi local --volumes
+
 $ service: docker compose config --services
 $ image: echo -e 'busybox\n'
