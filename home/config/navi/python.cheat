@@ -1,0 +1,7 @@
+% Python
+
+# Set up a virtual environment
+python -m venv venv
+
+# Freeze environment requirements
+pip freeze > requirements.txt
