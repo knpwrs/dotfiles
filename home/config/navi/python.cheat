@@ -5,3 +5,9 @@ python -m venv venv
 
 # Freeze environment requirements
 pip freeze > requirements.txt
+
+# Import anaconda environment
+conda env create -f environment.yml
+
+# Export anaconda environment
+conda env export > environment.yml
