@@ -162,6 +162,9 @@ git pull --rebase=interactive <remote> <branch>
 # Fetch and merge remote main branch
 git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
 
+# Push specific branch to remote
+git push <remote> <branch>:<branch>
+
 # Push to specific remote
 git push <remote>
 
