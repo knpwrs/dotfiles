@@ -90,20 +90,29 @@ git diff <branch> -- <git_file>
 # Git stash specific files
 git stash push <git_dirty_files>
 
-# Git stash specific files with message
-git stash push -m <message> <git_dirty_files>
+# Git stash specific files with message / name
+git stash push -m "<message>" <git_dirty_files>
 
 # Git stash staged changes
 git stash push --staged
 
-# Git stash staged changes with message
-git stash push --staged -m <message>
+# Git stash staged changes with message / name
+git stash push --staged -m "<message>"
 
 # Git stash all files including untracked files
 git stash --include-untracked
 
 # View most recent git stash
 git stash show -p
+
+# List stashes
+git stash list
+
+# Apply a specific stash
+git stash apply <stash>
+
+# Pop a specific stash
+git stash pop <stash>
 
 # Git diff with difftastic
 GIT_EXTERNAL_DIFF=difft git diff
@@ -326,5 +335,6 @@ $ git_dirty_files: git diff --name-only --- --multi
 $ glob: fd -td
 $ ref: echo -e 'HEAD\n'
 $ remote: git remote
+$ stash: git stash list --- --map 'cut -d ":" -f 1'
 $ user_name: git config user.name
 $ conflicted_file: git diff --name-only --diff-filter=U --relative
