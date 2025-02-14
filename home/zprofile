@@ -11,7 +11,7 @@ export EDITOR='nvim'
 export VISUAL='nvim' # Editor to be opened from $PAGER
 
 if type bat > /dev/null; then
-  export PAGER='bat -p'
+  export PAGER=('bat', '-p')
   export MANPAGER="sh -c 'col -bx | bat -plman'"
 else
   export PAGER='less -R'
