@@ -60,6 +60,12 @@ gh pr ready
 # Mark a draft pull request as ready for review
 gh pr ready <pr>
 
+# Mark current pull request as draft
+gh pr ready --undo
+
+# Mark given pull request as draft
+gh pr ready --undo <pr>
+
 # Reopen pull request for current branch
 gh pr reopen
 
