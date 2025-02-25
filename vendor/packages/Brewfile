@@ -54,6 +54,7 @@ brew 'jpegoptim'                               # Utility to optimize JPEG files
 brew 'jq'                                      # SED for JSON.
 brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
 brew 'kdabir/tap/has'                          # checks presence of various command line tools and their versions on the path
+brew 'knqyf263/sou/sou'                        # A tool for exploring files in container image layers.
 brew 'lazygit'                                 # Simple terminal UI for git commands
 brew 'lazydocker'                              # Simple terminal UI for docker commands
 brew 'make'                                    # GNU make utility to maintain groups of programs.
