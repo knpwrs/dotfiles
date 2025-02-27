@@ -28,10 +28,10 @@ fcd() {
 
 # fdf - cd into the directory of the selected file
 fdf() {
-   local file
-   local dir
-   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
- }
+  local file
+  local dir
+  file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
 
 # fdr - cd to selected parent directory
 fcdr() {

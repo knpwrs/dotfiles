@@ -7,6 +7,30 @@ if [ -d $ZINIT_HOME ]; then
   zinit light Tarrasch/zsh-bd
   zinit light zdharma-continuum/fast-syntax-highlighting
   zinit light zsh-users/zsh-autosuggestions
+
+  forgit_log=fglo
+  forgit_reflog=fgrl
+  forgit_diff=fgd
+  forgit_show=fgso
+  forgit_add=fga
+  forgit_reset_head=fgrh
+  forgit_ignore=fgi
+  forgit_attributes=fgat
+  forgit_checkout_file=fgcf
+  forgit_checkout_branch=fgcb
+  forgit_branch_delete=fgbd
+  forgit_checkout_tag=fgct
+  forgit_checkout_commit=fgco
+  forgit_revert_commit=fgrc
+  forgit_clean=fgclean
+  forgit_stash_show=fgss
+  forgit_stash_push=fgsp
+  forgit_cherry_pick=fgcp
+  forgit_rebase=fgrb
+  forgit_blame=fgbl
+  forgit_fixup=fgfu
+
+  zinit light wfxr/forgit
 fi
 
 # Load zsh modules
