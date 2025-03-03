@@ -16,13 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    {
-      "LazyVim/LazyVim",
-      import = "lazyvim.plugins",
-      keys = {
-        { "<leader>l", mode = "n", false },
-      },
-    },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "lazyvim.plugins.extras.ai.copilot" },
     { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
@@ -33,6 +27,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
+    { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
@@ -40,47 +35,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "plugins" },
-    {
-      "lambdalisue/suda.vim",
-      init = function()
-        vim.cmd("cnoreabbrev ww SudaWrite")
-      end,
-    },
-    "ku1ik/vim-pasta",
-    "yorickpeterse/nvim-tree-pairs",
-    "tmux-plugins/vim-tmux-focus-events",
-    "tommcdo/vim-exchange",
-    "tpope/vim-abolish",
-    "tpope/vim-eunuch",
-    "tpope/vim-sleuth",
-    {
-      "folke/snacks.nvim",
-      opts = {
-        dashboard = {
-          preset = {
-            header = table.concat({
-              "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
-              "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
-              "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
-              "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
-              "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
-              "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
-            }, "\n"),
-          },
-        },
-      },
-    },
-    {
-      "folke/noice.nvim",
-      opts = {
-        messages = {
-          enabled = false,
-        },
-        notify = {
-          enabled = false,
-        },
-      },
-    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -91,14 +45,18 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  checker = { enabled = false },
+  install = { colorscheme = { "tokyonight", "habamax" } },
+  checker = {
+    enabled = true, -- check for plugin updates periodically
+    notify = false, -- notify on update
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        "matchit",
-        "matchparen",
+        -- "matchit",
+        -- "matchparen",
         -- "netrwPlugin",
         "tarPlugin",
         "tohtml",

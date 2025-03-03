@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Font
-config.color_scheme = "carbonfox"
+config.color_scheme = "tokyonight_night"
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.font_size = 12.0
 

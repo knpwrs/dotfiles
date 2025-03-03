@@ -1,11 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "andymass/vim-matchup",
-      "RRethy/nvim-treesitter-endwise",
-      "windwp/nvim-ts-autotag",
-    },
+    dependencies = { "andymass/vim-matchup" },
     opts = {
       ensure_installed = {
         "astro",
@@ -41,12 +37,6 @@ return {
         "toml",
         "typescript",
         "tsx",
-      },
-      autotag = {
-        enable = true,
-      },
-      endwise = {
-        enable = true,
       },
       matchup = {
         enable = true,
@@ -124,4 +114,7 @@ return {
       { "gM", "<cmd>TSJToggle<cr>", desc = "Toggle Split Treesitter Node" },
     },
   },
+  "RRethy/nvim-treesitter-endwise",
+  "windwp/nvim-ts-autotag",
+  "yorickpeterse/nvim-tree-pairs",
 }
