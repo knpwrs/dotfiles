@@ -114,6 +114,7 @@ brew 'knpwrs/tap/woodo'                        # It's a weird tree
 
 # Casks
 cask '1password'                 # Password manager.
+cask '1password-cli'             # 1Password CLI.
 cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
 cask 'appcleaner'                # Mac app uninstaller.
 cask 'beardedspice'              # More control over keyboard media keys.
