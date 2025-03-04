@@ -11,3 +11,6 @@ tail -f /Users/knpwrs/.cache/nvim/dap.log
 
 # Clear all neovim swap files
 rm $HOME/.local/state/nvim/swap/*.swp
+
+# Delete all neovim user data and cache
+ rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim
