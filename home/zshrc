@@ -8,27 +8,27 @@ if [ -d $ZINIT_HOME ]; then
   zinit light zdharma-continuum/fast-syntax-highlighting
   zinit light zsh-users/zsh-autosuggestions
 
-  forgit_log=fglo
-  forgit_reflog=fgrl
+  forgit_log=flo
+  forgit_reflog=frl
   forgit_diff=fgd
-  forgit_show=fgso
-  forgit_add=fga
-  forgit_reset_head=fgrh
+  forgit_show=fso
+  forgit_add=fa
+  forgit_reset_head=frh
   forgit_ignore=fgi
-  forgit_attributes=fgat
-  forgit_checkout_file=fgcf
-  forgit_checkout_branch=fgcb
-  forgit_branch_delete=fgbd
-  forgit_checkout_tag=fgct
-  forgit_checkout_commit=fgco
-  forgit_revert_commit=fgrc
-  forgit_clean=fgclean
-  forgit_stash_show=fgss
-  forgit_stash_push=fgsp
-  forgit_cherry_pick=fgcp
-  forgit_rebase=fgrb
-  forgit_blame=fgbl
-  forgit_fixup=fgfu
+  forgit_attributes=fat
+  forgit_checkout_file=fcf
+  forgit_checkout_branch=fco
+  forgit_branch_delete=fbd
+  forgit_checkout_tag=fct
+  forgit_checkout_commit=fcc
+  forgit_revert_commit=frc
+  forgit_clean=fcl
+  forgit_stash_show=fss
+  forgit_stash_push=fsp
+  forgit_cherry_pick=fcp
+  forgit_rebase=frb
+  forgit_blame=fbl
+  forgit_fixup=ffu
 
   zinit light wfxr/forgit
 fi
