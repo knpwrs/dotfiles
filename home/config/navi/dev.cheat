@@ -102,6 +102,9 @@ fd '<fd_pattern>' -x rg '<find_pattern>' '{}'
 # Find Across Specific Files
 rg '<find_pattern>' <files>
 
+# Count files matching pattern
+rg -l '<find_pattern>' | wc -l
+
 # Launch cheat.sh shell
 cht.sh --shell
 
