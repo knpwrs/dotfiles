@@ -11,11 +11,12 @@ return {
 
       -- And use custom keymaps!
       -- stylua: ignore start
-      keys[#keys + 1] = { "<leader>ld", vim.lsp.buf.definition, desc = "Goto Definition", has = "definition" }
-      keys[#keys + 1] = { "<leader>lD", vim.lsp.buf.declaration, desc = "Goto Declaration" }
-      keys[#keys + 1] = { "<leader>li", vim.lsp.buf.implementation, desc = "Goto Implementation" }
-      keys[#keys + 1] = { "<leader>y", vim.lsp.buf.type_definition, desc = "Goto T[y]pe Definition" }
-      keys[#keys + 1] = { "<leader>lr", vim.lsp.buf.definition, desc = "Goto Definition", has = "definition" }
+      keys[#keys + 1] = { "<leader>ld", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition", has = "definition" }
+      keys[#keys + 1] = { "<leader>lD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" }
+      keys[#keys + 1] = { "<leader>ly", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" }
+      keys[#keys + 1] = { "<leader>lr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" }
+      keys[#keys + 1] = { "<leader>li", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" }
+      keys[#keys + 1] = { "<leader>lr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" }
       keys[#keys + 1] = { "<leader>lk", vim.lsp.buf.hover, desc = "Hover" }
       keys[#keys + 1] = { "<leader>lK", vim.lsp.buf.hover, desc = "Signature Help", has = "signatureHelp" }
       keys[#keys + 1] = { "<c-k>", function() return vim.lsp.buf.signature_help() end, mode = "i", desc = "Signature Help", has = "signatureHelp" }
