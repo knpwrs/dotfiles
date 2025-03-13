@@ -75,6 +75,7 @@ brew 'otree'                                   # A command line tool to view obj
 brew 'p7zip'                                   # Extract 7z archives
 brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
 brew 'pigz'                                    # Parallel gzip
+brew 'presenterm'                              # A markdown terminal slideshow tool
 brew 'pv'                                      # Monitor the progress of data through a pipe.
 brew 'python3'                                 # Python 3
 brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
@@ -86,7 +87,6 @@ brew 'rsync'                                   # Utility that provides fast incr
 brew 'sd'                                      # Intuitive find & replace CLI (sed alternative)
 brew 'silicon'                                 # Create beautiful image of your source code.
 brew 'sl'                                      # Steam Locomotive
-brew 'slides'                                  # Terminal presentation tool
 brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file.
 brew 'sshuttle'                                # Proxy server that works as a poor man's VPN.
 brew 'starship'                                # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
