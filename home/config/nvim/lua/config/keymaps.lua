@@ -18,7 +18,7 @@ vim.keymap.set("x", "@", ":<C-u>call ExecuteMacroOverVisualRange()<Cr>", { norem
 
 vim.keymap.set("n", "<leader>y", '"*y', { desc = "Yank to System Clipboard" })
 vim.keymap.set("v", "<leader>y", '"*y', { desc = "Yank to System Clipboard" })
-vim.keymap.set("n", "cp", ':let @*=expand("%")<cr>', { desc = "Copy Relative File Path to System Clipboard" })
+vim.keymap.set("n", "cp", ':let @*=expand("%:.")<cr>', { desc = "Copy Relative File Path to System Clipboard" })
 vim.keymap.set("n", "cP", ':let @*=expand("%:p")<cr>', { desc = "Copy Absolute File Path to System Clipboard" })
-vim.keymap.set("n", "yp", ':let @"=expand("%")<cr>', { desc = "Yank Relative File Path" })
+vim.keymap.set("n", "yp", ':let @"=expand("%:.")<cr>', { desc = "Yank Relative File Path" })
 vim.keymap.set("n", "yP", ':let @"=expand("%:p")<cr>', { desc = "Yank Absolute File Path" })
