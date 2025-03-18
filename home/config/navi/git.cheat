@@ -237,6 +237,18 @@ git rev-parse HEAD | head -c 8
 # Copy short hash of HEAD
 git rev-parse HEAD | head -c 8 | pbcopy
 
+# Print hash of given commit
+git rev-parse <commit> | tr -d '\n'
+
+# Copy hash of given commit
+git rev-parse <commit> | tr -d '\n' | pbcopy
+
+# Print short hash of given commit
+git rev-parse <commit> | head -c 8
+
+# Copy short hash of given commit
+git rev-parse <commit> | head -c 8 | pbcopy
+
 # Count commits up to HEAD
 git rev-list --count @
 
