@@ -9,8 +9,8 @@ gh browse --commit --no-browser | sed 's|/tree|/commit|' | pbcopy
 # Show CI status for current branch pull request
 gh pr checks
 
-# Watch CI status for current branch pull requst
-viddy gh pr checks
+# Watch CI status for current branch pull request
+gh pr checks --watch
 
 # Watch Github Actions run
 gh run watch
