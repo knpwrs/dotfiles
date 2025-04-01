@@ -12,6 +12,12 @@ gh pr checks
 # Watch CI status for current branch pull request
 gh pr checks --watch
 
+# Show CI status for given pull request
+gh pr checks
+
+# Watch CI status for given pull request
+gh pr checks --watch
+
 # Watch Github Actions run
 gh run watch
 
