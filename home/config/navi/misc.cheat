@@ -1,5 +1,10 @@
 % Misc
 
+# Run a command in a loop a given number of times
+for i in {1..<n>}; do
+  <inline_cmd>
+done
+
 # Show weather info for current location
 curl -s "wttr.in" \
    | grep -v "New feature" \
