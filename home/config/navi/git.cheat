@@ -145,7 +145,9 @@ git branch -d <branch>
 git branch -D <branch>
 
 # Rename current branch
-git branch -m <current_branch>
+git branch -m <current_branch> <new_branch>
+
+$ new_branch: echo -e '<current_branch>\n'
 
 # Checkout a branch with name based on current branch
 git checkout -b <current_branch>
