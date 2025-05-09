@@ -11,6 +11,17 @@ return {
           adapter = "openai",
         },
       },
+      adapters = {
+        openai = function()
+          return require("codecompanion.adapters").extend("openai", {
+            schema = {
+              model = {
+                default = "gpt-4.1",
+              },
+            },
+          })
+        end,
+      },
     },
     keys = {
       { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
