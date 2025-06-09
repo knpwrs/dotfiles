@@ -1,5 +1,8 @@
 % Dev
 
+# Run Claude Code in YOLO mode
+claude --dangerously-skip-permissions
+
 # Generate a LICENSE file
 npx lice
 
