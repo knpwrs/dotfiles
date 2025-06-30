@@ -18,4 +18,13 @@ end
 -- Misc
 config.automatically_reload_config = true
 
+-- Keys
+config.keys = {
+  {
+    key = "k",
+    mods = "CMD",
+    action = wezterm.action.SendKey({ key = "l", mods = "CTRL" }),
+  },
+}
+
 return config
