@@ -1,0 +1,61 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+echo "🔄 Fetching latest nixpkgs commit..."
+
+local COMMIT_HASH
+COMMIT_HASH=$(curl -s https://api.github.com/repos/nixos/nixpkgs/commits/master | jq -r .sha)
+
+local URL="https://github.com/nixos/nixpkgs/archive/${COMMIT_HASH}.tar.gz"
+echo "📦 Prefetching $URL ..."
+local SHA256
+SHA256=$(nix-prefetch-url --unpack "$URL")
+
+echo "📝 Writing shell.nix..."
+
+cat >shell.nix <<EOF
+# generate the sha256 like this:
+# nix-prefetch-url --unpack https://github.com/nixos/nixpkgs/archive/${COMMIT_HASH}.tar.gz
+
+let
+nixpkgs = fetchTarball {
+  url = "${URL}";
+  sha256 = "${SHA256}";
+};
+pkgs = import nixpkgs { config = {}; overlays = []; };
+in
+
+pkgs.mkShell {
+packages = with pkgs; [
+  just
+  navi
+];
+}
+EOF
+
+echo "📝 Writing .envrc..."
+
+cat >.envrc <<EOF
+source_up_if_exists
+
+if ! has nix_direnv_version || ! nix_direnv_version 3.1.0; then
+  source_url "https://raw.githubusercontent.com/nix-community/nix-direnv/3.1.0/direnvrc" "sha256-yMJ2OVMzrFaDPn7q8nCBZFRYpL/f0RcHzhmw/i6btJM="
+fi
+
+use nix
+source_env_if_exists ./.envrc.local
+
+git config --local core.hooksPath $PWD/.githooks
+
+# Set environment variables
+set -a
+: ${FOO:=foo_value}
+: ${BAR:=bar_value}
+set +a
+# End setting environment variables
+
+path_add NAVI_PATH ./navi
+EOF
+
+echo "✅ Done: shell.nix and .envrc created."

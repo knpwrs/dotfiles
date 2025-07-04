@@ -1,5 +1,8 @@
 % Dev
 
+# Initialize a new nix/direnv project
+nix-init
+
 # Run Claude Code in YOLO mode
 claude --dangerously-skip-permissions
 
