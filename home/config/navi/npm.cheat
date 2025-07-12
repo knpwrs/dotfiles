@@ -25,7 +25,7 @@ npx install-peerdeps <dependency>
 npx install-peerdeps --dev <dependency>
 
 # Initialize a new npm project
-jo -p name="<name>" version="<version>" description="<description>" type=module "exports[.]"=./dist/index.js "scripts[test]"="echo test" author="Ken Powers <ken@kenpowers.net>" license="Unlicense OR CC0-1.0" > package.json
+jo -p name="<name>" version="<version>" description="<description>" type=module "exports[.]"=./dist/index.js "scripts[test]"="echo test" author="Ken Powers <ken@kenpowers.net> (https://knpw.rs)" license="Unlicense OR CC0-1.0" > package.json
 
 $ version: echo -e '0.0.0\n'
 
