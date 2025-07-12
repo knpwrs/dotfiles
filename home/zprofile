@@ -67,9 +67,19 @@ path=(
 RUST_BIN="$HOME/.cargo/bin"
 if [[ -d "$RUST_BIN" ]]; then
   path=(
-    $HOME/.cargo/bin # rust crates
+    $RUST_BIN
     $path
   )
+fi
+
+# bun
+BUN_BIN="$HOME/.bun/bin"
+if [[ -d "$BUN_BIN" ]]; then
+  path=(
+    $BUN_BIN # bun
+    $path
+  )
+  [ -s "$BUN_BIN/_bun" ] && source "$BUN_BIN/_bun"
 fi
 
 # Temporary Files
