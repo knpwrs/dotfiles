@@ -127,6 +127,7 @@ cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal em
 cask 'appcleaner'                # Mac app uninstaller.
 cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
+cask 'clop'                      # Automatically optimize images.
 cask 'devutils'                  # All-in-one toolbox for developers.
 cask 'dockdoor'                  # A new way of interacting with the Dock.
 cask 'firefox'                   # Web browser from Mozilla.
