@@ -1,8 +1,16 @@
+# Taps
+
+tap 'kdabir/tap'
+tap 'knpwrs/tap'
+tap 'knqyf263/sou'
+tap 'mike-engel/jwt-cli'
+tap 'teamookla/speedtest'
+
 # Base Packages
 
 brew 'age'                                     # A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.
 brew 'aria2'                                   # Multi-protocol download client.
-brew 'ast-grep'                                # A CLI tool for code structrual search, lint and rewriting. Written in Rust.
+brew 'ast-grep'                                # A CLI tool for code structural search, lint and rewriting. Written in Rust.
 brew 'bat'                                     # A cat clone with wings.
 brew 'boxes'                                   # A command line program which draws, removes, and repairs ASCII art boxes.
 brew 'chafa'                                   # Image viewer and converter for the terminal.
@@ -128,7 +136,7 @@ cask 'google-drive'              # Google Drive
 cask 'keka'                      # Archive extraction and creation.
 cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
-cask 'miniconda'                               # ture installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.
+cask 'miniconda'                 # true installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.
 cask 'notunes'                   # A simple macOS application that will prevent iTunes or Apple Music from launching.
 cask 'paw'                       # The most advanced API tool for Mac
 cask 'raycast'                   # Supercharged productivity
@@ -144,7 +152,6 @@ cask 'wezterm'                   # A GPU-accelerated cross-platform terminal emu
 cask 'betterzip'           # Quicklook for zip files.
 cask 'provisionql'         # Quicklook for ipa & provision.
 cask 'qlcolorcode'         # Quicklook syntax highlighting.
-cask 'qlimagesize'         # Adds dimensions and file size to Quicklook title bar.
 cask 'qlmarkdown'          # Quicklook for markdown.
 cask 'qlprettypatch'       # Quicklook for patch files.
 cask 'qlstephen'           # Quicklook for extensionless text files (README, etc).
