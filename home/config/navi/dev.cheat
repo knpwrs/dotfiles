@@ -105,6 +105,9 @@ sd -s '<find_string>' '<replace_string>' <files>
 # Find Across Files
 fd '<fd_pattern>' -x rg '<find_pattern>' '{}'
 
+# Find files ignoring gitignore
+fd -uu --type f -g '<find_pattern>'
+
 # Find Across Specific Files
 rg '<find_pattern>' <files>
 
