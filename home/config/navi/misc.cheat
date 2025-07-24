@@ -1,5 +1,13 @@
 % Misc
 
+# Transfer a file via wormhole
+womhole send <file>
+
+$ file: fd
+
+# Receive a file via wormhole
+wormhole receive <code>
+
 # Run a command in a loop a given number of times
 for i in {1..<n>}; do
   <inline_cmd>
