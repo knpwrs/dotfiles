@@ -4,7 +4,7 @@
 <ai_command>
 
 $ ai_command: http POST http://localhost:11434/api/generate model=<ai_command_model> prompt="Write shell commands for a unix-like shell without comments. Only output the shell command. Do not use code blocks. Do not write comments. Be concise. Do not write alternative suggestions.\n\n<prompt>" | jq -rs 'map(.response) | join("")'
-$ ai_command_model: echo -e 'zephyr\nmistral\n'
+$ ai_command_model: echo -e 'gpt-oss\nzephyr\nmistral\n'
 
 # Use AI to describe a picture
 http POST http://localhost:11434/api/generate model=llava images\[0\]=$(base64 -w 0 < <image_path>) prompt="What is in this picture?" | jq -sr 'map(.response) | join("")'
