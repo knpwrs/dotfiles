@@ -14,4 +14,7 @@ $ image_path: fd
 # Chat with an Ollama model
 ollama run <model>
 
+# Remove or delete an Ollama model
+ollama rm <model>
+
 $ model: ollama list | tail -n +2 | cut -d : -f1
