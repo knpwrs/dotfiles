@@ -25,6 +25,11 @@ config.keys = {
     mods = "CMD",
     action = wezterm.action.SendKey({ key = "l", mods = "CTRL" }),
   },
+  {
+    key = "Enter",
+    mods = "SHIFT",
+    action = wezterm.action.SendString("\n"),
+  },
 }
 
 return config
