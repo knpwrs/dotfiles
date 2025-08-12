@@ -13,6 +13,7 @@ brew 'aria2'                                   # Multi-protocol download client.
 brew 'ast-grep'                                # A CLI tool for code structural search, lint and rewriting. Written in Rust.
 brew 'bat'                                     # A cat clone with wings.
 brew 'boxes'                                   # A command line program which draws, removes, and repairs ASCII art boxes.
+brew 'btop'                                    # A monitor of resources.
 brew 'chafa'                                   # Image viewer and converter for the terminal.
 brew 'cmatrix'                                 # Matrix in the terminal.
 brew 'coreutils'                               # GNU core utilities (Mac is BSD).
