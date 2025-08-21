@@ -65,6 +65,12 @@ $EDITOR <dirty_files>
 
 $dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | sort | uniq --- --multi --expand
 
+# Open staged files in $EDITOR
+git diff --staged --name-only | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
+
+# Pick staged files to open in $EDITOR
+$EDITOR <staged_files>
+
 # Open files from HEAD commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
