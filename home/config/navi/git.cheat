@@ -87,6 +87,9 @@ $EDITOR <commit_files>
 
 $commit_files: git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
 
+# Edit local git exclude file
+$EDITOR .git/info/exclude
+
 # Git diff specific file
 git diff <git_file>
 
