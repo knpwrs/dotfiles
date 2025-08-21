@@ -18,6 +18,9 @@ npx lice
 # Format JSON
 <source> | jq | <dest>
 
+# Format as JSON string
+<source> | jq -Rs | <dest>
+
 # URL-Encode Text
 <source> | tr -d '\n' | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))' | <dest>
 
