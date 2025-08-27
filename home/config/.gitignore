@@ -3,6 +3,8 @@
 !starship.toml
 !alacritty
 !alacritty/**
+!karabiner
+!karabiner/**
 !kitty
 !kitty/**
 !nvim

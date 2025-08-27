@@ -137,6 +137,7 @@ cask 'google-chrome'             # Web browser from Google.
 cask 'google-chrome@canary'      # Web browser from Google (beta release).
 cask 'google-drive'              # Google Drive
 cask 'jordanbaird-ice'           # Powerful menu bar manager for macOS.
+cask 'carabiner-elements'        # Keyboard customizer
 cask 'keka'                      # Archive extraction and creation.
 cask 'keybase'                   # Crypto for everyone.
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
