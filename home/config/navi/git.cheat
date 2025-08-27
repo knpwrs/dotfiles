@@ -54,6 +54,9 @@ git cherry-pick -i <branch>
 # cherry-pick a given commit
 git cherry-pick -i <commit>
 
+# cherry-pick a given commit from a given branch
+git cherry-pick <commit_from_branch>
+
 # List dirty files
 cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard)
 
@@ -360,4 +363,5 @@ $ ref: echo -e 'HEAD\n'
 $ remote: git remote
 $ stash: git stash list --- --map 'cut -d ":" -f 1'
 $ user_name: git config user.name
+$ commit_from_branch: git log --oneline --max-count 250 <branch> --- --map 'cut -d " " -f 1'
 $ conflicted_file: git diff --name-only --diff-filter=U --relative
