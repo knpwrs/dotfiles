@@ -6,6 +6,12 @@ nix-init
 # Run Claude Code in YOLO mode
 claude --dangerously-skip-permissions
 
+# Continue last Claude Code conversation
+claude --continue
+
+# Resume past Claude Code conversation
+claude --resume
+
 # Generate a LICENSE file
 npx lice
 
