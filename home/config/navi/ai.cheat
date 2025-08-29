@@ -1,0 +1,39 @@
+% AI
+
+# Run Claude Code in YOLO mode
+claude --dangerously-skip-permissions
+
+# Continue last Claude Code conversation
+claude --continue
+
+# Resume past Claude Code conversation
+claude --resume
+
+# Use Claude Code to generate a shell command
+<claude_shell_cmd>
+
+$ claude_shell_cmd: gum spin --spinner dot --title "Thinking..." -- claude -p "write a shell command for a unix-like shell, output the command only, with no markdown: <prompt>"
+
+# Use OpenAI Codex to generate a shell command
+<codex_shell_cmd>
+
+$ codex_shell_cmd: gum spin --spinner dot --title "Thinking..." -- codex exec --full-auto "write a shell command for a unix-like shell, output the command only, on one line, with no markdown: <prompt>" | tail -n 2 | head -n 1
+
+# Use Ollama to generate a shell command
+<ollama_shell_cmd>
+
+$ ollama_shell_cmd: gum spin --spinner dot --title "Thinking..." -- http POST http://localhost:11434/api/generate model=<ollama_shell_cmd_model> prompt="write a shell command for a unix-like shell, output the command only with no markdown: <prompt>" | jq -rs 'map(.response) | join("")'
+$ ollama_shell_cmd_model: echo -e 'gpt-oss\nzephyr\nmistral\n'
+
+# Use Ollama to describe a picture
+http POST http://localhost:11434/api/generate model=llava images\[0\]=$(base64 -w 0 < <image_path>) prompt="What is in this picture?" | jq -sr 'map(.response) | join("")'
+
+$ image_path: fd
+
+# Chat with an Ollama model
+ollama run <model>
+
+# Remove or delete an Ollama model
+ollama rm <model>
+
+$ model: ollama list | tail -n +2 | cut -d : -f1
