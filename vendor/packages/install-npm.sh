@@ -19,7 +19,6 @@ packages=(
   localtunnel                      # Simple tool to expose a local port over public dns.
   matrix-rain                      # Fill your terminal with falling green text.
   modhelp                          # Display README for any NPM module in terminal.
-  nd                               # CLI markdown viewer.
   neovim                           # Neovim Node provider.
   np                               # Better npm publish.
   npm-merge-driver                 # git merge driver for resolving conflicts in npm-related files
