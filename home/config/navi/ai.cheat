@@ -14,6 +14,11 @@ claude --resume
 
 $ claude_shell_cmd: gum spin --spinner dot --title "Thinking..." -- claude -p "write a shell command for a unix-like shell, output the command only, with no markdown: <prompt>"
 
+# Use Gemini to generate a shell command
+<gemini_shell_cmd>
+
+$ gemini_shell_cmd: gum spin --spinner dot --title "Thinking..." -- gemini -p "write a shell command for a unix-like shell, output the command only, with no markdown: <prompt>"
+
 # Use OpenAI Codex to generate a shell command
 <codex_shell_cmd>
 
