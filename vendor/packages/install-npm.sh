@@ -39,6 +39,7 @@ packages=(
   ttystudio                        # Record terminal to GIF.
   wscat                            # WebSocket debugging tool.
   zx                               # A tool for writing better scripts
+  @anthropic-ai/claude-code        # An open-source AI agent that brings the power of Gemini directly into your terminal.
   @fsouza/prettierd                # prettier, as a daemon, for ludicrous formatting speed
 )
 
