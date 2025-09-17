@@ -99,6 +99,12 @@ git diff <git_file>
 # Git diff specific file with another branch
 git diff <branch> -- <git_file>
 
+# Git diff specific file and ignore whitespace
+git diff -w <git_file>
+
+# Git diff specific file with another branch and ignore whitespace
+git diff -w <branch> -- <git_file>
+
 # Git stash specific files
 git stash push <git_dirty_files>
 
