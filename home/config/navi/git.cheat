@@ -66,7 +66,7 @@ cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o -
 # Pick dirty files to open in $EDITOR
 $EDITOR <dirty_files>
 
-$dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | sort | uniq --- --multi --expand
+$dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | sort | uniq --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 
 # Open staged files in $EDITOR
 git diff --staged --name-only | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
@@ -80,7 +80,7 @@ git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-par
 # Pick files from HEAD commit to open in $EDITOR
 $EDITOR <head_files>
 
-$head_files: git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
+$head_files: git diff-tree --no-commit-id --name-only -r HEAD --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 
 # Open files from given commit in $EDITOR
 git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
@@ -88,7 +88,7 @@ git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev
 # Pick files from given commit to open in $EDITOR
 $EDITOR <commit_files>
 
-$commit_files: git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} --- --multi --expand
+$commit_files: git diff-tree --no-commit-id --name-only -r <commit> --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 
 # Edit local git exclude file
 $EDITOR .git/info/exclude
@@ -360,7 +360,7 @@ $ ssh_public_key_file: fd . ~/.ssh -e pub
 
 $ current_branch: git branch --show-current
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
-$ staged_files: git diff --staged --name-only --- --multi --expand
+$ staged_files: git diff --staged --name-only --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 $ branch: git branch | cut -c 3-
 $ main_branch: git branch | cut -c 3- | grep -m 1 '^\(main\|master\|dev\|development\|trunk\)$'
 $ branch_or_tag: (git branch | cut -c 3-; git tag)
