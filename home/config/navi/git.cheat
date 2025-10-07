@@ -30,6 +30,9 @@ git checkout <main_branch>
 # Checkout target branch or tag
 git checkout <branch_or_tag>
 
+# Checkout target commit
+git checkout <commit>
+
 # Checkout "their" change for a conflicted file
 git checkout --theirs <conflicted_file>
 
