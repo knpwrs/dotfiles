@@ -27,6 +27,11 @@ duu() {
   du -hd0 $1 | cut -f1
 }
 
+gleep() {
+  local duration=${1:-1}
+  gum spin --spinner dot --title "Sleeping for ${duration}s..." -- sleep "$duration"
+}
+
 alias md='mkdir -p'
 function mvd() {
   mkdir $1
