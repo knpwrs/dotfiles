@@ -20,7 +20,7 @@ $ claude_shell_cmd: gum spin --spinner dot --title "Thinking..." -- claude -p "w
 $ gemini_shell_cmd: gum spin --spinner dot --title "Thinking..." -- gemini -p "write a shell command for a unix-like shell, output the command only, with no markdown: <prompt>"
 
 # Run Codex in YOLO mode
-codex --full-auto
+codex --dangerously-bypass-approvals-and-sandbox
 
 # Use OpenAI Codex to generate a shell command
 <codex_shell_cmd>
