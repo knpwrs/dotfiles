@@ -93,7 +93,7 @@ $EDITOR <commit_files>
 
 $commit_files: git diff-tree --no-commit-id --name-only -r <commit> --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 
-# Edit local git exclude file
+# Edit local git exclude file (local ignore)
 $EDITOR .git/info/exclude
 
 # Git diff specific file
