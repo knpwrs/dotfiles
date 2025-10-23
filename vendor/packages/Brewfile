@@ -16,7 +16,6 @@ brew 'boxes'                                   # A command line program which dr
 brew 'btop'                                    # A monitor of resources.
 brew 'chafa'                                   # Image viewer and converter for the terminal.
 brew 'cmatrix'                                 # Matrix in the terminal.
-brew 'codex'                                   # Lightweight coding agent that runs in your terminal (OpenAI)
 brew 'coreutils'                               # GNU core utilities (Mac is BSD).
 brew 'cowsay'                                  # Configurable talking characters in ASCII art.
 brew 'cpufetch'                                # Simple yet fancy CPU architecture fetching tool.
@@ -132,6 +131,7 @@ cask 'appcleaner'                # Mac app uninstaller.
 cask 'beardedspice'              # More control over keyboard media keys.
 cask 'bettertouchtool'           # Advanced system touch gesture control.
 cask 'clop'                      # Automatically optimize images.
+cask 'codex'                     # Lightweight coding agent that runs in your terminal (OpenAI)
 cask 'devutils'                  # All-in-one toolbox for developers.
 cask 'dockdoor'                  # A new way of interacting with the Dock.
 cask 'firefox'                   # Web browser from Mozilla.
