@@ -26,6 +26,7 @@ brew 'direnv'                                  # Shell environment switcher.
 brew 'doctl'                                   # DigitalOcean CLI
 brew 'doggo'                                   # Command-line DNS Client for Humans. Written in Golang
 brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
+brew 'eget'                                    # Easily install prebuilt binaries from GitHub.
 brew 'exiftool'                                # Image exif manipulation.
 brew 'fastfetch'                               # tool for fetching system information and displaying them in a pretty way.
 brew 'fd'                                      # A simple, fast, and user-friendly alternative to 'find'.

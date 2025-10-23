@@ -17,6 +17,9 @@ export DOTPACKAGES="$DOTFILES/vendor/packages"
 export WORKSPACE="$HOME/Workspace"
 export GITHUB="$WORKSPACE/github.com"
 export KNPWRS="$GITHUB/knpwrs"
+
+# Other environment variables
+export EGET_BIN="$HOME/bin"
 export NAVI_PATH="$HOME/.config/navi"
 
 # Load zmv command
