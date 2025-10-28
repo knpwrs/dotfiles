@@ -119,6 +119,25 @@ alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commi
 alias lg='lazygit'
 alias zap='gc -am ":zap:";gp'
 
+# Extract ticket number from branch name (e.g., OSC-11584 from ken/osc-11584-description)
+function git_ticket() {
+  local branch=$(current_branch)
+  echo $branch | grep -ioE '[A-Z]+-[0-9]+' | head -1 | tr '[:lower:]' '[:upper:]'
+}
+
+# Commit with ticket number prefix
+function gct() {
+  local ticket=$(git_ticket)
+  if [[ -n "$ticket" ]]; then
+    git commit -v -e -m "${ticket}: " "$@"
+  else
+    echo "No ticket found in branch name"
+    return 1
+  fi
+}
+
+alias gcta='gct -a'
+
 # Count lines of code in a git repository
 # Requires tokei crate to be installed
 gloc() {
