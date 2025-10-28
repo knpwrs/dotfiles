@@ -21,11 +21,6 @@ config.automatically_reload_config = true
 -- Keys
 config.keys = {
   {
-    key = "k",
-    mods = "CMD",
-    action = wezterm.action.SendKey({ key = "l", mods = "CTRL" }),
-  },
-  {
     key = "Enter",
     mods = "SHIFT",
     action = wezterm.action.SendString("\n"),
