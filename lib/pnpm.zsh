@@ -29,3 +29,14 @@ alias pnt='pnpm test'
 alias pntc='pnpm run test:coverage'
 alias pntw='pnpm run test:watch'
 alias pnv='echo "v$(jq -r .version < package.json)"'
+
+function pnf() {
+  if jq -e '.scripts.fix' package.json > /dev/null 2>&1; then
+    pnpm run fix
+  elif jq -e '.scripts.format' package.json > /dev/null 2>&1; then
+    pnpm run format
+  else
+    echo "No 'fix' or 'format' script found in package.json"
+    return 1
+  fi
+}

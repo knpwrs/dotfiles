@@ -36,11 +36,14 @@ alias npvm='npm version minor'
 alias npvp='npm version patch'
 
 function npf() {
-  jq ".$2" < $(npm ls --parseable "$1")/package.json
-}
-
-function nplf() {
-  jq ".$2" < "./node_modules/$1/package.json"
+  if jq -e '.scripts.fix' package.json > /dev/null 2>&1; then
+    npm run fix
+  elif jq -e '.scripts.format' package.json > /dev/null 2>&1; then
+    npm run format
+  else
+    echo "No 'fix' or 'format' script found in package.json"
+    return 1
+  fi
 }
 
 function npoh() {
