@@ -64,21 +64,21 @@ git cherry-pick <commit_from_branch>
 cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard)
 
 # Open dirty files in $EDITOR
-cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | sort | uniq | xargs -o $EDITOR
+cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | sort | uniq | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Pick dirty files to open in $EDITOR
 $EDITOR <dirty_files>
 
-$dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | sort | uniq --- --multi --expand --preview 'bat --style=numbers --color=always {}'
+$dirty_files: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | sort | uniq | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 
 # Open staged files in $EDITOR
-git diff --staged --name-only | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
+git diff --staged --name-only | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Pick staged files to open in $EDITOR
 $EDITOR <staged_files>
 
 # Open files from HEAD commit in $EDITOR
-git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
+git diff-tree --no-commit-id --name-only -r HEAD | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Pick files from HEAD commit to open in $EDITOR
 $EDITOR <head_files>
@@ -86,7 +86,7 @@ $EDITOR <head_files>
 $head_files: git diff-tree --no-commit-id --name-only -r HEAD --- --multi --expand --preview 'bat --style=numbers --color=always {}'
 
 # Open files from given commit in $EDITOR
-git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} echo $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
+git diff-tree --no-commit-id --name-only -r <commit> | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} | xargs -o $EDITOR
 
 # Pick files from given commit to open in $EDITOR
 $EDITOR <commit_files>
