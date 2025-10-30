@@ -122,7 +122,10 @@ brew 'yq'                                      # Like jq for yaml
 brew 'zsh'                                     # UNIX shell (command interpreter).
 
 # My fomrulae
+brew 'knpwrs/tap/bsct'                         # Interactively bisects input lines to find the first bad line
 brew 'knpwrs/tap/guy'                          # Take your terminal to Flavortown
+brew 'knpwrs/tap/m3u8dl'                       # Downloads M3U8 playlists and all referenced files recursively
+brew 'knpwrs/tap/whodis'                       # Modern, colorful CLI tool for WHOIS lookups
 brew 'knpwrs/tap/woodo'                        # It's a weird tree
 
 # Casks
