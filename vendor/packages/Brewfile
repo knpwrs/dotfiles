@@ -8,118 +8,118 @@ tap 'teamookla/speedtest'
 
 # Base Packages
 
-brew 'age'                                     # A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability.
-brew 'aria2'                                   # Multi-protocol download client.
-brew 'ast-grep'                                # A CLI tool for code structural search, lint and rewriting. Written in Rust.
-brew 'bat'                                     # A cat clone with wings.
-brew 'boxes'                                   # A command line program which draws, removes, and repairs ASCII art boxes.
-brew 'btop'                                    # A monitor of resources.
-brew 'chafa'                                   # Image viewer and converter for the terminal.
-brew 'cmatrix'                                 # Matrix in the terminal.
-brew 'coreutils'                               # GNU core utilities (Mac is BSD).
-brew 'cowsay'                                  # Configurable talking characters in ASCII art.
-brew 'cpufetch'                                # Simple yet fancy CPU architecture fetching tool.
-brew 'curl'                                    # HTTP client.
-brew 'curlie'                                  # The power of curl, the ease of use of httpie.
-brew 'direnv'                                  # Shell environment switcher.
+brew 'age'                                     # A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability
+brew 'aria2'                                   # Multi-protocol download client
+brew 'ast-grep'                                # A CLI tool for code structural search, lint and rewriting. Written in Rust
+brew 'bat'                                     # A cat clone with wings
+brew 'boxes'                                   # A command line program which draws, removes, and repairs ASCII art boxes
+brew 'btop'                                    # A monitor of resources
+brew 'chafa'                                   # Image viewer and converter for the terminal
+brew 'cmatrix'                                 # Matrix in the terminal
+brew 'coreutils'                               # GNU core utilities (Mac is BSD)
+brew 'cowsay'                                  # Configurable talking characters in ASCII art
+brew 'cpufetch'                                # Simple yet fancy CPU architecture fetching tool
+brew 'curl'                                    # HTTP client
+brew 'curlie'                                  # The power of curl, the ease of use of httpie
+brew 'direnv'                                  # Shell environment switcher
 brew 'doctl'                                   # DigitalOcean CLI
 brew 'doggo'                                   # Command-line DNS Client for Humans. Written in Golang
 brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
-brew 'eget'                                    # Easily install prebuilt binaries from GitHub.
-brew 'exiftool'                                # Image exif manipulation.
-brew 'fastfetch'                               # tool for fetching system information and displaying them in a pretty way.
-brew 'fd'                                      # A simple, fast, and user-friendly alternative to 'find'.
-brew 'fdupes'                                  # Duplicate file finder.
-brew 'ffmpeg'                                  # Play, record, convert, and stream audio and video.
-brew 'figlet'                                  # Make large letters out of ordinary text.
-brew 'findutils'                               # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew 'eget'                                    # Easily install prebuilt binaries from GitHub
+brew 'exiftool'                                # Image exif manipulation
+brew 'fastfetch'                               # tool for fetching system information and displaying them in a pretty way
+brew 'fd'                                      # A simple, fast, and user-friendly alternative to 'find'
+brew 'fdupes'                                  # Duplicate file finder
+brew 'ffmpeg'                                  # Play, record, convert, and stream audio and video
+brew 'figlet'                                  # Make large letters out of ordinary text
+brew 'findutils'                               # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew 'fx'                                      # Terminal JSON viewer & processor
-brew 'fzf'                                     # Fuzzy finder.
+brew 'fzf'                                     # Fuzzy finder
 brew 'gcc'                                     # GNU Compiler Collection
 brew 'gh'                                      # GitHub official CLI
-brew 'git'                                     # Distributed revision control system.
-brew 'git-cal'                                 # Visual commits calendar for git.
+brew 'git'                                     # Distributed revision control system
+brew 'git-cal'                                 # Visual commits calendar for git
 brew 'git-delta'                               # A syntax-highlighter for git and diff output
-brew 'git-extras'                              # Extra git commands.
-brew 'git-imerge'                              # Incremental merge helper for git.
-brew 'git-lfs'                                 # Git extension for versioning large files.
-brew 'git-open'                                # Open the GitHub page or website for the current repository.
-brew 'git-spice'                               # Tool for stacking Git branches.
+brew 'git-extras'                              # Extra git commands
+brew 'git-imerge'                              # Incremental merge helper for git
+brew 'git-lfs'                                 # Git extension for versioning large files
+brew 'git-open'                                # Open the GitHub page or website for the current repository
+brew 'git-spice'                               # Tool for stacking Git branches
 brew 'glab'                                    # GitLab CLI
 brew 'glow'                                    # Render markdown on the CLI, with pizzazz! 💅🏻
-brew 'gnu-sed'                                 # GNU version of the sed utility.
-brew 'gnu-tar'                                 # GNU version of the tar utility.
-brew 'gnu-which'                               # GNU version of the tar utility.
-brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) package.
-brew 'graphviz'                                # Rich set of graph drawing tools.
+brew 'gnu-sed'                                 # GNU version of the sed utility
+brew 'gnu-tar'                                 # GNU version of the tar utility
+brew 'gnu-which'                               # GNU version of the tar utility
+brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) package
+brew 'graphviz'                                # Rich set of graph drawing tools
 brew 'gron'                                    # Make JSON greppable!
 brew 'gum'                                     # A tool for glamorous shell scripts 🎀
 brew 'htmlq'                                   # Like jq, but for HTML
 brew 'htop'                                    # Improved top (interactive process viewer)
-brew 'httpie'                                  # cURL-like tool for humans.
-brew 'hurl'                                    # Hurl CLI for HTTP testing.
-brew 'imagemagick'                             # CLI image manipulation utilities.
+brew 'httpie'                                  # cURL-like tool for humans
+brew 'hurl'                                    # Hurl CLI for HTTP testing
+brew 'imagemagick'                             # CLI image manipulation utilities
 brew 'just'
-brew 'jo'                                      # A small utility to create JSON objects.
+brew 'jo'                                      # A small utility to create JSON objects
 brew 'jpegoptim'                               # Utility to optimize JPEG files
-brew 'jq'                                      # SED for JSON.
-brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality.
+brew 'jq'                                      # SED for JSON
+brew 'jpegoptim'                               # Optimize/compress JPEG files without losing quality
 brew 'kdabir/tap/has'                          # checks presence of various command line tools and their versions on the path
-brew 'knqyf263/sou/sou'                        # A tool for exploring files in container image layers.
+brew 'knqyf263/sou/sou'                        # A tool for exploring files in container image layers
 brew 'lazygit'                                 # Simple terminal UI for git commands
 brew 'lazydocker'                              # Simple terminal UI for docker commands
-brew 'magic-wormhole'                          # Get things from one computer to another, safely.
-brew 'make'                                    # GNU make utility to maintain groups of programs.
+brew 'magic-wormhole'                          # Get things from one computer to another, safely
+brew 'make'                                    # GNU make utility to maintain groups of programs
 brew 'mas'                                     # Mac App Store CLI
 brew 'mike-engel/jwt-cli/jwt-cli'              # JWT CLI Tool
 brew 'miller'                                  # Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON
 brew 'mkcert'                                  # Simple tool to make locally trusted development certificates
 brew 'moreutils'                               # Other useful utilities (vipe, vidir, etc) (https://joeyh.name/code/moreutils/)
-brew 'navi'                                    # An interactive cheatsheet tool for the command-line.
+brew 'navi'                                    # An interactive cheatsheet tool for the command-line
 brew 'ncdu'                                    # NCurses Disk Usage
 brew 'neovim'                                  # Neovim
-brew 'netcat'                                  # Utility for managing network connections.
-brew 'node'                                    # Node.js.
+brew 'netcat'                                  # Utility for managing network connections
+brew 'node'                                    # Node.js
 brew 'nss'                                     # Libraries for security-enabled client and server applications, required for mkcert and Firefox
-brew 'nyancat'                                 # Nyancat in your terminal, rendered through ANSI escape sequences.
+brew 'nyancat'                                 # Nyancat in your terminal, rendered through ANSI escape sequences
 brew 'onefetch'                                # Git repository summary on your terminal
-brew 'otree'                                   # A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget.
+brew 'otree'                                   # A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget
 brew 'p7zip'                                   # Extract 7z archives
-brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
+brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting
 brew 'pigz'                                    # Parallel gzip
 brew 'presenterm'                              # A markdown terminal slideshow tool
-brew 'pv'                                      # Monitor the progress of data through a pipe.
+brew 'pv'                                      # Monitor the progress of data through a pipe
 brew 'python3'                                 # Python 3
 brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
-brew 'rename'                                  # File renaming utilities.
+brew 'rename'                                  # File renaming utilities
 brew 'rig'                                     # Random Identity Generator
-brew 'ripgrep'                                 # Faster Silver Searcher.
-brew 'rlwrap'                                  # A small utility that uses the GNU Readline library to allow the editing of keyboard input for any command.
+brew 'ripgrep'                                 # Faster Silver Searcher
+brew 'rlwrap'                                  # A small utility that uses the GNU Readline library to allow the editing of keyboard input for any command
 brew 'rsync'                                   # Utility that provides fast incremental file transfer
 brew 'scooter'                                 # Interactive find and replace in the terminal
 brew 'sd'                                      # Intuitive find & replace CLI (sed alternative)
-brew 'silicon'                                 # Create beautiful image of your source code.
+brew 'silicon'                                 # Create beautiful image of your source code
 brew 'sl'                                      # Steam Locomotive
-brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file.
-brew 'sshuttle'                                # Proxy server that works as a poor man's VPN.
+brew 'ssh-copy-id'                             # Add a public key to a remote machine's authorized_keys file
+brew 'sshuttle'                                # Proxy server that works as a poor man's VPN
 brew 'starship'                                # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 brew 'svn'                                     # Subversion, required for some of the font casks
 brew 'teamookla/speedtest/speedtest'           # Ookla Speedtest
-brew 'tmux'                                    # Terminal multiplexer.
-brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
+brew 'tmux'                                    # Terminal multiplexer
+brew 'tree'                                    # Display directories as trees (with optional color/HTML output)
 brew 'up'                                      # Ultimate Plumber
-brew 'viddy'                                   # A modern watch command. Time machine and pager etc.
-brew 'vim'                                     # Vi "workalike" with many additional features.
-brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit).
+brew 'viddy'                                   # A modern watch command. Time machine and pager etc
+brew 'vim'                                     # Vi "workalike" with many additional features
+brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit)
 brew 'watch'                                   # Executes a program periodically, showing output fullscreen
 brew 'watchexec'                               # Executes commands in response to file modifications
-brew 'wget'                                    # Internet file retriever.
+brew 'wget'                                    # Internet file retriever
 brew 'whalebrew'                               # Homebrew but with docker
 brew 'wrk'                                     # Modern HTTP benchmarking tool
-brew 'xxhash'                                  # XXHASH library and xxsum CLI.
-brew 'yarn'                                    # JavaScript package manager.
+brew 'xxhash'                                  # XXHASH library and xxsum CLI
+brew 'yarn'                                    # JavaScript package manager
 brew 'yq'                                      # Like jq for yaml
-brew 'zsh'                                     # UNIX shell (command interpreter).
+brew 'zsh'                                     # UNIX shell (command interpreter)
 
 # My fomrulae
 brew 'knpwrs/tap/bsct'                         # Interactively bisects input lines to find the first bad line
@@ -129,48 +129,48 @@ brew 'knpwrs/tap/whodis'                       # Modern, colorful CLI tool for W
 brew 'knpwrs/tap/woodo'                        # It's a weird tree
 
 # Casks
-cask '1password'                 # Password manager.
-cask '1password-cli'             # 1Password CLI.
-cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
-cask 'appcleaner'                # Mac app uninstaller.
-cask 'beardedspice'              # More control over keyboard media keys.
-cask 'bettertouchtool'           # Advanced system touch gesture control.
-cask 'clop'                      # Automatically optimize images.
+cask '1password'                 # Password manager
+cask '1password-cli'             # 1Password CLI
+cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence
+cask 'appcleaner'                # Mac app uninstaller
+cask 'beardedspice'              # More control over keyboard media keys
+cask 'bettertouchtool'           # Advanced system touch gesture control
+cask 'clop'                      # Automatically optimize images
 cask 'codex'                     # Lightweight coding agent that runs in your terminal (OpenAI)
-cask 'devutils'                  # All-in-one toolbox for developers.
-cask 'dockdoor'                  # A new way of interacting with the Dock.
-cask 'firefox'                   # Web browser from Mozilla.
-cask 'google-chrome'             # Web browser from Google.
-cask 'google-chrome@canary'      # Web browser from Google (beta release).
+cask 'devutils'                  # All-in-one toolbox for developers
+cask 'dockdoor'                  # A new way of interacting with the Dock
+cask 'firefox'                   # Web browser from Mozilla
+cask 'google-chrome'             # Web browser from Google
+cask 'google-chrome@canary'      # Web browser from Google (beta release)
 cask 'google-drive'              # Google Drive
-cask 'jordanbaird-ice'           # Powerful menu bar manager for macOS.
+cask 'jordanbaird-ice'           # Powerful menu bar manager for macOS
 cask 'karabiner-elements'        # Keyboard customizer
-cask 'keka'                      # Archive extraction and creation.
-cask 'keybase'                   # Crypto for everyone.
+cask 'keka'                      # Archive extraction and creation
+cask 'keybase'                   # Crypto for everyone
 cask 'kitty'                     # the fast, featureful, GPU based terminal emulator¶
-cask 'miniconda'                 # true installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.
-cask 'notunes'                   # A simple macOS application that will prevent iTunes or Apple Music from launching.
+cask 'miniconda'                 # true installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages
+cask 'notunes'                   # A simple macOS application that will prevent iTunes or Apple Music from launching
 cask 'paw'                       # The most advanced API tool for Mac
 cask 'raycast'                   # Supercharged productivity
 cask 'shottr'                    # Screenshot app for Mac for Designers and UI Developers
-cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
+cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more
 cask 'vimr'                      # neovim gui
-cask 'virtualbox'                # Open source virtual machines.
-cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
-cask 'vlc'                       # Open source media player.
+cask 'virtualbox'                # Open source virtual machines
+cask 'visual-studio-code'        # Electron-based text editor from Microsoft
+cask 'vlc'                       # Open source media player
 cask 'wezterm'                   # A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
 
 # Cask Quick Look Plugins
-cask 'betterzip'           # Quicklook for zip files.
-cask 'provisionql'         # Quicklook for ipa & provision.
-cask 'qlcolorcode'         # Quicklook syntax highlighting.
-cask 'qlmarkdown'          # Quicklook for markdown.
-cask 'qlprettypatch'       # Quicklook for patch files.
-cask 'qlstephen'           # Quicklook for extensionless text files (README, etc).
-cask 'quicklook-csv'       # Quicklook for csv files.
-cask 'quicklook-json'      # Quicklook for json files.
-cask 'suspicious-package'  # Quicklook for package files.
-cask 'webpquicklook'       # Quicklook for webp files.
+cask 'betterzip'           # Quicklook for zip files
+cask 'provisionql'         # Quicklook for ipa & provision
+cask 'qlcolorcode'         # Quicklook syntax highlighting
+cask 'qlmarkdown'          # Quicklook for markdown
+cask 'qlprettypatch'       # Quicklook for patch files
+cask 'qlstephen'           # Quicklook for extensionless text files (README, etc)
+cask 'quicklook-csv'       # Quicklook for csv files
+cask 'quicklook-json'      # Quicklook for json files
+cask 'suspicious-package'  # Quicklook for package files
+cask 'webpquicklook'       # Quicklook for webp files
 
 # Cask Fonts
 cask 'font-cal-sans'
