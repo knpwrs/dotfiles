@@ -1,0 +1,116 @@
+% Git Spice
+
+# Initialize git-spice for this repository
+gs repo init
+
+# Sync repository (pull changes and delete merged branches)
+gs repo sync
+
+# Create a new branch on top of current branch
+gs branch create <new_branch_name>
+
+# Create a new branch with commit message
+gs bc -m "<commit_message>" <new_branch_name>
+
+# Track an existing branch
+gs branch track <branch>
+
+# Untrack a branch
+gs branch untrack <branch>
+
+# Delete a branch from the stack
+gs branch delete <gs_branch>
+
+# Rename current branch
+gs branch rename <new_branch_name>
+
+# Fold current branch into its base
+gs branch fold
+
+# Split current branch at a commit
+gs branch split <commit>
+
+# Squash current branch into a single commit
+gs branch squash
+
+# Navigate up the stack (to parent branch)
+gs up
+
+# Navigate down the stack (to child branch)
+gs down
+
+# Navigate to top of stack
+gs top
+
+# Navigate to bottom of stack
+gs bottom
+
+# Navigate to trunk branch
+gs trunk
+
+# Restack current branch on its base
+gs restack
+
+# Restack entire stack
+gs stack restack
+
+# Submit stack (create/update PRs)
+gs stack submit
+
+# Submit stack with draft PRs
+gs stack submit --draft
+
+# Submit only current branch
+gs branch submit
+
+# Edit stack (reorder branches)
+gs stack edit
+
+# Show short log of stack
+gs log short
+
+# Show long log of stack
+gs log long
+
+# Show log for specific branch
+gs log short <gs_branch>
+
+# Create a commit
+gs commit create
+
+# Create a commit with message
+gs commit create -m "<commit_message>"
+
+# Amend the current commit
+gs commit amend
+
+# Fixup changes into an older commit
+gs commit fixup <commit>
+
+# Cherry-pick from another branch
+gs commit pick <commit>
+
+# Restack all upstack branches
+gs upstack restack
+
+# Submit all upstack branches
+gs upstack submit
+
+# Restack all downstack branches
+gs downstack restack
+
+# Submit all downstack branches
+gs downstack submit
+
+# Show git-spice authentication status
+gs auth status
+
+# Login to GitHub/GitLab
+gs auth login
+
+# Logout from services
+gs auth logout
+
+$ gs_branch: git branch | cut -c 3-
+$ branch: git branch | cut -c 3-
+$ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
