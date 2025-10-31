@@ -1,4 +1,5 @@
-alias pna='pnpm audit'
+alias pna='pnpm add'
+alias pnau='pnpm audit'
 alias pnaf='pnpm audit --fix'
 alias pncb='pnpm install --frozen-lockfile && pnpm run build'
 alias pncc='pnpm install --frozen-lockfile && pnpm run check'
