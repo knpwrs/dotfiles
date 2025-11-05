@@ -33,6 +33,9 @@ gh pr comment
 # Create a pull request
 gh pr create
 
+# Create a pull request with the git ticket in the title
+gh pr create --title "$(git_ticket): <title>"
+
 # Create draft pull request
 gh pr create --draft
 
