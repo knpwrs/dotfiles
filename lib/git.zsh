@@ -136,6 +136,8 @@ function gct() {
   fi
 }
 
+alias gct!='gct --amend'
+alias gcta!='gct -a --amend'
 alias gcta='gct -a'
 
 # Count lines of code in a git repository
