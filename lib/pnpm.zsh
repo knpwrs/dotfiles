@@ -32,7 +32,7 @@ alias pntc='pnpm run test:coverage'
 alias pntw='pnpm run test:watch'
 alias pnv='echo "v$(jq -r .version < package.json)"'
 
-function pnf() {
+function pnrf() {
   if jq -e '.scripts.fix' package.json > /dev/null 2>&1; then
     pnpm run fix
   elif jq -e '.scripts.format' package.json > /dev/null 2>&1; then
@@ -43,4 +43,4 @@ function pnf() {
   fi
 }
 
-alias pnf!='pnpm run fix!'
+alias pnrf!='pnpm run fix!'
