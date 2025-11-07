@@ -42,3 +42,5 @@ function pnf() {
     return 1
   fi
 }
+
+alias pnf!='pnpm run fix!'
