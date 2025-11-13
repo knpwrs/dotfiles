@@ -11,3 +11,11 @@ tmux resize-pane -x '60%'
 
 # Attach to existing tmux session
 tmux attach
+
+# Send keys to a given tmux pane after some delay
+sleep <delay> && tmux send-keys -t <session_name>:<window_index>.<pane_index> <keys>
+
+$ session_name: tmux list-sessions -F '#{session_name}' --- --preview 'tmux list-windows -t {}'
+$ window_index: tmux list-windows -t <session_name> -F '#{window_index} - #{window_name}' --- --column 1 --delimiter ' - '
+$ pane_index: tmux list-panes -t <session_name>:<window_index> -F '#{pane_index} - #{pane_title}' --- --column 1 --delimiter ' - '
+$ keys: echo -e "Enter\n"
