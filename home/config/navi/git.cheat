@@ -238,6 +238,9 @@ git checkout <commit> -- <git_file>
 # Checkout contents of directory at a commit
 git checkout <commit> -- <git_dir>
 
+# Show fuller commit (complete metadata)
+git show -s --format=fuller <commit>
+
 # Show contents of a given commit
 git show <commit>
 
