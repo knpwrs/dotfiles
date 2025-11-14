@@ -1,21 +1,31 @@
 #!/usr/bin/env bash
 
-# Use is.gd to shorten whatever is in the clipboard
-URL=$(pbpaste)
+# Use is.gd to shorten a URL from stdin or clipboard
+if [ -t 0 ]; then
+  # stdin is a terminal, use clipboard
+  URL=$(pbpaste)
+  USE_CLIPBOARD=true
+else
+  # stdin is piped, read from it
+  URL=$(cat)
+  USE_CLIPBOARD=false
+fi
 
 # Trim whitespace
 URL=$(echo "$URL" | tr -d '[:space:]')
 
 if [[ -z "$URL" ]]; then
-  echo "Clipboard is empty or not a URL"
+  echo "No URL provided via stdin or clipboard"
   exit 1
 fi
 
 # Call is.gd API
 SHORT=$(curl -s "https://is.gd/create.php?format=simple&url=$(printf %s "$URL" | jq -sRr @uri)")
 
-# Copy result back to clipboard
-echo -n "$SHORT" | pbcopy
+if [[ "$USE_CLIPBOARD" == "true" ]]; then
+  # Copy result back to clipboard
+  echo -n "$SHORT" | pbcopy
+  echo "Shortened URL copied to clipboard:"
+fi
 
-echo "Shortened URL copied to clipboard:"
 echo "$SHORT"
