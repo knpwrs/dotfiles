@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Use is.gd to shorten whatever is in the clipboard
+URL=$(pbpaste)
+
+# Trim whitespace
+URL=$(echo "$URL" | tr -d '[:space:]')
+
+if [[ -z "$URL" ]]; then
+  echo "Clipboard is empty or not a URL"
+  exit 1
+fi
+
+# Call is.gd API
+SHORT=$(curl -s "https://is.gd/create.php?format=simple&url=$(printf %s "$URL" | jq -sRr @uri)")
+
+# Copy result back to clipboard
+echo -n "$SHORT" | pbcopy
+
+echo "Shortened URL copied to clipboard:"
+echo "$SHORT"
