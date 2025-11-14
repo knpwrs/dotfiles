@@ -153,6 +153,9 @@ GIT_EXTERNAL_DIFF=difft git show <commit> --ext-diff
 # Commit with co-author
 git commit -e -m "commit message" -m "<co_authors>"
 
+# Amend commit and keep timestamps
+AD=$(git show -s --format=%aI); CD=$(git show -s --format=%cI); GIT_AUTHOR_DATE="$AD" GIT_COMMITTER_DATE="$CD" git commit --amend
+
 # Restore staged files
 git restore --staged <staged_files>
 
