@@ -43,6 +43,9 @@ $(echo $<var_name> | vipe | sed 's|^|export <var_name>=|')
 
 $ var_name: env --- --map "cut -d '=' -f 1"
 
+# Copy current working directory (cwd)
+pwd | tr -d '\n' | jq -Rrs @sh | pbcopy
+
 # Optimize pngs
 oxipng -o max <pngs>
 
