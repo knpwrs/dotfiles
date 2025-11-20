@@ -40,16 +40,16 @@ git checkout --theirs <conflicted_file>
 git checkout --ours <conflicted_file>
 
 # Rebase on a given branch
-git rebase <branch>
+git rebase --committer-date-is-author-date <branch>
 
 # Rebase interactively on a given branch
-git rebase -i <branch>
+git rebase --committer-date-is-author-date -i <branch>
 
 # Rebase interactively on a given commit
-git rebase -i <commit>
+git rebase --committer-date-is-author-date -i <commit>
 
 # Rebase interactively before the root
-git rebase -i --root
+git rebase --committer-date-is-author-date -i --root
 
 # cherry-pick a given branch
 git cherry-pick -i <branch>
@@ -183,16 +183,16 @@ echo <current_branch> | pbcopy
 git checkout -
 
 # Pull and rebase on main branch
-git pull --rebase <remote> <main_branch>
+git pull --rebase --committer-date-is-author-date <remote> <main_branch>
 
 # Pull and rebase interactively on main branch
-git pull --rebase=interactive <remote> <main_branch>
+git pull --rebase=interactive --committer-date-is-author-date <remote> <main_branch>
 
 # Pull and rebase on given branch
-git pull --rebase <remote> <branch>
+git pull --rebase --committer-date-is-author-date <remote> <branch>
 
 # Pull and rebase interactively on given branch
-git pull --rebase=interactive <remote> <branch>
+git pull --rebase=interactive --committer-date-is-author-date <remote> <branch>
 
 # Fetch and merge remote main branch
 git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
@@ -373,7 +373,7 @@ $ staged_files: git diff --staged --name-only --- --multi --expand --preview 'ba
 $ branch: git branch | cut -c 3-
 $ main_branch: git branch | cut -c 3- | grep -m 1 '^\(main\|master\|dev\|development\|trunk\)$'
 $ branch_or_tag: (git branch | cut -c 3-; git tag)
-$ commit: git log --oneline --max-count 250 --- --map 'cut -d " " -f 1'
+$ commit: git log --oneline --max-count 250 --format='%h %s (%an)' --- --map 'cut -d " " -f 1'
 $ git_changed_files: git diff --name-only --- --multi --expand
 $ git_file: git ls-files
 $ git_dir: git ls-files | xargs -n1 dirname | uniq
@@ -383,5 +383,5 @@ $ ref: echo -e 'HEAD\n'
 $ remote: git remote
 $ stash: git stash list --- --map 'cut -d ":" -f 1'
 $ user_name: git config user.name
-$ commit_from_branch: git log --oneline --max-count 250 <branch> --- --map 'cut -d " " -f 1'
+$ commit_from_branch: git log --oneline --max-count 250 --format='%h %s (%an)' <branch> --- --map 'cut -d " " -f 1'
 $ conflicted_file: git diff --name-only --diff-filter=U --relative
