@@ -313,6 +313,15 @@ git restore --source <commit> .
 # Make working tree look like a given branch
 git restore --source <branch> .
 
+# Add a worktree and checkout the given branch
+git worktree add <path> <branch>
+
+# Add a worktree with the given branch name
+git worktree add -b <branch_name> <path>
+
+# Add a worktree with the given branch name at a given branch
+git worktree add -b <new_branch_name> <path> <branch>
+
 # Apply patch on clipboard
 git apply <(pbpaste)
 
