@@ -183,16 +183,16 @@ echo <current_branch> | pbcopy
 git checkout -
 
 # Pull and rebase on main branch
-git pull --rebase --committer-date-is-author-date <remote> <main_branch>
+git pull -c rebase.committerDateIsAuthorDate=true --rebase <remote> <main_branch>
 
 # Pull and rebase interactively on main branch
-git pull --rebase=interactive --committer-date-is-author-date <remote> <main_branch>
+git pull -c rebase.committerDateIsAuthorDate=true --rebase=interactive <remote> <main_branch>
 
 # Pull and rebase on given branch
-git pull --rebase --committer-date-is-author-date <remote> <branch>
+git pull -c rebase.committerDateIsAuthorDate=true --rebase <remote> <branch>
 
 # Pull and rebase interactively on given branch
-git pull --rebase=interactive --committer-date-is-author-date <remote> <branch>
+git pull -c rebase.committerDateIsAuthorDate=true --rebase=interactive <remote> <branch>
 
 # Fetch and merge remote main branch
 git fetch <remote> <main_branch> && git merge <remote>/<main_branch>
