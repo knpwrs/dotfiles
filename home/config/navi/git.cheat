@@ -322,6 +322,9 @@ git worktree add -b <branch_name> <path>
 # Add a worktree with the given branch name at a given branch
 git worktree add -b <new_branch_name> <path> <branch>
 
+# Remove a worktree
+git worktree remove <worktree>
+
 # Apply patch on clipboard
 git apply <(pbpaste)
 
@@ -394,3 +397,4 @@ $ stash: git stash list --- --map 'cut -d ":" -f 1'
 $ user_name: git config user.name
 $ commit_from_branch: git log --oneline --max-count 250 --format='%h %s (%an)' <branch> --- --map 'cut -d " " -f 1'
 $ conflicted_file: git diff --name-only --diff-filter=U --relative
+$ worktree: git worktree list | tail -n +2 --- --map 'awk "{print \$1}" | xargs basename'
