@@ -109,6 +109,7 @@ brew 'teamookla/speedtest/speedtest'           # Ookla Speedtest
 brew 'tmux'                                    # Terminal multiplexer
 brew 'tree'                                    # Display directories as trees (with optional color/HTML output)
 brew 'up'                                      # Ultimate Plumber
+brew 'Valkyrie00/homebrew-bbrew/bbrew'         # A Homebrew TUI
 brew 'viddy'                                   # A modern watch command. Time machine and pager etc
 brew 'vim'                                     # Vi "workalike" with many additional features
 brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit)
