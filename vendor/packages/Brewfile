@@ -69,6 +69,7 @@ brew 'kdabir/tap/has'                          # checks presence of various comm
 brew 'knqyf263/sou/sou'                        # A tool for exploring files in container image layers
 brew 'lazygit'                                 # Simple terminal UI for git commands
 brew 'lazydocker'                              # Simple terminal UI for docker commands
+brew 'lima'                                    # Linux virtual machines with automatic file sharing and port forwarding
 brew 'magic-wormhole'                          # Get things from one computer to another, safely
 brew 'make'                                    # GNU make utility to maintain groups of programs
 brew 'mas'                                     # Mac App Store CLI
