@@ -107,6 +107,6 @@ npm pack --dry-run
 npx lice
 
 # Check for updates and upgrade packages
-npx npm-check-updates -i
+npx npm-check-updates -i --format group
 
 $ script: jq -r '.scripts | keys | .[]' package.json

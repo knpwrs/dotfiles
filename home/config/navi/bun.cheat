@@ -53,10 +53,4 @@ $ dependency: jq -r '.dependencies | keys[]' < package.json
 # Preview what will be published to npm
 bun publish --dry-run
 
-# Generate a LICENSE file
-bunx lice
-
-# Check for updates and upgrade packages
-bunx npm-check-updates -i
-
 $ script: jq -r '.scripts | keys | .[]' package.json
