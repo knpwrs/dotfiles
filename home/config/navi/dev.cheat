@@ -117,6 +117,9 @@ rg -l '<find_pattern>' | wc -l
 # Open files matching pattern in $EDITOR
 rg -l '<find_pattern>' | xargs -o $EDITOR
 
+# Open files from clipboard in $EDITOR
+pbpaste | xargs -o $EDITOR
+
 # Launch cheat.sh shell
 cht.sh --shell
 
