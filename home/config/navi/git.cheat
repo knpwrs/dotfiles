@@ -313,7 +313,7 @@ git restore --source <commit> .
 # Make working tree look like a given branch
 git restore --source <branch> .
 
-# Add a worktree and checkout the given branch
+# Add a worktree with the given existing branch
 git worktree add <path> <branch>
 
 # Add a worktree with the given branch name
