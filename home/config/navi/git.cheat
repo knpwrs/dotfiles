@@ -331,6 +331,12 @@ git apply <(pbpaste)
 # Reverse patch on clipboard
 git apply --reverse <(pbpaste)
 
+# Apply patch from file
+git apply < <patch_file>
+
+# Reverse patch from file
+git apply --reverse < <patch_file>
+
 # Create an empty commit
 git commit --allow-empty
 
@@ -391,6 +397,7 @@ $ git_file: git ls-files
 $ git_dir: git ls-files | xargs -n1 dirname | uniq
 $ git_dirty_files: git diff --name-only --- --multi
 $ glob: fd -td
+$ patch_file: fd . -e patch
 $ ref: echo -e 'HEAD\n'
 $ remote: git remote
 $ stash: git stash list --- --map 'cut -d ":" -f 1'
