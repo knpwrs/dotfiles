@@ -75,6 +75,8 @@ alias j='just'
 
 alias osvg='svgo -i - -o - --pretty --multipass --enable=removeXMLNS'
 
+alias rsc='rsync -avz'
+
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup;'
 
 alias v='nvim'
