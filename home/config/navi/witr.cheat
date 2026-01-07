@@ -1,0 +1,44 @@
+% witr - why is this running
+
+# Inspect a running process by name
+witr <process>
+
+# Inspect a process by PID
+witr --pid <pid>
+
+# Find process listening on a port
+witr --port <port>
+
+# Show full process ancestry tree
+witr <process> --tree
+
+# Show only warnings for a process
+witr <process> --warnings
+
+# Show environment variables for a process
+witr <process> --env
+
+# Show short single-line output
+witr <process> --short
+
+# Show extended process information
+witr <process> --verbose
+
+# Show extended process information (JSON)
+witr <process> --json
+
+# Inspect port with environment variables as JSON
+witr --port <port> --env --json
+
+# Inspect port with full process tree
+witr --port <port> --tree
+
+# Inspect PID with environment variables
+witr --pid <pid> --env
+
+# Inspect PID with verbose information
+witr --pid <pid> --verbose
+
+$ process: ps -eo comm= | sed 's/.*\///' | sort -u
+$ port: lsof -iTCP -sTCP:LISTEN -P -n | awk 'NR>1 {split($9,a,":"); if(a[2]!="") print}' | sort -k2 -t: -nu --- --map 'awk "{split(\$9,a,\":\"); print a[2]}"'
+$ pid: ps -eo pid=,comm= | awk '{print}' --- --map 'awk "{print \$1}"'

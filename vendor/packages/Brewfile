@@ -118,6 +118,7 @@ brew 'watch'                                   # Executes a program periodically
 brew 'watchexec'                               # Executes commands in response to file modifications
 brew 'wget'                                    # Internet file retriever
 brew 'whalebrew'                               # Homebrew but with docker
+brew 'witr'                                    # Why is this running?
 brew 'wrk'                                     # Modern HTTP benchmarking tool
 brew 'xxhash'                                  # XXHASH library and xxsum CLI
 brew 'yarn'                                    # JavaScript package manager
