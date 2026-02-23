@@ -29,6 +29,8 @@ alias pnsb='pnpm start build'
 alias pnsl='pnpm start lint'
 alias pnt='pnpm test'
 alias pntc='pnpm run test:coverage'
+alias pnte='pnpm run test:e2e'
+alias pntu='pnpm run test:unit'
 alias pntw='pnpm run test:watch'
 alias pnv='echo "v$(jq -r .version < package.json)"'
 
