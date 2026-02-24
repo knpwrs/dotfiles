@@ -78,20 +78,31 @@ fi
 compdef _git ggp=git-checkout
 alias ggpush='ggp'
 compdef _git ggpush=git-checkout
+
+# Clone a GitHub repo and cd into it: ghcd <user/repo> [dir]
 function ghcd() {
-  glcd "git@github.com:$1"
+  glcd "git@github.com:$1" $2
 }
+
+# Clone a GitHub repo: ghone <user/repo> [dir]
 function ghone() {
-  git clone "git@github.com:$1"
+  git clone "git@github.com:$1" ${@:2}
 }
+
 alias ginit='git init'
+
 function gicd() {
   git init $1 && cd $1
 }
+
 alias gl='git pull'
+
+# Clone a repo and cd into it: glcd <url> [dir]
 function glcd() {
-  git clone $1 && cd $(basename -s .git $1)
+  local target=${2:-$(basename -s .git $1)}
+  git clone $1 $target && cd $target
 }
+
 alias globber='git reset --hard && git clean -dfx -e "*.ignore.*"'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glone='git clone'
@@ -152,4 +163,41 @@ gloc() {
 # Count lines of code in a github repository
 ghoc() {
   gloc https://github.com/$1
+}
+
+# Interactive git restore (file)
+frf() {
+  git diff --name-only "$@" |
+  fzf --ansi --multi --reverse \
+    --preview "git diff --color=always -- {} | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  xargs -I {} git restore {} && git status --short
+}
+
+# Interactive git switch (branch)
+fsb() {
+  local selected
+  selected=$(git branch --all |
+    grep -v HEAD |
+    sed 's/^[* ]*//' |
+    sed 's/^  //' |
+    fzf --reverse \
+      --preview "git log --color=always --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit {}" \
+      --bind "ctrl-d:preview-down,ctrl-u:preview-up")
+
+  [ -z "$selected" ] && return
+
+  # Check if it's a remote branch
+  if echo "$selected" | grep -q '^remotes/origin/'; then
+    local branch_name=$(echo "$selected" | sed 's#^remotes/origin/##')
+    # Check if local branch already exists
+    if git show-ref --verify --quiet "refs/heads/$branch_name"; then
+      git switch "$branch_name"
+    else
+      # Create new local branch tracking the remote
+      git switch -c "$branch_name" --track "origin/$branch_name"
+    fi
+  else
+    git switch "$selected"
+  fi
 }
