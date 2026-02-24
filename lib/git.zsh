@@ -78,20 +78,31 @@ fi
 compdef _git ggp=git-checkout
 alias ggpush='ggp'
 compdef _git ggpush=git-checkout
+
+# Clone a GitHub repo and cd into it: ghcd <user/repo> [dir]
 function ghcd() {
-  glcd "git@github.com:$1"
+  glcd "git@github.com:$1" $2
 }
+
+# Clone a GitHub repo: ghone <user/repo> [dir]
 function ghone() {
-  git clone "git@github.com:$1"
+  git clone "git@github.com:$1" ${@:2}
 }
+
 alias ginit='git init'
+
 function gicd() {
   git init $1 && cd $1
 }
+
 alias gl='git pull'
+
+# Clone a repo and cd into it: glcd <url> [dir]
 function glcd() {
-  git clone $1 && cd $(basename -s .git $1)
+  local target=${2:-$(basename -s .git $1)}
+  git clone $1 $target && cd $target
 }
+
 alias globber='git reset --hard && git clean -dfx -e "*.ignore.*"'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glone='git clone'
@@ -152,4 +163,247 @@ gloc() {
 # Count lines of code in a github repository
 ghoc() {
   gloc https://github.com/$1
+}
+
+# Forgit-style interactive git functions using fzf and bat
+# Uses git switch/restore instead of git checkout
+
+# Interactive git log viewer
+flo() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse --tiebreak=index \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % git show --color=always % | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" \
+    --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % sh -c 'git show --color=always % | bat --style=plain --paging=always')"
+}
+
+# Interactive git reflog viewer
+frl() {
+  git reflog --color=always "$@" |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % git show --color=always % | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" \
+    --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % sh -c 'git show --color=always % | bat --style=plain --paging=always')"
+}
+
+# Interactive git diff
+fgd() {
+  git diff --name-only "$@" |
+  fzf --ansi --no-sort --reverse --multi \
+    --preview "git diff --color=always $@ -- {} | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up"
+}
+
+# Interactive git show
+fso() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % git show --color=always % | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" \
+    --bind "enter:execute(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs -I % sh -c 'git show --color=always % | bat --style=plain --paging=always')"
+}
+
+# Interactive git add
+fa() {
+  git -c color.status=always status --short "$@" |
+  fzf --ansi --multi --reverse \
+    --preview "echo {} | awk '{print \$2}' | xargs git diff --color=always -- | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  awk '{print $2}' |
+  xargs -I {} git add {} && git status --short
+}
+
+# Interactive git reset HEAD
+frh() {
+  git diff --cached --name-only |
+  fzf --ansi --multi --reverse \
+    --preview "git diff --cached --color=always -- {} | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  xargs -I {} git reset HEAD {} && git status --short
+}
+
+# Interactive .gitignore generator
+fgi() {
+  local gitignore_file="${GIT_PREFIX}.gitignore"
+  git status --short --untracked-files=all |
+  grep '^??' |
+  awk '{print $2}' |
+  fzf --ansi --multi --reverse \
+    --preview "echo {} will be added to .gitignore" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  while read -r file; do
+    echo "$file" >> "$gitignore_file"
+  done && cat "$gitignore_file"
+}
+
+# Interactive .gitattributes generator
+fat() {
+  local gitattributes_file="${GIT_PREFIX}.gitattributes"
+  git ls-files |
+  fzf --ansi --multi --reverse \
+    --prompt "Select files for .gitattributes: " \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  while read -r file; do
+    echo -n "Attribute for $file (e.g., 'text eol=lf'): "
+    read -r attr
+    echo "$file $attr" >> "$gitattributes_file"
+  done && cat "$gitattributes_file"
+}
+
+# Interactive git restore (file)
+frf() {
+  git diff --name-only "$@" |
+  fzf --ansi --multi --reverse \
+    --preview "git diff --color=always -- {} | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  xargs -I {} git restore {} && git status --short
+}
+
+# Interactive git switch (branch)
+fsb() {
+  local selected
+  selected=$(git branch --all |
+    grep -v HEAD |
+    sed 's/^[* ]*//' |
+    sed 's/^  //' |
+    fzf --reverse \
+      --preview "git log --color=always --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit {}" \
+      --bind "ctrl-d:preview-down,ctrl-u:preview-up")
+
+  [ -z "$selected" ] && return
+
+  # Check if it's a remote branch
+  if echo "$selected" | grep -q '^remotes/origin/'; then
+    local branch_name=$(echo "$selected" | sed 's#^remotes/origin/##')
+    # Check if local branch already exists
+    if git show-ref --verify --quiet "refs/heads/$branch_name"; then
+      git switch "$branch_name"
+    else
+      # Create new local branch tracking the remote
+      git switch -c "$branch_name" --track "origin/$branch_name"
+    fi
+  else
+    git switch "$selected"
+  fi
+}
+
+# Interactive branch delete
+fbd() {
+  git branch --color=always |
+  grep -v '^\*' |
+  fzf --ansi --multi --reverse \
+    --preview "echo {} | sed 's/^[* ]*//' | xargs git log --color=always --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  sed 's/^[* ]*//' |
+  xargs -I {} git branch -D {}
+}
+
+# Interactive git switch (tag)
+fct() {
+  git tag --sort=-version:refname |
+  fzf --ansi --reverse \
+    --preview "git show --color=always {} | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  xargs git switch --detach
+}
+
+# Interactive git switch (commit)
+fcc() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs git show --color=always | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  grep -o '[a-f0-9]\{7\}' | head -1 |
+  xargs git switch --detach
+}
+
+# Interactive git revert
+frc() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse --multi \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs git show --color=always | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  grep -o '[a-f0-9]\{7\}' |
+  xargs git revert
+}
+
+# Interactive git clean
+fcl() {
+  git clean -xdfn |
+  sed 's/^Would remove //' |
+  fzf --ansi --multi --reverse \
+    --preview "[ -f {} ] && bat --style=plain --color=always {} || ls -la {}" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  xargs -I {} git clean -xdf {}
+}
+
+# Interactive git stash show
+fss() {
+  git stash list |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | cut -d: -f1 | xargs git stash show --color=always -p | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" \
+    --bind "enter:execute(echo {} | cut -d: -f1 | xargs git stash show --color=always -p | bat --style=plain --paging=always)"
+}
+
+# Interactive git stash push
+fsp() {
+  git status --short --untracked-files=all |
+  fzf --ansi --multi --reverse \
+    --preview "echo {} | awk '{print \$2}' | xargs git diff --color=always -- | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  awk '{print $2}' |
+  xargs git stash push -m "stash: $(date)" --
+}
+
+# Interactive git cherry-pick
+fcp() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse --multi \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs git show --color=always | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  grep -o '[a-f0-9]\{7\}' |
+  xargs git cherry-pick
+}
+
+# Interactive git rebase
+frb() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs git show --color=always | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  grep -o '[a-f0-9]\{7\}' | head -1 |
+  xargs git rebase -i
+}
+
+# Interactive git blame
+fbl() {
+  local file="$1"
+  if [ -z "$file" ]; then
+    file=$(git ls-files | fzf --ansi --reverse --prompt "Select file to blame: ")
+  fi
+  [ -z "$file" ] && return
+
+  git blame --color-always "$file" |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | awk '{print \$1}' | xargs git show --color=always | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" \
+    --bind "enter:execute(echo {} | awk '{print \$1}' | xargs sh -c 'git show --color=always \$0 | bat --style=plain --paging=always')"
+}
+
+# Interactive git fixup
+ffu() {
+  git log --graph --color=always \
+    --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse \
+    --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs git show --color=always | bat --style=plain --color=always" \
+    --bind "ctrl-d:preview-down,ctrl-u:preview-up" |
+  grep -o '[a-f0-9]\{7\}' | head -1 |
+  xargs -I {} git commit --fixup={}
 }
