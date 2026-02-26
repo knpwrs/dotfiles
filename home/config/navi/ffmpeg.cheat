@@ -6,7 +6,7 @@ ffprobe -v quiet -print_format json -show_format -show_streams <file>
 
 # Convert video to audio (m4a)
 
-ffmpeg -i <input> -vn -c:a aac <output>
+ffmpeg -i '<input>' -vn -c:a aac '<output>'
 
 $ input: fd --extension mp4 --extension mov --extension avi --extension mkv --extension webm --extension flv --extension wmv --extension m4v
-$ output: echo
+$ output: echo '<input>' | sed 's/\.[^.]*$/.m4a/'
