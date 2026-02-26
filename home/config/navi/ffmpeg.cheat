@@ -4,9 +4,9 @@
 
 ffprobe -v quiet -print_format json -show_format -show_streams <file>
 
-# Convert video to audio (m4a)
+# Extract audio from video (copy codec)
 
-ffmpeg -i '<input>' -vn -c:a aac '<output>'
+ffmpeg -i '<input>' -vn -c:a copy '<output>'
 
 $ input: fd --extension mp4 --extension mov --extension avi --extension mkv --extension webm --extension flv --extension wmv --extension m4v
-$ output: echo '<input>' | sed 's/\.[^.]*$/.m4a/'
+$ output: input='<input>'; stem="${input%.*}"; codec=$(ffprobe -v quiet -select_streams a:0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 "$input" 2>/dev/null); case "$codec" in aac) ext=m4a;; mp3) ext=mp3;; opus) ext=opus;; vorbis) ext=ogg;; flac) ext=flac;; pcm_*) ext=wav;; ac3|eac3) ext=ac3;; *) ext=mka;; esac; echo "${stem}.${ext}"
