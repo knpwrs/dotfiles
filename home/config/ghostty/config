@@ -1,0 +1,13 @@
+# Font
+font-family = Hack Nerd Font Mono
+font-size = 12
+
+# Theme
+theme = TokyoNight Night
+
+# UI
+window-show-tab-bar = auto
+cursor-style = bar
+
+# Keys
+keybind = shift+enter=text:\n

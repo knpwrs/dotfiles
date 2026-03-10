@@ -9,6 +9,9 @@ config.font_size = 12.0
 -- UI
 config.hide_tab_bar_if_only_one_tab = true
 config.native_macos_fullscreen_mode = true
+config.default_cursor_style = "BlinkingBar"
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
 
 -- Windows
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then

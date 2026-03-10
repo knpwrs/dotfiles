@@ -3,6 +3,8 @@
 !starship.toml
 !alacritty
 !alacritty/**
+!ghostty
+!ghostty/**
 !karabiner
 !karabiner/**
 !kitty

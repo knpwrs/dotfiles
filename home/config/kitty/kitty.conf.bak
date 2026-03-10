@@ -1,0 +1,9 @@
+# Font
+font_family Hack Nerd Font Mono
+font_size 12.0
+
+# Theme (run `kitten themes` and select "Tokyo Night" to generate this file)
+include current-theme.conf
+
+# Keys
+map shift+enter send_text all \n
