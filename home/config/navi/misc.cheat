@@ -54,10 +54,20 @@ oxipng -o max <pngs>
 
 $ pngs: fd -e png --- --multi --map "navi fn map::expand"
 
+# Optimize dirty pngs
+oxipng -o max <dirty_pngs>
+
+$ dirty_pngs: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | sort | uniq | grep -E '\.(png)$' | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} --- --multi --map "navi fn map::expand"
+
 # Optimize jpegs
 jpegoptim <jpgs>
 
 $ jpgs: fd -e jpg -e jpeg --- --multi --map "navi fn map::expand"
+
+# Optimize dirty jpegs
+jpegoptim <dirty_jpgs>
+
+$ dirty_jpgs: cat <(git diff --name-only) <(git diff --name-only --staged) <(git ls-files -o --exclude-standard) | sort | uniq | grep -E '\.(jpg|jpeg)$' | xargs -I{} realpath --relative-to=. $(git rev-parse --show-toplevel)/{} --- --multi --map "navi fn map::expand"
 
 # Convert image to a shell script
 echo '#!/usr/bin/env bash' > <script>.sh && chafa -c full '<image>' | sed "s/^/echo -e '/; s/$/'/" >> <script>.sh && chmod +x <script>.sh
