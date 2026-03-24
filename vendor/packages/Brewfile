@@ -148,7 +148,6 @@ cask 'firefox'                   # Web browser from Mozilla
 cask 'google-chrome'             # Web browser from Google
 cask 'google-chrome@canary'      # Web browser from Google (beta release)
 cask 'google-drive'              # Google Drive
-cask 'jordanbaird-ice'           # Powerful menu bar manager for macOS
 cask 'karabiner-elements'        # Keyboard customizer
 cask 'keka'                      # Archive extraction and creation
 cask 'keybase'                   # Crypto for everyone
@@ -159,6 +158,7 @@ cask 'paw'                       # The most advanced API tool for Mac
 cask 'raycast'                   # Supercharged productivity
 cask 'shottr'                    # Screenshot app for Mac for Designers and UI Developers
 cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more
+cask 'thaw'                      # Powerful menu bar manager for macOS
 cask 'vimr'                      # neovim gui
 cask 'virtualbox'                # Open source virtual machines
 cask 'visual-studio-code'        # Electron-based text editor from Microsoft
