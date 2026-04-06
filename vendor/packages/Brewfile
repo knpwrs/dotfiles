@@ -120,6 +120,7 @@ brew 'watchexec'                               # Executes commands in response t
 brew 'wget'                                    # Internet file retriever
 brew 'whalebrew'                               # Homebrew but with docker
 brew 'witr'                                    # Why is this running?
+brew 'worktrunk'                               # A CLI for Git worktree management
 brew 'wrk'                                     # Modern HTTP benchmarking tool
 brew 'xxhash'                                  # XXHASH library and xxsum CLI
 brew 'yarn'                                    # JavaScript package manager
