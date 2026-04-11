@@ -385,6 +385,21 @@ $ op_ssh_key: op item list --categories "SSH Key" | tail -n +2 --- --map "cut -d
 $ ssh_public_key_text: cat <ssh_public_key_file>
 $ ssh_public_key_file: fd . ~/.ssh -e pub
 
+# Show most-changed files in the last year (hotspots)
+git log --format=format: --name-only --since="1 year ago" | sort | uniq -c | sort -nr | head -20
+
+# Show contributor ranking by commit count (no merges)
+git shortlog -sn --no-merges
+
+# Show files with the most bug-related commits (bug hotspots)
+git log -i -E --grep="fix|bug|broken" --name-only --format='' | sort | uniq -c | sort -nr | head -20
+
+# Show monthly commit velocity over time
+git log --format='%ad' --date=format:'%Y-%m' | sort | uniq -c
+
+# Show revert/hotfix/emergency commits in the last year (firefighting frequency)
+git log --oneline --since="1 year ago" | grep -iE 'revert|hotfix|emergency|rollback'
+
 $ current_branch: git branch --show-current
 $ co_authors: git log --pretty="%an <%ae>" | sort | uniq | sed 's|^|Co-authored-by: |g' --- --multi
 $ staged_files: git diff --staged --name-only --- --multi --expand --preview 'bat --style=numbers --color=always {}'
