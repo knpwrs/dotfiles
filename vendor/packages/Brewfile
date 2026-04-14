@@ -125,6 +125,7 @@ brew 'wrk'                                     # Modern HTTP benchmarking tool
 brew 'xxhash'                                  # XXHASH library and xxsum CLI
 brew 'yarn'                                    # JavaScript package manager
 brew 'yq'                                      # Like jq for yaml
+brew 'zellij'                                  # A terminal workspace with batteries included
 brew 'zsh'                                     # UNIX shell (command interpreter)
 
 # My fomrulae

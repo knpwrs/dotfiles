@@ -1,0 +1,7 @@
+alias zj='zellij'
+alias zja='zellij attach'
+alias zjls='zellij list-sessions'
+alias zjk='zellij kill-session'
+alias zjka='zellij kill-all-sessions'
+alias zjd='zellij delete-session'
+alias zjda='zellij delete-all-sessions'

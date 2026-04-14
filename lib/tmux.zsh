@@ -1,2 +1,5 @@
 alias t='tmux'
 alias ta='tmux attach'
+alias tls='tmux list-sessions'
+alias tk='tmux kill-session'
+alias tka='tmux kill-server'

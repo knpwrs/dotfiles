@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# navi widget for zellij
+# Opens navi in a floating pane, writes the selected command to the previous pane
+
+output=$(navi --print </dev/tty)
+
+if [ -n "$output" ]; then
+    zellij action toggle-floating-panes
+    zellij action write-chars -- "$output"
+fi
