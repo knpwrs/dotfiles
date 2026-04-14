@@ -182,6 +182,14 @@ keybinds clear-defaults=true {
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
+        bind "Alt t" {
+            Run "sh" "-c" "$EDITOR todo.ignore.md" {
+                floating true
+                close_on_exit true
+                name "$EDITOR todo.ignore.md"
+            }
+            SwitchToMode "locked"
+        }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
