@@ -49,6 +49,8 @@ keybinds clear-defaults=true {
         bind "j" { GoToNextTab; }
         bind "k" { GoToPreviousTab; }
         bind "l" { GoToNextTab; }
+        bind "H" { MoveTab "left"; }
+        bind "L" { MoveTab "right"; }
         bind "n" { NewTab; SwitchToMode "locked"; }
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "locked"; }
@@ -162,6 +164,15 @@ keybinds clear-defaults=true {
                 name "navi"
             }
         }
+        bind "Alt 1" { GoToTab 1; SwitchToMode "locked"; }
+        bind "Alt 2" { GoToTab 2; SwitchToMode "locked"; }
+        bind "Alt 3" { GoToTab 3; SwitchToMode "locked"; }
+        bind "Alt 4" { GoToTab 4; SwitchToMode "locked"; }
+        bind "Alt 5" { GoToTab 5; SwitchToMode "locked"; }
+        bind "Alt 6" { GoToTab 6; SwitchToMode "locked"; }
+        bind "Alt 7" { GoToTab 7; SwitchToMode "locked"; }
+        bind "Alt 8" { GoToTab 8; SwitchToMode "locked"; }
+        bind "Alt 9" { GoToTab 9; SwitchToMode "locked"; }
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
@@ -181,6 +192,8 @@ keybinds clear-defaults=true {
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
+        bind "Alt Shift h" { GoToPreviousTab; }
+        bind "Alt Shift l" { GoToNextTab; }
         bind "Alt t" {
             Run "sh" "-c" "$EDITOR todo.ignore.md" {
                 floating true
