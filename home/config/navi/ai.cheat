@@ -1,8 +1,5 @@
 % AI
 
-# Run Claude Code in YOLO mode
-claude --dangerously-skip-permissions
-
 # Continue last Claude Code conversation
 claude --continue
 

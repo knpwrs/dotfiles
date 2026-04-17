@@ -4,6 +4,9 @@
     "commit": "",
     "pr": ""
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "codex@openai-codex": true,
@@ -23,6 +26,6 @@
       }
     }
   },
-  "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
 }
