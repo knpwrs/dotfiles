@@ -1,4 +1,6 @@
+*.ignore
 *.ignore.*
+*.local
 *.local.*
 *.swp
 .DS_Store
