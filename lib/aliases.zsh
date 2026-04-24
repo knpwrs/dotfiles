@@ -102,6 +102,11 @@ decrypt() {
   openssl aes-256-cbc -d
 }
 
+# set terminal window/tab title via OSC 2
+name() {
+  printf '\e]2;%s\a' "$1"
+}
+
 # see what is listening on a given port
 port() {
   lsof -n -i:$1 | grep LISTEN
