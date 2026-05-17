@@ -6,6 +6,7 @@
 	defaultBranch = main
 [alias]
 	branches = branch -avv
+	hidden = !git ls-files -v | grep \"^h\"
 [pull]
 	ff = only
 [push]
