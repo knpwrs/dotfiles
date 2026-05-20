@@ -301,7 +301,7 @@ web_client {
 //   - true (Default)
 //   - false
 // 
-// osc8_hyperlinks true
+osc8_hyperlinks true
  
 // Choose the theme that is specified in the themes section.
 // Default: default
