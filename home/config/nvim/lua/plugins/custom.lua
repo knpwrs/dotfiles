@@ -11,7 +11,9 @@ return {
   "tpope/vim-sleuth",
   {
     "barrett-ruth/import-cost.nvim",
-    build = "sh install.sh yarn",
-    config = true,
+    build = "sh install.sh npm",
+    init = function()
+      vim.g.import_cost = { package_manager = "npm" }
+    end,
   },
 }
