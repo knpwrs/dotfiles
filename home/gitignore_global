@@ -4,6 +4,7 @@
 *.local.*
 *.swp
 .DS_Store
+.playwright-mcp
 .tern-port
 .vscode
 *.code-workspace
