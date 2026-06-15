@@ -206,6 +206,12 @@ git push <remote>
 # Push to all remotes
 git remote | xargs -n1 git push
 
+# Push specific branch to all remotes
+git remote | xargs -I{} git push {} <branch>:<branch>
+
+# Delete specific branch from all remotes
+git remote | xargs -I{} git push {} --delete <branch>
+
 # Set a new url for a remote
 git remote set-url <remote> <newurl>
 
