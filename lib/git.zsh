@@ -51,6 +51,7 @@ alias gds='git diff --staged'
 alias gdt='git difftool'
 alias gfa='git fetch --all --prune'
 alias gfr='git fetch --all && git reset --hard @{upstream}'
+alias ghpc='gh pr checkout'
 ggf() {
   [[ "$#" != 1 ]] && b="$(current_branch)"
   git push --force-with-lease origin "${b:=$1}"
@@ -107,6 +108,7 @@ alias globber='git reset --hard && git clean -dfx -e "*.ignore.*"'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glone='git clone'
 alias glrb='git pull --rebase'
+alias glrbm='git pull --rebase origin $(git_main_branch)'
 alias gm='git merge'
 alias gma='git merge --abort'
 alias gmnff='git merge --no-ff'
