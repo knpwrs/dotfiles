@@ -9,8 +9,17 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    opts = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    opts = function(_, opts)
+      opts.servers = opts.servers or {}
+
+      -- nil (Nix LSP) is built from source via cargo and requires the `nix`
+      -- binary at build time. Skip Mason's install; install manually once Nix
+      -- is available (e.g. `nix profile install github:oxalica/nil`).
+      opts.servers.nil_ls = vim.tbl_deep_extend("force", opts.servers.nil_ls or {}, { mason = false })
+
+      opts.servers["*"] = opts.servers["*"] or {}
+      local keys = opts.servers["*"].keys or {}
+      opts.servers["*"].keys = keys
 
       -- Remove all default lsp keymaps
       for i = #keys, 1, -1 do
@@ -24,7 +33,6 @@ return {
       keys[#keys + 1] = { "<leader>ly", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" }
       keys[#keys + 1] = { "<leader>lr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" }
       keys[#keys + 1] = { "<leader>li", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" }
-      keys[#keys + 1] = { "<leader>lr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" }
       keys[#keys + 1] = { "<leader>lk", vim.lsp.buf.hover, desc = "Hover" }
       keys[#keys + 1] = { "<leader>lK", vim.lsp.buf.hover, desc = "Signature Help", has = "signatureHelp" }
       keys[#keys + 1] = { "<c-k>", function() return vim.lsp.buf.signature_help() end, mode = "i", desc = "Signature Help", has = "signatureHelp" }
