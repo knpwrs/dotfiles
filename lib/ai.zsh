@@ -3,3 +3,4 @@ if [[ -x "$HOME/.claude/local/claude" ]]; then
 fi
 
 alias c='claude'
+alias yodex='codex --dangerously-bypass-approvals-and-sandbox'
