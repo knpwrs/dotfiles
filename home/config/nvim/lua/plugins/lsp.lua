@@ -34,7 +34,7 @@ return {
       keys[#keys + 1] = { "<leader>lr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" }
       keys[#keys + 1] = { "<leader>li", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" }
       keys[#keys + 1] = { "<leader>lk", vim.lsp.buf.hover, desc = "Hover" }
-      keys[#keys + 1] = { "<leader>lK", vim.lsp.buf.hover, desc = "Signature Help", has = "signatureHelp" }
+      keys[#keys + 1] = { "<leader>lK", vim.lsp.buf.signature_help, desc = "Signature Help", has = "signatureHelp" }
       keys[#keys + 1] = { "<c-k>", function() return vim.lsp.buf.signature_help() end, mode = "i", desc = "Signature Help", has = "signatureHelp" }
       keys[#keys + 1] = { "<leader>ll", vim.diagnostic.open_float, desc = "Show Line Diagnostics" }
       keys[#keys + 1] = { "<leader>lR", "<cmd>LspRestart<cr>", desc = "Restart LSP" }
