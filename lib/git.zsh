@@ -51,7 +51,6 @@ alias gds='git diff --staged'
 alias gdt='git difftool'
 alias gfa='git fetch --all --prune'
 alias gfr='git fetch --all && git reset --hard @{upstream}'
-alias ghpc='gh pr checkout'
 ggf() {
   [[ "$#" != 1 ]] && b="$(current_branch)"
   git push --force-with-lease origin "${b:=$1}"
@@ -203,6 +202,10 @@ fsb() {
     git switch "$selected"
   fi
 }
+
+# gh aliases
+alias ghpc='gh pr checkout'
+alias ghpra='gh pr review --approve'
 
 # Worktrunk aliases
 alias wts='wt switch'
