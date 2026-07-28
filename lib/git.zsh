@@ -203,3 +203,11 @@ fsb() {
     git switch "$selected"
   fi
 }
+
+# Worktrunk aliases
+alias wts='wt switch'
+alias wtsc='wt switch --create'
+alias wtss='wt switch -'
+alias wtls='wt list'
+alias wtrm='wt remove'
+alias wtrmf='wt remove --force --force-delete'
