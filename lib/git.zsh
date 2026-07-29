@@ -209,7 +209,7 @@ alias ghpra='gh pr review --approve'
 
 # Worktrunk aliases
 alias wts='wt switch'
-alias wtsc='wt switch --create'
+alias wtc='wt switch --create'
 alias wtss='wt switch -'
 alias wtls='wt list'
 alias wtrm='wt remove'
