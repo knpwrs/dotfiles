@@ -2,4 +2,7 @@
 !.gitignore
 !commands
 !commands/*
+!skills
+!skills/no-slop
+!skills/no-slop/**
 !settings.json
