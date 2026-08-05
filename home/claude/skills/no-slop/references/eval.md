@@ -15,7 +15,7 @@ Run this against the finished text before returning it. Answer each check pass o
 ## Grounding
 
 8. Every claim ends on a concrete detail rather than an assertion of importance.
-9. Intensifiers have been replaced by the facts they stood in for, or cut.
+9. Intensifiers have been replaced by the facts they stood in for, or cut. Every "unusually", "surprisingly", "notably", "strikingly" style comparative either names its baseline in the same sentence or is gone.
 10. Specific facts survived the edit instead of being smoothed into generic significance.
 11. Hedging is under three per paragraph, and what remains marks real uncertainty rather than habit.
 12. Every "experts agree" style attribution is either sourced or gone. Nothing was invented to fill a gap.

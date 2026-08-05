@@ -153,6 +153,16 @@ Almost always empty: absolutely, basically, certainly, clearly, definitely, dram
 
 Judgment call: just, actually, honestly, literally, simply, genuinely, fundamentally, maybe, probably.
 
+### Unstated-baseline comparatives
+
+A separate failure from the empty intensifiers above: these claim the thing is off some norm without ever naming the norm, so the reader cannot check it and the writer never had to.
+
+- unusually, uncommonly, atypically, abnormally, unexpectedly, surprisingly, strikingly, notably, impressively, refreshingly, oddly, curiously
+
+"An unusually clean codebase", "surprisingly fast", "notably small". Unusual next to what? Either give the comparison ("300 lines where the old one was 2,000") or drop the adverb and let the adjective stand. `unusually` in particular is heavily overused in current model output; treat a single occurrence as a flag, not a judgment call.
+
+Keep it only when the text goes on to say what the baseline is, and the deviation from it is the point.
+
 ## Hedging markers
 
 AI hedges four to seven times more than human writers. Count them: more than three in a paragraph, or more than eight per thousand words in a section stating established facts, means the draft is hedging out of habit rather than honesty.

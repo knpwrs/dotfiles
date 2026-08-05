@@ -50,6 +50,7 @@ Slop is mostly a symptom of sentences that assert without carrying anything chec
 
 - **Every claim ends on a concrete detail.** If a sentence cannot end on a fact, delete the sentence. "This practice has had a significant impact" becomes "The company replaced 11 million batteries in 2018, against the 1 to 2 million it forecast."
 - **Replace intensifiers with the number they stand in for.** "Significantly higher than the cost of the part" becomes "$1,200 for a repair that needed a $5 chip."
+- **A comparative needs a baseline in the sentence.** "Unusually", "surprisingly", "notably", "strikingly", "impressively" assert a deviation from a norm the text never names, and "unusually" is the current worst offender. "An unusually thorough test suite" becomes "1,400 tests against 200 in the module it replaced", or just "a thorough test suite". Full list in `references/phrases.md`.
 - **Protect the specific fact.** Do not smooth a useful detail into generic importance. "The tool improves engineering productivity" becomes "The tool cut review time from 30 minutes to 8."
 - **Commit or cut.** "May potentially", "can help to", "might be able to" hedge a claim into nothing. Either it happens or it does not. Say which. More than three hedges in one paragraph is a red flag; save hedging for genuinely disputed or pending things.
 - **Name the source or drop the claim.** "Experts agree", "studies show", "widely regarded as" are weasel attribution. If the user has no source, ask instead of supplying one.
