@@ -1,0 +1,17 @@
+# Runtime sockets
+*.sock
+
+# Runtime logs
+*.log
+
+# Live session / runtime state
+session.json
+.plugins.lock
+
+# Cached from herdr.dev
+release-notes.json
+
+# Plugins are installed imperatively (`herdr plugin install owner/repo`);
+# plugins/ holds git clones and plugins.json is a cache of absolute paths.
+plugins.json
+plugins/

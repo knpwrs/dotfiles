@@ -1,0 +1,28 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+g"
+
+# --- panes ---
+split_vertical = "alt+\\"
+split_horizontal = "alt+minus"
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+
+# --- tabs ---
+new_tab = "alt+t"
+rename_tab = "alt+r"
+previous_tab = "alt+["
+next_tab = "alt+]"
+
+# --- spaces ---
+new_workspace = "alt+shift+t"
+rename_workspace = "alt+shift+r"
+previous_workspace = "alt+shift+k"
+next_workspace = "alt+shift+j"
+
+# --- agents ---
+previous_agent = "alt+p"
+next_agent = "alt+n"
