@@ -206,6 +206,21 @@ fsb() {
 # gh aliases
 alias ghpc='gh pr checkout'
 alias ghpra='gh pr review --approve'
+alias ghs='gh stack'
+alias ghsa='gh stack add'
+alias ghsb='gh stack bottom'
+alias ghsc='gh stack checkout'
+alias ghsi='gh stack init'
+alias ghsj='gh stack down'
+alias ghsk='gh stack up'
+alias ghsm='gh stack modify'
+alias ghsp='gh stack push'
+alias ghsr='gh stack rebase'
+alias ghss='gh stack sync'
+alias ghst='gh stack top'
+alias ghsu='gh stack submit'
+alias ghsv='gh stack view'
+alias ghsw='gh stack switch'
 
 # Worktrunk aliases
 alias wts='wt switch'
