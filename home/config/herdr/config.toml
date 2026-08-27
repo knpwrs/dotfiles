@@ -3,6 +3,9 @@ onboarding = false
 [keys]
 prefix = "ctrl+g"
 
+# --- config ---
+reload_config = "prefix+shift+r"
+
 # --- panes ---
 split_vertical = "alt+\\"
 split_horizontal = "alt+minus"
@@ -20,8 +23,8 @@ next_tab = "alt+]"
 # --- spaces ---
 new_workspace = "alt+shift+t"
 rename_workspace = "alt+shift+r"
-previous_workspace = "alt+shift+k"
-next_workspace = "alt+shift+j"
+previous_workspace = "alt+{"
+next_workspace = "alt+}"
 
 # --- agents ---
 previous_agent = "alt+p"
