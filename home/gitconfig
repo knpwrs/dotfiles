@@ -87,5 +87,11 @@
 	insteadOf = "gst:"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
 [include]
   path = ~/.gitconfig.local
