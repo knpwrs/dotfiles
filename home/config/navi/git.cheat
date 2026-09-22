@@ -343,6 +343,12 @@ git apply < <patch_file>
 # Reverse patch from file
 git apply --reverse < <patch_file>
 
+# Send a commit over wormhole
+git format-patch -1 <commit> --stdout | wormhole send --text -
+
+# Receive a commit over wormhole
+wormhole receive --only-text <wormhole_code> | git am
+
 # Create an empty commit
 git commit --allow-empty
 
