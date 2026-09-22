@@ -3,5 +3,6 @@
 !commands
 !commands/*
 !skills
-!skills/*
+!skills/no-slop
+!skills/no-slop/**
 !settings.json
