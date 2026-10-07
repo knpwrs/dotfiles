@@ -6,3 +6,5 @@
 !skills/no-slop
 !skills/no-slop/**
 !settings.json
+!agents
+!agents/video-producer.md
