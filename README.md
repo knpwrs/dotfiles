@@ -45,6 +45,16 @@ You can create a file at `home/env.local.zsh` which will be `source`d by
 `home/zshenv`. `*.local.zsh` is in this repository's `.gitignore` file so you
 don't have to worry about sensitive data being committed to the repository.
 
+Some scripts expect these variables to be set there:
+
+| Variable     | Used by                | Example                               |
+| ------------ | ---------------------- | ------------------------------------- |
+| `WORK_EMAIL` | `home/bin/calls-today` | `export WORK_EMAIL="you@example.com"` |
+
+`calls-today` uses `WORK_EMAIL` as the name of the calendar to read, which
+matches how Calendar.app names Google Workspace calendars. Set
+`CALLS_TODAY_CALENDAR` to override it.
+
 ### Recruiters Love Him!
 
 ![Top 10%!](./etc/recruiters.png)

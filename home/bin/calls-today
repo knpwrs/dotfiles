@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# calls-today: print today's calls from the work calendar (icalBuddy) as a markdown
+# list and copy it to the clipboard. When calls overlap, the longer call wins.
+set -euo pipefail
+
+# $WORK_EMAIL lives in ~/.env.local.zsh; see
+# https://github.com/knpwrs/dotfiles#private-environment-variables
+CALENDAR="${CALLS_TODAY_CALENDAR:-${WORK_EMAIL:?set WORK_EMAIL or CALLS_TODAY_CALENDAR to your work calendar name}}"
+
+calls=$(icalBuddy -ic "$CALENDAR" -ea -nc -nrd -b '' -iep datetime -tf '%H:%M' -df '' eventsToday |
+  python3 -c '
+import re, sys
+from datetime import datetime
+
+def mins(t):
+    h, m = map(int, t.split(":"))
+    return h * 60 + m
+
+def fmt(m):
+    return datetime(2000, 1, 1, m // 60 % 24, m % 60).strftime("%-I:%M %p")
+
+events = []
+for line in sys.stdin:
+    times = re.findall(r"\d{1,2}:\d{2}", line)
+    if len(times) == 2:
+        start, end = mins(times[0]), mins(times[1])
+        if end <= start:  # runs past midnight
+            end += 24 * 60
+        events.append((start, end))
+
+# Longest calls claim their slot first; a shorter call overlapping one already kept is dropped.
+kept = []
+for start, end in sorted(set(events), key=lambda e: (e[0] - e[1], e[0])):
+    if all(end <= s or start >= e for s, e in kept):
+        kept.append((start, end))
+
+lines = [f"- {fmt(s)} to {fmt(e)}" for s, e in sorted(kept)] or ["- None"]
+print("Calls today:\n\n" + "\n".join(lines))
+')
+
+printf "%s\n" "$calls" | pbcopy
+printf "%s\n" "$calls"
+echo -e "\nCopied to clipboard!" >&2

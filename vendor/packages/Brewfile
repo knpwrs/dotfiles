@@ -62,6 +62,7 @@ brew 'htmlq'                                   # Like jq, but for HTML
 brew 'htop'                                    # Improved top (interactive process viewer)
 brew 'httpie'                                  # cURL-like tool for humans
 brew 'hurl'                                    # Hurl CLI for HTTP testing
+brew 'ical-buddy'                              # Get events and tasks from the macOS calendar database
 brew 'imagemagick'                             # CLI image manipulation utilities
 brew 'just'
 brew 'jo'                                      # A small utility to create JSON objects
