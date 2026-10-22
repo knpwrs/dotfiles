@@ -1,0 +1,91 @@
+% cmux
+
+# Clear all browser cookies (needs a browser surface; opens a blank one first)
+surface=$(cmux browser open about:blank | sed -E 's/.*surface=(surface:[0-9]+).*/\1/') && cmux browser "$surface" cookies clear --all && cmux close-surface --surface "$surface"
+
+# Clear cookies on an existing browser surface
+cmux browser <surface> cookies clear --all
+
+# Clear cookies for one domain
+cmux browser <surface> cookies clear --domain <domain>
+
+# List cookies on a browser surface
+cmux browser <surface> cookies get
+
+# Clear all data for the default browser profile (cookies, storage, cache)
+cmux browser profiles clear
+
+# List browser profiles
+cmux browser profiles list
+
+# Clear browser history for the default profile
+cmux browser history clear --force
+
+# Clear localStorage on a browser surface
+cmux browser <surface> storage local clear
+
+# Open a URL in a new browser split
+cmux browser open <url>
+
+# Import cookies and history from another browser
+cmux browser import --interactive
+
+# Save browser state (cookies, storage) to a file
+cmux browser <surface> state save <path>
+
+# Load browser state from a file
+cmux browser <surface> state load <path>
+
+# Take a screenshot of a browser surface
+cmux browser <surface> screenshot --out <path>
+
+# Open a browser surface's devtools
+cmux browser devtools toggle --surface <surface>
+
+# Show the process tree for all workspaces
+cmux tree --all
+
+# Show per-workspace CPU and memory usage
+cmux top --all --sort mem
+
+# Identify the current workspace and surface
+cmux identify
+
+# Read the visible screen (or scrollback) of a terminal surface
+cmux read-screen --surface <surface> --scrollback --lines <lines>
+
+# Send text to a terminal surface
+cmux send --surface <surface> "<text>"
+
+# Send a key to a terminal surface
+cmux send-key --surface <surface> <key>
+
+# Open a new workspace in a directory
+cmux new-workspace --name <name> --cwd <path>
+
+# Split the current pane
+cmux new-split <direction>
+
+# Open a markdown file in a live-reloading viewer
+cmux markdown open <path>
+
+# Open the working-tree diff in a browser split
+cmux diff --unstaged
+
+# Send a notification from a script
+cmux notify --title "<title>" --body "<body>"
+
+# Reload the Ghostty and cmux config
+cmux reload-config
+
+# Validate the cmux config
+cmux config doctor
+
+# Show keyboard shortcuts
+cmux shortcuts
+
+# Show cmux docs for a topic
+cmux docs <topic>
+
+$ direction: echo -e "right\nleft\ndown\nup"
+$ topic: echo -e "settings\nshortcuts\napi\nbrowser\nagents\ndock\nsidebars"
