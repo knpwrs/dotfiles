@@ -1,0 +1,5 @@
+{
+  "name": "agents-skills",
+  "version": "0.1.0",
+  "description": "Load skills from ~/.agents/skills and each repo's .agents/skills by linking them into the matching .claude/skills at session start."
+}

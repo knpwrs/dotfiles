@@ -3,8 +3,13 @@
 !commands
 !commands/*
 !skills
-!skills/no-slop
-!skills/no-slop/**
+skills/*
+# Track real skill directories. Links (agents-skills links ~/.agents/skills here) are
+# files to git, so the trailing slash never matches them and they stay ignored.
+!skills/*/
+!skills/*/**
+skills/.trash/
+skills/synced/
 !settings.json
 !agents
 !agents/video-producer.md
