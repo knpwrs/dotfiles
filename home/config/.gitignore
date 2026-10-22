@@ -3,6 +3,8 @@
 !starship.toml
 !alacritty
 !alacritty/**
+!cmux
+!cmux/**
 !ghostty
 !ghostty/**
 !herdr
