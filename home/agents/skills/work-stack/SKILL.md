@@ -83,7 +83,9 @@ child covers.
 One line per layer, bottom first: PR URL, ticket, and what it does. Then how it was tested,
 review findings fixed and skipped (with reasons), skipped children, and anything left open.
 
-End with one offer: mark every PR in the stack ready for review and hand the stack to
-`/babysit-pr stack`. If the user accepts, run `gh pr ready <number>` for each PR, then invoke the
-babysit-pr skill with `stack`. If any questions are still open, say they should be answered
-first.
+End with one offer: mark every PR in the stack ready for review, draft messages to the reviewers
+(`/notify-reviewers stack`), and hand the stack to `/babysit-pr stack`. The user may accept all of
+it or part, and may name reviewers. For what they accept, in order: run `gh pr ready <number>` for
+each PR; invoke the notify-reviewers skill with `stack` and any reviewers they named, which sends
+each reviewer one draft covering all of their PRs in the stack; then invoke the babysit-pr skill
+with `stack`. If any questions are still open, say they should be answered first.
