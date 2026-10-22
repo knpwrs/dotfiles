@@ -5,6 +5,7 @@ description: >
   the current branch (or branch off the latest base), implement the change with tests, run /code-review on the result, fix what
   is worth fixing, then push and open a draft PR. Use when asked to work on, pick up, implement,
   or "do" a ticket or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL).
+  For a parent ticket whose children should each become a PR in a stack, use work-stack.
 argument-hint: "<ticket id or URL> [extra instructions]"
 ---
 
