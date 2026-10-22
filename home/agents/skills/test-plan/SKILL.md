@@ -1,18 +1,21 @@
 ---
 name: test-plan
 description: >
-  Write a thorough, edge-case-heavy test plan for the feature currently being worked on, grounded
-  in the actual diff, its callers, and the existing tests. Use when asked for a test plan, QA plan,
-  testing checklist, "how should I test this", "what could break", or "what tests am I missing"
-  for a branch, PR, set of uncommitted changes, or described feature. Produces a plan, not tests.
+  Write a short test plan for the feature currently being worked on that still covers every
+  behavior and every edge case that matters, grounded in the actual diff, its callers, and the
+  existing tests. Use when asked for a test plan, QA checklist, "what should I test", "what could
+  break", or "what tests am I missing" for a branch, PR, set of uncommitted changes, or described
+  feature. Produces a plan of cases to automate, not tests. For a short manual walkthrough that
+  exercises the whole change once, use test-plan-minimal.
 argument-hint: "[all|committed|uncommitted|<PR number>|<branch>|<path>|<feature description>]"
 ---
 
 # Test plan
 
-Produce a test plan for the feature in progress that a reviewer or QA engineer could execute
-without asking questions, and that would catch the defects most likely to ship. The plan is the
-deliverable. Do not write or run tests unless the user asks.
+Produce a test plan someone could execute without asking questions, that would catch the defects
+most likely to ship, and that fits on one screen for a typical feature. Concision comes from
+merging and cutting words, never from cutting coverage. The plan is the deliverable. Do not write
+or run tests unless the user asks.
 
 Scope comes from `$ARGUMENTS`:
 
@@ -27,151 +30,87 @@ Scope comes from `$ARGUMENTS`:
 Find the base branch with `git symbolic-ref refs/remotes/origin/HEAD` (fall back to `main`, then
 `master`). If the scope turns up nothing, say so and ask what to plan for rather than inventing one.
 
-## Rules
+## Do the full analysis, print only the cases
 
-- **Ground every case in code you read.** A diff hunk is not enough. Open the changed files, their
-  callers, the types, the schemas, and the existing tests. A case you cannot tie to a real code path,
-  input, or requirement is padding. Leave it out.
-- **Be concrete.** Every case names the specific input or state, the action, and the observable
-  expected result. "Test invalid input" is not a case. "POST `amount: -0.01` → 400, body names
-  `amount`, no row written" is.
-- **Expected results come from the spec or the code's evident intent, not from what the code
-  happens to do.** When the two disagree, or the intent is unclear, record it as an open question,
-  not as an expected result.
-- **Go past the happy path.** Most of the plan should be boundaries, failures, and interactions.
-  Work through `references/edge-cases.md` for every input, state, and dependency you identify. Skip
-  categories that genuinely do not apply, and do not pad the plan with ones that don't.
-- **Note what already exists.** For each case, check whether a current test covers it. Mark it
-  covered (cite the test), partial, or missing. The gaps are the most useful part of the plan.
-- **Prefer the cheapest level that proves the behavior.** Unit before integration before end-to-end
-  before manual. Use manual only for what cannot reasonably be automated, and say why.
+The research is the same as a thorough plan. Only the output is shorter.
 
-## Process
+1. **Read, don't skim.** Open the changed files, their callers, types, schemas, and existing tests.
+   Collect intent from commit messages, the PR description, linked tickets, docs, and what the
+   user said.
+2. **Inventory privately.** List entry points, inputs (with constraints and defaults), state read
+   and written, dependencies, side effects, unchanged callers of modified code, invariants, and
+   existing tests. Keep this in your head or scratch notes. It does not go in the plan.
+3. **Sweep for edge cases.** Run every input, state, and dependency through
+   `references/edge-cases.md`. Keep a case only if the code gives it a real path to fail: a branch,
+   a parse, a constraint, a lookup, a write. Drop catalog items that do not apply without comment.
+4. **Derive cases** for each entry point across: happy paths and acceptance criteria, validation
+   and boundaries, state and sequencing (repeat, out of order, concurrent), dependency failures,
+   authorization and tenant isolation, regressions in unchanged callers, rollout (flags, existing
+   data, migrations, old clients), and non-functional concerns where the change gives a reason.
 
-### 1. Establish intent
+## Make it short
 
-Collect what the feature is supposed to do: commit messages, the PR description, a linked ticket
-if one is referenced and a tool to read it is available, docs or specs touched in the diff, the
-names and comments in the code, and what the user said. Write a short statement of intent and list
-the acceptance criteria, explicit or inferred. Mark inferred ones as inferred.
+- **Merge cases that share setup and expected result.** One line can carry an equivalence class:
+  "`amount` ∈ {missing, `null`, `0`, `-0.01`, `"abc"`} → 400 naming `amount`, nothing persisted."
+  Split only when the expected results differ.
+- **Name boundaries as values, not prose.** "`name` at 255 / 256 chars" beats a sentence.
+- **Collapse covered behavior.** Cases an existing test already proves go in one line per area:
+  "Covered: `transfer.test.ts` (create, list, 404)." Do not restate them as cases.
+- **No inventory, no restated diff, no generic advice.** No "consider performance", no "ensure
+  error handling". If it is worth testing, it is a specific case; otherwise it is gone.
+- **One line per case.** Input or state → observable result. Use arrows and code spans, not
+  sentences. Add a short note after an em dash only when the reason a case exists is not obvious.
+- **Expected results come from intent, not from what the code does.** Where they disagree or
+  intent is unclear, write an open question instead of guessing.
+- **Pick the cheapest level that proves it** (unit, integration, e2e, manual) and tag it. Mark
+  manual only when automation is unreasonable, and give the reason in a few words.
 
-### 2. Map the surface
-
-Build an inventory before writing any cases:
-
-- **Entry points**: endpoints, CLI commands, UI routes and controls, jobs, event handlers, public
-  functions. Note which are new and which are existing ones whose behavior changed.
-- **Inputs**: every parameter, field, header, env var, config value, and feature flag, with its
-  type, constraints, and default.
-- **State**: what is read and written (DB tables, caches, files, local storage, in-memory), and the
-  states the entity can be in.
-- **Dependencies**: services, APIs, queues, clocks, randomness, the file system. Each is a source
-  of failure cases.
-- **Outputs and side effects**: responses, rendered UI, emitted events, writes, notifications,
-  logs, metrics.
-- **Unchanged callers**: every existing call site of a modified function, type, schema, or
-  endpoint. Each one is a regression candidate.
-- **Invariants**: what must always hold (balances never negative, one active record per user,
-  audit row for every write). Each one becomes at least one case that tries to break it.
-- **Existing tests**: the framework, where tests live, fixtures and factories, how to run them.
-
-### 3. Derive cases
-
-For each entry point, cover in order:
-
-1. **Happy paths**: each acceptance criterion, plus each meaningfully different valid input class.
-2. **Validation and boundaries**: every input against the relevant parts of the edge-case catalog.
-3. **State and sequencing**: each starting state the entity can be in, repeated calls, out-of-order
-   calls, and concurrent calls.
-4. **Dependency failures**: each dependency timing out, erroring, returning malformed data, or
-   succeeding only partly. State what the system must do and what it must not leave behind.
-5. **Authorization and isolation**: who may do this, who may not, and whether one tenant or user
-   can see or affect another's data.
-6. **Regression**: each unchanged caller and each existing behavior near the change.
-7. **Compatibility and rollout**: existing data, old clients, mixed versions during deploy, the
-   flag off and on and flipped mid-flight, migration forward and back.
-8. **Non-functional**: performance at realistic and extreme sizes, security, accessibility,
-   observability, where the change gives a reason to care.
-
-Combine inputs deliberately. Use pairwise combinations when a full matrix would explode, and call
-out the specific combinations that interact in the code (two flags read in the same branch, a field
-that is only validated when another is set).
-
-### 4. Prioritize
-
-Rate each case:
+Priority:
 
 - **P0**: data loss or corruption, security or isolation breach, money or compliance impact, a
-  core flow broken, or an acceptance criterion. Must pass before merge.
-- **P1**: likely real-world inputs and failures, regressions in nearby behavior.
-- **P2**: rare or low-impact cases, polish.
-
-Rank by likelihood times impact, not by how easy the case is to write.
-
-### 5. Write the plan
-
-Use the template below. Keep IDs stable (`TP-01`, `TP-02`, ...) so the user can refer to cases. Group
-cases by area. Put the gaps and open questions where they are easy to find, because those are what
-the user acts on.
-
-Print the plan in the conversation. If the user asks for a file, write it to `TEST_PLAN.md` at the
-repo root (or the path they give) and say where it went.
+  broken core flow, an acceptance criterion
+- **P1**: likely real-world inputs and failures, regressions in nearby behavior
+- **P2**: rare or low-impact
 
 ## Template
 
 ````markdown
-# Test plan: <feature name>
+# Test plan: <feature>
 
-**Scope:** <branch / PR / paths>, <N files changed>
-**Intent:** <two or three sentences on what the feature does and why>
+<One sentence: what changed and why. Scope: branch/PR, N files.>
 
-## Acceptance criteria
-- AC1: <criterion> (*inferred* if not stated anywhere)
+## <Area, e.g. "POST /transfers">
+- [ ] **P0** `unit` `amount` ∈ {missing, `null`, `0`, `-0.01`, `"abc"`} → 400 naming `amount`, no row
+- [ ] **P0** `int` Same `idempotency_key` twice within 1s → one transfer, both calls return it *(partial: `transfer.test.ts` single call only)*
+- [ ] **P1** `int` Ledger service times out → 503, transfer stays `pending`, no ledger entry — retry path in `transferJob.ts`
+- Covered: `transfer.test.ts` (happy create, list, 404 on unknown id)
 
-## Surface
-- **Entry points:** ...
-- **Inputs:** ...
-- **State touched:** ...
-- **Dependencies:** ...
-- **Unchanged callers at risk:** `path/to/file.ts` (`functionName`), ...
-- **Invariants:** ...
-
-## Test cases
-
-### <Area, e.g. "Create transfer endpoint">
-
-| ID | P | Level | Case | Setup / input | Expected | Coverage |
-|----|---|-------|------|---------------|----------|----------|
-| TP-01 | P0 | unit | Rejects negative amount | `amount: -0.01` | 400, error names `amount`, nothing persisted | missing |
-| TP-02 | P1 | integration | Duplicate submit is idempotent | Same `idempotency_key` sent twice within 1s | One transfer, second call returns the first result | partial: `transfer.test.ts` "creates transfer" covers a single call only |
-
-### <Next area>
+## <Next area>
 ...
 
-## Manual checks
-Only what cannot reasonably be automated, each with steps and the reason it is manual.
-
-## Coverage gaps
-The missing and partial P0 and P1 cases, in priority order, with where each test should go
-(file, describe block, fixture to reuse).
+## Regressions
+- [ ] **P1** `int` `reports/daily.ts` still totals legacy transfers with `currency: null`
 
 ## Open questions
-Places where intended behavior is unclear or where the code and the stated intent disagree. Each
-one names the case IDs that depend on the answer.
+- Should `amount` of exactly `0` be allowed? Code accepts it; ticket says "positive". Affects the first `amount` case.
 
-## Running
-The commands to run the relevant existing suites, and any setup they need.
+**Run:** `pnpm test transfer`
 ````
+
+Every case is missing a test unless marked *(partial: …)*. Omit the regressions section, open
+questions, or the run line when empty. Order cases within an area by priority.
+
+Print the plan in the conversation. If the user asks for a file, write it to `TEST_PLAN.md` at the
+repo root (or the path they give) and say where it went.
 
 ## Before you finish
 
-Check the plan against these, and fix it rather than reporting the shortfall:
+Check against your private inventory, and fix the plan rather than reporting the shortfall:
 
-- Every acceptance criterion has at least one case.
-- Every entry point has at least one failure case, not only happy paths.
-- Every unchanged caller at risk has a regression case or a stated reason it is safe.
-- Every dependency has a failure case.
-- Every invariant has a case that tries to violate it.
-- No case says "should work", "handles correctly", or "behaves as expected". Each names the
-  observable result.
-- Coverage marks cite real test names you found, not guesses.
+- Every acceptance criterion, entry point, and input appears in some case or a Covered line.
+- Every entry point has at least one failure case.
+- Every dependency has a failure case, and every invariant has a case that tries to break it.
+- Every unchanged caller at risk has a regression case, or is safe for a reason you checked.
+- No two lines could be merged without changing an expected result.
+- No line says "works", "handles correctly", or "as expected". Each names the observable result.
+- Coverage notes cite real test names you found.
