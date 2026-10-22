@@ -1,0 +1,66 @@
+# One PR. {url} is replaced with the PR link. One message per line; # lines are ignored.
+PR for you to review: {url}
+When you have a minute: {url}
+Review when you get a chance: {url}
+Could you take a look? {url}
+Got a PR for you: {url}
+{url} whenever you have a sec
+Mind reviewing this? {url}
+Up for review: {url}
+For your review queue: {url}
+Would appreciate a review: {url}
+Review request: {url}
+When you get a moment: {url}
+Could use your eyes on this: {url}
+Ready for review: {url}
+Whenever you're free: {url}
+Added you as a reviewer: {url}
+Your review, when you can: {url}
+Would you mind reviewing? {url}
+Mind taking a look when you're free? {url}
+Here's one for you: {url}
+Review please, when you have time: {url}
+Looking for a review: {url}
+PR ready for your eyes: {url}
+Could you review this one? {url}
+{url} is ready for review
+{url} when you have a minute
+{url} for you to review
+{url} could use your review
+No rush: {url}
+Thoughts welcome: {url}
+Fresh PR, still warm: {url}
+A wild PR appeared: {url}
+Have PR, need reviewer: {url}
+It's dangerous to merge alone. Take this: {url}
+Knock knock. Who's there? A PR: {url}
+Roses are red, this PR's for you: {url}
+New PR just dropped: {url}
+Got a sec? Got a PR: {url}
+Behold, a PR: {url}
+Bat-signal for a review: {url}
+You've got PR: {url}
+Special delivery: {url}
+Your mission, should you choose to accept it: {url}
+One PR, hold the drama: {url}
+Hot off the press: {url}
+This PR walks into a review queue: {url}
+Order up: {url}
+Paging a reviewer: {url}
+Request for comments, or approvals: {url}
+A PR has entered the chat: {url}
+Plot twist, it's a PR: {url}
+Your next side quest: {url}
+Fresh from the oven: {url}
+Today's special: {url}
+I choose you: {url}
+Ding! Review ready: {url}
+Signed, sealed, needs review: {url}
+Coming soon to a main branch near you: {url}
+In this house we review PRs: {url}
+Freshly brewed: {url}
+Pull up a chair: {url}
+Now accepting reviews: {url}
+For your consideration: {url}
+New in your queue: {url}
+A PR seeks a worthy reviewer: {url}
