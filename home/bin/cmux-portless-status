@@ -1,0 +1,150 @@
+#!/usr/bin/env zsh
+#
+# cmux-portless-status: show each running portless dev server (app, storybook,
+# ...) as a clickable status row in the cmux sidebar of the workspace whose
+# terminal started it.
+#
+#   cmux-portless-status           reconcile once
+#   cmux-portless-status --watch   reconcile every few seconds until cmux goes away
+#   cmux-portless-status --ensure  start a detached watcher unless a current one runs
+#
+# cmux only accepts socket commands from processes started inside its
+# terminals, so the watcher is started from shell init (lib/cmux.zsh,
+# conf.d/cmux.fish) rather than launchd. It keeps the terminal's inherited
+# socket capability after that terminal closes, and exits once cmux restarts
+# so the next shell can start a fresh one.
+
+setopt err_return no_unset pipe_fail extended_glob
+zmodload zsh/system
+
+readonly PORTLESS_DIR=${PORTLESS_STATE_DIR:-$HOME/.portless}
+readonly ROUTES=$PORTLESS_DIR/routes.json
+readonly STATE_DIR=${XDG_CACHE_HOME:-$HOME/.cache}/cmux-portless-status
+readonly APPLIED=$STATE_DIR/applied
+readonly PIDFILE=$STATE_DIR/pid
+readonly LOCKFILE=$STATE_DIR/lock
+readonly KEY_PREFIX=portless_
+readonly INTERVAL=3
+readonly SELF=${0:A}
+
+mkdir -p $STATE_DIR
+
+# Changes whenever cmux recreates its socket, i.e. once per app launch.
+cmux_generation() {
+  [[ -n ${CMUX_SOCKET_PATH:-} && -S $CMUX_SOCKET_PATH ]] || return 1
+  /usr/bin/stat -f '%i:%m' $CMUX_SOCKET_PATH
+}
+
+proxy_origin_suffix() {
+  local port=443 tls=0
+  [[ -r $PORTLESS_DIR/proxy.port ]] && port=$(<$PORTLESS_DIR/proxy.port)
+  [[ -e $PORTLESS_DIR/proxy.tls ]] && tls=1
+  if (( tls )); then
+    print -r -- "https $([[ $port == 443 ]] || print -n ":$port")"
+  else
+    print -r -- "http $([[ $port == 80 ]] || print -n ":$port")"
+  fi
+}
+
+# Prints one "workspace<TAB>key<TAB>label<TAB>url<TAB>icon<TAB>color<TAB>priority" line
+# per live route whose process was started from a cmux terminal.
+desired() {
+  [[ -r $ROUTES ]] || return 0
+  local scheme port_suffix
+  read -r scheme port_suffix <<<"$(proxy_origin_suffix)"
+  local host pid ws key kind icon color priority
+  jq -r '.[] | "\(.hostname)\t\(.pid)"' $ROUTES 2>/dev/null | while IFS=$'\t' read -r host pid; do
+    [[ $pid == <-> ]] && kill -0 $pid 2>/dev/null || continue
+    # `ps -E` appends the process environment, which carries the workspace of
+    # the cmux terminal that launched the dev server.
+    ws=$(ps -E -ww -o command= -p $pid 2>/dev/null |
+      grep -oE 'CMUX_WORKSPACE_ID=[0-9A-Fa-f-]{36}' | head -1) || true
+    ws=${ws#CMUX_WORKSPACE_ID=}
+    [[ -n $ws ]] || continue
+    key=$KEY_PREFIX${host//[^A-Za-z0-9]/_}
+    if [[ $host == *storybook* ]]; then
+      kind=Storybook icon=book.closed color='#FF4785' priority=-11
+    else
+      kind='Dev server' icon=globe color='#5AC8FA' priority=-10
+    fi
+    print -r -- "$ws"$'\t'"$key"$'\t'"$kind · $host"$'\t'"$scheme://$host$port_suffix"$'\t'"$icon"$'\t'"$color"$'\t'"$priority"
+  done
+}
+
+reconcile() {
+  local -a want have kept
+  want=("${(@f)$(desired | sort -u)}")
+  want=(${want:#})
+  [[ -r $APPLIED ]] && have=("${(@f)$(<$APPLIED)}")
+  have=(${have:#})
+
+  local line ws key label url icon color priority
+  local -A wanted_ids
+  for line in $want; do
+    IFS=$'\t' read -r ws key _ <<<"$line"
+    wanted_ids[$ws/$key]=1
+  done
+
+  for line in $have; do
+    IFS=$'\t' read -r ws key _ <<<"$line"
+    (( ${+wanted_ids[$ws/$key]} )) && continue
+    cmux clear-status $key --workspace $ws >/dev/null 2>&1 || true
+  done
+
+  for line in $want; do
+    if (( ${have[(Ie)$line]} )); then
+      kept+=($line)
+      continue
+    fi
+    IFS=$'\t' read -r ws key label url icon color priority <<<"$line"
+    cmux set-status $key $label --url $url --icon $icon --color $color --priority $priority \
+      --workspace $ws >/dev/null 2>&1 && kept+=($line)
+  done
+
+  print -rl -- $kept >$APPLIED.tmp && mv $APPLIED.tmp $APPLIED
+}
+
+# Clears rows a previous watcher left behind, which `applied` may not know about
+# after cmux restores a session.
+sweep() {
+  local ws key
+  rm -f $APPLIED
+  for ws in ${(f)"$(CMUX_QUIET=1 cmux workspace list --id-format uuids 2>/dev/null | awk '{print $1}')"}; do
+    for key in ${(f)"$(cmux list-status --workspace $ws 2>/dev/null | sed -n "s/^\(${KEY_PREFIX}[^=]*\)=.*/\1/p")"}; do
+      cmux clear-status $key --workspace $ws >/dev/null 2>&1 || true
+    done
+  done
+}
+
+watch() {
+  local lock_fd generation
+  : >>$LOCKFILE
+  zsystem flock -t 10 -f lock_fd $LOCKFILE || return 0
+  generation=$(cmux_generation) || return 0
+  print -r -- "$$ $generation" >$PIDFILE
+  sweep
+  while [[ $(cmux_generation 2>/dev/null) == $generation ]] && cmux ping >/dev/null 2>&1; do
+    reconcile || true
+    sleep $INTERVAL
+  done
+}
+
+ensure() {
+  local generation pid recorded
+  generation=$(cmux_generation) || return 0
+  if [[ -r $PIDFILE ]]; then
+    read -r pid recorded <$PIDFILE || true
+    if [[ $pid == <-> ]] && kill -0 $pid 2>/dev/null; then
+      [[ $recorded == $generation ]] && return 0
+      kill $pid 2>/dev/null || true
+    fi
+  fi
+  nohup $SELF --watch >/dev/null 2>&1 &!
+}
+
+case ${1:-} in
+  --watch) watch ;;
+  --ensure) ensure ;;
+  '') reconcile ;;
+  *) print -u2 "usage: ${0:t} [--watch|--ensure]"; exit 2 ;;
+esac
