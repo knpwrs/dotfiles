@@ -98,8 +98,9 @@ If the work splits into dependent parts that would each deserve their own review
      conventions. Keep the reason.
    - **Ask**: anything that changes the design or scope.
 3. Fix, rerun the checks from step 3.5, and commit.
-4. If the fixes were substantial (new logic, not just small edits), review once more the same
-   way. Stop after the second round; list anything left in the report.
+4. Repeat from 1 until a round has nothing left to fix, at most five rounds in all. Findings you
+   already skipped or asked about do not count as new; do not reopen them. After the fifth
+   round, list anything left in the report.
 
 ## 5. Open the draft PR
 

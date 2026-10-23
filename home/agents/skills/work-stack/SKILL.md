@@ -61,7 +61,8 @@ For each child, on its own layer:
 
 1. Do work-ticket steps 3 and 4 for that child: implement, test, commit, review this layer's
    diff only (Open Code Review with `--from` set to the layer below, else `/code-review high`
-   against it), fix what is worth fixing, commit.
+   against it), fix what is worth fixing, commit, and repeat the review until a round has
+   nothing left to fix, at most five rounds per layer.
 2. Keep each layer to its own ticket. If a later child needs a change in a lower layer, check out
    that layer, commit there, `gh stack rebase --upstack`, and return. Never put a lower ticket's
    change on a higher layer.
