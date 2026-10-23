@@ -2,7 +2,7 @@
 name: work-ticket
 description: >
   Take a ticket from description to draft pull request: read the ticket and its context, check
-  the current branch (or branch off the latest base), implement the change with tests, run /code-review on the result, fix what
+  the current branch (or branch off the latest base), implement the change with tests, review it (Open Code Review, else /code-review), fix what
   is worth fixing, then push and open a draft PR. Use when asked to work on, pick up, implement,
   or "do" a ticket or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL).
   For a parent ticket whose children should each become a PR in a stack, use work-stack.
@@ -87,16 +87,19 @@ If the work splits into dependent parts that would each deserve their own review
 
 ## 4. Review and fix
 
-1. Run `/code-review high` on the branch (through the Skill tool: `code-review`, args `high`).
-   Do not pass `--fix` or `--comment`: you decide what gets fixed, and nothing gets posted.
+1. Review the branch against `origin/<base>`. When the `ocr` CLI and the open-code-review plugin
+   are installed, run Open Code Review in delegation mode as a subagent, following
+   `references/ocr-review.md`. Otherwise, or if OCR fails, run `/code-review high` (through the
+   Skill tool: `code-review`, args `high`); do not pass `--fix` or `--comment`: you decide what
+   gets fixed, and nothing gets posted.
 2. Judge each finding against the code:
    - **Fix**: real bugs, missed edge cases, missing tests, and cheap clear improvements.
    - **Skip**: false positives, and suggestions that are out of scope or contradict repo
      conventions. Keep the reason.
    - **Ask**: anything that changes the design or scope.
 3. Fix, rerun the checks from step 3.5, and commit.
-4. If the fixes were substantial (new logic, not just small edits), run `/code-review high` once
-   more on the result. Stop after the second round; list anything left in the report.
+4. If the fixes were substantial (new logic, not just small edits), review once more the same
+   way. Stop after the second round; list anything left in the report.
 
 ## 5. Open the draft PR
 

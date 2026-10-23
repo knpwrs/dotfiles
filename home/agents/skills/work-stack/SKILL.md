@@ -3,7 +3,7 @@ name: work-stack
 description: >
   Turn a parent ticket's child tickets into one stack of PRs, one layer per child: order the
   children by dependency, create the stack with gh-stack, do each child's work on its own layer
-  the way work-ticket does (implement, test, /code-review, fix), then open every layer as a draft
+  the way work-ticket does (implement, test, review, fix), then open every layer as a draft
   PR. Use when asked to work on, implement, or stack a parent ticket, epic, or story with
   sub-tickets, or when /work-ticket is given a ticket whose children each need their own PR.
 argument-hint: "<parent ticket id or URL> [extra instructions]"
@@ -59,8 +59,9 @@ after the repo's recent branch names.
 
 For each child, on its own layer:
 
-1. Do work-ticket steps 3 and 4 for that child: implement, test, commit, `/code-review high` on
-   this layer's diff only (against the layer below), fix what is worth fixing, commit.
+1. Do work-ticket steps 3 and 4 for that child: implement, test, commit, review this layer's
+   diff only (Open Code Review with `--from` set to the layer below, else `/code-review high`
+   against it), fix what is worth fixing, commit.
 2. Keep each layer to its own ticket. If a later child needs a change in a lower layer, check out
    that layer, commit there, `gh stack rebase --upstack`, and return. Never put a lower ticket's
    change on a higher layer.

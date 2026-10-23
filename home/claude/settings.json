@@ -10,7 +10,8 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "codex@openai-codex": true,
-    "worktrunk@worktrunk": true
+    "worktrunk@worktrunk": true,
+    "open-code-review@open-code-review": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -23,6 +24,12 @@
       "source": {
         "source": "github",
         "repo": "max-sixty/worktrunk"
+      }
+    },
+    "open-code-review": {
+      "source": {
+        "source": "github",
+        "repo": "alibaba/open-code-review"
       }
     }
   },
