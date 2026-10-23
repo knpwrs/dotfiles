@@ -89,3 +89,7 @@ it or part, and may name reviewers. For what they accept, in order: run `gh pr r
 each PR; invoke the notify-reviewers skill with `stack` and any reviewers they named, which sends
 each reviewer one draft covering all of their PRs in the stack; then invoke the babysit-pr skill
 with `stack`. If any questions are still open, say they should be answered first.
+
+Auto-assignment requests reviewers a little after `gh pr ready`, so a check right after it shows
+none. When reporting who will review, read them with the notify-reviewers skill's
+`scripts/reviewers.sh --wait 60 <pr>...`, never a bare `gh pr view`.
