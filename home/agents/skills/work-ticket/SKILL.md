@@ -2,11 +2,12 @@
 name: work-ticket
 description: >
   Take a ticket from description to draft pull request: read the ticket and its context, check
-  the current branch (or branch off the latest base), implement the change with tests, review it (Open Code Review, else /code-review), fix what
-  is worth fixing, then push and open a draft PR. Use when asked to work on, pick up, implement,
-  or "do" a ticket or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL).
-  For a parent ticket whose children should each become a PR in a stack, use work-stack. For
-  work described in prose with no ticket, use work-feature.
+  the current branch (or branch off the latest base), implement the change with tests, review it
+  and fix what is worth fixing in a loop (review-loop: Open Code Review, else /code-review),
+  then push and open a draft PR. Use when asked to work on, pick up, implement, or "do" a ticket
+  or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL). For a parent ticket
+  whose children should each become a PR in a stack, use work-stack. For work described in prose
+  with no ticket, use work-feature.
 argument-hint: "<ticket id or URL> [extra instructions]"
 ---
 
@@ -88,20 +89,13 @@ If the work splits into dependent parts that would each deserve their own review
 
 ## 4. Review and fix
 
-1. Review the branch against `origin/<base>`. When the `ocr` CLI and the open-code-review plugin
-   are installed, run Open Code Review in delegation mode as a subagent, following
-   `references/ocr-review.md`. Otherwise, or if OCR fails, run `/code-review high` (through the
-   Skill tool: `code-review`, args `high`); do not pass `--fix` or `--comment`: you decide what
-   gets fixed, and nothing gets posted.
-2. Judge each finding against the code:
-   - **Fix**: real bugs, missed edge cases, missing tests, and cheap clear improvements.
-   - **Skip**: false positives, and suggestions that are out of scope or contradict repo
-     conventions. Keep the reason.
-   - **Ask**: anything that changes the design or scope.
-3. Fix, rerun the checks from step 3.5, and commit.
-4. Repeat from 1 until a round has nothing left to fix, at most five rounds in all. Findings you
-   already skipped or asked about do not count as new; do not reopen them. After the fifth
-   round, list anything left in the report.
+Write the ticket's acceptance criteria to a file in the scratchpad, then invoke the
+review-loop skill (Skill tool: `review-loop`, args
+`--from origin/<base> --to HEAD -B <criteria file> --commit-rounds`). It reviews the branch with
+Open Code Review (else `/code-review`), fixes what is worth fixing, reruns the checks from step
+3.5, commits each round, and stops when a round has nothing worth fixing, at most five rounds.
+Answer or pass on the questions it collects, and carry its fixed, skipped, and open findings
+into the report.
 
 ## 5. Open the draft PR
 
