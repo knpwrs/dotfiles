@@ -8,13 +8,19 @@ description: >
   "do" a ticket or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL). For a
   parent ticket whose children should each become a PR in a stack, use work-stack. For work
   described in prose with no ticket, use work-feature.
-argument-hint: "<ticket id or URL> [extra instructions]"
+argument-hint: "[ticket id or URL] [extra instructions]"
 ---
 
 # Work a ticket
 
 Take the ticket in `$ARGUMENTS` to a draft PR. Anything after the ticket reference is extra
 instruction from the user and overrides the ticket where they conflict.
+
+If `$ARGUMENTS` has no ticket reference, infer it from the current branch name: a tracker key
+anywhere in it, matched case-insensitively (`kp/abc-123-add-search` is `ABC-123`), else a
+GitHub issue number (`123-add-search`, `issue-123`, `gh-123`). If the branch has a PR, its
+title and body can confirm the ticket. Say which ticket you inferred. If you are on the base
+branch, or the name holds no reference or more than one, ask for the ticket.
 
 ## Permissions
 
