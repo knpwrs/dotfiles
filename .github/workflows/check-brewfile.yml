@@ -13,6 +13,7 @@ jobs:
         run: |
           brew bundle list --tap | xargs -n1 brew tap
           brew bundle list --formula | grep / | xargs -n1 dirname | xargs -n1 brew tap
+          brew tap | grep -v '^homebrew/' | xargs brew trust --tap
           brew update
       - name: Check Formulae
         working-directory: vendor/packages
