@@ -3,11 +3,11 @@ name: work-ticket
 description: >
   Take a ticket from description to draft pull request: read the ticket and its context, check
   the current branch (or branch off the latest base), implement the change with tests, review it
-  and fix what is worth fixing in a loop (review-loop: Open Code Review, else /code-review),
-  then push and open a draft PR. Use when asked to work on, pick up, implement, or "do" a ticket
-  or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL). For a parent ticket
-  whose children should each become a PR in a stack, use work-stack. For work described in prose
-  with no ticket, use work-feature.
+  and fix what is worth fixing in a loop (review-loop: /code-review, plus /security-review when
+  sensitive), then push and open a draft PR. Use when asked to work on, pick up, implement, or
+  "do" a ticket or issue from any tracker (e.g. ABC-123, a GitHub issue, or a ticket URL). For a
+  parent ticket whose children should each become a PR in a stack, use work-stack. For work
+  described in prose with no ticket, use work-feature.
 argument-hint: "<ticket id or URL> [extra instructions]"
 ---
 
@@ -92,8 +92,9 @@ If the work splits into dependent parts that would each deserve their own review
 Write the ticket's acceptance criteria to a file in the scratchpad, then invoke the
 review-loop skill (Skill tool: `review-loop`, args
 `--from origin/<base> --to HEAD -B <criteria file> --commit-rounds`). It reviews the branch with
-Open Code Review (else `/code-review`), fixes what is worth fixing, reruns the checks from step
-3.5, commits each round, and stops when a round has nothing worth fixing, at most five rounds.
+`/code-review` (plus `/security-review` when the change is security-sensitive), fixes what is
+worth fixing, reruns the checks from step 3.5, commits each round, and stops when a round has
+nothing new worth fixing, at most five rounds.
 Answer or pass on the questions it collects, and carry its fixed, skipped, and open findings
 into the report.
 

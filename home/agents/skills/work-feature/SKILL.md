@@ -4,9 +4,9 @@ description: >
   Take a feature or fix described in prose to a draft pull request, for projects without an issue
   tracker: pin down what done looks like, check the current branch (or branch off the latest
   base), implement the change with tests, review it and fix what is worth fixing in a loop
-  (review-loop: Open Code Review, else /code-review), then push and open a draft PR. Use when
-  asked to build, add, implement, or fix something with no ticket to read. For work that has a
-  ticket, use work-ticket.
+  (review-loop: /code-review, plus /security-review when sensitive), then push and open a
+  draft PR. Use when asked to build, add, implement, or fix something with no ticket to read.
+  For work that has a ticket, use work-ticket.
 argument-hint: "<description of the feature or fix>"
 ---
 
