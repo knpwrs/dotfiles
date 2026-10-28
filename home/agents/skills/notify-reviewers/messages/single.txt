@@ -64,3 +64,279 @@ Now accepting reviews: {url}
 For your consideration: {url}
 New in your queue: {url}
 A PR seeks a worthy reviewer: {url}
+Could I get a review on this? {url}
+When you have a few minutes: {url}
+Got time for a quick review? {url}
+Whenever works for you: {url}
+Ready when you are: {url}
+Would love your review: {url}
+Could you give this a look? {url}
+Mind giving this a review? {url}
+If you have a moment: {url}
+One for your queue: {url}
+Ready for your eyes: {url}
+Requesting your review: {url}
+Could you review when you're free? {url}
+Your turn to review: {url}
+Over to you: {url}
+In your queue: {url}
+A PR for you, when you can: {url}
+Here's a PR for you: {url}
+Up next for review: {url}
+PR ready: {url}
+Ready to go, pending your review: {url}
+Would you take a look? {url}
+Can I borrow your eyes? {url}
+When you get around to it: {url}
+No hurry: {url}
+At your convenience: {url}
+Appreciate a look when you can: {url}
+Another one for you: {url}
+{url} is up for review
+{url} is waiting on your review
+{url} needs a reviewer, and you're it
+{url} whenever you get a chance
+{url} when you're free
+{url} could use your eyes
+{url} is ready when you are
+{url} ready for a look
+{url} if you have a minute
+{url}, when you can
+You've been summoned: {url}
+Incoming: {url}
+Tag, you're it: {url}
+Your PR, should you want it: {url}
+A PR approaches: {url}
+It's PR o'clock: {url}
+Straight from the branch: {url}
+Fresh off the branch: {url}
+Psst, a PR: {url}
+Small favor: {url}
+A PR walks into a bar. You review it: {url}
+This one's got your name on it: {url}
+Lights, camera, review: {url}
+Now boarding, review group 1: {url}
+Next stop, main: {url}
+Your code review horoscope says: {url}
+Dinner is served: {url}
+Ring ring, it's a PR: {url}
+Ahoy, a PR: {url}
+Hear ye, hear ye: {url}
+Assemble the reviewers: {url}
+Delivered with care: {url}
+Gently placed in your queue: {url}
+Here, catch: {url}
+Brought to you by git push: {url}
+Freshly pushed: {url}
+Some light reading: {url}
+Your daily diff: {url}
+Diff for you: {url}
+Diffs, served fresh: {url}
+Pushed, tested, awaiting judgment: {url}
+Gaze upon this PR: {url}
+Coming in hot: {url}
+One PR, made to order: {url}
+A humble PR: {url}
+A modest PR: {url}
+Bring your red pen: {url}
+Red pen at the ready? {url}
+Seeking your blessing: {url}
+For your approving eyes: {url}
+Requesting a second pair of eyes: {url}
+Four eyes are better than two: {url}
+Achievement unlocked, review requested: {url}
+A challenger approaches: {url}
+Player two has entered the game: {url}
+Press start to review: {url}
+New quest available: {url}
+Ready, set, review: {url}
+And now, a PR: {url}
+Breaking news, a PR: {url}
+This just in: {url}
+Read all about it: {url}
+Ta-da: {url}
+Voilà: {url}
+Presenting: {url}
+Exhibit A: {url}
+Submitted for your approval: {url}
+Your honor, I present: {url}
+Knock knock, review time: {url}
+Unwrap this one: {url}
+A gift, sort of: {url}
+Fresh diff, hot and ready: {url}
+Serving up a PR: {url}
+Chef's kiss pending your review: {url}
+Hand-delivered: {url}
+Fast-tracked to your queue: {url}
+Look what the CI dragged in: {url}
+Green checks, waiting on you: {url}
+Tests pass, now you: {url}
+The PR you've been waiting for: {url}
+You won't believe this PR: {url}
+Doctor, the PR will see you now: {url}
+Got a minute for a review? {url}
+Could you have a look? {url}
+Would you mind having a look? {url}
+Quick review, if you can: {url}
+Up for a review? {url}
+Could you check this out? {url}
+Have a look when you can: {url}
+Take a look when you're free: {url}
+Free for a review? {url}
+Can you review this when you have time? {url}
+Ready and waiting: {url}
+Waiting on your review: {url}
+All set for review: {url}
+Good to go, pending review: {url}
+Opened for review: {url}
+Marked ready: {url}
+Just marked ready: {url}
+Review needed: {url}
+Need a reviewer: {url}
+Looking for your review: {url}
+Hoping for a review: {url}
+Thanks in advance for a look: {url}
+When the moment strikes: {url}
+Whenever the mood strikes: {url}
+Sometime today or tomorrow is great: {url}
+In between meetings, maybe: {url}
+{url} awaits your review
+{url} would love a review
+{url} is all yours
+{url} is in your queue
+{url}, if you have a sec
+{url}, no rush
+{url}, whenever
+{url} is looking for a reviewer
+{url} just landed in your queue
+{url}: ready when you are
+Behold, a diff: {url}
+Lo, a PR: {url}
+And lo, a PR appeared: {url}
+By popular demand: {url}
+Due to overwhelming demand: {url}
+Now streaming: {url}
+Now in theaters: {url}
+Coming to a code review near you: {url}
+Starring you as the reviewer: {url}
+In a world where PRs need reviewers: {url}
+Once upon a time, a PR: {url}
+Previously on this branch: {url}
+To be continued, pending review: {url}
+Season finale: {url}
+Plot thickens: {url}
+Spoiler, it's a PR: {url}
+Fun fact, this needs a review: {url}
+Did you know? This PR needs a review: {url}
+Today's forecast, a PR: {url}
+Forecast: 100% chance of PR: {url}
+Weather report, scattered diffs: {url}
+Mail call: {url}
+You've got mail, sort of: {url}
+Postmarked for you: {url}
+Return to sender, with approval: {url}
+Package at your door: {url}
+Signature required: {url}
+Courier for you: {url}
+Express delivery: {url}
+Overnighted to your queue: {url}
+Room service: {url}
+Table for one: {url}
+Your order is ready: {url}
+Pickup at the counter: {url}
+Served warm: {url}
+Hot and fresh: {url}
+Small batch, handcrafted: {url}
+Artisanal PR: {url}
+Locally sourced diff: {url}
+Organic, free-range PR: {url}
+Farm to table PR: {url}
+Fresh catch of the day: {url}
+Chef's special: {url}
+Off the menu: {url}
+Barista's pick: {url}
+A PR, with coffee: {url}
+Grab a coffee, then this: {url}
+Pairs well with coffee: {url}
+Best enjoyed with tea: {url}
+Bon appétit: {url}
+Cheers: {url}
+Ready player one: {url}
+Insert coin to review: {url}
+Level up: {url}
+Boss fight: {url}
+Bonus round: {url}
+Side quest unlocked: {url}
+Quest log updated: {url}
+Your move: {url}
+Checkmate pending: {url}
+Your serve: {url}
+Ball's in your court: {url}
+Passing the baton: {url}
+Tagging you in: {url}
+Calling an audible: {url}
+Hail Mary: {url}
+Fore: {url}
+Batter up: {url}
+You're up: {url}
+On deck: {url}
+Next up: {url}
+Up next on the review channel: {url}
+Houston, we have a PR: {url}
+Ground control to reviewer: {url}
+T-minus one review: {url}
+Ready for launch, awaiting clearance: {url}
+Cleared for takeoff, pending review: {url}
+Request permission to merge: {url}
+Permission to come aboard: {url}
+Requesting backup: {url}
+Code review, assemble: {url}
+To the reviewer cave: {url}
+With great PRs comes great review: {url}
+This is the PR you're looking for: {url}
+May the review be with you: {url}
+One does not simply merge without review: {url}
+You shall not merge, until: {url}
+Elementary, my dear reviewer: {url}
+Make it so: {url}
+Engage: {url}
+Beam me a review: {url}
+Live long and review: {url}
+Winter is coming, so is this PR: {url}
+I'll be back, after your review: {url}
+Here's looking at you, reviewer: {url}
+You had me at {url}
+Show me the review: {url}
+To review or not to review: {url}
+Et tu, reviewer? {url}
+Veni, vidi, PR: {url}
+Carpe diff: {url}
+Keep calm and review: {url}
+Review responsibly: {url}
+Batteries included: {url}
+Some assembly required: {url}
+No assembly required: {url}
+As seen on CI: {url}
+Certified fresh: {url}
+New and improved: {url}
+Limited time only: {url}
+While supplies last: {url}
+Act now: {url}
+Operators are standing by: {url}
+But wait, there's more: {url}
+Not a drill: {url}
+Wake up, babe, new PR dropped: {url}
+POV: you're reviewing {url}
+Main character energy: {url}
+It's giving review: {url}
+Rent free in your queue: {url}
+Low effort, high reward: {url}
+Small but mighty: {url}
+Bite-sized: {url}
+Snack-sized PR: {url}
+Fun-sized diff: {url}
+Easy one, probably: {url}
+Should be painless: {url}
+Promise it's short: {url}
+Not too scary: {url}
+Mostly harmless: {url}

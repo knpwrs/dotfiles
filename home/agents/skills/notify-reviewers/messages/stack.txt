@@ -1,30 +1,108 @@
-# Header for several PRs from one stack; the links follow, bottom first, one per line.
-Stack for you to review, bottom first:
-Stacked PRs for you, bottom first:
-When you have a minute, a stack (bottom first):
-Could you take a look at this stack? Bottom first:
-A few stacked PRs for you, bottom first:
-Review when you get a chance (stacked, bottom first):
-Up for review, a stack, bottom first:
-For your review queue, stacked, bottom first:
-Would appreciate a review on these, bottom first:
-These build on each other, bottom first:
-Stacked PRs, in order:
-Whenever you're free, bottom first:
-Could use your eyes on these, bottom first:
+# Header for several PRs from one stack; the links follow in review order (bottom of the stack
+# first), one per line. The order is already in the list, so most headers need not repeat it.
+A stack for you to review:
+Stacked PRs for you:
+A stack for your queue:
+Could you take a look at this stack?
+Could you review this stack?
+Mind reviewing this stack?
+Would you take a look at these? They're stacked:
+When you have a minute, a stack:
+Whenever you're free, a stack:
+No rush on this stack:
+Stack ready for review:
+Stacked and ready for review:
+Could use your eyes on this stack:
+Would appreciate a review on this stack:
+A few stacked PRs for you:
+Some stacked PRs for your queue:
+These build on each other:
+Each one builds on the last:
+These depend on each other, so in order:
 Review in this order, when you can:
-A wild stack appeared (bottom first):
-Like pancakes, but code. Bottom first:
-Stack attack, bottom first:
-Bottoms up (stack, bottom first):
-Some assembly required, bottom first:
-A stack, best read from the bottom:
-Layer cake, bottom first:
-Jenga time, start at the bottom:
-Stacked like Tetris, bottom first:
-Turtles all the way down, but read from the bottom:
-Build order matters, bottom first:
-Stacked and ready, bottom first:
-A tower of PRs, ground floor first:
-Climb this one from the bottom:
-Read like a comic strip, bottom first:
+In the order listed, please:
+Top of the list is the base:
+The first link is the base; the rest build on it:
+Start with the first one:
+Start at the top of this list:
+Go in order, if you can:
+In sequence:
+In review order:
+One after another:
+A stack, best read in order:
+Read these in order:
+Split into a stack to make review easier:
+Broken into small layers for you:
+Bite-sized and stacked:
+Small layers, easy reviews:
+A wild stack appeared:
+Stack attack:
+Some assembly required:
+Like pancakes, but code:
+A short stack:
+A tall stack:
+A stack of pancakes, hold the syrup:
+Layer cake:
+Like a wedding cake, one tier at a time:
+Lasagna, but code:
+Layered like an onion:
+A club sandwich of diffs:
+A burger, assembled bun first:
+Stacked like Tetris:
+Stacked like Lego:
+A Jenga tower, please don't pull any out:
+Turtles all the way down:
+A tower of diffs:
+A skyscraper, lobby first:
+Start in the basement:
+Ground floor first:
+Foundation first:
+Climb this one rung by rung:
+A ladder, one rung at a time:
+Base camp, then the summit:
+Stairs, one at a time:
+Going up:
+An elevator ride:
+Building blocks:
+Bricks, laid in order:
+Sedimentary layers, oldest at the top of the list:
+Strata for you:
+Nesting dolls:
+Dominoes, lined up:
+A train, engine first:
+A conga line of diffs:
+A chain, first link first:
+Episode one first:
+Previously on this stack:
+A trilogy, part one first:
+A miniseries:
+A saga in several parts:
+Chapter by chapter:
+Read like a book:
+No spoilers, start at the beginning:
+Begin at the beginning, as the King said:
+A recipe, follow the steps:
+Step by step:
+One layer at a time:
+Layer by layer:
+Floor by floor:
+Stack overflow, the good kind:
+Full-stack review:
+Stack trace, but friendly:
+Like a git log, upside down:
+Rebased and stacked:
+Stacked and synced:
+Freshly stacked:
+Neatly stacked:
+Hot stack:
+Stack o' diffs:
+A heaping stack:
+A full stack:
+Stacked high:
+Stacked like firewood:
+Stacked like plates:
+Like a totem pole:
+Penthouse last:
+Some light stacking:
+A set of stacked PRs, best enjoyed in order:
+LIFO, but read FIFO:

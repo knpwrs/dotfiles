@@ -19,13 +19,161 @@ PRs, assemble:
 Fresh batch of PRs:
 Have PRs, need reviewer:
 It's dangerous to merge alone. Take these:
-A small parade of PRs:
+A small parade:
 Special delivery, several packages:
 Today's specials:
 A few side quests for you:
 Your review buffet:
 PR bundle, no assembly required:
 Batch of fresh PRs, still warm:
-A wild set of PRs appeared:
+A wild set appeared:
 Order up, several plates:
 Paging a reviewer, a few times:
+A few PRs for your queue:
+Some PRs for you:
+Could you review these?
+When you get a chance:
+Whenever works for you:
+When you have a few minutes:
+If you have some time:
+At your convenience:
+Mind reviewing these?
+Would you take a look at these?
+Could I get reviews on these?
+Requesting your review on these:
+A few reviews, when you can:
+Several PRs for you:
+A handful of PRs for you:
+A couple of PRs for you:
+Ready for your eyes:
+These are ready for review:
+All ready for review:
+New in your queue:
+For your review queue:
+Over to you:
+No hurry on these:
+Here are a few for you:
+A few more for you:
+A few PRs, no particular order:
+Unrelated, but all yours:
+A mixed bag for you:
+Assorted PRs:
+Grab bag:
+PR sampler platter:
+A PR variety pack:
+Pick and mix:
+Tasting menu:
+A flight, like wine but diffs:
+Several courses, any order:
+Dinner for one reviewer:
+A care package:
+Some light reading:
+Your reading list:
+Your weekend reading, or whenever:
+Incoming, several:
+Multiple PRs approach:
+Party of several, your table is ready:
+The PRs have assembled:
+The gang's all here:
+Squad goals:
+A pack of wild PRs:
+Grazing in your queue:
+It's raining PRs:
+PRs, assorted flavors:
+Several side quests available:
+Choose your adventure:
+Multiplayer mode:
+Gotta review 'em all:
+Your queue, now with more PRs:
+Several diffs, freshly pushed:
+Could I get your eyes on these?
+Could you have a look at these?
+Would you mind reviewing these?
+Some reviews for you, when you can:
+A few reviews, no rush:
+These could use a review:
+These need a reviewer:
+Looking for reviews on these:
+Requesting reviews:
+Hoping for reviews on these:
+Waiting on your review:
+All set for review:
+Just marked ready:
+Opened for review:
+Several PRs ready:
+Multiple PRs for you:
+Small batch, hand-pushed:
+PR roundup:
+Review roundup:
+PR digest:
+Today's PRs:
+This week's PRs:
+In your queue now:
+Freshly added to your queue:
+Queued up for you:
+Lined up for you:
+Tonight's lineup:
+Separate PRs, any order:
+Independent PRs, any order works:
+Unrelated PRs, pick any:
+In no particular order:
+Any order you like:
+Shuffle and review:
+Review in any order:
+Pick one, or all:
+Several PRs walk into a bar:
+PR reunion tour:
+The PR family reunion:
+Potluck:
+All you can review:
+Smorgasbord:
+Dim sum, but PRs:
+Tapas-style PRs:
+Small plates:
+Appetizers, all of them:
+Bento box:
+Charcuterie board, diffs only:
+A box of chocolates, you never know what you'll get:
+Mixtape:
+Greatest hits:
+The B-sides:
+On the playlist:
+Now playing, several PRs:
+Compilation album:
+Box set:
+Season pass:
+Bundle deal:
+Buy one, review all:
+Combo meal:
+Value pack:
+Multipack:
+Family size:
+Bulk order:
+Shipment arrived:
+Mail call, several letters:
+Several packages at your door:
+Your inbox, but PRs:
+A bouquet for you:
+Flurries in the forecast:
+A smattering:
+A few for the road:
+Loose ends, all yours:
+Odds and ends:
+Bits and pieces:
+Miscellany:
+Sundry PRs:
+Various and sundry:
+Et cetera:
+The usual suspects:
+Round up the usual PRs:
+Calling all reviewers, or just you:
+Raid party forming:
+Multiple quests available:
+Bounty board updated:
+Daily quests:
+Achievements available:
+Collect all the approvals:
+Stamp collection, approvals wanted:
+Breaking news, several PRs:
+Headlines:
+Top stories:
