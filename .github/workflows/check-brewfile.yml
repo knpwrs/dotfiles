@@ -7,7 +7,7 @@ jobs:
   check-homebrew:
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Tap and Update
         working-directory: vendor/packages
         run: |
