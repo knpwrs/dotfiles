@@ -63,6 +63,8 @@ Repeat until everything is merged or closed, or the user stops you:
 1. **Triage** every new item from the state script (threads, reviews, comments, failing checks).
 2. **Act** on it (below).
 3. **Report** in a few lines: what changed, what was pushed, drafts awaiting approval, questions.
+   "Drafts" means only this skill's PR replies. Messages other skills drafted elsewhere (such as
+   notify-reviewers' Slack DMs) are the user's to send; don't list them.
    Put drafts and questions in one message so the user can answer them together. In stack mode,
    group by PR.
 4. **Wait.** Run `scripts/wait-for-change.sh <number>` (or `scripts/wait-for-change.sh --stack`)

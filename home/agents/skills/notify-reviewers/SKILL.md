@@ -19,8 +19,12 @@ them by absolute path.
 ## Never send
 
 Only create drafts. Never call a tool that sends, posts, or schedules a message, even if the user
-seems to expect it; tell them the drafts are waiting and let them send. If the messaging connector
+seems to expect it; the user sends them. If the messaging connector
 has no draft tool, print each message and its recipient for the user to send themselves.
+
+Creating the drafts finishes the job. The user sends them outside this session, and you can't see
+when. After the report, don't mention, remind about, or list the drafts as pending again, and don't
+check whether they were sent, unless the user asks.
 
 ## 1. Check the PRs are ready
 
@@ -78,4 +82,4 @@ named applies to every PR in scope unless the user said which ones.
    with the user id as the channel). If a draft already exists in that conversation, do not
    overwrite it; tell the user and show the message instead.
 3. Report each draft: reviewer, the PRs it covers, the message text, and a link to the
-   conversation when the tool returns one. Remind the user the drafts are unsent.
+   conversation when the tool returns one. Say once that they're in Slack ready to send.
