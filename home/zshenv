@@ -28,6 +28,7 @@ autoload -U zmv
 alias zcp='zmv -C' # Copy
 alias zln='zmv -L' # Link
 
-# Local zsh env
+# Private env for all shells (plain `export NAME=value` lines), then zsh-only extras
+[ -f ~/.env.local.sh ] && source ~/.env.local.sh
 [ -f ~/.env.local.zsh ] && source ~/.env.local.zsh
 if [ -e /Users/knpwrs/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/knpwrs/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
