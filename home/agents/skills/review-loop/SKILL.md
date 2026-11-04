@@ -60,7 +60,24 @@ scope of the change.
 2. **Judge** each finding against the code, reading whatever it needs. First check it against
    the ledger: a finding that matches one already there (same location or same underlying
    issue, even reworded or moved a few lines) is a **Repeat**. Do not reopen it, unless it was
-   Fixed and the fix demonstrably did not work. Judge the rest:
+   Fixed and the fix demonstrably did not work.
+
+   Verify each remaining finding before judging it. Read the flagged code and what it depends
+   on (callers, effect deps, the module a test mocks). Unverified `/code-review` findings tend
+   to be wrong in the same few ways:
+   - **Real?** Trace the failure scenario through the code. It is a false positive if an
+     earlier step makes it impossible (state cleared first, a guard upstream, an input that
+     can't occur).
+   - **In the change?** Check the line is added or changed in the scoped diff. A line only
+     moved, or behavior that predates the change, is out of scope: Skip it, or Ask if it is a
+     serious bug.
+   - **Intended?** If a nearby comment or the background says the behavior is deliberate, Skip
+     it, unless the design itself is worth questioning; then it is an Ask.
+   - **Suggested fix correct?** Don't apply a reviewer's fix as written. Check it type-checks
+     against the real types and keeps every path the original covered. A cast that looks
+     unnecessary may be forced by a mock, and a one-line simplification may drop a case.
+
+   Judge what survives:
    - **Fix:** correctness bugs, real vulnerabilities, missed edge cases, and missing tests. In
      round 1 also cheap, clear improvements.
    - **Skip:** false positives; cleanup, simplification, efficiency, and altitude suggestions
