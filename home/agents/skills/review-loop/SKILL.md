@@ -29,8 +29,8 @@ hold the loop's own code to a higher bar.
   to the files that belong to the change and say which you excluded.
 - **Background:** the file given with `-B` (usually acceptance criteria). Without one, write a
   sentence or two on what the change does to a file in the scratchpad and use that.
-- **`--commit-rounds`:** commit each round's fixes in the repo's commit style. Without it, do
-  not stage or commit.
+- **`--commit-rounds`:** commit each round's fixes in the repo's commit style, with messages
+  that follow the `no-slop` skill. Without it, do not stage or commit.
 
 ## Permissions
 

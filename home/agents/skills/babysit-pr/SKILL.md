@@ -106,16 +106,16 @@ Sort each item, or each separate finding inside one item, into one bucket:
 
 **Code changes.** Read the code the comment points at before changing it. Keep each fix to what
 was asked. Run the narrowest relevant tests, linters, and type checks locally. Group related fixes
-into one commit, matching the repo's commit message style; mention the reviewer's point, not
-"address feedback". Push after each batch so CI and reviewers see it. Record the sha in the ledger.
+into one commit, matching the repo's commit message style and following the `no-slop` skill;
+mention the reviewer's point, not "address feedback". Push after each batch so CI and reviewers see it. Record the sha in the ledger.
 
 **CI failures.** Read the failing log (`gh run view <run-id> --log-failed`, or the check `link`).
 If the diff caused it, fix it. If it is flaky and unrelated, rerun the failed jobs once
 (`gh run rerun <run-id> --failed`). If it fails the same way twice, or it is a non-code check
 (PR description lint, labels, required sign-offs), tell the user what it needs.
 
-**Drafts.** As few words as possible. No greeting, no thanks, no praise, no restating the
-comment, no hedging. Reference commits by short sha. Examples:
+**Drafts.** Follow the `no-slop` skill. As few words as possible. No greeting, no thanks, no
+praise, no restating the comment, no hedging. Reference commits by short sha. Examples:
 
 - `Fixed in a1b2c3d.`
 - `Done.`

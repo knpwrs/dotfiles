@@ -90,8 +90,8 @@ If the work splits into dependent parts that would each deserve their own review
 5. Run the repo's own checks for what you touched: build, type check, lint, format, and the
    relevant tests. Fix every failure your change caused. Report failures that exist on the base
    branch too, without fixing them.
-6. Commit in the repo's commit message style, including the ticket id if recent commits do.
-   Several focused commits are fine.
+6. Commit in the repo's commit message style, including the ticket id if recent commits do,
+   and write the messages following the `no-slop` skill. Several focused commits are fine.
 
 ## 4. Review and fix
 
@@ -107,8 +107,8 @@ into the report.
 ## 5. Open the draft PR
 
 If the branch already has a PR, push to it and do not open another; leave its draft state alone,
-and if its title or body no longer describes the change, draft the update and ask before applying
-it. Otherwise:
+and if its title or body no longer describes the change, draft the update (as in steps 2 and 3
+below) and ask before applying it. Otherwise:
 
 1. Push the branch: `git push -u origin <branch>`.
 2. Title: follow recent merged PRs in the repo (for example `ABC-123: Short imperative summary`).
@@ -117,6 +117,7 @@ it. Otherwise:
    CI may lint it. Otherwise write: what changed and why, how it was tested, and anything a
    reviewer should look at closely. Link the ticket the way recent PRs in the repo do (a tracker
    URL, a ticket key, or `Fixes #<n>`). Keep it short and specific; no filler.
+   Write the title and body following the `no-slop` skill.
 4. `gh pr create --draft --base <base> --title ... --body-file <file>`. In a stack, use
    `gh stack submit --auto` instead (it opens drafts).
 

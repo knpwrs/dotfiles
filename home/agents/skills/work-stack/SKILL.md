@@ -75,8 +75,9 @@ child covers.
 
 1. `gh stack submit --auto` pushes every layer and opens each PR as a draft.
 2. The generated titles and bodies are placeholders. For each PR, write the title and body the
-   way work-ticket step 5 does, about that layer's child ticket only; link the child ticket and
-   mention the parent. Apply them with `gh pr edit <number> --title ... --body-file <file>`.
+   way work-ticket step 5 does (following the `no-slop` skill), about that layer's child ticket
+   only; link the child ticket and mention the parent. Apply them with
+   `gh pr edit <number> --title ... --body-file <file>`.
 3. Confirm with `gh stack view --json` that every layer has an open draft PR.
 
 ## 5. Report
