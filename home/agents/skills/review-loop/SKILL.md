@@ -7,7 +7,7 @@ description: >
   new worth fixing, at most five rounds. Use when asked to review and fix in a loop, "review
   until clean", or to run /code-review repeatedly on some changes. work-ticket, work-stack, and
   work-feature use it for their review step.
-argument-hint: "[max rounds] [paths, --commit <sha>, or --from <ref> --to <ref>] [-B <background file>] [--commit-rounds]"
+argument-hint: "[max rounds] [low|medium|high|xhigh|max] [paths, --commit <sha>, or --from <ref> --to <ref>] [-B <background file>] [--commit-rounds]"
 ---
 
 # Review and fix in a loop
@@ -24,6 +24,8 @@ hold the loop's own code to a higher bar.
 ## Inputs
 
 - **Max rounds:** a leading number in the arguments, else 5.
+- **Level:** `low`, `medium`, `high`, `xhigh`, or `max` in the arguments, else `high`. Every
+  round's `/code-review` runs at it; higher levels find more and cost more tokens per round.
 - **Scope:** paths, `--commit <sha>`, or `--from <ref> --to <ref>`. With none, the workspace
   (staged, unstaged, and untracked). If the working tree holds unrelated work, narrow the scope
   to the files that belong to the change and say which you excluded.
@@ -41,14 +43,23 @@ scope of the change.
 ## 1. Before the first round
 
 - **Target.** Turn the scope into `/code-review` args: `<from>...<to>` for a range,
-  `<sha>^...<sha>` for a commit, the paths for paths, nothing for the workspace.
+  `<sha>^...<sha>` for a commit, the paths for paths, nothing for the workspace. That target
+  is for round 1 only.
+- **Base.** Record where the change starts: `<from>` for a range, `<sha>^` for a commit, the
+  current `HEAD` for paths and the workspace. From round 2 on, review everything from the base
+  to the working tree (`git diff <base>` plus untracked files, limited to the scope's paths), so
+  the loop's fixes are reviewed whether they are committed or not. A fixed range or commit
+  target would miss them, and with `--commit-rounds` an empty workspace diff would end the loop
+  without reviewing its own fixes.
 - **Security-sensitive?** Decide from the diff whether the change touches authentication or
   authorization, sessions, tokens, secrets, or crypto; handles untrusted input (request
   parsing, uploads, file paths, deserialization); builds SQL, shell commands, HTML, or URLs from
   data; changes permission checks, network-facing endpoints, CORS, or infra and access config;
   handles personal data; or adds or upgrades dependencies. If so, round 1 also runs
   `/security-review`. Later rounds run it only if the previous round's fixes touched sensitive
-  code.
+  code. `/security-review` takes no target and reviews the branch's pending changes, so for a
+  commit or range scope, name the commits and files in the brief and keep only its findings in
+  them.
 - **Ledger.** Keep a list of every finding judged so far: location, a one-line gist, the
   verdict (Fixed, Skipped with reason, Asked), and the round. It is how you recognize repeats.
 
@@ -93,21 +104,23 @@ scope of the change.
    Five findings that are all repeats or not worth fixing is a clean round, not a reason to go
    again.
 4. **Fix** each Fix finding in the style of the surrounding code. Then run the project's own
-   checks for the touched files (lint, format, type check, and tests; follow `CLAUDE.md` for
-   how), and fix any failure your fixes caused. When a fix changes runtime behavior and the app
-   can be run, check it in the app.
+   checks for the touched files (lint, format, type check, and tests; follow `AGENTS.md` or
+   `CLAUDE.md` for how), and fix any failure your fixes caused. When a fix changes runtime
+   behavior and the app can be run, check it in the app.
 5. **Commit** the round's fixes if `--commit-rounds` was given.
-6. Start the next round over the same scope (the fixes are now part of the diff, so they get
-   reviewed too). After the last allowed round, stop even if findings remain, and list them.
+6. Start the next round, reviewing from the base to the working tree (see **Base**), so this
+   round's fixes get reviewed too. After the last allowed round, stop even if findings remain,
+   and list them.
 
 ## Subagent brief
 
-Fill in the target args, the background file, and whether to run the security review.
+Fill in the level, the target args (from round 2, the base-to-working-tree diff), the
+background file, and whether to run the security review.
 
 > Review this change and report findings only: do not edit files, commit, or post anything.
 > The change is described in `<background file>`; read it first.
 >
-> 1. Invoke the `code-review` skill with args `high --max-findings default <target args>`.
+> 1. Invoke the `code-review` skill with args `<level> --max-findings default <target args>`.
 >    Do not pass `--fix` or `--comment`.
 > 2. `<Only when security-sensitive:>` Then invoke the `security-review` skill.
 >
