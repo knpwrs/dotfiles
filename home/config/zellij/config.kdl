@@ -151,6 +151,11 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "locked"
         }
+        bind "n" { GoToNextAttention; SwitchToMode "locked"; }
+        bind "u" { MuteSession; SwitchToMode "locked"; }
+        bind "tab" { ToggleSession; SwitchToMode "locked"; }
+        bind "left" { GoToPreviousSession; SwitchToMode "locked"; }
+        bind "right" { GoToNextSession; SwitchToMode "locked"; }
     }
     shared_among "normal" "locked" {
         bind "Ctrl space" {
@@ -262,24 +267,8 @@ keybinds clear-defaults=true {
     }
 }
 
-// Plugin aliases - can be used to change the implementation of Zellij
-// changing these requires a restart to take effect
-plugins {
-    about location="zellij:about"
-    compact-bar location="zellij:compact-bar"
-    configuration location="zellij:configuration"
-    filepicker location="zellij:strider" {
-        cwd "/"
-    }
-    plugin-manager location="zellij:plugin-manager"
-    session-manager location="zellij:session-manager"
-    status-bar location="zellij:status-bar"
-    strider location="zellij:strider"
-    tab-bar location="zellij:tab-bar"
-    welcome-screen location="zellij:session-manager" {
-        welcome_screen true
-    }
-}
+// Plugin aliases: no overrides, so tab-bar/status-bar/etc. follow Zellij's
+// built-in defaults (zellij:bars since 0.46) as they change.
 
 // Plugins to load in the background when a new session starts
 // eg. "file:/path/to/my-plugin.wasm"
@@ -309,7 +298,7 @@ osc8_hyperlinks true
 // Default: default
 // 
 // theme "dracula"
- 
+
 // Choose the base input mode of zellij.
 // Default: normal
 // 
@@ -579,3 +568,4 @@ default_layout "stacked"
 // typically work best. Set to 0 to use the number of (physical) CPU cores.
 // Note: This only applies to web clients at the moment.
 // client_async_worker_tasks 4
+show_startup_tips false
