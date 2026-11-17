@@ -3,7 +3,10 @@ font-family = Hack Nerd Font Mono
 font-size = 12
 
 # Theme
-theme = TokyoNight Night
+# A light/dark pair (with different names) also makes ghostty report the
+# right mode to programs like zellij: a single theme always reports "light"
+# (ghostty discussion #15017, PR #13605).
+theme = light:TokyoNight Day,dark:TokyoNight Night
 
 # UI
 window-show-tab-bar = auto
